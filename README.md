@@ -1,17 +1,9 @@
 Package: alinex
 =================================================
 
-[![Build Status] (https://travis-ci.org/alinex/node-alinex.svg?branch=master)] (https://travis-ci.org/alinex/node-alinex) 
-[![Coverage Status] (https://coveralls.io/repos/alinex/node-alinex/badge.png?branch=master)] (https://coveralls.io/r/alinex/node-alinex?branch=master)
-[![Dependency Status] (https://gemnasium.com/alinex/node-alinex.png)] (https://gemnasium.com/alinex/node-alinex)
-
 Description comes here...
 
 
-Install
--------------------------------------------------
-
-[![NPM](https://nodei.co/npm/alinex.png?downloads=true&stars=true)] (https://nodei.co/npm/alinex/)
 
 
 License

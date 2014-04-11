@@ -1,9 +1,9 @@
 {
   "name": "alinex",
   "version": "0.0.0",
-  "description": "",
-  "copyright": "true 2014",
-  "private": false,
+  "description": "Description of the alinex universe which may later yield into a alinex system.",
+  "copyright": "Alexander Schilling 2014",
+  "private": true,
   "keywords": "",
   "homepage": "http://alinex.github.io/node-alinex/",
   "repository": {

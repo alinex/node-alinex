@@ -64,13 +64,13 @@ Find additional information in the following documents:
 
 ### Helper
 
--   [Third Party Modules](src/doc/3rdparty.md.html)
+- [Third Party Modules](src/doc/3rdparty.md.html)
 
 ### Usage Tips and Tricks
 
--   [coffee](src/doc/coffee.md.html)
--   [npm](src/doc/snpm.md.html)
--   [git](src/doc/git.md.html)
+- [coffee](src/doc/coffee.md.html)
+- [npm](src/doc/npm.md.html)
+- [git](src/doc/git.md.html)
 
 
 License

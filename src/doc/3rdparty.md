@@ -1,18 +1,19 @@
-NPM modules
+Third Party Modules
 =================================================
 
-This page gives a short description of the used npm modules in the core.
+This page gives a short description of the used npm modules in different
+categories.
 
 
 General modules
 -------------------------------------------------
 
-### IcedCoffeeScript
+### CoffeeScript
 
-IcedCoffeeScript is a superset of CoffeeScript including `await`/`defer`
-for easy asynchronous control flow.
+CoffeeScript is a language that compiles into JavaScript but is easier to
+read and write.
 
-See more at [Iced CoffeeScript](http://maxtaco.github.io/coffee-script/).
+See more at [CoffeeScript](http://coffeescript.org).
 
 
 ### Async utilities
@@ -40,15 +41,18 @@ Easy way to get colorful output mainly on the command line.
 See more at [colors.js](https://github.com/marak/colors.js/)
 
 
-### source-map
-
-Parse and consume source-maps to show the error there it is written down. This
-is used as part of the error handler.
-
-See more at [source-map](https://github.com/mozilla/source-map/)
-
-
 ### sprintf-js
+
+
+
+Maintenance
+-------------------------------------------------
+
+### debug
+
+### winston
+
+- Logging: [winston](https://github.com/flatiron/winston)
 
 
 Web server modules
@@ -65,10 +69,6 @@ Framework: [express.js](http://expressjs.com)
 ### node-force-domain
 
 ### stream-rotate
-
-### winston
-
-- Logging: [winston](https://github.com/flatiron/winston)
 
 
 Template languages
@@ -91,8 +91,6 @@ Miscellaneous
 -------------------------------------------------
 
 ### moment
-
-### debug
 
 ### passport
 

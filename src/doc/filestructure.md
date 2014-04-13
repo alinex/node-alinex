@@ -18,182 +18,144 @@ presents the development cycle of the system:
 Each of these states may have some of the possible directories so they will
 be referenced in the further description.
 
-### Source
+**Source**
 
 The developer will start with the GIT source by cloning or forking.
 
-### Development
+**Development**
 
 While in development additional directories will be created while compiling and
 testing the code.
 
-### Installed
+**Installed**
 
-For productive use, this is the start point. You get a ready to run compiled 
+For productive use, this is the start point. You get a ready to run compiled
 system.
 
-### Productive
+**Productive**
 
-In the first run the system may be configured and create some additional 
+In the first run the system may be configured and create some additional
 directories for configs and runtime data.
 
 
 Possible directories
 -------------------------------------------------
 
-    src // source code
-      doc // general documentation which won't belong to any specific file
-    lib // compiled source code
+The following list displays all directories of any state which may exist each
+listet with the states to which it belongs:
 
-Source Code
+    bin           // all
+    data          // productive
+    doc           // development
+    lib           // development
+    log           // productive
+    node_modules  // development, ...
+    src           // source, development
+    test          // source, development
+    var           // source, ...
+      src         // source, ...
+      local       // development, ...
+      lib         // productive
+
+Read the further sections to get more information of what resides in which
+directory and how it is used and created.
+
+
+Source
 -------------------------------------------------
 
-The source code resides in the `src` dir and will be copied/compiled into 
-`lib` to run.
+The source specifies what is stored in the code repository.
+
+This stage contains the following directories:
+
+    bin           // executable files
+    src           // source code
+      doc         // general documentation which won't belong to any specific file
+    test          // test data and test suites
+      data        // test data
+      mocha       // mocha test suites
+    var           // data and code which maybe changed in installation
+      src         // original data, will be overriden on update
+
+The source code resides in the `src` dir and will be copied/compiled into
+`lib` to run. This step is done on prepublication of package.
 
 
-
-
-GIT source
--------------------------------------------------
-Get it using the
-[zip-download](https://github.com/alinex/alinex-node/archive/master.zip) or
-
-    > git checkout https://github.com/alinex/alinex-node.git
-
-This only contains the source code with documentation and test cases. All
-included in the both directories:
-
-    src - source code used for development only
-      bin - shell commands and tools for development
-      doc - additional documentation
-      config - example configuration
-      server - server code
-      view - templates for client view
-      client - source code for client development
-    test - test data and test suites
-      server - mocha tests for the server
-      client - mocha/casper tests of the client
-
-After downloading the code the next step will be to install the development
-system. Run the install for all necessary packages under debian 6, ubuntu or
-other debian based distributions with the following script:
-
-    > src/bin/install-debian.sh
-
-Which will install all necessary packages and modules (root access or sudo
-password required). For all other unix like systems with other package managers
-you may configure this script for your system or do the tasks manually.
-
-
-Development System
--------------------------------------------------
-After installing you will have a ready to use development system. You may now
-code and extend it.
-
-You now have the following directory structure:
-
-    src - source code (same as before)
-    test - test data and suites (same as before)
-    bin - scripts to help work with the system
-    node_modules - npm installed packages
-
-For further tasks you should use the integrated
-[build tool](../bin/build/README.md.html):
-
-    > bin/make.sh <command>
-
-This will create all the necessary data for the base system.
-
-
-Base System (NPM)
--------------------------------------------------
-After building the Development System you will have the following directory
-structure:
-
-    lib - compiled source code
-      config - example configuration
-      server - server code
-      view - templates for client view
-      client - source code for client development
-    bin - scripts to help work with the system (same as before)
-    node_modules - npm installed packages (same as before)
-
-    src - source code (same as before)
-    test - test data and suites (same as before)
-    doc - html documentation (if created)
-
-The second block are directories which may be removed if you only want
-a productive system.
-
-Before the first start or after adding new modules or changing the general
-configuration the [setup script](../bin/setup/README.md.html)
-is used to initialize the system:
-
-    > bin/setup.sh <command>
-
-
-Runtime package
--------------------------------------------------
-The runtime package is only a packaging format for the base system. It is meant
-to be packed as archive and distributed. So someone who only wants to use the
-system can directly unpack this and start the setup script to get started.
-
-It will lack only the `src`, `test` and  `doc` folder as well as the development
-node modules.
-
-
-Configured System
--------------------------------------------------
-After the setup script the following directory structure will be made:
-
-    lib - compiled source code
-    bin - scripts to help work with the system (same as before)
-    node_modules - npm installed packages (same as before)
-    config - configuration files
-    public - links to the package public dir
-    view - links to the package view dir
-    data - created but empty
-    log - created but empty
-
-    src - source code (same as before)
-    test - test data and suites (same as before)
-    doc - html documentation (if created)
-
-The second block are directories which may be removed if you only want
-a productive system.
-
-Now you may start and stop the server with the next type of control script which
-is the [server tool](../bin/server/README.md.html):
-
-    > bin/server <command>
-
-
-Running System
--------------------------------------------------
-And also while the server runs a specific CLI interface is here to help you
-manage it. Use the [control script](../bin/control/README.md.html):
-
-    > bin/control <command>
-
-This is only possible if the server is started with the optional CLI connector.
-
-
-IDE
+Development
 -------------------------------------------------
 
-You may use any IDE you want but as I tested some of the popular free ones I
-had little till no support for CoffeeScript, Jade and other modern dialects.
-So you may use some generic IDEs like Eclipse or NetBeans with less support or
-some simpler Editors which often at least has a working syntax highlighting.
+Shows what the developer will find on his machine while developing and testing
+the system. While testing the development system will also get all the
+directories from productive which are not listed here.
 
-I for myself decided to use Sublime_Text which is a Texteditor with lots of
-modules, Syntax Highlighting, Linting, GIT integration and lots more in a
-fast way.
+This stage contains the following directories:
 
-To get a good support I installed the following modules:
+    bin           // executable files
+    doc           // created documentation (optional)
+    lib           // copied/compiled code
+    node_modules  // npm installed packages
+    src           // source code
+    test          // test data and test suites
+    var           // data and code which maybe changed in installation
+      src         // original data, will be overriden on update
+      local       // linked or copied from src (not overridden on update)
 
-- PackageControl
-- CoffeeScript
-- SublimeGit
-- SublimeLinter
+
+Installed
+-------------------------------------------------
+
+This is what you get after a fresh npm installation.
+
+This stage contains the following directories:
+
+    bin           // executable files
+    lib           // copied/compiled code
+    node_modules  // npm installed packages
+    var           // data and code which maybe changed in installation
+
+
+Productive
+-------------------------------------------------
+
+And finally this shows what resides on the productive server.
+
+This stage contains the following directories:
+
+    bin           // executable files
+    data          // runtime data storage
+    lib           // copied/compiled code
+    log           // log files and debugging data
+    node_modules  // npm installed packages
+    var           // data and code which maybe changed in installation
+      src         // original data, will be overriden on update
+      local       // copied from src (not overridden on update)
+      run         // linked or compiled from local (on system start or manually)
+
+
+Where belongs what?
+-------------------------------------------------
+- templates -> /var
+- temporary files -> systems temp dir
+- configuration -> /var
+- server statics -> /var
+- language packs -> /var
+- cache files -> systems temp dir
+
+
+var folder
+-------------------------------------------------
+The var folder contains everything that may be changed for the individual
+installation.
+
+It contains the three subfolders:
+
+- `src` - the source files which will change with each update
+- `local` - local maybe changed files or links to the sources
+- `run` - linked or compiled files from source overriden by local
+
+Within these three directories you will find the following structure:
+
+    config
+    template
+      <theme>
+    static

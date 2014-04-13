@@ -14,11 +14,10 @@ spaces.
 
 Variables
 -------------------------------------------------
-Over the whole project some common variable names will be used for the same
-values:
+Over all modules some common variable names will be used for the same values:
 
 - `cb` - for the callback method
-- `err` - for an Error object
+- `err` - for an error message or object
 - `ex` - mostly the exception in a `try...catch` block
 
 
@@ -28,10 +27,8 @@ Through the whole code as much as possible only asynchronous code should be used
 without blocking. That brings the most performance out.
 
 These code follows the node.js convention of providing a single callback as
-the last argument of your async function.
-
-This can be achieved using `await...defer` (iced-coffee-script) or with the
-async module. Which one to use depends on the complexity.
+the last argument of your async function. This can be achieved using the `async`
+module.
 
 
 Error/Exception handling
@@ -94,7 +91,7 @@ Configuration
 -------------------------------------------------
 The general configuration is stored in files to be also available without
 database connection. To make it easy readable and maintainable it should
-be written in coffee script rather than json.
+be written in yml rather than json.
 
 
 Dependencies

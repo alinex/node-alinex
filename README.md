@@ -59,8 +59,8 @@ Find additional information in the following documents:
 ### Development
 
 - [Styleguide](src/doc/styleguide.md.html)
--   [File Structure](src/doc/filestructure.md.html)
--
+- [File Structure](src/doc/filestructure.md.html)
+- [Development Tools](src/doc/developtools.md.html)
 
 ### Helper
 

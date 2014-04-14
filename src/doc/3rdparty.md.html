@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3rdparty.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/3rdparty.md", defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+  <script src="../../fileSearch.js"></script>
+  <script src="../../goToLine.js"></script>
+  <link rel="stylesheet" href="../../fileSearch.css" />
+  <link rel="stylesheet" href="../../goToLine.css" />
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#third%20party%20modules">Third Party Modules</a>
+      </div>
+      <div class="heading h2">
+        <a href="#general%20modules">General modules</a>
+      </div>
+      <div class="heading h3">
+        <a href="#coffeescript">CoffeeScript</a>
+      </div>
+      <div class="heading h3">
+        <a href="#async%20utilities">Async utilities</a>
+      </div>
+      <div class="heading h2">
+        <a href="#command%20line%20support">Command line support</a>
+      </div>
+      <div class="heading h3">
+        <a href="#commander.js">Commander.js</a>
+      </div>
+      <div class="heading h3">
+        <a href="#colors">Colors</a>
+      </div>
+      <div class="heading h3">
+        <a href="#sprintf-js">sprintf-js</a>
+      </div>
+      <div class="heading h2">
+        <a href="#maintenance">Maintenance</a>
+      </div>
+      <div class="heading h3">
+        <a href="#debug">debug</a>
+      </div>
+      <div class="heading h3">
+        <a href="#winston">winston</a>
+      </div>
+      <div class="heading h2">
+        <a href="#web%20server%20modules">Web server modules</a>
+      </div>
+      <div class="heading h3">
+        <a href="#express">express</a>
+      </div>
+      <div class="heading h3">
+        <a href="#helmet">helmet</a>
+      </div>
+      <div class="heading h3">
+        <a href="#toobusy-js">toobusy-js</a>
+      </div>
+      <div class="heading h3">
+        <a href="#node-force-domain">node-force-domain</a>
+      </div>
+      <div class="heading h3">
+        <a href="#stream-rotate">stream-rotate</a>
+      </div>
+      <div class="heading h2">
+        <a href="#template%20languages">Template languages</a>
+      </div>
+      <div class="heading h3">
+        <a href="#jade">jade</a>
+      </div>
+      <div class="heading h3">
+        <a href="#stylus">stylus</a>
+      </div>
+      <div class="heading h3">
+        <a href="#nib">nib</a>
+      </div>
+      <div class="heading h2">
+        <a href="#miscellaneous">Miscellaneous</a>
+      </div>
+      <div class="heading h3">
+        <a href="#moment">moment</a>
+      </div>
+      <div class="heading h3">
+        <a href="#passport">passport</a>
+      </div>
+      <div class="heading h3">
+        <a href="#mongoose">mongoose</a>
+      </div>
+      <div class="heading h3">
+        <a href="#socket.io">socket.io</a>
+      </div>
+      <div class="heading h2">
+        <a href="#modules%20for%20development%20system%20only">Modules for development system only</a>
+      </div>
+      <div class="heading h3">
+        <a href="#docker">docker</a>
+      </div>
+      <div class="heading h3">
+        <a href="#chokidar">chokidar</a>
+      </div>
+      <div class="heading h3">
+        <a href="#diff">diff</a>
+      </div>
+      <div class="heading h3">
+        <a href="#fs-extra">fs-extra</a>
+      </div>
+      <div class="heading h3">
+        <a href="#browserify">browserify</a>
+      </div>
+      <div class="heading h3">
+        <a href="#icsify">icsify</a>
+      </div>
+      <div class="heading h3">
+        <a href="#minifyify">minifyify</a>
+      </div>
+      <div class="heading h3">
+        <a href="#node-inspector">node-inspector</a>
+      </div>
+      <div class="heading h2">
+        <a href="#test%20modules">Test modules</a>
+      </div>
+      <div class="heading h3">
+        <a href="#coffeelint">coffeelint</a>
+      </div>
+      <div class="heading h3">
+        <a href="#mocha">mocha</a>
+      </div>
+      <div class="heading h3">
+        <a href="#chai">chai</a>
+      </div>
+      <div class="heading h3">
+        <a href="#sinon">sinon</a>
+      </div>
+      <div class="heading h3">
+        <a href="#supervisor">supervisor</a>
+      </div>
+      <div class="heading h3">
+        <a href="#casper">Casper</a>
+      </div>
+      <div class="heading h2">
+        <a href="#client%20modules">Client modules</a>
+      </div>
+      <div class="heading h3">
+        <a href="#angular%20js">Angular JS</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="docs markdown">
+<div class="pilwrap" id="third%20party%20modules">
+  <h1>
+    <a href="#third%20party%20modules" name="third%20party%20modules" class="pilcrow">&#182;</a>
+    Third Party Modules
+  </h1>
+</div>
+
+
+<p>This page gives a short description of the used npm modules in different
+categories.</p>
+
+
+<div class="pilwrap" id="general%20modules">
+  <h2>
+    <a href="#general%20modules" name="general%20modules" class="pilcrow">&#182;</a>
+    General modules
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="coffeescript">
+  <h3>
+    <a href="#coffeescript" name="coffeescript" class="pilcrow">&#182;</a>
+    CoffeeScript
+  </h3>
+</div>
+
+
+<p>CoffeeScript is a language that compiles into JavaScript but is easier to
+read and write.</p>
+
+<p>See more at <a href="http://coffeescript.org">CoffeeScript</a>.</p>
+
+
+<div class="pilwrap" id="async%20utilities">
+  <h3>
+    <a href="#async%20utilities" name="async%20utilities" class="pilcrow">&#182;</a>
+    Async utilities
+  </h3>
+</div>
+
+
+<p>An utility module which provides straight-forward, powerful functions for
+working with asynchronous JavaScript.</p>
+
+<p>See more at <a href="https://github.com/caolan/async">Async</a></p>
+
+
+<div class="pilwrap" id="command%20line%20support">
+  <h2>
+    <a href="#command%20line%20support" name="command%20line%20support" class="pilcrow">&#182;</a>
+    Command line support
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="commander.js">
+  <h3>
+    <a href="#commander.js" name="commander.js" class="pilcrow">&#182;</a>
+    Commander.js
+  </h3>
+</div>
+
+
+<p>Commander is a light-weight, expressive, and powerful command-line framework.</p>
+
+<p>See more at <a href="http://visionmedia.github.io/commander.js/">Commander.js</a></p>
+
+
+<div class="pilwrap" id="colors">
+  <h3>
+    <a href="#colors" name="colors" class="pilcrow">&#182;</a>
+    Colors
+  </h3>
+</div>
+
+
+<p>Easy way to get colorful output mainly on the command line.</p>
+
+<p>See more at <a href="https://github.com/marak/colors.js/">colors.js</a></p>
+
+
+<div class="pilwrap" id="sprintf-js">
+  <h3>
+    <a href="#sprintf-js" name="sprintf-js" class="pilcrow">&#182;</a>
+    sprintf-js
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="maintenance">
+  <h2>
+    <a href="#maintenance" name="maintenance" class="pilcrow">&#182;</a>
+    Maintenance
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="debug">
+  <h3>
+    <a href="#debug" name="debug" class="pilcrow">&#182;</a>
+    debug
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="winston">
+  <h3>
+    <a href="#winston" name="winston" class="pilcrow">&#182;</a>
+    winston
+  </h3>
+</div>
+
+
+<ul>
+<li>Logging: <a href="https://github.com/flatiron/winston">winston</a></li>
+</ul>
+
+
+<div class="pilwrap" id="web%20server%20modules">
+  <h2>
+    <a href="#web%20server%20modules" name="web%20server%20modules" class="pilcrow">&#182;</a>
+    Web server modules
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="express">
+  <h3>
+    <a href="#express" name="express" class="pilcrow">&#182;</a>
+    express
+  </h3>
+</div>
+
+
+<p>Framework: <a href="http://expressjs.com">express.js</a></p>
+
+
+<div class="pilwrap" id="helmet">
+  <h3>
+    <a href="#helmet" name="helmet" class="pilcrow">&#182;</a>
+    helmet
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="toobusy-js">
+  <h3>
+    <a href="#toobusy-js" name="toobusy-js" class="pilcrow">&#182;</a>
+    toobusy-js
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="node-force-domain">
+  <h3>
+    <a href="#node-force-domain" name="node-force-domain" class="pilcrow">&#182;</a>
+    node-force-domain
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="stream-rotate">
+  <h3>
+    <a href="#stream-rotate" name="stream-rotate" class="pilcrow">&#182;</a>
+    stream-rotate
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="template%20languages">
+  <h2>
+    <a href="#template%20languages" name="template%20languages" class="pilcrow">&#182;</a>
+    Template languages
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="jade">
+  <h3>
+    <a href="#jade" name="jade" class="pilcrow">&#182;</a>
+    jade
+  </h3>
+</div>
+
+
+<p>Template: <a href="http://jade-lang.com">jade</a>,</p>
+
+
+<div class="pilwrap" id="stylus">
+  <h3>
+    <a href="#stylus" name="stylus" class="pilcrow">&#182;</a>
+    stylus
+  </h3>
+</div>
+
+
+<p><a href="http://visionmedia.github.io/nib/">nib</a></p>
+
+
+<div class="pilwrap" id="nib">
+  <h3>
+    <a href="#nib" name="nib" class="pilcrow">&#182;</a>
+    nib
+  </h3>
+</div>
+
+
+<p><a href="http://visionmedia.github.io/nib/">nib</a></p>
+
+
+<div class="pilwrap" id="miscellaneous">
+  <h2>
+    <a href="#miscellaneous" name="miscellaneous" class="pilcrow">&#182;</a>
+    Miscellaneous
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="moment">
+  <h3>
+    <a href="#moment" name="moment" class="pilcrow">&#182;</a>
+    moment
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="passport">
+  <h3>
+    <a href="#passport" name="passport" class="pilcrow">&#182;</a>
+    passport
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="mongoose">
+  <h3>
+    <a href="#mongoose" name="mongoose" class="pilcrow">&#182;</a>
+    mongoose
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="socket.io">
+  <h3>
+    <a href="#socket.io" name="socket.io" class="pilcrow">&#182;</a>
+    socket.io
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="modules%20for%20development%20system%20only">
+  <h2>
+    <a href="#modules%20for%20development%20system%20only" name="modules%20for%20development%20system%20only" class="pilcrow">&#182;</a>
+    Modules for development system only
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="docker">
+  <h3>
+    <a href="#docker" name="docker" class="pilcrow">&#182;</a>
+    docker
+  </h3>
+</div>
+
+
+<p>Used to create the documentation out of code and
+<a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>.
+<a href="http://jbt.github.io/docker/src/docker.js.html">docker</a></p>
+
+
+<div class="pilwrap" id="chokidar">
+  <h3>
+    <a href="#chokidar" name="chokidar" class="pilcrow">&#182;</a>
+    chokidar
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="diff">
+  <h3>
+    <a href="#diff" name="diff" class="pilcrow">&#182;</a>
+    diff
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="fs-extra">
+  <h3>
+    <a href="#fs-extra" name="fs-extra" class="pilcrow">&#182;</a>
+    fs-extra
+  </h3>
+</div>
+
+
+<p>Extension to the fs module which adds recursive file operations.</p>
+
+
+<div class="pilwrap" id="browserify">
+  <h3>
+    <a href="#browserify" name="browserify" class="pilcrow">&#182;</a>
+    browserify
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="icsify">
+  <h3>
+    <a href="#icsify" name="icsify" class="pilcrow">&#182;</a>
+    icsify
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="minifyify">
+  <h3>
+    <a href="#minifyify" name="minifyify" class="pilcrow">&#182;</a>
+    minifyify
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="node-inspector">
+  <h3>
+    <a href="#node-inspector" name="node-inspector" class="pilcrow">&#182;</a>
+    node-inspector
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="test%20modules">
+  <h2>
+    <a href="#test%20modules" name="test%20modules" class="pilcrow">&#182;</a>
+    Test modules
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="coffeelint">
+  <h3>
+    <a href="#coffeelint" name="coffeelint" class="pilcrow">&#182;</a>
+    coffeelint
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="mocha">
+  <h3>
+    <a href="#mocha" name="mocha" class="pilcrow">&#182;</a>
+    mocha
+  </h3>
+</div>
+
+
+<ul>
+<li>Testing: <a href="http://visionmedia.github.io/mocha/">Mocha</a></li>
+</ul>
+
+
+<div class="pilwrap" id="chai">
+  <h3>
+    <a href="#chai" name="chai" class="pilcrow">&#182;</a>
+    chai
+  </h3>
+</div>
+
+
+<p>with <a href="http://chaijs.com">chai</a>,</p>
+
+
+<div class="pilwrap" id="sinon">
+  <h3>
+    <a href="#sinon" name="sinon" class="pilcrow">&#182;</a>
+    sinon
+  </h3>
+</div>
+
+
+<p><a href="http://sinonjs.org">sinon</a> and</p>
+
+
+<div class="pilwrap" id="supervisor">
+  <h3>
+    <a href="#supervisor" name="supervisor" class="pilcrow">&#182;</a>
+    supervisor
+  </h3>
+</div>
+
+
+
+<div class="pilwrap" id="casper">
+  <h3>
+    <a href="#casper" name="casper" class="pilcrow">&#182;</a>
+    Casper
+  </h3>
+</div>
+
+
+<p><a href="http://casperjs.org">casper.js</a></p>
+
+
+<div class="pilwrap" id="client%20modules">
+  <h2>
+    <a href="#client%20modules" name="client%20modules" class="pilcrow">&#182;</a>
+    Client modules
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="angular%20js">
+  <h3>
+    <a href="#angular%20js" name="angular%20js" class="pilcrow">&#182;</a>
+    Angular JS
+  </h3>
+</div>
+
+
+<p>This client library is added here to be compiled into the client scripts.
+See more at <a href="http://docs.angularjs.org">AngularJS</a>.</p></div>
+  </div>
+</body>
+</html>

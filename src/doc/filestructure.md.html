@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>filestructure.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+  <script src="../../fileSearch.js"></script>
+  <script src="../../goToLine.js"></script>
+  <link rel="stylesheet" href="../../fileSearch.css" />
+  <link rel="stylesheet" href="../../goToLine.css" />
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#file%20structure">File Structure</a>
+      </div>
+      <div class="heading h2">
+        <a href="#overview">Overview</a>
+      </div>
+      <div class="heading h2">
+        <a href="#possible%20directories">Possible directories</a>
+      </div>
+      <div class="heading h2">
+        <a href="#source">Source</a>
+      </div>
+      <div class="heading h2">
+        <a href="#development">Development</a>
+      </div>
+      <div class="heading h2">
+        <a href="#installed">Installed</a>
+      </div>
+      <div class="heading h2">
+        <a href="#productive">Productive</a>
+      </div>
+      <div class="heading h2">
+        <a href="#where%20belongs%20what%3F">Where belongs what?</a>
+      </div>
+      <div class="heading h2">
+        <a href="#more%20details%20about%20some%20sections">More details about some sections</a>
+      </div>
+      <div class="heading h3">
+        <a href="#var%20folder">var folder</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="docs markdown">
+<div class="pilwrap" id="file%20structure">
+  <h1>
+    <a href="#file%20structure" name="file%20structure" class="pilcrow">&#182;</a>
+    File Structure
+  </h1>
+</div>
+
+
+<p>All modules in the alinex universe will use the same directory structure.
+This follows the general standards and is described here.</p>
+
+
+<div class="pilwrap" id="overview">
+  <h2>
+    <a href="#overview" name="overview" class="pilcrow">&#182;</a>
+    Overview
+  </h2>
+</div>
+
+
+<p>The locally installed system may be in one of the following states which
+presents the development cycle of the system:</p>
+
+<ol>
+<li><strong>Source</strong> - that's the base data</li>
+<li><strong>Development</strong> - after installing</li>
+<li><strong>Installed</strong> - if installed from npm (sources removed)</li>
+<li><strong>Productive</strong> - after the system is configured</li>
+</ol>
+
+<p>Each of these states may have some of the possible directories so they will
+be referenced in the further description.</p>
+
+<p><strong>Source</strong></p>
+
+<blockquote>
+  <p>The developer will start with the GIT source by cloning or forking.</p>
+</blockquote>
+
+<p><strong>Development</strong></p>
+
+<blockquote>
+  <p>While in development additional directories will be created while compiling and
+  testing the code.</p>
+</blockquote>
+
+<p><strong>Installed</strong></p>
+
+<blockquote>
+  <p>For productive use, this is the start point. You get a ready to run compiled
+  system.</p>
+</blockquote>
+
+<p><strong>Productive</strong></p>
+
+<blockquote>
+  <p>In the first run the system may be configured and create some additional
+  directories for configs and runtime data.</p>
+</blockquote>
+
+
+<div class="pilwrap" id="possible%20directories">
+  <h2>
+    <a href="#possible%20directories" name="possible%20directories" class="pilcrow">&#182;</a>
+    Possible directories
+  </h2>
+</div>
+
+
+<p>The following list displays all directories of any state which may exist each
+listed with the states to which it belongs:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// all</span>
+  <span class="nx">develop</span>     <span class="c1">// source, development</span>
+<span class="nx">coverage</span>      <span class="c1">// development</span>
+<span class="nx">data</span>          <span class="c1">// productive</span>
+<span class="nx">doc</span>           <span class="c1">// development</span>
+<span class="nx">lib</span>           <span class="c1">// development, ...</span>
+<span class="nx">log</span>           <span class="c1">// productive</span>
+<span class="nx">node_modules</span>  <span class="c1">// development, ...</span>
+<span class="nx">src</span>           <span class="c1">// source, development</span>
+<span class="nx">test</span>          <span class="c1">// source, development</span>
+<span class="kd">var</span>           <span class="c1">// source, ...</span>
+  <span class="nx">lib</span>         <span class="c1">// productive</span>
+  <span class="nx">local</span>       <span class="c1">// development, ...</span>
+  <span class="nx">src</span>         <span class="c1">// source, ...</span>
+</code></pre></div>
+
+
+
+<p>Read the further sections to get more information of what resides in which
+directory and how it is used and created.</p>
+
+
+<div class="pilwrap" id="source">
+  <h2>
+    <a href="#source" name="source" class="pilcrow">&#182;</a>
+    Source
+  </h2>
+</div>
+
+
+<p>The source specifies what is stored in the code repository.</p>
+
+<p>This stage contains the following directories:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
+  <span class="nx">develop</span>     <span class="c1">// scripts which only be needed in development</span>
+<span class="nx">src</span>           <span class="c1">// source code</span>
+  <span class="nx">doc</span>         <span class="c1">// general documentation which won&#39;t belong to any specific file</span>
+<span class="nx">test</span>          <span class="c1">// test data and test suites</span>
+  <span class="nx">data</span>        <span class="c1">// test data</span>
+  <span class="nx">mocha</span>       <span class="c1">// mocha test suites</span>
+<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
+  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
+</code></pre></div>
+
+
+
+<p>The source code resides in the <code>src</code> folder and will be copied/compiled into
+<code>lib</code> to run. This step is done on prepublication of package.</p>
+
+
+<div class="pilwrap" id="development">
+  <h2>
+    <a href="#development" name="development" class="pilcrow">&#182;</a>
+    Development
+  </h2>
+</div>
+
+
+<p>Shows what the developer will find on his machine while developing and testing
+the system. While testing the development system will also get all the
+directories from productive which are not listed here.</p>
+
+<p>This stage contains the following directories:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
+  <span class="nx">develop</span>     <span class="c1">// scripts which only be needed in development</span>
+<span class="nx">coverage</span>      <span class="c1">// coverage report from tests</span>
+<span class="nx">doc</span>           <span class="c1">// created documentation (optional)</span>
+<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
+<span class="nx">src</span>           <span class="c1">// source code</span>
+<span class="nx">test</span>          <span class="c1">// test data and test suites</span>
+<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
+  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
+  <span class="nx">local</span>       <span class="c1">// linked or copied from src (not overridden on update)</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="installed">
+  <h2>
+    <a href="#installed" name="installed" class="pilcrow">&#182;</a>
+    Installed
+  </h2>
+</div>
+
+
+<p>This is what you get after a fresh npm installation.</p>
+
+<p>This stage contains the following directories:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
+<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
+<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="productive">
+  <h2>
+    <a href="#productive" name="productive" class="pilcrow">&#182;</a>
+    Productive
+  </h2>
+</div>
+
+
+<p>And finally this shows what resides on the productive server.</p>
+
+<p>This stage contains the following directories:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
+<span class="nx">data</span>          <span class="c1">// runtime data storage</span>
+<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">log</span>           <span class="c1">// log files and debugging data</span>
+<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
+<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
+  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
+  <span class="nx">local</span>       <span class="c1">// copied from src (not overridden on update)</span>
+  <span class="nx">lib</span>         <span class="c1">// linked or compiled from local (on system start or manually)</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="where%20belongs%20what%3F">
+  <h2>
+    <a href="#where%20belongs%20what%3F" name="where%20belongs%20what%3F" class="pilcrow">&#182;</a>
+    Where belongs what?
+  </h2>
+</div>
+
+
+<p>The following list should give an overview of there to store what:</p>
+
+<ul>
+<li>specific build steps -> <code>/bin/develop/</code></li>
+<li>templates -> <code>/var/.../tèmplate</code></li>
+<li>temporary files -> systems temp folder</li>
+<li>configuration -> <code>/var/.../config</code></li>
+<li>server statics -> <code>/var/.../static</code></li>
+<li>language packs -> <code>/var/.../locale</code></li>
+<li>cache files -> systems temp folder</li>
+</ul>
+
+
+<div class="pilwrap" id="more%20details%20about%20some%20sections">
+  <h2>
+    <a href="#more%20details%20about%20some%20sections" name="more%20details%20about%20some%20sections" class="pilcrow">&#182;</a>
+    More details about some sections
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="var%20folder">
+  <h3>
+    <a href="#var%20folder" name="var%20folder" class="pilcrow">&#182;</a>
+    <code>var</code> folder
+  </h3>
+</div>
+
+
+<p>The var folder contains everything that may be changed for the individual
+installation.</p>
+
+<p>It contains the three subfolders:</p>
+
+<ul>
+<li><code>src</code> - the source files which will change with each update</li>
+<li><code>local</code> - local maybe changed files or links to the sources</li>
+<li><code>lib</code> - linked or compiled files from source overridden by local</li>
+</ul>
+
+<p>Within these three directories you will find the following structure:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">config</span>
+<span class="nx">template</span>
+  <span class="o">&lt;</span><span class="nx">theme</span><span class="o">&gt;</span>
+<span class="kr">static</span>
+<span class="p">...</span>
+</code></pre></div>
+
+</div>
+  </div>
+</body>
+</html>

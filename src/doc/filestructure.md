@@ -20,42 +20,44 @@ be referenced in the further description.
 
 **Source**
 
-The developer will start with the GIT source by cloning or forking.
+> The developer will start with the GIT source by cloning or forking.
 
 **Development**
 
-While in development additional directories will be created while compiling and
-testing the code.
+> While in development additional directories will be created while compiling and
+> testing the code.
 
 **Installed**
 
-For productive use, this is the start point. You get a ready to run compiled
-system.
+> For productive use, this is the start point. You get a ready to run compiled
+> system.
 
 **Productive**
 
-In the first run the system may be configured and create some additional
-directories for configs and runtime data.
+> In the first run the system may be configured and create some additional
+> directories for configs and runtime data.
 
 
 Possible directories
 -------------------------------------------------
 
 The following list displays all directories of any state which may exist each
-listet with the states to which it belongs:
+listed with the states to which it belongs:
 
     bin           // all
+      develop     // source, development
+    coverage      // development
     data          // productive
     doc           // development
-    lib           // development
+    lib           // development, ...
     log           // productive
     node_modules  // development, ...
     src           // source, development
     test          // source, development
     var           // source, ...
-      src         // source, ...
-      local       // development, ...
       lib         // productive
+      local       // development, ...
+      src         // source, ...
 
 Read the further sections to get more information of what resides in which
 directory and how it is used and created.
@@ -69,15 +71,16 @@ The source specifies what is stored in the code repository.
 This stage contains the following directories:
 
     bin           // executable files
+      develop     // scripts which only be needed in development
     src           // source code
       doc         // general documentation which won't belong to any specific file
     test          // test data and test suites
       data        // test data
       mocha       // mocha test suites
     var           // data and code which maybe changed in installation
-      src         // original data, will be overriden on update
+      src         // original data, will be overridden on update
 
-The source code resides in the `src` dir and will be copied/compiled into
+The source code resides in the `src` folder and will be copied/compiled into
 `lib` to run. This step is done on prepublication of package.
 
 
@@ -91,13 +94,15 @@ directories from productive which are not listed here.
 This stage contains the following directories:
 
     bin           // executable files
+      develop     // scripts which only be needed in development
+    coverage      // coverage report from tests
     doc           // created documentation (optional)
     lib           // copied/compiled code
     node_modules  // npm installed packages
     src           // source code
     test          // test data and test suites
     var           // data and code which maybe changed in installation
-      src         // original data, will be overriden on update
+      src         // original data, will be overridden on update
       local       // linked or copied from src (not overridden on update)
 
 
@@ -127,23 +132,29 @@ This stage contains the following directories:
     log           // log files and debugging data
     node_modules  // npm installed packages
     var           // data and code which maybe changed in installation
-      src         // original data, will be overriden on update
+      src         // original data, will be overridden on update
       local       // copied from src (not overridden on update)
-      run         // linked or compiled from local (on system start or manually)
+      lib         // linked or compiled from local (on system start or manually)
 
 
 Where belongs what?
 -------------------------------------------------
-- templates -> /var
-- temporary files -> systems temp dir
-- configuration -> /var
-- server statics -> /var
-- language packs -> /var
-- cache files -> systems temp dir
+The following list should give an overview of there to store what:
+
+- specific build steps -> `/bin/develop/`
+- templates -> `/var/.../tèmplate`
+- temporary files -> systems temp folder
+- configuration -> `/var/.../config`
+- server statics -> `/var/.../static`
+- language packs -> `/var/.../locale`
+- cache files -> systems temp folder
 
 
-var folder
+More details about some sections
 -------------------------------------------------
+
+### `var` folder
+
 The var folder contains everything that may be changed for the individual
 installation.
 
@@ -151,7 +162,7 @@ It contains the three subfolders:
 
 - `src` - the source files which will change with each update
 - `local` - local maybe changed files or links to the sources
-- `run` - linked or compiled files from source overriden by local
+- `lib` - linked or compiled files from source overridden by local
 
 Within these three directories you will find the following structure:
 
@@ -159,3 +170,4 @@ Within these three directories you will find the following structure:
     template
       <theme>
     static
+    ...

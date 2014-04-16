@@ -32,7 +32,10 @@
         <a href="#check%20for%20substring">Check for substring</a>
       </div>
       <div class="heading h2">
-        <a href="#arrays">Arrays</a>
+        <a href="#control%20flow">Control flow</a>
+      </div>
+      <div class="heading h3">
+        <a href="#try%20without%20catch">Try without catch</a>
       </div>
       <div class="heading h2">
         <a href="#callbacks">Callbacks</a>
@@ -55,6 +58,9 @@
 </div>
 
 
+<p>This page lists some tricks and tips which are mostly not mentioned in the
+official docs.</p>
+
 
 <div class="pilwrap" id="strings">
   <h2>
@@ -74,12 +80,56 @@
 
 
 
-<div class="pilwrap" id="arrays">
+<div class="highlight"><pre><code><span class="k">if</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+</code></pre></div>
+
+
+
+<p>The above syntax uses the tilde as bitwise or operator to get a boolean
+readable value. If the substring is found it will be true, and false (0) if it
+isn’t.</p>
+
+<p>Or use the negation:</p>
+
+
+<div class="highlight"><pre><code><span class="k">if</span> <span class="o">!~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="control%20flow">
   <h2>
-    <a href="#arrays" name="arrays" class="pilcrow">&#182;</a>
-    Arrays
+    <a href="#control%20flow" name="control%20flow" class="pilcrow">&#182;</a>
+    Control flow
   </h2>
 </div>
+
+
+
+<div class="pilwrap" id="try%20without%20catch">
+  <h3>
+    <a href="#try%20without%20catch" name="try%20without%20catch" class="pilcrow">&#182;</a>
+    Try without catch
+  </h3>
+</div>
+
+
+
+<div class="highlight"><pre><code><span class="k">try</span>
+  <span class="nx">funcWhichMayThrowError</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+<p>If you ommit the catch the error will be supressed.</p>
+
+
+<div class="highlight"><pre><code><span class="k">try</span> <span class="p">{</span>
+  <span class="nx">funcWhichMayThrowError</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">_error</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div>
+
 
 
 

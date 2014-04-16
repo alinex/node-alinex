@@ -45,7 +45,6 @@ The following list displays all directories of any state which may exist each
 listed with the states to which it belongs:
 
     bin           // all
-      develop     // source, development
     coverage      // development
     data          // productive
     doc           // development
@@ -71,7 +70,6 @@ The source specifies what is stored in the code repository.
 This stage contains the following directories:
 
     bin           // executable files
-      develop     // scripts which only be needed in development
     src           // source code
       doc         // general documentation which won't belong to any specific file
     test          // test data and test suites
@@ -94,7 +92,6 @@ directories from productive which are not listed here.
 This stage contains the following directories:
 
     bin           // executable files
-      develop     // scripts which only be needed in development
     coverage      // coverage report from tests
     doc           // created documentation (optional)
     lib           // copied/compiled code

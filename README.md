@@ -73,6 +73,16 @@ Find additional information in the following documents:
 - [git](src/doc/git.md.html)
 
 
+Alinex Modules
+-------------------------------------------------
+
+List of modules which are released as part of the alinex universe, but may be
+used independently.
+
+- [alinex-make](http://alinex.github.io/node-make) - build tool
+- [alinex-error](http://alinex.github.io/node-error) - enhanced error reporting
+
+
 License
 -------------------------------------------------
 

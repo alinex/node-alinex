@@ -81,6 +81,7 @@ used independently.
 
 - [alinex-make](http://alinex.github.io/node-make) - build tool
 - [alinex-error](http://alinex.github.io/node-error) - enhanced error reporting
+- [alinex-fs](http://alinex.github.io/node-fs) - enhanced filesystem tools
 
 
 License

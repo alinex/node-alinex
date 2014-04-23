@@ -26,15 +26,6 @@
         <a href="#npm%20package%20manager">NPM Package Manager</a>
       </div>
       <div class="heading h2">
-        <a href="#installation">Installation</a>
-      </div>
-      <div class="heading h2">
-        <a href="#productive">Productive</a>
-      </div>
-      <div class="heading h2">
-        <a href="#updates">Updates</a>
-      </div>
-      <div class="heading h2">
         <a href="#development">Development</a>
       </div>
     </div>
@@ -49,32 +40,7 @@
 </div>
 
 
-
-<div class="pilwrap" id="installation">
-  <h2>
-    <a href="#installation" name="installation" class="pilcrow">&#182;</a>
-    Installation
-  </h2>
-</div>
-
-
-
-<div class="pilwrap" id="productive">
-  <h2>
-    <a href="#productive" name="productive" class="pilcrow">&#182;</a>
-    Productive
-  </h2>
-</div>
-
-
-
-<div class="pilwrap" id="updates">
-  <h2>
-    <a href="#updates" name="updates" class="pilcrow">&#182;</a>
-    Updates
-  </h2>
-</div>
-
+<p>Short description of how to best work with npm.</p>
 
 
 <div class="pilwrap" id="development">
@@ -83,6 +49,26 @@
     Development
   </h2>
 </div>
+
+
+<p>While developing in node you should go into the applications root folder from
+there you may add packages which are specified in package.json:</p>
+
+
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="err">#</span> <span class="nx">install</span> <span class="k">new</span> <span class="nx">ones</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">update</span>  <span class="err">#</span> <span class="nx">update</span> <span class="nx">already</span> <span class="nx">installed</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">dedupe</span>  <span class="err">#</span> <span class="nx">remove</span> <span class="nx">duplication</span> <span class="k">if</span> <span class="nx">possible</span>
+</code></pre></div>
+
+
+
+<p>To only add a new package into the package.json you may instead call:</p>
+
+
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span>       <span class="err">#</span> <span class="nx">add</span> <span class="nx">to</span> <span class="nx">dependencies</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>   <span class="err">#</span> <span class="nx">add</span> <span class="nx">to</span> <span class="nx">development</span> <span class="nx">dependencies</span>
+</code></pre></div>
+
 </div>
   </div>
 </body>

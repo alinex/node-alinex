@@ -1,163 +1,140 @@
 Third Party Modules
 =================================================
 
-This page gives a short description of the used npm modules in different
-categories.
+This page gives a short description of the used and preferred npm modules in
+different categories.
+It's neither meant to be a complete list or show the best modules but more my
+selection from the ever growing node modules list.
 
 
 General modules
 -------------------------------------------------
 
-### CoffeeScript
+### Language tools
 
-CoffeeScript is a language that compiles into JavaScript but is easier to
-read and write.
+- [CoffeeScript](http://coffeescript.org)
+  a language that compiles into JavaScript but is easier to read and write
+- [Async](https://github.com/caolan/async)
+  An utility module which provides straight-forward, powerful functions for
+  working with asynchronous JavaScript.
 
-See more at [CoffeeScript](http://coffeescript.org).
+### Others
+
+- [moment](http://momentjs.com/docs/)
+  Parse, manipulate, and display dates and times
 
 
-### Async utilities
+System Tools
+-------------------------------------------------
 
-An utility module which provides straight-forward, powerful functions for
-working with asynchronous JavaScript.
+### Filesystem
 
-See more at [Async](https://github.com/caolan/async)
+- mkdirp
+  not used in favor for [alinex-fs](http://alinex.github.io/node-fs) mkdirs
+- chokidar - fs-watch wrapper
+
+
+### Server Health
+
+
+Data Storages
+-------------------------------------------------
+
+### Relational databases
+
+- [mysql]()
+
+
+### Document stores
 
 
 Command line support
 -------------------------------------------------
 
-### Commander.js
-
-Commander is a light-weight, expressive, and powerful command-line framework.
-
-See more at [Commander.js](http://visionmedia.github.io/commander.js/)
-
-
-### Colors
-
-Easy way to get colorful output mainly on the command line.
-
-See more at [colors.js](https://github.com/marak/colors.js/)
+- [Commander.js](http://visionmedia.github.io/commander.js/)
+  a light-weight, expressive, and powerful command-line framework
+- [Prompt](http://github.com/flatiron/prompt)
+  easy and beautiful command-line prompt
+- [Colors](https://github.com/marak/colors.js/)
+  easy way to get colorful output mainly on the command line.
 
 
-### sprintf-js
-
-
-
-Maintenance
+Services
 -------------------------------------------------
 
-### debug
-
-### winston
-
-- Logging: [winston](https://github.com/flatiron/winston)
+- [request](https://github.com/mikeal/request)
+  Simplified HTTP request client
 
 
-Web server modules
+Server
 -------------------------------------------------
 
-### express
+### Management
 
-Framework: [express.js](http://expressjs.com)
+- [Forever](http://github.com/nodejitsu/forever)
+  a simple CLI tool for ensuring that a given node script runs continuously
 
-### helmet
+### Maintenance
 
-### toobusy-js
+- [debug](https://github.com/visionmedia/debug)
+  tiny node.js & browser debugging utility for your libraries and applications
+- [Winston](http://github.com/flatiron/winston)
+  extensible multi-transport async logging library
 
-### node-force-domain
+### Webserver
 
-### stream-rotate
+- [express.js](http://expressjs.com)
+
+### Webserver modules
+
+- helmet
+- toobusy-js
+- node-force-domain
+- stream-rotate
 
 
 Template languages
 -------------------------------------------------
 
-### jade
+### HTML
 
-Template: [jade](http://jade-lang.com),
+- [jade](http://jade-lang.com)
 
-### stylus
+### CSS
 
-[nib](http://visionmedia.github.io/nib/)
-
-### nib
-
-[nib](http://visionmedia.github.io/nib/)
+- Stylus
+  with [nib](http://visionmedia.github.io/nib/)
 
 
-Miscellaneous
+Test
 -------------------------------------------------
 
-### moment
+### Testrunner
 
-### passport
+- [Mocha](http://visionmedia.github.io/mocha/)
+  Simple, flexible, javascript test framework
 
-### mongoose
+### Helper
 
-### socket.io
-
-
-Modules for development system only
--------------------------------------------------
-
-### docker
-
-Used to create the documentation out of code and
-[Markdown](http://daringfireball.net/projects/markdown/syntax).
-[docker](http://jbt.github.io/docker/src/docker.js.html)
-
-### chokidar
-
-### diff
-
-### fs-extra
-
-Extension to the fs module which adds recursive file operations.
-
-### browserify
-
-### icsify
-
-### minifyify
-
-### node-inspector
-
-
-Test modules
--------------------------------------------------
-
-### coffeelint
-
-### mocha
-
-- Testing: [Mocha](http://visionmedia.github.io/mocha/)
-
-### chai
-
-  with [chai](http://chaijs.com),
-
-### sinon
-
-  [sinon](http://sinonjs.org) and
-
-### supervisor
-
-### Casper
-
-  [casper.js](http://casperjs.org)
+- [Chai](http://chaijs.com)
+  assertion library that can be paired with mocha
+- [sinon](http://sinonjs.org)
+  test spies, stubs and mocks
+- [casper.js](http://casperjs.org)
+  navigation scripting & testing utility written in Javascript for the PhantomJS
+  WebKit headless browser and SlimerJS (Gecko)
 
 
 Client modules
 -------------------------------------------------
 
-### Angular JS
 
-This client library is added here to be compiled into the client scripts.
-See more at [AngularJS](http://docs.angularjs.org).
-
+- [AngularJS](http://docs.angularjs.org)
+  client library is added here to be compiled into the client scripts
 
 
-
-
+Other
+-------------------------------------------------
+- passport
+- mongoose
+- socket.io

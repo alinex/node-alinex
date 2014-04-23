@@ -1,6 +1,10 @@
 CoffeeScript Tipr & Tricks
 =================================================
 
+CoffeeScript is used as development language because it is very easy to write
+and read. In my opinion it makes development and maintenance easier and faster.
+Specially in the callback sequences of JavaScript.
+
 This page lists some tricks and tips which are mostly not mentioned in the
 official docs.
 

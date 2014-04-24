@@ -71,6 +71,7 @@ Find additional information in the following documents:
 - [coffee](src/doc/coffee.md.html)
 - [npm](src/doc/npm.md.html)
 - [git](src/doc/git.md.html)
+- [sublime](src/doc/sublime.md.html)
 
 
 Alinex Modules

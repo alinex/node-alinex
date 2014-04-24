@@ -73,6 +73,27 @@ following ways:
 Read more in the [errorHandler](src/bin/errorHandler.coffee.html) documentation.
 
 
+Control flow
+-------------------------------------------------
+To make the code more readable and prevent some hanging else-statements which
+you have to search to which indention level it belongs to return or callback
+as fast as possible.
+
+Bad:
+
+    if err
+      doSomething (err) ->
+        return cb err
+    else
+      return true
+
+Good:
+
+    return true unless err
+    doSomething (err) ->
+      return cb err
+
+
 Documentation
 -------------------------------------------------
 All the code in any language will be documented inline using comments as

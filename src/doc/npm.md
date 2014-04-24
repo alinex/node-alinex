@@ -19,3 +19,11 @@ To only add a new package into the package.json you may instead call:
     > npm install <package> --save       # add to dependencies
     > npm install <package> --save-dev   # add to development dependencies
 
+
+Package Versions
+-------------------------------------------------
+
+While developing I try to be as open as possible in the required versions. So
+I hope all developer follow standards and don't change the API within a minor
+version. So mostly everything till the next major version is allowed in
+package.json.

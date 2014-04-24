@@ -43,6 +43,10 @@ If you ommit the catch the error will be supressed.
 Callbacks
 -------------------------------------------------
 
-### Serial but Asynchroneous
+To prevent checking for a given callback method on every call you may give it
+an empty default function on parameter definition:
 
-### Conditional step
+    test = (src, cb = -> ) ->
+      console.log 'do something'
+      cb()
+

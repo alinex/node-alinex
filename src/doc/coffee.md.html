@@ -40,12 +40,6 @@
       <div class="heading h2">
         <a href="#callbacks">Callbacks</a>
       </div>
-      <div class="heading h3">
-        <a href="#serial%20but%20asynchroneous">Serial but Asynchroneous</a>
-      </div>
-      <div class="heading h3">
-        <a href="#conditional%20step">Conditional step</a>
-      </div>
     </div>
   </div>
   <div id="sidebar-toggle"></div>
@@ -145,22 +139,15 @@ isn’t.</p>
 </div>
 
 
-
-<div class="pilwrap" id="serial%20but%20asynchroneous">
-  <h3>
-    <a href="#serial%20but%20asynchroneous" name="serial%20but%20asynchroneous" class="pilcrow">&#182;</a>
-    Serial but Asynchroneous
-  </h3>
-</div>
+<p>To prevent checking for a given callback method on every call you may give it
+an empty default function on parameter definition:</p>
 
 
+<div class="highlight"><pre><code><span class="nx">test</span> <span class="o">=</span> <span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">cb</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s1">&#39;do something&#39;</span>
+  <span class="nx">cb</span><span class="p">()</span>
+</code></pre></div>
 
-<div class="pilwrap" id="conditional%20step">
-  <h3>
-    <a href="#conditional%20step" name="conditional%20step" class="pilcrow">&#182;</a>
-    Conditional step
-  </h3>
-</div>
 </div>
   </div>
 </body>

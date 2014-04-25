@@ -58,20 +58,20 @@ Find additional information in the following documents:
 
 ### Development
 
-- [Styleguide](src/doc/styleguide.md.html)
-- [File Structure](src/doc/filestructure.md.html)
-- [Development Tools](src/doc/developtools.md.html)
+- [Styleguide](src/doc/styleguide.md)
+- [File Structure](src/doc/filestructure.md)
+- [Development Tools](src/doc/developtools.md)
 
 ### Helper
 
-- [Third Party Modules](src/doc/3rdparty.md.html)
+- [Third Party Modules](src/doc/3rdparty.md)
 
 ### Usage Tips and Tricks
 
-- [coffee](src/doc/coffee.md.html)
-- [npm](src/doc/npm.md.html)
-- [git](src/doc/git.md.html)
-- [sublime](src/doc/sublime.md.html)
+- [coffee](src/doc/coffee.md)
+- [npm](src/doc/npm.md)
+- [git](src/doc/git.md)
+- [sublime](src/doc/sublime.md)
 
 
 Alinex Modules

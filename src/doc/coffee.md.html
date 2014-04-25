@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/coffee.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/coffee.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -40,6 +40,12 @@
       <div class="heading h2">
         <a href="#callbacks">Callbacks</a>
       </div>
+      <div class="heading h3">
+        <a href="#serial%20but%20asynchroneous">Serial but Asynchroneous</a>
+      </div>
+      <div class="heading h3">
+        <a href="#conditional%20step">Conditional step</a>
+      </div>
     </div>
   </div>
   <div id="sidebar-toggle"></div>
@@ -58,6 +64,10 @@ Specially in the callback sequences of JavaScript.</p>
 
 <p>This page lists some tricks and tips which are mostly not mentioned in the
 official docs.</p>
+
+<p>Also in this documentation which is aimed for the alinex developer I often use 
+examples in coffee script. While in description of modules which may be used 
+anywhere I will use javascript so anybody can read it.</p>
 
 
 <div class="pilwrap" id="strings">
@@ -139,15 +149,22 @@ isn’t.</p>
 </div>
 
 
-<p>To prevent checking for a given callback method on every call you may give it
-an empty default function on parameter definition:</p>
+
+<div class="pilwrap" id="serial%20but%20asynchroneous">
+  <h3>
+    <a href="#serial%20but%20asynchroneous" name="serial%20but%20asynchroneous" class="pilcrow">&#182;</a>
+    Serial but Asynchroneous
+  </h3>
+</div>
 
 
-<div class="highlight"><pre><code><span class="nx">test</span> <span class="o">=</span> <span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">cb</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">)</span> <span class="o">-&gt;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s1">&#39;do something&#39;</span>
-  <span class="nx">cb</span><span class="p">()</span>
-</code></pre></div>
 
+<div class="pilwrap" id="conditional%20step">
+  <h3>
+    <a href="#conditional%20step" name="conditional%20step" class="pilcrow">&#182;</a>
+    Conditional step
+  </h3>
+</div>
 </div>
   </div>
 </body>

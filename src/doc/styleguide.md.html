@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/styleguide.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/styleguide.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -36,9 +36,6 @@
       </div>
       <div class="heading h2">
         <a href="#error%2Fexception%20handling">Error/Exception handling</a>
-      </div>
-      <div class="heading h2">
-        <a href="#control%20flow">Control flow</a>
       </div>
       <div class="heading h2">
         <a href="#documentation">Documentation</a>
@@ -156,42 +153,8 @@ an fatal error which may stop the overall process.</p>
 <li><p>Another solution is to use eventful methods which emit an <code>error</code> event</p></li>
 </ul>
 
-<p>Read more in the <a href="src/bin/errorHandler.coffee.html">errorHandler</a> documentation.</p>
-
-
-<div class="pilwrap" id="control%20flow">
-  <h2>
-    <a href="#control%20flow" name="control%20flow" class="pilcrow">&#182;</a>
-    Control flow
-  </h2>
-</div>
-
-
-<p>To make the code more readable and prevent some hanging else-statements which
-you have to search to which indention level it belongs to return or callback
-as fast as possible.</p>
-
-<p>Bad:</p>
-
-
-<div class="highlight"><pre><code><span class="k">if</span> <span class="nx">err</span>
-  <span class="nx">doSomething</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">-&gt;</span>
-    <span class="k">return</span> <span class="nx">cb</span> <span class="nx">err</span>
-<span class="k">else</span>
-  <span class="k">return</span> <span class="kc">true</span>
-</code></pre></div>
-
-
-
-<p>Good:</p>
-
-
-<div class="highlight"><pre><code><span class="k">return</span> <span class="kc">true</span> <span class="nx">unless</span> <span class="nx">err</span>
-<span class="nx">doSomething</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">-&gt;</span>
-  <span class="k">return</span> <span class="nx">cb</span> <span class="nx">err</span>
-</code></pre></div>
-
-
+<p>Read more in the <a href="https://github.com/alinex/node-error/">errorHandler</a>
+documentation.</p>
 
 
 <div class="pilwrap" id="documentation">

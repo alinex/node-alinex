@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sublime.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/sublime.md", defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+  <script src="../../fileSearch.js"></script>
+  <script src="../../goToLine.js"></script>
+  <link rel="stylesheet" href="../../fileSearch.css" />
+  <link rel="stylesheet" href="../../goToLine.css" />
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#sublime%20text%203%20tips%20and%20tricks">Sublime Text 3 Tips and Tricks</a>
+      </div>
+      <div class="heading h2">
+        <a href="#goto">Goto</a>
+      </div>
+      <div class="heading h2">
+        <a href="#commands">Commands</a>
+      </div>
+      <div class="heading h2">
+        <a href="#editing">Editing</a>
+      </div>
+      <div class="heading h3">
+        <a href="#multiple%20cursors">Multiple cursors</a>
+      </div>
+      <div class="heading h3">
+        <a href="#selections">Selections</a>
+      </div>
+      <div class="heading h3">
+        <a href="#move%20lines%20up%20and%20down">Move lines up and down</a>
+      </div>
+      <div class="heading h3">
+        <a href="#deleting%20lines">Deleting lines</a>
+      </div>
+      <div class="heading h3">
+        <a href="#search%20and%20replace">Search and Replace</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="docs markdown">
+<div class="pilwrap" id="sublime%20text%203%20tips%20and%20tricks">
+  <h1>
+    <a href="#sublime%20text%203%20tips%20and%20tricks" name="sublime%20text%203%20tips%20and%20tricks" class="pilcrow">&#182;</a>
+    Sublime Text 3 Tips and Tricks
+  </h1>
+</div>
+
+
+<p>Since I use sublime text as editor more and more, here some tips and tricks
+I found helpful at work. </p>
+
+
+<div class="pilwrap" id="goto">
+  <h2>
+    <a href="#goto" name="goto" class="pilcrow">&#182;</a>
+    Goto
+  </h2>
+</div>
+
+
+<p>Use the shortcut <code>Ctrl/⌘ + P</code> to:
+- open any file
+- use <code>@...</code> jump to a symbol in the file
+- use <code>#...</code> to search within file
+- use <code>:...</code> to jump to line</p>
+
+<p>You may also combine a starting file selection with one of the in file searches
+like <code>index:30</code> or <code>index@mkdir</code>.</p>
+
+<p>Use <code>Ctrl/⌘ + R</code> to directly open the symbol search or <code>Ctrl/⌘ + G</code> for the
+goto line jump.</p>
+
+
+<div class="pilwrap" id="commands">
+  <h2>
+    <a href="#commands" name="commands" class="pilcrow">&#182;</a>
+    Commands
+  </h2>
+</div>
+
+
+<p>Use <code>Ctrl/⌘ + Shift + P_</code> to open the complete command list and search with some 
+letters within.</p>
+
+
+<div class="pilwrap" id="editing">
+  <h2>
+    <a href="#editing" name="editing" class="pilcrow">&#182;</a>
+    Editing
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="multiple%20cursors">
+  <h3>
+    <a href="#multiple%20cursors" name="multiple%20cursors" class="pilcrow">&#182;</a>
+    Multiple cursors
+  </h3>
+</div>
+
+
+<ol>
+<li>Use <code>Ctrl/⌘ + D</code> to duplicate the cursor to the next occurrence of the same word
+this may be done multiple times. Go back with <code>Ctrl/⌘ + U</code>.</li>
+<li>You may also manually set multiple cursors with <code>Ctrl/⌘ + Mouseclick</code>. </li>
+<li><code>Alt + F3</code> (<code>Ctrl + ⌘ + G</code> on Mac) can be used to directly select all occurrences
+of the current selected word.</li>
+</ol>
+
+<p>If you now edit something it will change on all cursor positions.</p>
+
+
+<div class="pilwrap" id="selections">
+  <h3>
+    <a href="#selections" name="selections" class="pilcrow">&#182;</a>
+    Selections
+  </h3>
+</div>
+
+
+<p>The following shortcuts are available here:
+- <code>Ctrl/⌘ + L</code> to select the whole current line
+- <code>Ctrl/⌘ + Shift + J</code> to select the complete block which is on the same indention 
+  level
+- <code>Ctrl/⌘ + Shift + M</code> to select all within the same bracket
+- <code>Ctrl/⌘ + Shift + Space</code> to select everything in the same scope
+- <code>Ctrl/⌘ + Shift + A</code> to select all within the same HTML tag
+- <code>Alt + Shift + Up</code> to expand selection upwards
+- <code>Alt + Shift + Down</code> to expand selection downwards</p>
+
+
+<div class="pilwrap" id="move%20lines%20up%20and%20down">
+  <h3>
+    <a href="#move%20lines%20up%20and%20down" name="move%20lines%20up%20and%20down" class="pilcrow">&#182;</a>
+    Move lines up and down
+  </h3>
+</div>
+
+
+<p>You may switch lines and move the current line up or down using 
+<code>Ctrl + Shift + Up</code> and <code>Ctrl + Shift + Down</code> (<code>Ctrl + ⌘ + ...</code> on Mac).</p>
+
+
+<div class="pilwrap" id="deleting%20lines">
+  <h3>
+    <a href="#deleting%20lines" name="deleting%20lines" class="pilcrow">&#182;</a>
+    Deleting lines
+  </h3>
+</div>
+
+
+<p>Therefore use <code>Ctrl/⌘ + Shift + K</code> to delete the current line.</p>
+
+
+<div class="pilwrap" id="search%20and%20replace">
+  <h3>
+    <a href="#search%20and%20replace" name="search%20and%20replace" class="pilcrow">&#182;</a>
+    Search and Replace
+  </h3>
+</div>
+
+
+<ul>
+<li><code>Ctrl/⌘ + F</code> to open find dialog</li>
+<li><code>Ctrl/⌘ + H</code> to open replacement dialog</li>
+<li><code>Ctrl/⌘ + Shift + F</code> to open multi file find and replace dialog</li>
+</ul>
+
+<p>Within the dialog you may:
+- <code>F3</code> - Search Forward Using Most Recent Pattern
+- <code>Shift + F3</code> - Search Backwards Using Most Recent Pattern
+- <code>Alt + F3</code> - Select All Matches Using Most Recent Pattern
+- <code>Alt + R</code> - Toggle Regular Expressions
+- <code>Alt + C</code> - Toggle Case Sensitivity
+- <code>Alt + W</code> - Toggle Exact Match
+- <code>Enter</code> - Find Next
+- <code>Shift + Enter</code> - Find Previous
+- <code>Alt + Enter</code> - Find All
+- <code>Ctrl/⌘  + Alt + Enter</code> - Replace All</p>
+
+<p>In Multifile search:
+- <code>F4</code> - Next File Match
+- <code>Ctrl + F4</code> - Previous File Match</p>
+
+<p>You may enter a multi line search pattern, use <code>Ctrl + Enter</code> therefore.</p></div>
+  </div>
+</body>
+</html>

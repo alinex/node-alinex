@@ -70,7 +70,8 @@ following ways:
 
 - Another solution is to use eventful methods which emit an `error` event
 
-Read more in the [errorHandler](src/bin/errorHandler.coffee.html) documentation.
+Read more in the [errorHandler](https://github.com/alinex/node-error/)
+documentation.
 
 
 Control flow

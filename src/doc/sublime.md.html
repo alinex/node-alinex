@@ -28,8 +28,8 @@
       <div class="heading h2">
         <a href="#goto">Goto</a>
       </div>
-      <div class="heading h2">
-        <a href="#commands">Commands</a>
+      <div class="heading h3">
+        <a href="#bookmarks">Bookmarks</a>
       </div>
       <div class="heading h2">
         <a href="#editing">Editing</a>
@@ -44,10 +44,16 @@
         <a href="#move%20lines%20up%20and%20down">Move lines up and down</a>
       </div>
       <div class="heading h3">
-        <a href="#deleting%20lines">Deleting lines</a>
+        <a href="#input%20shortcuts">Input shortcuts</a>
       </div>
-      <div class="heading h3">
+      <div class="heading h2">
         <a href="#search%20and%20replace">Search and Replace</a>
+      </div>
+      <div class="heading h2">
+        <a href="#commands">Commands</a>
+      </div>
+      <div class="heading h2">
+        <a href="#display">Display</a>
       </div>
     </div>
   </div>
@@ -73,29 +79,42 @@ I found helpful at work. </p>
 </div>
 
 
-<p>Use the shortcut <code>Ctrl/⌘ + P</code> to:
-- open any file
-- use <code>@...</code> jump to a symbol in the file
-- use <code>#...</code> to search within file
-- use <code>:...</code> to jump to line</p>
+<p>Use the shortcut <code>Ctrl/⌘ + P</code> to:</p>
+
+<ul>
+<li>open any file</li>
+<li>use <code>@...</code> jump to a symbol in the file</li>
+<li>use <code>#...</code> to search within file</li>
+<li>use <code>:...</code> to jump to line</li>
+</ul>
 
 <p>You may also combine a starting file selection with one of the in file searches
 like <code>index:30</code> or <code>index@mkdir</code>.</p>
 
-<p>Use <code>Ctrl/⌘ + R</code> to directly open the symbol search or <code>Ctrl/⌘ + G</code> for the
-goto line jump.</p>
+<p>Shortcuts are also:</p>
+
+<ul>
+<li><code>Ctrl/⌘ + R</code> to directly open the symbol search </li>
+<li><code>Ctrl/⌘ + G</code> for the goto line jump</li>
+</ul>
+
+<p>Or you may directly jump in the file:</p>
+
+<ul>
+<li><code>Ctrl/⌘ + M</code> to the closing bracket</li>
+</ul>
 
 
-<div class="pilwrap" id="commands">
-  <h2>
-    <a href="#commands" name="commands" class="pilcrow">&#182;</a>
-    Commands
-  </h2>
+<div class="pilwrap" id="bookmarks">
+  <h3>
+    <a href="#bookmarks" name="bookmarks" class="pilcrow">&#182;</a>
+    Bookmarks
+  </h3>
 </div>
 
 
-<p>Use <code>Ctrl/⌘ + Shift + P_</code> to open the complete command list and search with some 
-letters within.</p>
+<p>With <code>Ctrl + F2</code> you may make a bookmark for the current line and step through them
+using <code>F2</code>. At the end delete all of them using <code>Ctrl + Shift + F2</code>.</p>
 
 
 <div class="pilwrap" id="editing">
@@ -134,15 +153,19 @@ of the current selected word.</li>
 </div>
 
 
-<p>The following shortcuts are available here:
-- <code>Ctrl/⌘ + L</code> to select the whole current line
-- <code>Ctrl/⌘ + Shift + J</code> to select the complete block which is on the same indention 
-  level
-- <code>Ctrl/⌘ + Shift + M</code> to select all within the same bracket
-- <code>Ctrl/⌘ + Shift + Space</code> to select everything in the same scope
-- <code>Ctrl/⌘ + Shift + A</code> to select all within the same HTML tag
-- <code>Alt + Shift + Up</code> to expand selection upwards
-- <code>Alt + Shift + Down</code> to expand selection downwards</p>
+<p>The following shortcuts are available here:</p>
+
+<ul>
+<li><code>Ctrl/⌘ + L</code> to select the whole current line</li>
+<li><code>Ctrl/⌘ + D</code> to select the word</li>
+<li><code>Ctrl/⌘ + Shift + J</code> to select the complete block which is on the same indention 
+level</li>
+<li><code>Ctrl/⌘ + Shift + M</code> to select all within the same bracket</li>
+<li><code>Ctrl/⌘ + Shift + Space</code> to select everything in the same scope</li>
+<li><code>Ctrl/⌘ + Shift + A</code> to select all within the same HTML tag</li>
+<li><code>Alt + Shift + Up</code> to expand selection upwards</li>
+<li><code>Alt + Shift + Down</code> to expand selection downwards</li>
+</ul>
 
 
 <div class="pilwrap" id="move%20lines%20up%20and%20down">
@@ -157,22 +180,32 @@ of the current selected word.</li>
 <code>Ctrl + Shift + Up</code> and <code>Ctrl + Shift + Down</code> (<code>Ctrl + ⌘ + ...</code> on Mac).</p>
 
 
-<div class="pilwrap" id="deleting%20lines">
+<div class="pilwrap" id="input%20shortcuts">
   <h3>
-    <a href="#deleting%20lines" name="deleting%20lines" class="pilcrow">&#182;</a>
-    Deleting lines
+    <a href="#input%20shortcuts" name="input%20shortcuts" class="pilcrow">&#182;</a>
+    Input shortcuts
   </h3>
 </div>
 
 
-<p>Therefore use <code>Ctrl/⌘ + Shift + K</code> to delete the current line.</p>
+<p>Insert line <code>Ctrl/⌘ + Shift + Enter' before current or</code>Ctrl/⌘ + Enter` after current.</p>
+
+<p>Copy <code>Ctrl/⌘ + C</code> and Cur <code>Ctrl/⌘ + X</code> works on current line if no selection.</p>
+
+<p>Use <code>Ctrl/⌘ + V</code> to insert and <code>Ctrl/⌘ + Shift + V</code> to insert with correct indention.
+Also <code>Ctrl/⌘ + Shift + D</code> may be used to duplicate selected content.</p>
+
+<p>Use <code>Ctrl/⌘ + KK</code> to delete till end of line, <code>Ctrl/⌘ + Backspace</code> to delete to start 
+of line or <code>Ctrl/⌘ + Shift + K</code> to delete the current line.</p>
+
+<p><code>Ctrl/⌘ + KU</code> and <code>Ctrl/⌘ + KL</code> makes selection upper case or lower case.</p>
 
 
 <div class="pilwrap" id="search%20and%20replace">
-  <h3>
+  <h2>
     <a href="#search%20and%20replace" name="search%20and%20replace" class="pilcrow">&#182;</a>
     Search and Replace
-  </h3>
+  </h2>
 </div>
 
 
@@ -182,23 +215,55 @@ of the current selected word.</li>
 <li><code>Ctrl/⌘ + Shift + F</code> to open multi file find and replace dialog</li>
 </ul>
 
-<p>Within the dialog you may:
-- <code>F3</code> - Search Forward Using Most Recent Pattern
-- <code>Shift + F3</code> - Search Backwards Using Most Recent Pattern
-- <code>Alt + F3</code> - Select All Matches Using Most Recent Pattern
-- <code>Alt + R</code> - Toggle Regular Expressions
-- <code>Alt + C</code> - Toggle Case Sensitivity
-- <code>Alt + W</code> - Toggle Exact Match
-- <code>Enter</code> - Find Next
-- <code>Shift + Enter</code> - Find Previous
-- <code>Alt + Enter</code> - Find All
-- <code>Ctrl/⌘  + Alt + Enter</code> - Replace All</p>
+<p>Within the dialog you may:</p>
 
-<p>In Multifile search:
-- <code>F4</code> - Next File Match
-- <code>Ctrl + F4</code> - Previous File Match</p>
+<ul>
+<li><code>F3</code> - Search Forward Using Most Recent Pattern</li>
+<li><code>Shift + F3</code> - Search Backwards Using Most Recent Pattern</li>
+<li><code>Alt + F3</code> - Select All Matches Using Most Recent Pattern</li>
+<li><code>Alt + R</code> - Toggle Regular Expressions</li>
+<li><code>Alt + C</code> - Toggle Case Sensitivity</li>
+<li><code>Alt + W</code> - Toggle Exact Match</li>
+<li><code>Enter</code> - Find Next</li>
+<li><code>Shift + Enter</code> - Find Previous</li>
+<li><code>Alt + Enter</code> - Find All</li>
+<li><code>Ctrl/⌘  + Alt + Enter</code> - Replace All</li>
+</ul>
 
-<p>You may enter a multi line search pattern, use <code>Ctrl + Enter</code> therefore.</p></div>
+<p>In Multifile search:</p>
+
+<ul>
+<li><code>F4</code> - Next File Match</li>
+<li><code>Ctrl + F4</code> - Previous File Match</li>
+</ul>
+
+<p>You may enter a multi line search pattern, use <code>Ctrl + Enter</code> therefore.</p>
+
+
+<div class="pilwrap" id="commands">
+  <h2>
+    <a href="#commands" name="commands" class="pilcrow">&#182;</a>
+    Commands
+  </h2>
+</div>
+
+
+<p>Use <code>Ctrl/⌘ + Shift + P_</code> to open the complete command list and search with some 
+letters within.</p>
+
+
+<div class="pilwrap" id="display">
+  <h2>
+    <a href="#display" name="display" class="pilcrow">&#182;</a>
+    Display
+  </h2>
+</div>
+
+
+<p>Toggle sidebar using <code>Ctrl/⌘ + KB</code>.</p>
+
+<p>Switch between tabs: <code>Ctrl/⌘ + PgUp</code> and <code>Ctrl/⌘ + PgDown</code> or <code>Ctrl/⌘ + Shift + t</code> 
+to open last closed tab.</p></div>
   </div>
 </body>
 </html>

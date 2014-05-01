@@ -58,9 +58,9 @@
 there you may add packages which are specified in package.json:</p>
 
 
-<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="err">#</span> <span class="nx">install</span> <span class="k">new</span> <span class="nx">ones</span>
-<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">update</span>  <span class="err">#</span> <span class="nx">update</span> <span class="nx">already</span> <span class="nx">installed</span>
-<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">dedupe</span>  <span class="err">#</span> <span class="nx">remove</span> <span class="nx">duplication</span> <span class="k">if</span> <span class="nx">possible</span>
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="c1">// install new ones</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">update</span>  <span class="c1">// update already installed</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">dedupe</span>  <span class="c1">// remove duplication if possible</span>
 </code></pre></div>
 
 
@@ -68,8 +68,8 @@ there you may add packages which are specified in package.json:</p>
 <p>To only add a new package into the package.json you may instead call:</p>
 
 
-<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span>       <span class="err">#</span> <span class="nx">add</span> <span class="nx">to</span> <span class="nx">dependencies</span>
-<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>   <span class="err">#</span> <span class="nx">add</span> <span class="nx">to</span> <span class="nx">development</span> <span class="nx">dependencies</span>
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span>       <span class="c1">// add to dependencies</span>
+<span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>   <span class="c1">// add to development dependencies</span>
 </code></pre></div>
 
 

@@ -15,14 +15,15 @@ General modules
 - [CoffeeScript](http://coffeescript.org/)
   a language that compiles into JavaScript but is easier to read and write
 - [Async](https://github.com/caolan/async/)
-  An utility module which provides straight-forward, powerful functions for
+  an utility module which provides straight-forward, powerful functions for
   working with asynchronous JavaScript.
 
 ### Others
 
 - [moment](http://momentjs.com/docs/)
-  Parse, manipulate, and display dates and times
-
+  parse, manipulate, and display dates and times
+- [memoizee](https://github.com/medikoo/memoize)
+  caching which will encapsulate functions or methods to use results cache
 
 System Tools
 -------------------------------------------------
@@ -31,7 +32,10 @@ System Tools
 
 - mkdirp
   not used in favor for [alinex-fs](https://alinex.github.io/node-fs/) mkdirs
-- chokidar - fs-watch wrapper
+- [minimatch](https://github.com/isaacs/minimatch)
+  glob like file name matching
+- chokidar
+  fs-watch wrapper
 
 
 ### Server Health

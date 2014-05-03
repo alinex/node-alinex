@@ -8,8 +8,8 @@ Specially in the callback sequences of JavaScript.
 This page lists some tricks and tips which are mostly not mentioned in the
 official docs.
 
-Also in this documentation which is aimed for the alinex developer I often use 
-examples in coffee script. While in description of modules which may be used 
+Also in this documentation which is aimed for the alinex developer I often use
+examples in coffee script. While in description of modules which may be used
 anywhere I will use javascript so anybody can read it.
 
 
@@ -42,6 +42,7 @@ If you ommit the catch the error will be supressed.
     try {
       funcWhichMayThrowError();
     } catch (_error) {}
+
 
 
 Callbacks

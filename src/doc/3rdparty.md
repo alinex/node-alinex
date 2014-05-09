@@ -17,25 +17,30 @@ General modules
 - [Async](https://github.com/caolan/async/)
   an utility module which provides straight-forward, powerful functions for
   working with asynchronous JavaScript.
+- [Memoizee](https://github.com/medikoo/memoize)
+  make a function or method using cache for results
+
 
 ### Others
 
-- [moment](http://momentjs.com/docs/)
-  parse, manipulate, and display dates and times
-- [memoizee](https://github.com/medikoo/memoize)
-  caching which will encapsulate functions or methods to use results cache
+- [Moment](http://momentjs.com/docs/)
+  Parse, manipulate, and display dates and times
+- [Chrono](https://github.com/wanasit/chrono)
+  natural language date parser
+
 
 System Tools
 -------------------------------------------------
 
 ### Filesystem
 
-- mkdirp
-  not used in favor for [alinex-fs](https://alinex.github.io/node-fs/) mkdirs
+- mkdirp, fs-extra, graceful-fs, ncp, rimraf
+  => not used in favor for [alinex-fs](https://alinex.github.io/node-fs/)
+- chokidar - fs-watch wrapper
 - [minimatch](https://github.com/isaacs/minimatch)
   glob like file name matching
-- chokidar
-  fs-watch wrapper
+- POSIX
+  => not used because not platform independent
 
 
 ### Server Health
@@ -46,7 +51,7 @@ Data Storages
 
 ### Relational databases
 
-- [mysql]()
+- [MySQL]()
 
 
 ### Document stores
@@ -66,7 +71,7 @@ Command line support
 Services
 -------------------------------------------------
 
-- [request](https://github.com/mikeal/request/)
+- [Request](https://github.com/mikeal/request/)
   Simplified HTTP request client
 
 
@@ -80,14 +85,14 @@ Server
 
 ### Maintenance
 
-- [debug](https://github.com/visionmedia/debug/)
+- [Debug](https://github.com/visionmedia/debug/)
   tiny node.js & browser debugging utility for your libraries and applications
 - [Winston](https://github.com/flatiron/winston/)
   extensible multi-transport async logging library
 
 ### Webserver
 
-- [express.js](http://expressjs.com)
+- [Express.js](http://expressjs.com)
 
 ### Webserver modules
 
@@ -115,7 +120,7 @@ Test
 
 ### Testrunner
 
-- [Mocha](https://visionmedia.github.io/mocha/)
+- [mocha](https://visionmedia.github.io/mocha/)
   Simple, flexible, javascript test framework
 
 ### Helper

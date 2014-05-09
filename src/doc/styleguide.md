@@ -30,6 +30,11 @@ These code follows the node.js convention of providing a single callback as
 the last argument of your async function. This can be achieved using the `async`
 module.
 
+To not make it too complex the async function may call its callback synchronously 
+in the same eventloop or later. It is no true asynchronity by definition, so
+if you need it maybe think about your code structure or call the function
+through `process.nextTick()` yourself.
+
 
 Error/Exception handling
 -------------------------------------------------

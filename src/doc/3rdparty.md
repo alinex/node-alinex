@@ -34,8 +34,9 @@ System Tools
 
 ### Filesystem
 
-- mkdirp, fs-extra, graceful-fs, ncp, rimraf
-  => not used in favor for [alinex-fs](https://alinex.github.io/node-fs/)
+- [alinex-fs](https://alinex.github.io/node-fs/)
+  enhancement for the node fs module
+  (same as mkdirp, fs-extra, graceful-fs, ncp, rimraf, wrench and more)
 - chokidar - fs-watch wrapper
 - [minimatch](https://github.com/isaacs/minimatch)
   glob like file name matching

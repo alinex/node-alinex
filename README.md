@@ -68,10 +68,11 @@ Find additional information in the following documents:
 
 ### Usage Tips and Tricks
 
-- [coffee](src/doc/coffee.md)
-- [npm](src/doc/npm.md)
-- [git](src/doc/git.md)
-- [sublime](src/doc/sublime.md)
+- [coffee](src/doc/coffee.md) - language
+- [npm](src/doc/npm.md) - package manager
+- [git](src/doc/git.md) - source code repository
+- [atom](src/doc/atom.md) - editor
+- [sublime](src/doc/sublime.md) - editor
 
 
 Alinex Modules

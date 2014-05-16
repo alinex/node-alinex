@@ -50,6 +50,11 @@ System Tools
 Data Storages
 -------------------------------------------------
 
+### Data Structures
+
+- [js-yaml](https://github.com/nodeca/js-yaml)
+  YAML parser (to read configurations)
+
 ### Relational databases
 
 - [MySQL]()

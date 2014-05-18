@@ -150,21 +150,28 @@ The following list should give an overview of there to store what:
 More details about some sections
 -------------------------------------------------
 
-### `var` folder
+### var folder
 
 The var folder contains everything that may be changed for the individual
-installation.
+installations.
 
-It contains the three subfolders:
+It contains the three sub folders:
 
 - `src` - the source files which will change with each update
-- `local` - local maybe changed files or links to the sources
+- `local` - local maybe changed files
 - `lib` - linked or compiled files from source overridden by local
 
-Within these three directories you will find the following structure:
+Within these three directories you will find the following possible structure:
 
     config
     template
       <theme>
     static
     ...
+
+???
+
+For the configurations the `src` file should be loaded and merged with the
+`local` changes which overwrites the `src`.
+
+Templates and statics will be compiled from `local` or `src` to lib.

@@ -35,7 +35,8 @@ Roadmap
 -------------------------------------------------
 
 There is no real roadmap for the time and funtionality. It all depends on my
-personal time and interests. But I will give a short overview what is planned
+personal time a
+nd interests. But I will give a short overview what is planned
 for now:
 
 - base development system
@@ -62,17 +63,21 @@ Find additional information in the following documents:
 - [File Structure](src/doc/filestructure.md)
 - [Development Tools](src/doc/developtools.md)
 
-### Helper
-
-- [Third Party Modules](src/doc/3rdparty.md)
-
-### Usage Tips and Tricks
+### Tips and Tricks
 
 - [coffee](src/doc/coffee.md) - language
 - [npm](src/doc/npm.md) - package manager
 - [git](src/doc/git.md) - source code repository
 - [atom](src/doc/atom.md) - editor
 - [sublime](src/doc/sublime.md) - editor
+
+### List of Helper Tools
+
+- [Third Party Modules](src/doc/3rdparty.md)
+
+### Instalation and Usage
+
+- [install](src/doc/install.md)
 
 
 Alinex Modules

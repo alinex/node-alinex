@@ -32,6 +32,9 @@ For development please install some global modules like below:
 	sudo apt-get install -y python-virtualenv
 	sudo easy_install Pygments
 
+	git config --global user.name Alinex
+	git config --global user.email info@alinex.de
+
 
 Alinex Applications
 -----------------------------------------

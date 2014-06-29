@@ -19,6 +19,15 @@ To only add a new package into the package.json you may instead call:
     > npm install <package> --save       // add to dependencies
     > npm install <package> --save-dev   // add to development dependencies
 
+To publish to npm you have to call:
+
+    > npm adduser
+
+This will ask you about your user details (name, password, email). Afterwards 
+you may publish modules:
+
+    > npm publish  // called from the modules directory
+    
 
 Package Versions
 -------------------------------------------------

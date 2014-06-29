@@ -29,6 +29,17 @@ Or use the negation:
     if !~message.indexOf 'test'
 
 
+Objects
+-------------------------------------------------
+
+### Check for empty object
+
+    unless object? and object.length
+
+This will run the following code if the object under test is not defined or is
+an empty object.
+
+
 Control flow
 -------------------------------------------------
 

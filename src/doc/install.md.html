@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>install.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/install.md", defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+  <script src="../../fileSearch.js"></script>
+  <script src="../../goToLine.js"></script>
+  <link rel="stylesheet" href="../../fileSearch.css" />
+  <link rel="stylesheet" href="../../goToLine.css" />
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#installation">Installation</a>
+      </div>
+      <div class="heading h2">
+        <a href="#installation%20of%20node.js%20and%20npm">Installation of node.js and npm</a>
+      </div>
+      <div class="heading h3">
+        <a href="#linux%20system%20based%20on%20debian%207">Linux system based on debian 7</a>
+      </div>
+      <div class="heading h2">
+        <a href="#developmnet%20helpers">Developmnet helpers</a>
+      </div>
+      <div class="heading h2">
+        <a href="#alinex%20applications">Alinex Applications</a>
+      </div>
+      <div class="heading h3">
+        <a href="#productive%20system">Productive System</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+<div class="pilwrap" id="installation">
+  <h1>
+    <a href="#installation" name="installation" class="pilcrow">&#182;</a>
+    Installation
+  </h1>
+</div>
+
+
+
+<div class="pilwrap" id="installation%20of%20node.js%20and%20npm">
+  <h2>
+    <a href="#installation%20of%20node.js%20and%20npm" name="installation%20of%20node.js%20and%20npm" class="pilcrow">&#182;</a>
+    Installation of node.js and npm
+  </h2>
+</div>
+
+
+<p>You may install node from your repository or with the following manual steps.</p>
+
+
+<div class="pilwrap" id="linux%20system%20based%20on%20debian%207">
+  <h3>
+    <a href="#linux%20system%20based%20on%20debian%207" name="linux%20system%20based%20on%20debian%207" class="pilcrow">&#182;</a>
+    Linux system based on debian 7
+  </h3>
+</div>
+
+
+
+<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">Install</span> <span class="nx">dependencies</span> <span class="nx">from</span> <span class="nx">repository</span>
+<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">g</span><span class="o">++</span> <span class="nx">curl</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">git</span><span class="o">-</span><span class="nx">core</span>
+<span class="err">#</span> <span class="nx">Download</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span> <span class="nx">source</span>
+<span class="nx">cd</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">src</span>
+<span class="nx">sudo</span> <span class="nx">mkdir</span> <span class="nx">node</span>
+<span class="nx">sudo</span> <span class="nx">chmod</span> <span class="mi">777</span> <span class="nx">node</span>
+<span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/joyent/node.git</span>
+<span class="err">#</span> <span class="nx">Compile</span> <span class="nx">and</span> <span class="nx">install</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span>
+<span class="nx">cd</span> <span class="nx">node</span>
+<span class="nx">git</span> <span class="nx">checkout</span> <span class="nx">v0</span><span class="p">.</span><span class="mf">11.13</span><span class="o">-</span><span class="nx">release</span>
+<span class="p">.</span><span class="o">/</span><span class="nx">configure</span>
+<span class="nx">make</span>
+<span class="nx">sudo</span> <span class="nx">make</span> <span class="nx">install</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="developmnet%20helpers">
+  <h2>
+    <a href="#developmnet%20helpers" name="developmnet%20helpers" class="pilcrow">&#182;</a>
+    Developmnet helpers
+  </h2>
+</div>
+
+
+<p>For development please install some global modules like below:</p>
+
+<pre><code>sudo apt-get install -y python-virtualenv
+sudo easy_install Pygments
+
+git config --global user.name Alinex
+git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a>
+</code></pre>
+
+
+<div class="pilwrap" id="alinex%20applications">
+  <h2>
+    <a href="#alinex%20applications" name="alinex%20applications" class="pilcrow">&#182;</a>
+    Alinex Applications
+  </h2>
+</div>
+
+
+<p>To install the alinex applications you can now simply call npm:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">alinex</span><span class="o">-</span><span class="p">...</span>
+</code></pre></div>
+
+
+
+<p>See <a href="npm.md.html">npm</a> for more help to use the package manager.</p>
+
+
+<div class="pilwrap" id="productive%20system">
+  <h3>
+    <a href="#productive%20system" name="productive%20system" class="pilcrow">&#182;</a>
+    Productive System
+  </h3>
+</div>
+
+
+<p>You may use the forever productive system to run as daemon.</p>
+
+
+<div class="highlight"><pre><code><span class="nx">sudo</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">forever</span>
+</code></pre></div>
+
+</div>
+  </div>
+</body>
+</html>

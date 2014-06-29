@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/git.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/git.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -24,6 +24,15 @@
     <div id="headings">
       <div class="heading h1">
         <a href="#git%20code%20repository">Git Code Repository</a>
+      </div>
+      <div class="heading h2">
+        <a href="#setup">Setup</a>
+      </div>
+      <div class="heading h3">
+        <a href="#configure%20default%20user">Configure default user</a>
+      </div>
+      <div class="heading h3">
+        <a href="#password%20caching">Password caching</a>
       </div>
       <div class="heading h2">
         <a href="#using%20the%20origin">Using the Origin</a>
@@ -51,6 +60,61 @@
   </h1>
 </div>
 
+
+
+<div class="pilwrap" id="setup">
+  <h2>
+    <a href="#setup" name="setup" class="pilcrow">&#182;</a>
+    Setup
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="configure%20default%20user">
+  <h3>
+    <a href="#configure%20default%20user" name="configure%20default%20user" class="pilcrow">&#182;</a>
+    Configure default user
+  </h3>
+</div>
+
+
+<pre><code>git config --global user.name alinex
+git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a>
+</code></pre>
+
+
+<div class="pilwrap" id="password%20caching">
+  <h3>
+    <a href="#password%20caching" name="password%20caching" class="pilcrow">&#182;</a>
+    Password caching
+  </h3>
+</div>
+
+
+<p>The next option will tell Git that you don't want to type your username and 
+password every time your computer talks to GitHub.</p>
+
+<p>To use this option, you need to turn on the credential helper so that Git will 
+save your password in memory for some time:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">credential</span><span class="p">.</span><span class="nx">helper</span> <span class="nx">cache</span>
+</code></pre></div>
+
+
+
+<p>This will keep the password for 15 minutes in memory.
+But you can also have Git store your credentials permanently using the following:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">credential</span><span class="p">.</span><span class="nx">helper</span> <span class="nx">store</span>
+</code></pre></div>
+
+
+
+<p>Note: While this is convenient, Git will store your credentials in clear text 
+in a local file (.git-credentials) under your "home" directory</p>
 
 
 <div class="pilwrap" id="using%20the%20origin">

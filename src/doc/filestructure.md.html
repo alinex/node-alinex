@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "Users/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -291,23 +291,23 @@ directories from productive which are not listed here.</p>
 <div class="pilwrap" id="var%20folder">
   <h3>
     <a href="#var%20folder" name="var%20folder" class="pilcrow">&#182;</a>
-    <code>var</code> folder
+    var folder
   </h3>
 </div>
 
 
 <p>The var folder contains everything that may be changed for the individual
-installation.</p>
+installations.</p>
 
-<p>It contains the three subfolders:</p>
+<p>It contains the three sub folders:</p>
 
 <ul>
 <li><code>src</code> - the source files which will change with each update</li>
-<li><code>local</code> - local maybe changed files or links to the sources</li>
+<li><code>local</code> - local maybe changed files</li>
 <li><code>lib</code> - linked or compiled files from source overridden by local</li>
 </ul>
 
-<p>Within these three directories you will find the following structure:</p>
+<p>Within these three directories you will find the following possible structure:</p>
 
 
 <div class="highlight"><pre><code><span class="nx">config</span>
@@ -317,7 +317,14 @@ installation.</p>
 <span class="p">...</span>
 </code></pre></div>
 
-</div>
+
+
+<p>???</p>
+
+<p>For the configurations the <code>src</code> file should be loaded and merged with the
+<code>local</code> changes which overwrites the <code>src</code>.</p>
+
+<p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p></div>
   </div>
 </body>
 </html>

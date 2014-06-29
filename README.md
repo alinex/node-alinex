@@ -75,9 +75,9 @@ Find additional information in the following documents:
 
 - [Third Party Modules](src/doc/3rdparty.md)
 
-### Instalation and Usage
+### General Installation and Usage
 
-- [install](src/doc/install.md)
+- [Install](src/doc/install.md)
 
 
 Alinex Modules

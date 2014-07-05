@@ -62,6 +62,7 @@ Find additional information in the following documents:
 - [Styleguide](src/doc/styleguide.md)
 - [File Structure](src/doc/filestructure.md)
 - [Development Tools](src/doc/developtools.md)
+- [Ideas](src/doc/ideas.md)
 
 ### Tips and Tricks
 

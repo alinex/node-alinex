@@ -34,7 +34,7 @@ Objects
 
 ### Check for empty object
 
-    unless object? and object.length
+    unless object? and Object.keys(options).length
 
 This will run the following code if the object under test is not defined or is
 an empty object.

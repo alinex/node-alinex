@@ -66,7 +66,8 @@ Find additional information in the following documents:
 
 ### Tips and Tricks
 
-- [coffee](src/doc/coffee.md) - language
+- [JavaScript](src/doc/javascript.md) - language
+- [CoffeeScript](src/doc/coffee.md) - language
 - [npm](src/doc/npm.md) - package manager
 - [git](src/doc/git.md) - source code repository
 - [atom](src/doc/atom.md) - editor

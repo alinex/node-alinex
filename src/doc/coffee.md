@@ -66,3 +66,63 @@ an empty default function on parameter definition:
       console.log 'do something'
       cb()
 
+
+Classes
+-------------------------------------------------
+
+Classes are made really easy using CoffeeScript:
+
+    # define a class
+    class Test
+      # make a constructor method
+      constructor: ->
+
+    # create instance
+    t = new Test
+
+Use the `@` sign in parameters to store the value in the same instance property:
+
+    class Test
+      # store given name in this.name
+      constructor: (@name) ->
+
+    # add another prototype to class
+    Test::done = true
+
+Inheritance is also made easy:
+
+    class Test
+      constructor: (@name) ->
+
+    # extend the class
+    class Test2 extends Test
+      constructor: ->
+        # call the parent constructor
+        super 'numberTwo'
+
+Local variables are created using `=` but properties are defined using `:`:
+
+    class Test
+      # local class variable/function
+      foo = 1
+      # instance variable/function
+      bar: 2
+      # or from the constructor
+      constructor: ->
+        @baz = 3
+
+You may also use static properties/funtions
+
+    class Test
+      # static class variable/function
+      @foo: 1
+      @bar: (name) -> 
+      constructor: ->
+        # access statics
+        Test.bar()
+        # or
+        @constructor.bar()
+        
+    # access from outside
+    Test.foo
+    Test.bar 'baz'

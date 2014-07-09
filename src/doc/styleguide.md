@@ -20,6 +20,12 @@ Over all modules some common variable names will be used for the same values:
 - `err` - for an error message or object
 - `ex` - mostly the exception in a `try...catch` block
 
+Classes start with an Uppercase letter:
+
+    test = new Test
+
+To mark private properties/functions they start with an underscore.
+
 
 Asynchronous code
 -------------------------------------------------

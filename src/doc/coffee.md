@@ -55,6 +55,25 @@ If you ommit the catch the error will be supressed.
     } catch (_error) {}
 
 
+For loops
+-------------------------------------------------
+
+Loop over array:
+
+    for element in arr
+
+Counting loop:
+
+    for i in [0..n] by 1
+
+Reverse loop:
+
+    for i in arr by -1
+
+Loop over object:
+
+    for key, value of object
+
 
 Callbacks
 -------------------------------------------------
@@ -111,7 +130,7 @@ Local variables are created using `=` but properties are defined using `:`:
       constructor: ->
         @baz = 3
 
-You may also use static properties/funtions
+You may also use class properties/funtions
 
     class Test
       # static class variable/function
@@ -122,7 +141,7 @@ You may also use static properties/funtions
         Test.bar()
         # or
         @constructor.bar()
-        
+
     # access from outside
     Test.foo
     Test.bar 'baz'

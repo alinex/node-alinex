@@ -72,6 +72,7 @@ Reverse loop:
 
 Loop over object:
 
+    for key of object
     for key, value of object
 
 

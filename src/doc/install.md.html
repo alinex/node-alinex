@@ -73,20 +73,20 @@
 
 
 
-<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">Install</span> <span class="nx">dependencies</span> <span class="nx">from</span> <span class="nx">repository</span>
-<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
-<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">g</span><span class="o">++</span> <span class="nx">curl</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">git</span><span class="o">-</span><span class="nx">core</span>
-<span class="err">#</span> <span class="nx">Download</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span> <span class="nx">source</span>
-<span class="nx">cd</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">src</span>
-<span class="nx">sudo</span> <span class="nx">mkdir</span> <span class="nx">node</span>
-<span class="nx">sudo</span> <span class="nx">chmod</span> <span class="mi">777</span> <span class="nx">node</span>
-<span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/joyent/node.git</span>
-<span class="err">#</span> <span class="nx">Compile</span> <span class="nx">and</span> <span class="nx">install</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span>
-<span class="nx">cd</span> <span class="nx">node</span>
-<span class="nx">git</span> <span class="nx">checkout</span> <span class="nx">v0</span><span class="p">.</span><span class="mf">11.13</span><span class="o">-</span><span class="nx">release</span>
-<span class="p">.</span><span class="o">/</span><span class="nx">configure</span>
-<span class="nx">make</span>
-<span class="nx">sudo</span> <span class="nx">make</span> <span class="nx">install</span>
+<div class="highlight"><pre><code>    <span class="err">#</span> <span class="nx">Install</span> <span class="nx">dependencies</span> <span class="nx">from</span> <span class="nx">repository</span>
+    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">update</span>
+    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">g</span><span class="o">++</span> <span class="nx">curl</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">git</span><span class="o">-</span><span class="nx">core</span>
+    <span class="err">#</span> <span class="nx">Download</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span> <span class="nx">source</span>
+    <span class="nx">cd</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">src</span>
+    <span class="nx">sudo</span> <span class="nx">mkdir</span> <span class="nx">node</span>
+    <span class="nx">sudo</span> <span class="nx">chmod</span> <span class="mi">777</span> <span class="nx">node</span>
+    <span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/joyent/node.git</span>
+    <span class="err">#</span> <span class="nx">Compile</span> <span class="nx">and</span> <span class="nx">install</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span>
+    <span class="nx">cd</span> <span class="nx">node</span>
+    <span class="nx">git</span> <span class="nx">checkout</span> <span class="nx">v0</span><span class="p">.</span><span class="mf">11.13</span><span class="o">-</span><span class="nx">release</span>
+    <span class="p">.</span><span class="o">/</span><span class="nx">configure</span>
+    <span class="nx">make</span>
+    <span class="nx">sudo</span> <span class="nx">make</span> <span class="nx">install</span>
 </code></pre></div>
 
 
@@ -102,12 +102,26 @@
 
 <p>For development please install some global modules like below:</p>
 
-<pre><code>sudo apt-get install -y python-virtualenv
-sudo easy_install Pygments
 
-git config --global user.name Alinex
-git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a>
+<div class="highlight"><pre><code>    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">python</span><span class="o">-</span><span class="nx">virtualenv</span>
+    <span class="nx">sudo</span> <span class="nx">easy_install</span> <span class="nx">Pygments</span>
+</code></pre></div>
+
+
+
+<p>And to make work with git easy:</p>
+
+<pre><code>    git config --global user.name Alinex
+    git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a>
 </code></pre>
+
+<p>The same goes for npm:</p>
+
+
+<div class="highlight"><pre><code>    <span class="nx">npm</span> <span class="nx">adduser</span> <span class="err">#</span> <span class="nx">you</span> <span class="nx">will</span> <span class="nx">be</span>  <span class="nx">required</span> <span class="nx">to</span> <span class="nx">give</span> <span class="nx">your</span> <span class="nx">user</span> <span class="nx">information</span>
+</code></pre></div>
+
+
 
 
 <div class="pilwrap" id="alinex%20applications">
@@ -121,7 +135,7 @@ git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a
 <p>To install the alinex applications you can now simply call npm:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">alinex</span><span class="o">-</span><span class="p">...</span>
+<div class="highlight"><pre><code>    <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">alinex</span><span class="o">-</span><span class="p">...</span>
 </code></pre></div>
 
 
@@ -140,7 +154,7 @@ git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a
 <p>You may use the forever productive system to run as daemon.</p>
 
 
-<div class="highlight"><pre><code><span class="nx">sudo</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">forever</span>
+<div class="highlight"><pre><code>    <span class="nx">sudo</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">forever</span>
 </code></pre></div>
 
 </div>

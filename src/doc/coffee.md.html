@@ -32,13 +32,25 @@
         <a href="#check%20for%20substring">Check for substring</a>
       </div>
       <div class="heading h2">
+        <a href="#objects">Objects</a>
+      </div>
+      <div class="heading h3">
+        <a href="#check%20for%20empty%20object">Check for empty object</a>
+      </div>
+      <div class="heading h2">
         <a href="#control%20flow">Control flow</a>
       </div>
       <div class="heading h3">
         <a href="#try%20without%20catch">Try without catch</a>
       </div>
       <div class="heading h2">
+        <a href="#for%20loops">For loops</a>
+      </div>
+      <div class="heading h2">
         <a href="#callbacks">Callbacks</a>
+      </div>
+      <div class="heading h2">
+        <a href="#classes">Classes</a>
       </div>
     </div>
   </div>
@@ -100,6 +112,33 @@ isn’t.</p>
 
 
 
+<div class="pilwrap" id="objects">
+  <h2>
+    <a href="#objects" name="objects" class="pilcrow">&#182;</a>
+    Objects
+  </h2>
+</div>
+
+
+
+<div class="pilwrap" id="check%20for%20empty%20object">
+  <h3>
+    <a href="#check%20for%20empty%20object" name="check%20for%20empty%20object" class="pilcrow">&#182;</a>
+    Check for empty object
+  </h3>
+</div>
+
+
+
+<div class="highlight"><pre><code><span class="nx">unless</span> <span class="nx">object</span><span class="o">?</span> <span class="nx">and</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">length</span>
+</code></pre></div>
+
+
+
+<p>This will run the following code if the object under test is not defined or is
+an empty object.</p>
+
+
 <div class="pilwrap" id="control%20flow">
   <h2>
     <a href="#control%20flow" name="control%20flow" class="pilcrow">&#182;</a>
@@ -135,6 +174,48 @@ isn’t.</p>
 
 
 
+<div class="pilwrap" id="for%20loops">
+  <h2>
+    <a href="#for%20loops" name="for%20loops" class="pilcrow">&#182;</a>
+    For loops
+  </h2>
+</div>
+
+
+<p>Loop over array:</p>
+
+
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">element</span> <span class="k">in</span> <span class="nx">arr</span>
+</code></pre></div>
+
+
+
+<p>Counting loop:</p>
+
+
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="nx">n</span><span class="p">]</span> <span class="nx">by</span> <span class="mi">1</span>
+</code></pre></div>
+
+
+
+<p>Reverse loop:</p>
+
+
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span> <span class="nx">by</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+
+
+
+<p>Loop over object:</p>
+
+
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">key</span> <span class="nx">of</span> <span class="nx">object</span>
+<span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="nx">of</span> <span class="nx">object</span>
+</code></pre></div>
+
+
+
+
 <div class="pilwrap" id="callbacks">
   <h2>
     <a href="#callbacks" name="callbacks" class="pilcrow">&#182;</a>
@@ -150,6 +231,92 @@ an empty default function on parameter definition:</p>
 <div class="highlight"><pre><code><span class="nx">test</span> <span class="o">=</span> <span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">cb</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">)</span> <span class="o">-&gt;</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s1">&#39;do something&#39;</span>
   <span class="nx">cb</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="classes">
+  <h2>
+    <a href="#classes" name="classes" class="pilcrow">&#182;</a>
+    Classes
+  </h2>
+</div>
+
+
+<p>Classes are made really easy using CoffeeScript:</p>
+
+
+<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">define</span> <span class="nx">a</span> <span class="kr">class</span>
+<span class="kr">class</span> <span class="nx">Test</span>
+  <span class="err">#</span> <span class="nx">make</span> <span class="nx">a</span> <span class="nx">constructor</span> <span class="nx">method</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+
+<span class="err">#</span> <span class="nx">create</span> <span class="nx">instance</span>
+<span class="nx">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Test</span>
+</code></pre></div>
+
+
+
+<p>Use the <code>@</code> sign in parameters to store the value in the same instance property:</p>
+
+
+<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
+  <span class="err">#</span> <span class="nx">store</span> <span class="nx">given</span> <span class="nx">name</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+
+<span class="err">#</span> <span class="nx">add</span> <span class="nx">another</span> <span class="nx">prototype</span> <span class="nx">to</span> <span class="kr">class</span>
+<span class="nx">Test</span><span class="o">::</span><span class="nx">done</span> <span class="o">=</span> <span class="kc">true</span>
+</code></pre></div>
+
+
+
+<p>Inheritance is also made easy:</p>
+
+
+<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+
+<span class="err">#</span> <span class="nx">extend</span> <span class="nx">the</span> <span class="kr">class</span>
+<span class="kr">class</span> <span class="nx">Test2</span> <span class="kr">extends</span> <span class="nx">Test</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="nx">parent</span> <span class="nx">constructor</span>
+    <span class="kr">super</span> <span class="s1">&#39;numberTwo&#39;</span>
+</code></pre></div>
+
+
+
+<p>Local variables are created using <code>=</code> but properties are defined using <code>:</code>:</p>
+
+
+<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
+  <span class="err">#</span> <span class="nx">local</span> <span class="kr">class</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
+  <span class="nx">foo</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="err">#</span> <span class="nx">instance</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
+  <span class="nx">bar</span><span class="o">:</span> <span class="mi">2</span>
+  <span class="err">#</span> <span class="nx">or</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">constructor</span>
+  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="err">@</span><span class="nx">baz</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+
+
+<p>You may also use class properties/funtions</p>
+
+
+<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
+  <span class="err">#</span> <span class="kr">static</span> <span class="kr">class</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
+  <span class="err">@</span><span class="nx">foo</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="err">@</span><span class="nx">bar</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span> 
+  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+    <span class="err">#</span> <span class="nx">access</span> <span class="nx">statics</span>
+    <span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
+    <span class="err">#</span> <span class="nx">or</span>
+    <span class="err">@</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
+
+<span class="err">#</span> <span class="nx">access</span> <span class="nx">from</span> <span class="nx">outside</span>
+<span class="nx">Test</span><span class="p">.</span><span class="nx">foo</span>
+<span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span> <span class="s1">&#39;baz&#39;</span>
 </code></pre></div>
 
 </div>

@@ -1,8 +1,8 @@
 Package: alinex
 =================================================
 
-This is a base package containing of the alinex universe. Currently only
-containing some overall description and rules.
+This is the base package for the alinex universe. Currently only
+containing some overall description and rules for all the individual mosules.
 
 Maybe later it will make a whole system out of all the modules.
 
@@ -91,8 +91,14 @@ used independently.
 - [alinex-make](https://alinex.github.io/node-make/) - build tool
 - [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
 - [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
-- [alinex-util](https://alinex.github.io/node-util/) - enhanced utilities for standard types
+- [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
+
+In development are currently also:
+
+- [alinex-server](https://alinex.github.io/node-config/) - express.js based webserver
+- [alinex-monitor](https://alinex.github.io/node-config/) - server and service monitoring
+- [alinex-process](https://alinex.github.io/node-config/) - process management
 
 
 License

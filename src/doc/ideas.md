@@ -5,11 +5,6 @@ This document collects some Ideas of what may be developed and what may be used
 in the further packages and versions.
 
 
-Modules
--------------------------------------------------
-Maybe the config from alinex-server may be extracted as standalone module.
-
-
 Generators
 -------------------------------------------------
 

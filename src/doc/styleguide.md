@@ -17,6 +17,7 @@ Variables
 Over all modules some common variable names will be used for the same values:
 
 - `cb` - for the callback method
+- `done` - for the callback which gets nothing or an error as parameter
 - `err` - for an error message or object
 - `ex` - mostly the exception in a `try...catch` block
 
@@ -118,6 +119,14 @@ callback methods with their values, they will get.
 
 Some overall documentation like this will be stored in special markup files
 ending with `.md`.
+
+
+Testing
+-------------------------------------------------
+Linting is used to precheck the code,
+
+Mocha unit tests are used to check individual parts and the overall
+functionality.
 
 
 Configuration

@@ -54,6 +54,8 @@ Data Storages
 
 - [js-yaml](https://github.com/nodeca/js-yaml)
   YAML parser (to read configurations)
+- [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
+  Conversion from simple XML to JavaScript objects
 
 ### Relational databases
 

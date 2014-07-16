@@ -91,6 +91,8 @@ used independently.
 - [alinex-make](https://alinex.github.io/node-make/) - build tool
 - [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
 - [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
+- [alinex-util](https://alinex.github.io/node-util/) - enhanced utilities for standard types
+- [alinex-config](https://alinex.github.io/node-config/) - configuration management
 
 
 License

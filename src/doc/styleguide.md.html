@@ -34,6 +34,15 @@
       <div class="heading h2">
         <a href="#asynchronous%20code">Asynchronous code</a>
       </div>
+      <div class="heading h3">
+        <a href="#callbacks">Callbacks</a>
+      </div>
+      <div class="heading h3">
+        <a href="#async%20module">Async module</a>
+      </div>
+      <div class="heading h3">
+        <a href="#events">Events</a>
+      </div>
       <div class="heading h2">
         <a href="#error%2Fexception%20handling">Error/Exception handling</a>
       </div>
@@ -42,6 +51,9 @@
       </div>
       <div class="heading h2">
         <a href="#documentation">Documentation</a>
+      </div>
+      <div class="heading h2">
+        <a href="#testing">Testing</a>
       </div>
       <div class="heading h2">
         <a href="#configuration">Configuration</a>
@@ -91,6 +103,7 @@ spaces.</p>
 
 <ul>
 <li><code>cb</code> - for the callback method</li>
+<li><code>done</code> - for the callback which gets nothing or an error as parameter</li>
 <li><code>err</code> - for an error message or object</li>
 <li><code>ex</code> - mostly the exception in a <code>try...catch</code> block</li>
 </ul>
@@ -117,14 +130,45 @@ spaces.</p>
 <p>Through the whole code as much as possible only asynchronous code should be used
 without blocking. That brings the most performance out.</p>
 
-<p>These code follows the node.js convention of providing a single callback as
-the last argument of your async function. This can be achieved using the <code>async</code>
-module.</p>
 
-<p>To not make it too complex the async function may call its callback synchronously 
+<div class="pilwrap" id="callbacks">
+  <h3>
+    <a href="#callbacks" name="callbacks" class="pilcrow">&#182;</a>
+    Callbacks
+  </h3>
+</div>
+
+
+<p>These code follows the node.js convention of providing a single callback as
+the last argument of your asynchronous function. </p>
+
+<p>To not make it too complex the async function may call it's callback synchronously 
 in the same eventloop or later. It is no true asynchronity by definition, so
 if you need it maybe think about your code structure or call the function
 through <code>process.nextTick()</code> yourself.</p>
+
+
+<div class="pilwrap" id="async%20module">
+  <h3>
+    <a href="#async%20module" name="async%20module" class="pilcrow">&#182;</a>
+    Async module
+  </h3>
+</div>
+
+
+<p>You may also use the <code>async</code> module.</p>
+
+
+<div class="pilwrap" id="events">
+  <h3>
+    <a href="#events" name="events" class="pilcrow">&#182;</a>
+    Events
+  </h3>
+</div>
+
+
+<p>Often events are also used to make use of the asynchronous behavior in class
+objects.</p>
 
 
 <div class="pilwrap" id="error%2Fexception%20handling">
@@ -228,6 +272,20 @@ callback methods with their values, they will get.</p>
 
 <p>Some overall documentation like this will be stored in special markup files
 ending with <code>.md</code>.</p>
+
+
+<div class="pilwrap" id="testing">
+  <h2>
+    <a href="#testing" name="testing" class="pilcrow">&#182;</a>
+    Testing
+  </h2>
+</div>
+
+
+<p>Linting is used to precheck the code,</p>
+
+<p>Mocha unit tests are used to check individual parts and the overall
+functionality.</p>
 
 
 <div class="pilwrap" id="configuration">

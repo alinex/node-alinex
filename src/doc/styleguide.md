@@ -33,14 +33,24 @@ Asynchronous code
 Through the whole code as much as possible only asynchronous code should be used
 without blocking. That brings the most performance out.
 
-These code follows the node.js convention of providing a single callback as
-the last argument of your async function. This can be achieved using the `async`
-module.
+### Callbacks
 
-To not make it too complex the async function may call its callback synchronously 
+These code follows the node.js convention of providing a single callback as
+the last argument of your asynchronous function. 
+
+To not make it too complex the async function may call it's callback synchronously 
 in the same eventloop or later. It is no true asynchronity by definition, so
 if you need it maybe think about your code structure or call the function
 through `process.nextTick()` yourself.
+
+### Async module
+
+You may also use the `async` module.
+
+### Events
+
+Often events are also used to make use of the asynchronous behavior in class
+objects.
 
 
 Error/Exception handling

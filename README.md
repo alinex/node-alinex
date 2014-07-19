@@ -31,16 +31,34 @@ but stable way.
 Till now it is only an incomplete collection mainly for the backend.
 
 
+Alinex Modules
+-------------------------------------------------
+
+List of modules which are released as part of the alinex universe, but may be
+used independently.
+
+- [alinex-make](https://alinex.github.io/node-make/) - build tool
+- [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
+- [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
+- [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
+- [alinex-config](https://alinex.github.io/node-config/) - configuration management
+
+In development are currently also:
+
+- [alinex-server](https://alinex.github.io/node-config/) - express.js based webserver
+- [alinex-monitor](https://alinex.github.io/node-config/) - server and service monitoring
+- [alinex-process](https://alinex.github.io/node-config/) - process management
+
+
 Roadmap
 -------------------------------------------------
 
 There is no real roadmap for the time and funtionality. It all depends on my
-personal time a
-nd interests. But I will give a short overview what is planned
+personal time and interests. But I will give a short overview what is planned
 for now:
 
-- base development system
-- basic web server
+- base development system - done
+- basic web server - in work
 - modular webapp system
 - demo context module
 - basic login management
@@ -52,7 +70,7 @@ After that more data storages, verification, queue support and more will come
 with modules for user management, right management...
 
 
-Description
+Development
 -------------------------------------------------
 
 Find additional information in the following documents:
@@ -80,25 +98,6 @@ Find additional information in the following documents:
 ### General Installation and Usage
 
 - [Install](src/doc/install.md)
-
-
-Alinex Modules
--------------------------------------------------
-
-List of modules which are released as part of the alinex universe, but may be
-used independently.
-
-- [alinex-make](https://alinex.github.io/node-make/) - build tool
-- [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
-- [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
-- [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
-- [alinex-config](https://alinex.github.io/node-config/) - configuration management
-
-In development are currently also:
-
-- [alinex-server](https://alinex.github.io/node-config/) - express.js based webserver
-- [alinex-monitor](https://alinex.github.io/node-config/) - server and service monitoring
-- [alinex-process](https://alinex.github.io/node-config/) - process management
 
 
 License

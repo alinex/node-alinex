@@ -136,7 +136,7 @@ You may also use class properties/funtions
     class Test
       # static class variable/function
       @foo: 1
-      @bar: (name) -> 
+      @bar: (name) ->
       constructor: ->
         # access statics
         Test.bar()
@@ -146,3 +146,5 @@ You may also use class properties/funtions
     # access from outside
     Test.foo
     Test.bar 'baz'
+    test = new Test
+    test.constructor.foo

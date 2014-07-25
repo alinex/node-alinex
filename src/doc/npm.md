@@ -23,11 +23,19 @@ To publish to npm you have to call:
 
     > npm adduser
 
-This will ask you about your user details (name, password, email). Afterwards 
+This will ask you about your user details (name, password, email). Afterwards
 you may publish modules:
 
     > npm publish  // called from the modules directory
-    
+
+
+Small tricks
+-------------------------------------------------
+
+If the output of npm is too noisy for you (like for me) change it with:
+
+    > npm config set loglevel
+
 
 Package Versions
 -------------------------------------------------

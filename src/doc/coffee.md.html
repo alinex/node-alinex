@@ -307,7 +307,7 @@ an empty default function on parameter definition:</p>
 <div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
   <span class="err">#</span> <span class="kr">static</span> <span class="kr">class</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
   <span class="err">@</span><span class="nx">foo</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="err">@</span><span class="nx">bar</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span> 
+  <span class="err">@</span><span class="nx">bar</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
   <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
     <span class="err">#</span> <span class="nx">access</span> <span class="nx">statics</span>
     <span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
@@ -317,6 +317,8 @@ an empty default function on parameter definition:</p>
 <span class="err">#</span> <span class="nx">access</span> <span class="nx">from</span> <span class="nx">outside</span>
 <span class="nx">Test</span><span class="p">.</span><span class="nx">foo</span>
 <span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span> <span class="s1">&#39;baz&#39;</span>
+<span class="nx">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Test</span>
+<span class="nx">test</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">foo</span>
 </code></pre></div>
 
 </div>

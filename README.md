@@ -45,9 +45,12 @@ used independently.
 
 In development are currently also:
 
-- [alinex-server](https://alinex.github.io/node-config/) - express.js based webserver
-- [alinex-monitor](https://alinex.github.io/node-config/) - server and service monitoring
-- [alinex-process](https://alinex.github.io/node-config/) - process management
+- [alinex-server](https://alinex.github.io/node-config/) -
+  express.js based webserver
+- [alinex-monitor](https://alinex.github.io/node-monitor/) -
+  server and service monitoring
+- [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
+  sensors for monitoring
 
 
 Roadmap

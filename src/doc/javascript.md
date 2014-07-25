@@ -1,7 +1,14 @@
-JavaScript Tips & Tricks
+JavaScript Tips & Tricks (for node.js)
 =================================================
 
 Some things or tricks to know then working with JavaScript.
+
+
+Events
+-------------------------------------------------
+
+The 'error' event is a special event which will throw an Error if no listener
+registered.
 
 
 Iterator (ES6)

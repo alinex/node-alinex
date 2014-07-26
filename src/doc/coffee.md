@@ -1,4 +1,4 @@
-CoffeeScript Tipr & Tricks
+CoffeeScript Tips & Tricks
 =================================================
 
 CoffeeScript is used as development language because it is very easy to write

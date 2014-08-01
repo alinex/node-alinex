@@ -42,6 +42,7 @@ used independently.
 - [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
 - [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
+- [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
 
 In development are currently also:
 

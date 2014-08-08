@@ -36,6 +36,8 @@ If the output of npm is too noisy for you (like for me) change it with:
 
     > npm config set loglevel
 
+A less noisy level is `warn`.
+
 
 Package Versions
 -------------------------------------------------

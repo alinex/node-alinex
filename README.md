@@ -28,7 +28,14 @@ Just now it is a modular, flexible and powerful toolset for web applications.
 It aims to help the developer to create individual solutions in a fast and easy
 but stable way.
 
-Till now it is only an incomplete collection mainly for the backend.
+The alinex package itself will be the base system which have a management
+console for easy management.
+
+- search for alinex applications
+- install new alinex packages
+- configure
+- remove packages
+- start and stop applications
 
 
 Alinex Modules
@@ -63,12 +70,12 @@ for now:
 
 - base development system - done
 - basic web server - in work
+- server monitor (as module) - in work
 - modular webapp system
 - demo context module
 - basic login management
 - mongo db support
 - admin console through web (as module)
-- server monitor (as module)
 
 After that more data storages, verification, queue support and more will come
 with modules for user management, right management...

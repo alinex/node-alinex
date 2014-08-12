@@ -5,15 +5,6 @@ This document collects some Ideas of what may be developed and what may be used
 in the further packages and versions.
 
 
-Next steps
--------------------------------------------------
-
-- config - validator integration
-- monitor - config contacts check group entries are defined as contacts, too
-- monitor - debug start init, config loaded
-- monitor - controller config check
-
-
 Generators
 -------------------------------------------------
 

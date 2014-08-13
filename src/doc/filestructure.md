@@ -57,6 +57,7 @@ listed with the states to which it belongs:
       lib         // productive
       local       // development, ...
       src         // source, ...
+      example     // examples
 
 Read the further sections to get more information of what resides in which
 directory and how it is used and created.
@@ -77,6 +78,7 @@ This stage contains the following directories:
       mocha       // mocha test suites
     var           // data and code which maybe changed in installation
       src         // original data, will be overridden on update
+      example     // examples
 
 The source code resides in the `src` folder and will be copied/compiled into
 `lib` to run. This step is done on prepublication of package.
@@ -101,6 +103,7 @@ This stage contains the following directories:
     var           // data and code which maybe changed in installation
       src         // original data, will be overridden on update
       local       // linked or copied from src (not overridden on update)
+      example     // examples
 
 
 Installed
@@ -114,6 +117,8 @@ This stage contains the following directories:
     lib           // copied/compiled code
     node_modules  // npm installed packages
     var           // data and code which maybe changed in installation
+      src         // original data, will be overridden on update
+      example     // examples
 
 
 Productive
@@ -132,6 +137,7 @@ This stage contains the following directories:
       src         // original data, will be overridden on update
       local       // copied from src (not overridden on update)
       lib         // linked or compiled from local (on system start or manually)
+      example     // examples
 
 
 Where belongs what?
@@ -160,6 +166,7 @@ It contains the three sub folders:
 - `src` - the source files which will change with each update
 - `local` - local maybe changed files
 - `lib` - linked or compiled files from source overridden by local
+- `example` - examples to be used as template for own configuration
 
 Within these three directories you will find the following possible structure:
 
@@ -168,10 +175,5 @@ Within these three directories you will find the following possible structure:
       <theme>
     static
     ...
-
-???
-
-For the configurations the `src` file should be loaded and merged with the
-`local` changes which overwrites the `src`.
 
 Templates and statics will be compiled from `local` or `src` to lib.

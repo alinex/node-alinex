@@ -9,17 +9,10 @@ Towards Monitoring app
 
 Run controller
 
-- monitor - use base settings configuration
-- monitor - controller config check
 - monitor - controller structure
-- monitor - create controller
 - monitor - run controller
 - monitor - output controller status and time
 - monitor - controller use old value while in validity
-- config - watch files (using watchr)
-- config - only change if checks succeeded
-- config - reinit instances
-- config - emit 'change' event
 - config - set(name, data) with reinit instances, emit 'change'
 - monitor - watch for new controler-configs
 - monitor-sensor - http store match results or string position

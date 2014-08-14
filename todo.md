@@ -9,8 +9,11 @@ Towards Monitoring app
 
 Run controller
 
-- monitor - controller use old value while in validity
+- make - replace commander with yargs
+- monitor-sensor - remove events because not really needed
+- monitor - config master = hostname then runat = null else runat = hostname
 - config - set(name, data) with reinit instances, emit 'change'
+- monitor - controller use old value while in validity
 - monitor - watch for new controler-configs
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent
@@ -32,6 +35,12 @@ Run controller
 - validator - ref-check isset, unset
 - validator - ref-check field.subfield specifies entry
 - validator - ref-check #name.field.subfield specifies other config
+- monitor - use ref-checks
+- make - publish first push
+- make - -d, --doc also update documentation
+- make - pull multiple dirs
+- make - push multiple dirs
+- monitor - controller groups calculation
 
 Reporting
 
@@ -39,8 +48,26 @@ Reporting
 - monitor-actor - email
 - monitor-actor - daemon
 - monitor-actor - REST call
+- monitor - controller rerun after time
 
 Data collection
+
+- last time ok
+- first time of current state
+
+REST Interface
+
+- POST /monitor/sensor/ping
+- POST /monitor/actor/cmd
+- GET /monitor/controller/name
+- GET /monitor/collector/name
+- http (with basic-auth)
+
+Commandline Interface
+
+- interactively work with sensors
+
+Web Interface
 
 
 Anytime

@@ -9,9 +9,6 @@ Towards Monitoring app
 
 Run controller
 
-- monitor - controller structure
-- monitor - run controller
-- monitor - output controller status and time
 - monitor - controller use old value while in validity
 - config - set(name, data) with reinit instances, emit 'change'
 - monitor - watch for new controler-configs
@@ -30,7 +27,11 @@ Run controller
 - monitor-sensor - process (cpu%, mem%, virt%, procnum)
 - monitor-sensor - network (send/received bytes)
 - monitor-sensor - log lines (filtered)
-
+- validator - ref-check call extra after the other
+- validator - ref-check greater, lower, in
+- validator - ref-check isset, unset
+- validator - ref-check field.subfield specifies entry
+- validator - ref-check #name.field.subfield specifies other config
 
 Reporting
 

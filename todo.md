@@ -7,12 +7,23 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-Run controller
+Run control
 
-- make - replace commander with yargs
-- monitor-sensor - remove events because not really needed
+- validator - object, async test, reference, description
+- validator - any, async test, reference, description
+- validator - reference check in phase two
+- validator - ref-check greater, greaterEqual, lower, lowerEqual, in, inKeys
+- validator - ref-check isset, unset
+- validator - ref-check field.subfield specifies entry
+- validator - ref-check #name.field.subfield specifies other config
+- validator - full description tests
+- validator - interval as 6:30:15
+- validator - publish as minor version
+- update all - alinex, config, error, fs, monitor*, server, util
+
+- validator - user.check
+- config - set timeout if config already initializing but not done
 - monitor - config master = hostname then runat = null else runat = hostname
-- config - set(name, data) with reinit instances, emit 'change'
 - monitor - controller use old value while in validity
 - monitor - watch for new controler-configs
 - monitor-sensor - http store match results or string position
@@ -30,16 +41,7 @@ Run controller
 - monitor-sensor - process (cpu%, mem%, virt%, procnum)
 - monitor-sensor - network (send/received bytes)
 - monitor-sensor - log lines (filtered)
-- validator - ref-check call extra after the other
-- validator - ref-check greater, lower, in
-- validator - ref-check isset, unset
-- validator - ref-check field.subfield specifies entry
-- validator - ref-check #name.field.subfield specifies other config
 - monitor - use ref-checks
-- make - publish first push
-- make - -d, --doc also update documentation
-- make - pull multiple dirs
-- make - push multiple dirs
 - monitor - controller groups calculation
 
 Reporting

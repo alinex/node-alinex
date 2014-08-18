@@ -3,16 +3,19 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- validator - reference check in phase two
-- validator - reference calls in array, object, any
-- validator - ref-check greater, greaterEqual, lower, lowerEqual, in, inKeys
+- validator - reference calls in array, any
+- validator - ref-check greaterEqual, lower, lowerEqual, in
 - validator - ref-check isset, unset
 - validator - ref-check field.subfield specifies entry
 - validator - ref-check #name.field.subfield specifies other config
 - validator - full description tests
-- validator - interval as 6:30:15
-- validator - publish as minor version
 - config - publish as minor version
+- validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
+- validator - domain /([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]))*$/
+- validator - ipv4 /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+- validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/
+- validator - ip (v4 or v6)
+
 
 - validator - user.check
 - validator - percent (0-100, float with % or 0..1)
@@ -29,6 +32,14 @@ Towards Monitoring app
 
 Run control
 
+- monitor - config controller disabled
+- monitor - split config loading and initializing
+- monitor - add yargs cli control
+- monitor-sensor - cpu (load s/m/l, average%)
+- monitor-sensor - memory (free%, used%, swap%)
+- monitor-sensor - partition (mounted, used%, free%)
+- monitor-sensor - daemon (status=running)
+
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent
 - monitor-sensor - http set post data
@@ -36,11 +47,7 @@ Run control
 - monitor-sensor - http match header
 - monitor-sensor - ftp/ftps (success, responsetime)
 - monitor-sensor - ssh zugriff (success, responsetime)
-- monitor-sensor - cpu (load s/m/l, average%)
-- monitor-sensor - memory (free%, used%, swap%)
-- monitor-sensor - partition (mounted, used%, free%)
 - monitor-sensor - dir (exist, size)
-- monitor-sensor - daemon (status=running)
 - monitor-sensor - process (cpu%, mem%, virt%, procnum)
 - monitor-sensor - network (send/received bytes)
 - monitor-sensor - log lines (filtered)

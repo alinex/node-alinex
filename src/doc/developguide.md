@@ -1,4 +1,4 @@
-Styleguide
+Developer Guideline
 =================================================
 This guide should give an overview of the general style within the alinex system
 and it's packages. It is neither meant as a hard limit but neither as some
@@ -36,9 +36,9 @@ without blocking. That brings the most performance out.
 ### Callbacks
 
 These code follows the node.js convention of providing a single callback as
-the last argument of your asynchronous function. 
+the last argument of your asynchronous function.
 
-To not make it too complex the async function may call it's callback synchronously 
+To not make it too complex the async function may call it's callback synchronously
 in the same eventloop or later. It is no true asynchronity by definition, so
 if you need it maybe think about your code structure or call the function
 through `process.nextTick()` yourself.
@@ -137,6 +137,26 @@ Linting is used to precheck the code,
 
 Mocha unit tests are used to check individual parts and the overall
 functionality.
+
+
+Publishing
+-------------------------------------------------
+To publish new packages the following steps should be done:
+
+1. Check dependencies and their version in package.json (maybe run `npm outdated`)
+2. Cleanup to remove test packages
+3. Install and update packages
+4. Run the test suite
+5. Push code to repository
+6. Publish new package
+7. Create and publish new documentation
+
+The steps 2 to 7 will be done using the [alinex-make](http://alinex.github.io/node-make)
+build tool as follows:
+
+> alinex-make -c clean --auto
+> npm install
+> alinex-make -c install --update -c test -c push -c publish --minor -c doc --publish
 
 
 Configuration

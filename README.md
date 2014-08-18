@@ -88,7 +88,7 @@ Find additional information in the following documents:
 
 ### Development
 
-- [Styleguide](src/doc/styleguide.md)
+- [Development Guide](src/doc/developguide.md)
 - [File Structure](src/doc/filestructure.md)
 - [Development Tools](src/doc/developtools.md)
 - [Ideas](src/doc/ideas.md)

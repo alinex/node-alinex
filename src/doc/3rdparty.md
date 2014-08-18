@@ -68,7 +68,7 @@ Data Storages
 Command line support
 -------------------------------------------------
 
-- [Commander.js](https://visionmedia.github.io/commander.js/)
+- [yargs](https://github.com/chevex/yargs)
   a light-weight, expressive, and powerful command-line framework
 - [Prompt](https://github.com/flatiron/prompt/)
   easy and beautiful command-line prompt

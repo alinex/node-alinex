@@ -3,12 +3,6 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-
-Towards Monitoring app
--------------------------------------------------
-
-Run control
-
 - validator - reference check in phase two
 - validator - reference calls in array, object, any
 - validator - ref-check greater, greaterEqual, lower, lowerEqual, in, inKeys
@@ -18,13 +12,23 @@ Run control
 - validator - full description tests
 - validator - interval as 6:30:15
 - validator - publish as minor version
-- update all - alinex, config, error, fs, monitor*, server, util
+- config - publish as minor version
 
 - validator - user.check
-- config - set timeout if config already initializing but not done
-- monitor - config master = hostname then runat = null else runat = hostname
-- monitor - controller use old value while in validity
-- monitor - watch for new controler-configs
+- validator - percent (0-100, float with % or 0..1)
+
+- validator - field ref: 'media.controller.initial' # simple
+- validator - field ref: 'sensors.[*].sensor' # through any array/key element
+- validator - field ref: '@sensor' # relative
+- validator - field ref: '@<sensor' # relative back
+- validator - field ref: '#config.monitor.contacts' # other data element
+
+
+Towards Monitoring app
+-------------------------------------------------
+
+Run control
+
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent
 - monitor-sensor - http set post data
@@ -42,6 +46,8 @@ Run control
 - monitor-sensor - log lines (filtered)
 - monitor - use ref-checks
 - monitor - controller groups calculation
+- monitor - controller use old value while in validity
+- monitor - watch for new controler-configs
 
 Reporting
 
@@ -74,6 +80,8 @@ Web Interface
 Anytime
 -------------------------------------------------
 
+- config - set timeout if config already initializing but not done
+- validator - select type: different checks by specific setting
 - server - config integration
 - server - start() with event
 - server - stop() with event#

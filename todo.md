@@ -9,9 +9,8 @@ Towards Monitoring app
 
 Run control
 
-- validator - object, async test, reference, description
-- validator - any, async test, reference, description
 - validator - reference check in phase two
+- validator - reference calls in array, object, any
 - validator - ref-check greater, greaterEqual, lower, lowerEqual, in, inKeys
 - validator - ref-check isset, unset
 - validator - ref-check field.subfield specifies entry

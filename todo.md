@@ -3,6 +3,16 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
+- string
+- integer
+- float
+- interval
+- percent
+- object
+- array
+- any
+- validator - reference integration
+
 - validator - reference calls in array, any
 - validator - ref-check greaterEqual, lower, lowerEqual, in
 - validator - ref-check isset, unset

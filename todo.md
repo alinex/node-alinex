@@ -3,15 +3,12 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- string
-- integer
-- float
-- interval
-- percent
 - object
 - array
 - any
-- validator - reference integration
+- validator - ref absolute
+- validator - ref relative <<
+- validator - ref external
 
 - validator - reference calls in array, any
 - validator - ref-check greaterEqual, lower, lowerEqual, in

@@ -3,16 +3,15 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- object
-- array
-- any
 - validator - ref absolute
 - validator - ref relative <<
 - validator - ref external
 
+- validator store list of checked paths to decide when to rerun for references
 - validator - reference calls in array, any
 - validator - ref-check greaterEqual, lower, lowerEqual, in
 - validator - ref-check isset, unset
+
 - validator - full description tests
 - config - publish as minor version
 - validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
@@ -36,7 +35,6 @@ Run control
 - monitor - add yargs cli control
 - monitor-sensor - cpu (load s/m/l, average%)
 - monitor-sensor - memory (free%, used%, swap%)
-- monitor-sensor - partition (mounted, used%, free%)
 - monitor-sensor - daemon (status=running)
 
 - monitor-sensor - http store match results or string position

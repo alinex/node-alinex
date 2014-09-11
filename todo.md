@@ -3,15 +3,9 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- validator - ref absolute
-- validator - ref relative <<
-- validator - ref external
+- validator - string `values` in ref (array/object keys)
 
-- validator store list of checked paths to decide when to rerun for references
-- validator - reference calls in array, any
-- validator - ref-check greaterEqual, lower, lowerEqual, in
-- validator - ref-check isset, unset
-
+- validator - checkrules() validate validation rules
 - validator - full description tests
 - config - publish as minor version
 - validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
@@ -20,7 +14,7 @@ This is a working list of things which will be done the next days.
 - validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/
 - validator - ip (v4 or v6)
 
-- validator - user.check
+- validator - function
 
 - validator - field ref: 'sensors.*.sensor' # through any array/key element
 

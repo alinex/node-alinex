@@ -3,10 +3,10 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- validator - string `values` in ref (array/object keys)
-
-- validator - checkrules() validate validation rules
+- validator - checkrules() for boolean, percent, interval, any, array, object
 - validator - full description tests
+
+- validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 - config - publish as minor version
 - validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
 - validator - domain /([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]))*$/

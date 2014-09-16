@@ -3,8 +3,8 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
-- validator - checkrules() for boolean, percent, interval, any, array, object
-- validator - full description tests
+- validator - replace integerOrReference...
+- validator - function
 
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 - config - publish as minor version

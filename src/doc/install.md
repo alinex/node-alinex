@@ -24,6 +24,17 @@ You may install node from your repository or with the following manual steps.
 		make
 		sudo make install
 
+And to update use the following:
+
+		cd /usr/src/node
+		# Compile and install node.js
+		git pull
+		git checkout v0.11.13-release
+		./configure
+		make
+		sudo make install
+
+
 Developmnet helpers
 -----------------------------------------
 
@@ -40,7 +51,7 @@ And to make work with git easy:
 The same goes for npm:
 
 		npm adduser # you will be  required to give your user information
-		
+
 
 Alinex Applications
 -----------------------------------------

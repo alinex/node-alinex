@@ -3,6 +3,8 @@ ToDo
 
 This is a working list of things which will be done the next days.
 
+- config - watch loads multiple times (disabled, yet)
+
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 
 - validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
@@ -22,16 +24,12 @@ Towards Monitoring app
 
 Run control
 
-- monitor with selfcheck test
-- monitor - use ref-checks
-
-- monitor - config controller: disabled
-- monitor - split config loading and initializing
-- monitor - add yargs cli control
 - monitor-sensor - cpu (load s/m/l, average%)
 - monitor-sensor - memory (free%, used%, swap%)
 - monitor - controller groups calculation
 
+- monitor - use ref-checks
+- monitor - add yargs cli control
 - monitor-sensor - daemon (status=running)
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent

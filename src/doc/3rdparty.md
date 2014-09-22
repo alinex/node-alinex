@@ -37,7 +37,8 @@ System Tools
 - [alinex-fs](https://alinex.github.io/node-fs/)
   enhancement for the node fs module
   (same as mkdirp, fs-extra, graceful-fs, ncp, rimraf, wrench and more)
-- chokidar - fs-watch wrapper
+- [chokidar](https://github.com/paulmillr/chokidar)
+  fs-watch wrapper
 - [minimatch](https://github.com/isaacs/minimatch)
   glob like file name matching
 - POSIX
@@ -72,9 +73,8 @@ Command line support
   a light-weight, expressive, and powerful command-line framework
 - [Prompt](https://github.com/flatiron/prompt/)
   easy and beautiful command-line prompt
-- [Colors](https://github.com/marak/colors.js/)
+- [chalk](https://github.com/sindresorhus/chalk)
   easy way to get colorful output mainly on the command line.
-
 
 Services
 -------------------------------------------------

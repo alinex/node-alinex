@@ -4,11 +4,9 @@ ToDo
 This is a working list of things which will be done the next days.
 
 - config - watch loads multiple times (disabled, yet)
+- config - set timeout if config already initializing but not done
 
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
-
-- validator - hostname /^[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]$/
-- validator - domain /([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}[a-zA-Z0-9]))*$/
 
 - validator - ip (v4 or v6)
 - validator - ipv4 /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
@@ -16,7 +14,6 @@ This is a working list of things which will be done the next days.
 
 - validator - field ref: 'sensors.*.sensor' # through any array/key element
 
-- validator - reference: reference, source, operation= (v) -> v+5
 
 
 Towards Monitoring app
@@ -76,8 +73,6 @@ Web Interface
 Anytime
 -------------------------------------------------
 
-- config - set timeout if config already initializing but not done
-- validator - select type: different checks by specific setting
 - server - config integration
 - server - start() with event
 - server - stop() with event#

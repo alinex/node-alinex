@@ -19,7 +19,7 @@ This is a working list of things which will be done the next days.
 - validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/
 
 - validator - field ref: 'sensors.*.sensor' # through any array/key element
-
+- replace colors with https://github.com/sindresorhus/chalk
 
 
 Towards Monitoring app
@@ -39,7 +39,6 @@ Run control
   -v -verbose be more verbose (show values)
 
 - monitor - use ref-checks
-- monitor - add yargs cli control
 - monitor-sensor - daemon (status=running)
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent
@@ -54,6 +53,7 @@ Run control
 - monitor-sensor - log lines (filtered)
 - monitor - controller use old value while in validity
 - monitor - watch for new controler-configs
+- monitor - dependency tree + output dependent jobs
 
 Reporting
 

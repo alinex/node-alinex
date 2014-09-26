@@ -40,6 +40,7 @@ Run control
 - monitor-sensor - log lines (filtered)
 - monitor - controller use old value while in validity
 - monitor - watch for new controler-configs
+- monitor - dependency tree + output dependent jobs
 
 Reporting
 

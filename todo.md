@@ -1,3 +1,4 @@
+
 ToDo
 =================================================
 
@@ -5,6 +6,11 @@ This is a working list of things which will be done the next days.
 
 - config - watch loads multiple times (disabled, yet)
 - config - set timeout if config already initializing but not done
+- server - configs
+- server - config integration
+- server - start() with event
+- server - stop() with event#
+- server - reload on config change event
 
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 
@@ -24,6 +30,13 @@ Run control
 - monitor-sensor - cpu (load s/m/l, average%)
 - monitor-sensor - memory (free%, used%, swap%)
 - monitor - controller groups calculation
+- monitor - status calculation rule
+
+- monitor - cli
+  run once, list results
+  -d --daemon <time> run continously
+  -c --controller <name> run only this controller
+  -v -verbose be more verbose (show values)
 
 - monitor - use ref-checks
 - monitor - add yargs cli control
@@ -73,12 +86,7 @@ Web Interface
 Anytime
 -------------------------------------------------
 
-- server - config integration
-- server - start() with event
-- server - stop() with event#
-- server - reload on config change event
 - server - cluster support
-- server - configs
 - server -> http or https selectable
 - server -> switch uid gid
 - server -> restrictIP

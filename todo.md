@@ -22,37 +22,38 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-- combine load+cpu
-  lf + cf = f  => (lf || cf) && !(lo || co)
-  lf + cw = f
-  lw + cf = f
-  lo + co = o => lo && co
-  lf + co = w => else
-  lw + cw = w
-  lw + co = w
-  lo + cf = w
-  lo + cw = w
 - move hints from controller to sensor where possible
-- more specific description with machine usage in controller config
-
 - sensor.format() method
-- output formatted if warn, fail or verbose
 - additional info like specified:
   - from specific level warn/fail
   - only top x
 
+- controller.result wie sensor.result
+- more specific description with machine usage in controller config
+- output formatted if warn, fail or verbose
+
+- combine or: max(x)
+- combine and: min(x)
+- combine avg: round(avg(x))
+
+- monitor - status calculation rule
+- monitor - controller groups calculation
+- weight 0 -> keine beeinflussung
+- weight 2 -> doppelte gewichtung bei average
+- weight max -> max. gewichtung bei and und average
+- weight min -> min. gewichtung bei or
+
 
 Run control
-
-- monitor - controller groups calculation
-- monitor - status calculation rule
 
 - monitor - cli
   run once, list results
   -d --daemon <time> run continously
   -c --controller <name> run only this controller
   -v -verbose be more verbose (show values)
+  -l --list show what will be checked
 
+- monitor - controller use old value while in validity
 - monitor - use ref-checks
 - monitor-sensor - daemon (status=running)
 - monitor-sensor - http store match results or string position
@@ -66,7 +67,6 @@ Run control
 - monitor-sensor - process (cpu%, mem%, virt%, procnum)
 - monitor-sensor - network (send/received bytes)
 - monitor-sensor - log lines (filtered)
-- monitor - controller use old value while in validity
 - monitor - watch for new controler-configs
 - monitor - dependency tree + output dependent jobs
 
@@ -90,10 +90,6 @@ REST Interface
 - GET /monitor/controller/name
 - GET /monitor/collector/name
 - http (with basic-auth)
-
-Commandline Interface
-
-- interactively work with sensors
 
 Web Interface
 

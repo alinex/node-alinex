@@ -34,6 +34,7 @@ Towards Monitoring app
   lo + cw = w
 - move hints from controller to sensor where possible
 - more specific description with machine usage in controller config
+
 - sensor.format() method
 - output formatted if warn, fail or verbose
 - additional info like specified:

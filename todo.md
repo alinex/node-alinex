@@ -22,15 +22,7 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-- move hints from controller to sensor where possible
-- sensor.format() method
-- additional info like specified:
-  - from specific level warn/fail
-  - only top x
-
 - controller.result wie sensor.result
-- more specific description with machine usage in controller config
-- output formatted if warn, fail or verbose
 
 - combine or: max(x)
 - combine and: min(x)
@@ -43,6 +35,7 @@ Towards Monitoring app
 - weight max -> max. gewichtung bei and und average
 - weight min -> min. gewichtung bei or
 
+- monitor-sensor-... who was on the machine 'last -10' oder last | grep 'still logged in'
 
 Run control
 

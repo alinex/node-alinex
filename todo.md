@@ -11,7 +11,6 @@ This is a working list of things which will be done the next days.
 - server - stop() with event#
 - server - reload on config change event
 
-
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 - validator - field ref: 'sensors.*.sensor' # through any array/key element
 - validator - ip (v4 or v6)
@@ -24,20 +23,6 @@ Towards Monitoring app
 
 - monitor - controller format method (using sensor data...)
 
-- monitor - status calculation rule
-- monitor - controller groups calculation
-- combine or: max(x)
-- combine and: min(x)
-- combine avg: round(avg(x))
-- weight 0 -> keine beeinflussung
-- weight 2 -> doppelte gewichtung bei average
-- weight max -> max. gewichtung bei and und average
-- weight min -> min. gewichtung bei or
-
-- monitor-sensor-... who was on the machine 'last -10' oder last | grep 'still logged in'
-
-Run control
-
 - monitor - cli
   run once, list results
   -d --daemon <time> run continously
@@ -45,9 +30,12 @@ Run control
   -v -verbose be more verbose (show values)
   -l --list show what will be checked
 
+- monitor-sensor - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[])
+- monitor-sensor - load +top number of processes
 - monitor - controller use old value while in validity
 - monitor - use ref-checks
 - monitor-sensor - daemon (status=running)
+- monitor-sensor - sysupdate +last actualization
 - monitor-sensor - http store match results or string position
 - monitor-sensor - http set user-agent
 - monitor-sensor - http set post data
@@ -61,6 +49,7 @@ Run control
 - monitor-sensor - log lines (filtered)
 - monitor - watch for new controler-configs
 - monitor - dependency tree + output dependent jobs
+- monitor-sensor-... who was on the machine 'last -10' oder last | grep 'still logged in'
 
 Reporting
 

@@ -22,14 +22,13 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-- controller.result wie sensor.result
-
-- combine or: max(x)
-- combine and: min(x)
-- combine avg: round(avg(x))
+- monitor - controller format method (using sensor data...)
 
 - monitor - status calculation rule
 - monitor - controller groups calculation
+- combine or: max(x)
+- combine and: min(x)
+- combine avg: round(avg(x))
 - weight 0 -> keine beeinflussung
 - weight 2 -> doppelte gewichtung bei average
 - weight max -> max. gewichtung bei and und average

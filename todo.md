@@ -21,7 +21,10 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-- monitor - controller format method (using sensor data...)
+- monitor - controller group won't run
+- monitor - controller short NAMES
+  :xxx -> adding to current name
+  ::xxx -> adding to parent name
 
 - monitor - cli
   run once, list results

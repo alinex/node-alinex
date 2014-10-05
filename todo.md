@@ -32,27 +32,36 @@ Towards Monitoring app
   -c --controller <name> run only this controller
   -v -verbose be more verbose (show values)
   -l --list show what will be checked
+  -t --tree dependency tree
 
-- monitor-sensor - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[])
-- monitor-sensor - load +top number of processes
+- monitor-sensors system
+  - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[])
+  - load +top #processes (ps -A counting)
+  - cpu +%wa
+  - iostat +iotop (if installed)
+  - sysupdate +last actualization
+  - process (cpu%, mem%, virt%, procnum)
+  - network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
+  - log lines (syslog)
+
 - monitor - controller use old value while in validity
 - monitor - use ref-checks
-- monitor-sensor - daemon (status=running)
-- monitor-sensor - sysupdate +last actualization
-- monitor-sensor - http store match results or string position
-- monitor-sensor - http set user-agent
-- monitor-sensor - http set post data
-- monitor-sensor - http set method
-- monitor-sensor - http match header
-- monitor-sensor - ftp/ftps (success, responsetime)
-- monitor-sensor - ssh zugriff (success, responsetime)
-- monitor-sensor - dir (exist, size)
-- monitor-sensor - process (cpu%, mem%, virt%, procnum)
-- monitor-sensor - network (send/received bytes)
-- monitor-sensor - log lines (filtered)
+
+- sensor
+  - daemon (status=running)
+  - http
+    store match results or string position
+    set user-agent
+    set post data
+    set method
+    match header
+  - ftp/ftps (success, responsetime)
+  - ssh zugriff (success, responsetime, #logins)
+  - dir (exist, size)
+  - user warn min=1 +who was on the machine 'last -10' oder last | grep 'still logged in'
+  - hacking
+
 - monitor - watch for new controler-configs
-- monitor - dependency tree + output dependent jobs
-- monitor-sensor-... who was on the machine 'last -10' oder last | grep 'still logged in'
 
 Reporting
 

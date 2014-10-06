@@ -21,7 +21,6 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
-- monitor - controller group won't run
 - monitor - controller short NAMES
   :xxx -> adding to current name
   ::xxx -> adding to parent name
@@ -30,7 +29,6 @@ Towards Monitoring app
   run once, list results
   -d --daemon <time> run continously
   -c --controller <name> run only this controller
-  -v -verbose be more verbose (show values)
   -l --list show what will be checked
   -t --tree dependency tree
 

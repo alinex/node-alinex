@@ -21,6 +21,7 @@ This is a working list of things which will be done the next days.
 Towards Monitoring app
 -------------------------------------------------
 
+- console.warn chalk.magenta ... if config is missing or gives error
 - monitor - controller short NAMES
   :xxx -> adding to current name
   ::xxx -> adding to parent name
@@ -33,8 +34,7 @@ Towards Monitoring app
   -t --tree dependency tree
 
 - monitor-sensors system
-  - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[])
-  - load +top #processes (ps -A counting)
+  - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[]) -> async
   - cpu +%wa
   - iostat +iotop (if installed)
   - sysupdate +last actualization

@@ -34,7 +34,6 @@ Towards Monitoring app
   -t --tree dependency tree
 
 - monitor-sensors system
-  - diskfree +du -sh /tmp /var/log (from @config.analysisDir=[]) -> async
   - cpu +%wa
   - iostat +iotop (if installed)
   - sysupdate +last actualization

@@ -11,17 +11,70 @@ This is a working list of things which will be done the next days.
 - server - stop() with event#
 - server - reload on config change event
 
-- validator - string `values` with ref get values from string=>list, array=>values, object=>keys
-- validator - field ref: 'sensors.*.sensor' # through any array/key element
-- validator - ip (v4 or v6)
-- validator - ipv4 /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-- validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/
-
 
 Towards Monitoring app
 -------------------------------------------------
 
-- console.warn chalk.magenta ... if config is missing or gives error
+- sysupdate +last actualization
+
+  apt-get -s upgrade | grep Inst | awk -F '\\]? [\\[(]?' '{print $2,$3,$4}'
+  apt-get changelog apt-utils 2>/dev/null| sed -e '1d;/1.0.1ubuntu2.4.1/,$d'
+
+apt (1.0.1ubuntu2.5) trusty-security; urgency=low
+
+  * SECURITY UPDATE:
+      - cmdline/apt-get.cc: fix insecure tempfile handling in
+        apt-get changelog (CVE-2014-7206). Thanks to Guillem Jover
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 08 Oct 2014 10:38:50 +0200
+
+config:
+  timeWarn 14d
+  timeFail -
+  timeSecurityWarn 0
+  timeSecurityFail 7d
+
+values:
+  numSecurity
+  numOther
+  listSecurity
+  listOther
+  oldestSecurity
+  oldestOther
+
+analysis:
+  pack inst-version -> new-version (repository) SECURITY UPDATE
+    - changes
+
+- iostat +iotop (if installed)
+
+  cat /proc/diskstats
+
+    The /proc/diskstats file displays the I/O statistics
+    of block devices. Each line contains the following 14
+    fields:
+     1 - major number
+     2 - minor mumber
+     3 - device name
+     4 - reads completed successfully
+     5 - reads merged
+     6 - sectors read
+     7 - time spent reading (ms)
+     8 - writes completed
+     9 - writes merged
+    10 - sectors written
+    11 - time spent writing (ms)
+    12 - I/Os currently in progress
+    13 - time spent doing I/Os (ms)
+    14 - weighted time spent doing I/Os (ms)
+    For more details refer to Documentation/iostats.txt
+
+  /proc/schedstat
+  /proc/stat
+  /proc/uptime -> just restarted
+
+
+
 - monitor - controller short NAMES
   :xxx -> adding to current name
   ::xxx -> adding to parent name
@@ -35,8 +88,6 @@ Towards Monitoring app
 
 - monitor-sensors system
   - cpu +%wa
-  - iostat +iotop (if installed)
-  - sysupdate +last actualization
   - process (cpu%, mem%, virt%, procnum)
   - network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
   - log lines (syslog)
@@ -86,6 +137,12 @@ Web Interface
 
 Anytime
 -------------------------------------------------
+
+- validator - string `values` with ref get values from string=>list, array=>values, object=>keys
+- validator - field ref: 'sensors.*.sensor' # through any array/key element
+- validator - ip (v4 or v6)
+- validator - ipv4 /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+- validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/
 
 - server - cluster support
 - server -> http or https selectable

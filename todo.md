@@ -34,12 +34,12 @@ Towards Monitoring app
   -t --tree dependency tree
 
 - monitor-sensors system
-  - cpu +%wa
   - iostat +iotop (if installed)
   - sysupdate +last actualization
   - process (cpu%, mem%, virt%, procnum)
   - network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
   - log lines (syslog)
+  - cpu +%wa
 
 - monitor - controller use old value while in validity
 - monitor - use ref-checks

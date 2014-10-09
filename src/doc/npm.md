@@ -4,6 +4,18 @@ NPM Package Manager
 Short description of how to best work with npm.
 
 
+Application Installation
+-------------------------------------------------
+
+This is done using:
+
+	> npm install -g <package>
+
+And it is updated using:
+
+	> npm update -g
+
+
 Development
 -------------------------------------------------
 
@@ -31,6 +43,8 @@ you may publish modules:
 
 Small tricks
 -------------------------------------------------
+
+### Loglevel on node v0.10
 
 If the output of npm is too noisy for you (like for me) change it with:
 

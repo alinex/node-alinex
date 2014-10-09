@@ -58,11 +58,11 @@ Alinex Applications
 
 To install the alinex applications you can now simply call npm:
 
-		npm install alinex-...
+		npm install -g alinex-...
 
 See [npm](npm.md) for more help to use the package manager.
 
-### Productive System
+### Daemon
 
 You may use the forever productive system to run as daemon.
 

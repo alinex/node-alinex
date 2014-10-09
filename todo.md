@@ -16,11 +16,12 @@ Towards Monitoring app
 -------------------------------------------------
 
 - sysupdate +last actualization
+apt-get update
 
   apt-get -s upgrade | grep Inst | awk -F '\\]? [\\[(]?' '{print $2,$3,$4}'
-  apt-get changelog apt-utils 2>/dev/null| sed -e '1d;/1.0.1ubuntu2.4.1/,$d'
+  aptitude changelog rsyslog 2>/dev/null| sed -e '1d;/5.8.11-3/,$d'
 
-apt (1.0.1ubuntu2.5) trusty-security; urgency=low
+apt (1.0.1ubuntu2.5) trusty-security; urgency=low|medium|high
 
   * SECURITY UPDATE:
       - cmdline/apt-get.cc: fix insecure tempfile handling in
@@ -29,22 +30,31 @@ apt (1.0.1ubuntu2.5) trusty-security; urgency=low
  -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 08 Oct 2014 10:38:50 +0200
 
 config:
-  timeWarn 14d
-  timeFail -
+  timeLowWarn 14d
+  timeLowFail -
+  timeMediumWarn 0
+  timeMediumFail 7d
+  timeHighWarn 0
+  timeHighFail 3d
   timeSecurityWarn 0
-  timeSecurityFail 7d
+  timeSecurityFail 14d
 
 values:
   numSecurity
-  numOther
-  listSecurity
-  listOther
+  numLow
+  numMedium
+  numHigh
+  numTotal
   oldestSecurity
-  oldestOther
+  oldestLow
+  oldestMedium
+  oldestHigh
+  oldestTotal
 
-analysis:
+analysis: (ordered by security,urgency, date)
   pack inst-version -> new-version (repository) SECURITY UPDATE
     - changes
+
 
 - iostat +iotop (if installed)
 
@@ -138,6 +148,7 @@ Web Interface
 Anytime
 -------------------------------------------------
 
+- validator maybe compliance to http://tools.ietf.org/html/draft-zyp-json-schema-04
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 - validator - field ref: 'sensors.*.sensor' # through any array/key element
 - validator - ip (v4 or v6)

@@ -148,6 +148,9 @@ Web Interface
 Anytime
 -------------------------------------------------
 
+- make - package.json man
+  marked-man README.md > package.json.man
+
 - validator maybe compliance to http://tools.ietf.org/html/draft-zyp-json-schema-04
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
 - validator - field ref: 'sensors.*.sensor' # through any array/key element

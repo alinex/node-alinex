@@ -15,47 +15,6 @@ This is a working list of things which will be done the next weeks.
 Towards Monitoring app
 -------------------------------------------------
 
-- sysupdate +last actualization
-apt-get update
-
-  apt-get -s upgrade | grep Inst | awk -F '\\]? [\\[(]?' '{print $2,$3,$4}'
-  aptitude changelog rsyslog 2>/dev/null| sed -e '1d;/5.8.11-3/,$d'
-
-apt (1.0.1ubuntu2.5) trusty-security; urgency=low|medium|high
-
-  * SECURITY UPDATE:
-      - cmdline/apt-get.cc: fix insecure tempfile handling in
-        apt-get changelog (CVE-2014-7206). Thanks to Guillem Jover
-
- -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 08 Oct 2014 10:38:50 +0200
-
-config:
-  timeLowWarn 14d
-  timeLowFail -
-  timeMediumWarn 0
-  timeMediumFail 7d
-  timeHighWarn 0
-  timeHighFail 3d
-  timeSecurityWarn 0
-  timeSecurityFail 14d
-
-values:
-  numSecurity
-  numLow
-  numMedium
-  numHigh
-  numTotal
-  oldestSecurity
-  oldestLow
-  oldestMedium
-  oldestHigh
-  oldestTotal
-
-analysis: (ordered by security,urgency, date)
-  pack inst-version -> new-version (repository) SECURITY UPDATE
-    - changes
-
-
 - iostat +iotop (if installed)
 
   cat /proc/diskstats
@@ -150,6 +109,7 @@ Anytime
 
 - make - package.json man
   marked-man README.md > package.json.man
+- make - istanbul using source maps
 
 - validator maybe compliance to http://tools.ietf.org/html/draft-zyp-json-schema-04
 - validator - string `values` with ref get values from string=>list, array=>values, object=>keys
@@ -186,7 +146,6 @@ Anytime
 - make - compile with watch option
 - make - support uglify with internal call
 - make - support coffee source map in uglify
-- make - istanbul using source maps
 - make - deploy using ftp or ssh
 
 

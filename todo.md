@@ -107,8 +107,6 @@ Web Interface
 Anytime
 -------------------------------------------------
 
-- make - package.json man
-  marked-man README.md > package.json.man
 - make - istanbul using source maps
 
 - validator maybe compliance to http://tools.ietf.org/html/draft-zyp-json-schema-04

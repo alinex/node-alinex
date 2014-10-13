@@ -48,12 +48,7 @@ Towards Monitoring app
   :xxx -> adding to current name
   ::xxx -> adding to parent name
 
-- monitor - cli
-  run once, list results
-  -d --daemon <time> run continously
-  -c --controller <name> run only this controller
-  -l --list show what will be checked
-  -t --tree dependency tree
+- monitor -d --daemon <time> run continously
 
 - monitor-sensors system
   - cpu +%wa

@@ -15,46 +15,71 @@ This is a working list of things which will be done the next weeks.
 Towards Monitoring app
 -------------------------------------------------
 
-- iostat +iotop (if installed)
+SENSORS
 
-  cat /proc/diskstats
+- iostat
 
-    The /proc/diskstats file displays the I/O statistics
-    of block devices. Each line contains the following 14
-    fields:
-     1 - major number
-     2 - minor mumber
-     3 - device name
-     4 - reads completed successfully
-     5 - reads merged
-     6 - sectors read
-     7 - time spent reading (ms)
-     8 - writes completed
-     9 - writes merged
-    10 - sectors written
-    11 - time spent writing (ms)
-    12 - I/Os currently in progress
-    13 - time spent doing I/Os (ms)
-    14 - weighted time spent doing I/Os (ms)
-    For more details refer to Documentation/iostats.txt
+  iostat -yk 1 1
 
-  /proc/schedstat
-  /proc/stat
+    Linux 3.13.0-24-generic (samsung-R505)  13.10.2014  _i686_  (2 CPU)
+
+    avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+              56,35    0,00    5,58    0,51    0,00   37,56
+
+    Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+    sda               0,00         0,00         0,00          0          0
+    scd0              0,00         0,00         0,00          0          0
+
+  config:
+    iowaitWarn
+    iowaitFail
+    device
+    interval 1s
+    tpsWarn
+    readWarn 100kB
+    writeWarn
+
+  values:
+    iowait
+    tps
+                     Indicate the number of transfers per second that were issued to the device. A transfer is an I/O request to the device. Multiple log‐
+                     ical requests can be combined into a single I/O request to the device. A transfer is of indeterminate size.
+    kB_read/s
+           Indicate the amount of data read from the device expressed in a number of blocks (kilobytes, megabytes) per second. Blocks are equiv‐
+           alent to sectors and therefore have a size of 512 bytes.
+    kB_wrtn/s
+           Indicate the amount of data written to the device expressed in a number of blocks (kilobytes, megabytes) per second.
+    kB_read
+           The total number of blocks (kilobytes, megabytes) read.
+
+    kB_wrtn
+           The total number of blocks (kilobytes, megabytes) written.
+
+
+- uptime
+
   /proc/uptime -> just restarted
 
+  config:
+  values:
 
+- processes
 
-- monitor - controller short NAMES
-  :xxx -> adding to current name
-  ::xxx -> adding to parent name
+  config:
+  - name
 
-- monitor -d --daemon <time> run continously
+  values:
+  - cpu%
+  - mem%
+  - virt%
+  - procnum
 
-- monitor-sensors system
-  - cpu +%wa
-  - process (cpu%, mem%, virt%, procnum)
-  - network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
-  - log lines (syslog)
+- network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
+  config:
+  values:
+- log lines (syslog)
+  config:
+  values:
 
 - monitor - controller use old value while in validity
 - monitor - use ref-checks
@@ -75,6 +100,17 @@ Towards Monitoring app
 
 - monitor - watch for new controler-configs
 
+- monitor - controller short NAMES
+  :xxx -> adding to current name
+  ::xxx -> adding to parent name
+
+Daemon
+
+- monitor -d --daemon <time> run continously
+- using interval time
+- logging
+- storage system
+
 Reporting
 
 - monitor-actor - class design
@@ -83,20 +119,25 @@ Reporting
 - monitor-actor - REST call
 - monitor - controller rerun after time
 
+Architecture
+
+- local monitor running
+- push to collector
+- pull by collector
+- REST Interface
+  - POST /monitor/sensor/ping
+  - POST /monitor/actor/cmd
+  - GET /monitor/controller/name
+  - GET /monitor/collector/name
+  - http (with basic-auth)
+
 Data collection
 
 - last time ok
 - first time of current state
 
-REST Interface
 
-- POST /monitor/sensor/ping
-- POST /monitor/actor/cmd
-- GET /monitor/controller/name
-- GET /monitor/collector/name
-- http (with basic-auth)
 
-Web Interface
 
 
 Anytime

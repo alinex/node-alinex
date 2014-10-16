@@ -15,6 +15,10 @@ This is a working list of things which will be done the next weeks.
 Towards Monitoring app
 -------------------------------------------------
 
+- monitor test with missing config section in sensor for better error message
+- monitor move configs to /etc/monitor
+- monitor don't display if controller is completely disabled
+
 SENSORS
 
 - iostat

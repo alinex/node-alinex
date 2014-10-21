@@ -15,9 +15,6 @@ This is a working list of things which will be done the next weeks.
 Towards Monitoring app
 -------------------------------------------------
 
-- config with value 0 in upgrade warnSecurity
-- monitor test with missing config section in sensor for better error message
-
 SENSORS
 
 - iostat

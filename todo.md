@@ -17,44 +17,10 @@ Towards Monitoring app
 
 SENSORS
 
-- iostat
+- netstat
 
-  iostat -yk 1 1
-
-    Linux 3.13.0-24-generic (samsung-R505)  13.10.2014  _i686_  (2 CPU)
-
-    avg-cpu:  %user   %nice %system %iowait  %steal   %idle
-              56,35    0,00    5,58    0,51    0,00   37,56
-
-    Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
-    sda               0,00         0,00         0,00          0          0
-    scd0              0,00         0,00         0,00          0          0
-
-  config:
-    iowaitWarn
-    iowaitFail
-    device
-    interval 1s
-    tpsWarn
-    readWarn 100kB
-    writeWarn
-
-  values:
-    iowait
-    tps
-                     Indicate the number of transfers per second that were issued to the device. A transfer is an I/O request to the device. Multiple log‐
-                     ical requests can be combined into a single I/O request to the device. A transfer is of indeterminate size.
-    kB_read/s
-           Indicate the amount of data read from the device expressed in a number of blocks (kilobytes, megabytes) per second. Blocks are equiv‐
-           alent to sectors and therefore have a size of 512 bytes.
-    kB_wrtn/s
-           Indicate the amount of data written to the device expressed in a number of blocks (kilobytes, megabytes) per second.
-    kB_read
-           The total number of blocks (kilobytes, megabytes) read.
-
-    kB_wrtn
-           The total number of blocks (kilobytes, megabytes) written.
-
+  > netstat --ip
+  > ss
 
 - uptime
 
@@ -77,6 +43,7 @@ SENSORS
 - network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
   config:
   values:
+
 - log lines (syslog)
   config:
   values:

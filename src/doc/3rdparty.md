@@ -69,12 +69,12 @@ Data Storages
 Command line support
 -------------------------------------------------
 
+- [chalk](https://github.com/sindresorhus/chalk)
+  easy way to get colorful output mainly on the command line.
 - [yargs](https://github.com/chevex/yargs)
   a light-weight, expressive, and powerful command-line framework
 - [Prompt](https://github.com/flatiron/prompt/)
   easy and beautiful command-line prompt
-- [chalk](https://github.com/sindresorhus/chalk)
-  easy way to get colorful output mainly on the command line.
 
 Services
 -------------------------------------------------

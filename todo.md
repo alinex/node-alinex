@@ -5,17 +5,44 @@ ToDo
 This is a working list of things which will be done the next weeks.
 
 - config - test watch
-- server - configs
-- server - config integration
-- server - start() with event
-- server - stop() with event#
-- server - reload on config change event
+
+- server:
+  reload on config change event
+  cluster support
+  configs
+  -> http or https selectable
+  -> switch uid gid
+  -> restrictIP
+  -> toobusy
+  -> forceDomain
+  -> logging
+  deliver data
+  -> start page
+  -> static files from var structure (overloada
+  -> jade
+  -> stylus
+  -> 404
+  -> 500
+  integrateable in app
+  REST support
+  Module support
+  -> mount path
+  -> own routing
+  -> different static dir
+  -> different view dir
+
 
 
 Towards Monitoring app
 -------------------------------------------------
 
 SENSORS
+
+- monitor - send verbose to info, fail to error and warn
+
+- ssh
+
+- dirstat
 
 - netstat
 
@@ -64,6 +91,10 @@ SENSORS
   - dir (exist, size)
   - user warn min=1 +who was on the machine 'last -10' oder last | grep 'still logged in'
   - hacking
+
+- browse
+
+  use casperjs with test-routine defined in extra file
 
 - monitor - watch for new controler-configs
 

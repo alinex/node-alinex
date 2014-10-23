@@ -38,23 +38,17 @@ Towards Monitoring app
 
 SENSORS
 
-- monitor - send verbose to info, fail to error and warn
+- network
+  ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
+  config:
+  values:
 
-- ssh
-
-- dirstat
-
-- netstat
+  > cat /proc/net/dev
+  > ip addr show
+  > ip route show
 
   > netstat --ip
   > ss
-
-- uptime
-
-  /proc/uptime -> just restarted
-
-  config:
-  values:
 
 - processes
 
@@ -67,7 +61,18 @@ SENSORS
   - virt%
   - procnum
 
-- network ifconfig (ipaddress, connected, %errors, %missing, %overflow, %collisions) +RX/TX
+- ssh
+
+- dirstat
+
+- dns
+
+  > dig +trace +additional manage.divibib.com
+
+- uptime
+
+  /proc/uptime -> just restarted
+
   config:
   values:
 

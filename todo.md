@@ -36,6 +36,12 @@ This is a working list of things which will be done the next weeks.
 Towards Monitoring app
 -------------------------------------------------
 
+
+
+Show tree mit "partly" angabe bei down oder average
+
+
+
 SENSORS
 
 - network
@@ -194,6 +200,26 @@ Alinex
 - alinex - package installing
 - alinex - start/stop application
 - alinex - configure
+
+
+MC modules
+-------------------------------------------------
+- mc
+  - queue (redis)
+  - rest
+    - server
+  - process
+  - media
+    - fs
+  - mongo (store)
+
+### process
+- precheck fail
+- precheck done
+- command
+- check rules
+- retry count
+
 
 
 More modules

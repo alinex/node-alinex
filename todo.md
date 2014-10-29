@@ -54,12 +54,17 @@ SENSORS
 
   config:
   - name
+  - maxnumWarn
+  - maxnumFail
+  - minnumWarn
+  - minnumFail
 
   values:
+  - procnum
+  - user, pid, cpu%, mem%, vss, rss, term, state, start, time,
   - cpu%
   - mem%
   - virt%
-  - procnum
 
 - ssh
 

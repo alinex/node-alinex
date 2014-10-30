@@ -32,11 +32,26 @@ This is a working list of things which will be done the next weeks.
   -> different view dir
 
 
+Rewrite of sensor configuration
+-------------------------------------------------
+cpu sensor
+- no config needed - try to check with controller
+- config - createAnalysis: true to switch generally on
+- add fail/warn checks through general module
+- create general rule engine
+- replace hard coded rules with engine
+- update config output of general formatter
+
+
+
+
 
 Towards Monitoring app
 -------------------------------------------------
 
-
+- sensor results mit von/bis zeit
+- config von warn/error als regeln
+  - feld, operator, wert
 
 Show tree mit "partly" angabe bei down oder average
 

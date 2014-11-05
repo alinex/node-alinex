@@ -35,7 +35,6 @@ This is a working list of things which will be done the next weeks.
 Rewrite of sensor configuration
 -------------------------------------------------
 
-all sensors:
 - http test match: regexp
 - http test match: named-regexp
 fail:
@@ -48,8 +47,6 @@ fail:
 
 Towards Monitoring app
 -------------------------------------------------
-
-- monitor - support new sensors with fail/warn rules
 
 - sensor results mit von/bis zeit
 - Show tree mit "partly" angabe bei down oder average

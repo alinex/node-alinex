@@ -21,8 +21,10 @@ Strings
     if ~message.indexOf 'test'
 
 The above syntax uses the tilde as bitwise or operator to get a boolean
-readable value. If the substring is found it will be true, and false (0) if it
-isn’t.
+readable value. If the substring is found it will be true (any number), and
+false (0) if it isn’t. or use the following to get a real boolean type:
+
+    x = Boolean ~message.indexOf 'test'
 
 Or use the negation:
 

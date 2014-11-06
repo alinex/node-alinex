@@ -37,16 +37,9 @@ Towards Monitoring app
 
 - sensor results mit von/bis zeit
 - Show tree mit "partly" angabe bei down oder average
-- check that set to fail on timeout
-- remove success from values
 
 ### SENSORS
 https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent
-
-Rewrite of sensor configuration
-- http finish tests
-  named regexp work/fail
-- monitor-sensor - new minor version
 
 - ping
   config:
@@ -55,11 +48,14 @@ Rewrite of sensor configuration
     size - packet size in bytes
     interval - time between successive packets in milliseconds
 
+  set time range
+
   https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/simple_checks
   last table
 
 - time
   config:
+    timeout
     locale (berlin)
   values:
     timezone
@@ -74,6 +70,11 @@ Rewrite of sensor configuration
     ostype (linux)
     dist
     version
+
+- io
+  set time range
+
+- monitor-sensor - new minor version
 
 - network
   config:

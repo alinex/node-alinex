@@ -41,39 +41,6 @@ Towards Monitoring app
 ### SENSORS
 https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent
 
-- ping
-  config:
-    packets - number of packets
-    interval - time between successive packets in milliseconds
-    size - packet size in bytes
-    interval - time between successive packets in milliseconds
-
-  set time range
-
-  https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/simple_checks
-  last table
-
-- time
-  config:
-    timeout
-    locale (berlin)
-  values:
-    timezone
-    timezoneRef
-
-- cpu
-  values:
-    architecture
-
-- upgrades
-  values:
-    ostype (linux)
-    dist
-    version
-
-- io
-  set time range
-
 - monitor-sensor - new minor version
 
 - network

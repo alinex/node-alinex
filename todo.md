@@ -41,28 +41,9 @@ Towards Monitoring app
 ### SENSORS
 https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent
 
+- base display array/object in format()
+
 - monitor-sensor - new minor version
-
-- network
-  config:
-    interface
-  values:
-    ipaddress
-    connected
-    %errors
-    %missing
-    %overflow
-    %collisions
-    RX
-    TX
-    transfer (total)
-
-  > cat /proc/net/dev
-  > ip addr show
-  > ip route show
-
-  > netstat --ip
-  > ss
 
 - processes
   config:

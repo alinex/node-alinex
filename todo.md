@@ -54,6 +54,8 @@ https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_ag
   - procnum
   - user, pid, cpu%, mem%, vss, rss, term, state, start, time,
 
+  cat /proc/<pid>/....
+
 - ssh
   config:
     user

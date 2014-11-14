@@ -4,6 +4,18 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
+- spawn
+  create spawn class
+  store configuration
+  implement run()
+  test run
+  check result stores
+  test results
+  implement success conditions
+  implement retry
+  test retry
+  add events
+
 - config - test watch
 
 - server:

@@ -15,6 +15,22 @@ This is a working list of things which will be done the next weeks.
   implement retry
   test retry
   add events
+  dynamic retry timeout
+  set priority
+  wait if load too high
+  dynamic wait interval
+
+  prio = 1..10
+  retry time = prio *= 0.9 on each retry
+  wait if %load > 0.8 + (prio * 0.2) + (num * 0.01)
+  # prio 1: load 1.01 | 1.02
+  # prio 10: load 2.81 | 2.82
+  wait time = 1 / prio * num * 0.5
+  # prio 1: 0.5 | 1 | 1.5
+  # prio 10: 0.05 | 0.1
+
+
+
 
 - config - test watch
 

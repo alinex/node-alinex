@@ -5,10 +5,6 @@ ToDo
 This is a working list of things which will be done the next weeks.
 
 - spawn
-  create spawn class
-  store configuration
-  implement run()
-  test run
   check result stores
   test results
   implement success conditions
@@ -20,16 +16,29 @@ This is a working list of things which will be done the next weeks.
   wait if load too high
   dynamic wait interval
 
-  prio = 1..10
-  retry time = prio *= 0.9 on each retry
-  wait if %load > 0.8 + (prio * 0.2) + (num * 0.01)
-  # prio 1: load 1.01 | 1.02
-  # prio 10: load 2.81 | 2.82
-  wait time = 1 / prio * num * 0.5
-  # prio 1: 0.5 | 1 | 1.5
-  # prio 10: 0.05 | 0.1
+  prio = 0..1
 
+  minRetry = 10s maxRetry = 600s
+  retry time = min + ((max-min) * (1-prio))
+  # prio 0: 600s
+  # prio 0.3: 423s
+  # prio 1: 10s
+  prio *= 0.9 on each retry
+  # priority goes down on each additional try
 
+  minLoad = 0.8 maxLoad = 4
+  wait if %load > min + ((max-min) * prio)
+  # prio 0: load 0.8
+  # prio 0.3: load 1.8
+  # prio 1: load 4
+  minWait = 10s maxWait = 600s
+  wait time = min + ((max-min) * (1-prio))
+  # prio 0: 600s
+  # prio 0.3: 423s
+  # prio 1: 10s
+  prio *= 1.1 on each wait
+  # 0.1 | 0.11 | 0.12 | 0.13 | 0.14 | 0.16 | 0.17 | 0.19 | 0.21
+  # von 0.1 auf 1.0: 26 steps, 2.2h
 
 
 - config - test watch

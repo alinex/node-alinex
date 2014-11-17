@@ -136,7 +136,7 @@ This stage contains the following directories:
     var           // data and code which maybe changed in installation
       src         // original data, will be overridden on update
       local       // copied from src (not overridden on update)
-      lib         // linked or compiled from local (on system start or manually)
+      lib         // linked or compiled from src/local (on system start or manually)
       example     // examples
 
 
@@ -151,6 +151,7 @@ The following list should give an overview of there to store what:
 - server statics -> `/var/.../static`
 - language packs -> `/var/.../locale`
 - cache files -> systems temp folder
+- resources for binaries -> `/bin/lib`
 
 
 More details about some sections

@@ -50,6 +50,7 @@ used independently.
 - [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
+- [alinex-spawn](https://alinex.github.io/node-spawn/) - process control wrapper
 
 In development are currently also:
 

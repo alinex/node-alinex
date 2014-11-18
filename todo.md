@@ -5,9 +5,6 @@ ToDo
 This is a working list of things which will be done the next weeks.
 
 - spawn
-  check result stores
-  test results
-  implement success conditions
   implement retry
   test retry
   add events

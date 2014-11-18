@@ -51,15 +51,15 @@ used independently.
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
 - [alinex-spawn](https://alinex.github.io/node-spawn/) - process control wrapper
+- [alinex-monitor](https://alinex.github.io/node-monitor/) -
+  server and service monitoring
+- [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
+  sensors for monitoring
 
 In development are currently also:
 
 - [alinex-server](https://alinex.github.io/node-config/) -
   express.js based webserver
-- [alinex-monitor](https://alinex.github.io/node-monitor/) -
-  server and service monitoring
-- [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
-  sensors for monitoring
 
 
 Roadmap

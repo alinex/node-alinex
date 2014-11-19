@@ -66,6 +66,50 @@ This is a working list of things which will be done the next weeks.
   -> different view dir
 
 
+
+MC modules
+-------------------------------------------------
+- dvb-media
+DO
+  name config divibib
+  make example config with default files
+  test -c divibib
+  use config settings in ffmpeg
+FR
+  make sitmark-container
+  make sitmark-shuffler
+  store in git
+MO
+  install npm registry on media1/2
+    https://www.npmjs.org/package/sinopia
+    file storage /nfs/npm
+  "publishConfig":{"registry":"http://my-internal-registry.local"}
+  install on vproc1
+    npm config set <registryurl>
+    npm install -g --production https://github.com/indexzero/forever
+    copy local configs
+    test
+  media.info <file>
+    https://github.com/mscdex/mmmagic
+    http://stackoverflow.com/questions/9464617/retrieving-and-saving-media-metadata-using-ffmpeg
+
+- make
+  don't publish in npm if private
+  -c doc --publish
+    copy to www/node/dvb-media
+  a3/install.sh
+    list of machines
+    ssh rsync + install
+
+- dvb-prepare
+- mc
+  - queue (redis)
+  - rest
+    - server
+  - process
+  - mongo (store)
+
+
 Towards Monitoring app
 -------------------------------------------------
 
@@ -329,25 +373,6 @@ Alinex
 - alinex - package installing
 - alinex - start/stop application
 - alinex - configure
-
-
-MC modules
--------------------------------------------------
-- mc
-  - queue (redis)
-  - rest
-    - server
-  - process
-  - media
-    - fs
-  - mongo (store)
-
-### process
-- precheck fail
-- precheck done
-- command
-- check rules
-- retry count
 
 
 

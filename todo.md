@@ -70,11 +70,6 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 - dvb-media
-DO
-  name config divibib
-  make example config with default files
-  test -c divibib
-  use config settings in ffmpeg
 FR
   make sitmark-container
   make sitmark-shuffler

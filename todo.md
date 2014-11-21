@@ -69,32 +69,28 @@ This is a working list of things which will be done the next weeks.
 
 MC modules
 -------------------------------------------------
+MO
 - dvb-media
-FR
   make sitmark-container
   make sitmark-shuffler
-  store in git
-MO
-  install npm registry on media1/2
-    https://www.npmjs.org/package/sinopia
-    file storage /nfs/npm
+DI
   "publishConfig":{"registry":"http://my-internal-registry.local"}
   install on vproc1
     npm config set <registryurl>
     npm install -g --production https://github.com/indexzero/forever
     copy local configs
     test
-  media.info <file>
-    https://github.com/mscdex/mmmagic
-    http://stackoverflow.com/questions/9464617/retrieving-and-saving-media-metadata-using-ffmpeg
-
-- make
-  don't publish in npm if private
-  -c doc --publish
-    copy to www/node/dvb-media
   a3/install.sh
     list of machines
     ssh rsync + install
+MI
+- make
+  don't publish in npm if private
+  -c doc --publish
+    into gh-pages
+- media1/2
+  checkout gh-pages in /nfs/git/doc/dvb-media
+  set package.json document location
 
 - dvb-prepare
 - mc

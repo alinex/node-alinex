@@ -39,9 +39,16 @@ This is a working list of things which will be done the next weeks.
 
 
 - config - test watch
+  give config to app as class or object
 
 - server:
+  new concept
+  make express wrapper
+  test to serve a simple route in only express like
+  load configuration
+  -> use port from configuration
   reload on config change event
+  -> reload port
   cluster support
   configs
   -> http or https selectable

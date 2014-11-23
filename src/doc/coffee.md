@@ -36,10 +36,10 @@ Objects
 
 ### Check for empty object
 
-    unless object? and Object.keys(options).length
+    unless obj? and Object.keys(obj).length
 
-This will run the following code if the object under test is not defined or is
-an empty object.
+This will run the following code only if the object under test is not defined
+or is an empty object.
 
 
 Control flow

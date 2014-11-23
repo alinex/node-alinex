@@ -28,8 +28,8 @@ Just now it is a modular, flexible and powerful toolset for web applications.
 It aims to help the developer to create individual solutions in a fast and easy
 but stable way.
 
-The alinex package itself will be the base system which have a management
-console for easy management.
+The alinex package itself will become the base system which has a management
+console for easy management:
 
 - search for alinex applications
 - install new alinex packages
@@ -67,7 +67,7 @@ Roadmap
 
 There is no real roadmap for the time and funtionality. It all depends on my
 personal time and interests. But I will give a short overview what is planned
-for now:
+for the next year:
 
 - base development system - done
 - basic web server - in work
@@ -78,8 +78,9 @@ for now:
 - mongo db support
 - admin console through web (as module)
 
-After that more data storages, verification, queue support and more will come
-with modules for user management, right management...
+After that more data storages, queue support and more will come
+with modules for user management, right management... and of course more real
+applications.
 
 
 Development

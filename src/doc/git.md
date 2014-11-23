@@ -22,7 +22,7 @@ save your password in memory for some time:
 This will keep the password for 15 minutes in memory.
 But you can also have Git store your credentials permanently using the following:
 
-	  git config --global credential.helper store
+    git config --global credential.helper store
 
 Note: While this is convenient, Git will store your credentials in clear text
 in a local file (.git-credentials) under your "home" directory

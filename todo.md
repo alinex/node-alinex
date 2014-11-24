@@ -4,6 +4,9 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
+- validator
+  file
+
 - spawn
   implement retry
   test retry
@@ -76,10 +79,6 @@ This is a working list of things which will be done the next weeks.
 
 MC modules
 -------------------------------------------------
-MO
-- dvb-media
-  make sitmark-container
-  make sitmark-shuffler
 DI
   "publishConfig":{"registry":"http://my-internal-registry.local"}
   install on vproc1
@@ -98,6 +97,12 @@ MI
 - media1/2
   checkout gh-pages in /nfs/git/doc/dvb-media
   set package.json document location
+
+- maybe
+  use for check: java -jar bin/SITMarkShuffler.jar -p -i /tmp/test.m4ac
+  use multicontainer
+  m34c (mp3 + m4a container)
+  use ffmpeg converter for mp3?
 
 - dvb-prepare
 - mc

@@ -79,8 +79,7 @@ This is a working list of things which will be done the next weeks.
 
 MC modules
 -------------------------------------------------
-DI
-  "publishConfig":{"registry":"http://my-internal-registry.local"}
+MI
   install on vproc1
     npm config set <registryurl>
     npm install -g --production https://github.com/indexzero/forever
@@ -89,9 +88,8 @@ DI
   a3/install.sh
     list of machines
     ssh rsync + install
-MI
+DO
 - make
-  don't publish in npm if private
   -c doc --publish
     into gh-pages
 - media1/2

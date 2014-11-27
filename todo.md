@@ -4,9 +4,6 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-- validator
-  file
-
 - spawn
   implement retry
   test retry
@@ -79,28 +76,10 @@ This is a working list of things which will be done the next weeks.
 
 MC modules
 -------------------------------------------------
-MI
-  install on vproc1
-    npm config set <registryurl>
-    npm install -g --production https://github.com/indexzero/forever
-    copy local configs
-    test
-  a3/install.sh
-    list of machines
-    ssh rsync + install
-DO
-- make
-  -c doc --publish
-    into gh-pages
-- media1/2
-  checkout gh-pages in /nfs/git/doc/dvb-media
-  set package.json document location
-
-- maybe
-  use for check: java -jar bin/SITMarkShuffler.jar -p -i /tmp/test.m4ac
-  use multicontainer
-  m34c (mp3 + m4a container)
-  use ffmpeg converter for mp3?
+FR
+- validator
+  file
+- m4a bitrate and quality settings
 
 - dvb-prepare
 - mc
@@ -109,6 +88,13 @@ DO
     - server
   - process
   - mongo (store)
+
+- make
+  -c doc --publish
+    into gh-pages
+- media1/2
+  checkout gh-pages in /nfs/git/doc/dvb-media
+  set package.json document location
 
 
 Towards Monitoring app

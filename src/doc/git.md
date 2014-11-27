@@ -33,9 +33,11 @@ Create a new server repository
 
 First create a bare repository:
 
-    git init --bare /srv/git/xxx.git
-
-Check the permission of the files created if you use apache to access.
+    git --bare init myrepo
+    cd myrepo
+    git --bare update-server-info
+    cd ..
+    chown -R www-data:www-data myrepo
 
 Now make a new local repository:
 
@@ -46,6 +48,13 @@ After you have everything committed add the remote and push the repository:
     git remote add origin <url>
     git push --all origin
     git push --tags origin
+
+Add the  login credentials in the .netrc file which is used by curl:
+
+    $ cat ~/.netrc
+    machine git.yourdomain.com
+    login reader
+    password reader
 
 
 Moving repository
@@ -79,3 +88,10 @@ At last you may delete the old origin and rename it:
     git remote rename new-origin origin
 
 
+Pull/push to origin
+-------------------------------------------------
+
+Use the preset names:
+
+    git pull origin master
+    git push origin master

@@ -4,14 +4,21 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
+MO
+- validator
+  file
+
 - spawn
-  implement retry
-  test retry
-  add events
-  dynamic retry timeout
+DI
   set priority
   wait if load too high
   dynamic wait interval
+MI
+  implement retry
+  test retry
+  dynamic retry timeout
+DO
+  add events
 
   prio = 0..1
 
@@ -76,10 +83,6 @@ This is a working list of things which will be done the next weeks.
 
 MC modules
 -------------------------------------------------
-FR
-- validator
-  file
-- m4a bitrate and quality settings
 
 - dvb-prepare
 - mc

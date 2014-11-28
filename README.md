@@ -4,7 +4,7 @@ Package: alinex
 This is the base package for the alinex universe. Currently only
 containing some overall description and rules for all the individual mosules.
 
-Maybe later it will make a whole system out of all the modules.
+Maybe later it will become a whole system out of all the modules.
 
 
 Why I created it?

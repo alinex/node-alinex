@@ -5,8 +5,13 @@ ToDo
 This is a working list of things which will be done the next weeks.
 
 MO
+- monitor mocha selfcheck validator rules
 - validator
   file
+- cli -s|--script
+  file in scripts/<name>
+  require and run(argv, cb)
+  scripts/dvb-wma2m4a.coffee
 
 - spawn
 DI
@@ -47,31 +52,25 @@ DO
 
 - config - test watch
   give config to app as class or object
+  search for files in src
 
 - server:
-  new concept
-  make express wrapper
-  test to serve a simple route in only express like
-  load configuration
-  -> use port from configuration
-  reload on config change event
-  -> reload port
+  load multiple times on test
   cluster support
   configs
-  -> http or https selectable
-  -> switch uid gid
   -> restrictIP
+  -> session handling
   -> toobusy
   -> forceDomain
   -> logging
+  -> switch uid gid
   deliver data
   -> start page
   -> static files from var structure (overloada
   -> jade
   -> stylus
-  -> 404
-  -> 500
-  integrateable in app
+  reload on config change event
+  -> reload port
   REST support
   Module support
   -> mount path

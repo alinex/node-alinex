@@ -4,26 +4,26 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-MO
-- monitor mocha selfcheck validator rules
-- validator
-  file
-- cli -s|--script
-  file in scripts/<name>
-  require and run(argv, cb)
-  scripts/dvb-wma2m4a.coffee
+- publish node-validator
 
-- spawn
+
 DI
+- validator file
+- spawn
   set priority
+MI
   wait if load too high
   dynamic wait interval
-MI
+DO
   implement retry
   test retry
   dynamic retry timeout
-DO
+FR
   add events
+- publish dvb-media
+  update on processing
+  test on processing
+
 
   prio = 0..1
 

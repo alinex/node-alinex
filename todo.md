@@ -18,36 +18,6 @@ FR
 
 
 
-
-
-  minLoad = 0.8 maxLoad = 4
-  wait if %load > min + ((max-min) * prio)
-  # prio 0: load 0.8
-  # prio 0.3: load 1.8
-  # prio 1: load 4
-  minWait = 10s maxWait = 600s
-  wait time = min + ((max-min) * (1-prio))
-
-  # prio 0: 600s
-  # prio 0.3: 423s
-  # prio 1: 10s
-  prio *= 1.1 on each wait
-  # 0.1 | 0.11 | 0.12 | 0.13 | 0.14 | 0.16 | 0.17 | 0.19 | 0.21
-  # von 0.1 auf 1.0: 26 steps, 2.2h
-
-  minRetry = 10s maxRetry = 600s
-  retry time = min + ((max-min) * (1-prio))
-  # prio 0: 600s
-  # prio 0.3: 423s
-  # prio 1: 10s
-  prio *= 0.9 on each retry
-  # priority goes down on each additional try
-
-
-- config - test watch
-  give config to app as class or object
-  search for files in src
-
 - server:
   load multiple times on test
   cluster support

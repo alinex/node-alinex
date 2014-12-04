@@ -7,13 +7,10 @@ This is a working list of things which will be done the next weeks.
 - publish node-validator
 
 
-DO
-  add 1s for each 1000 waiting spawns
+FR
   implement retry
   test retry
   dynamic retry timeout
-  scripts run inline instead of using new process
-FR
   add events
 - publish dvb-media
   update on processing

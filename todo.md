@@ -4,18 +4,18 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-- publish node-validator
+- push node-spawn
 
-
-FR
+MO
   implement retry
   test retry
   dynamic retry timeout
   add events
+DI
 - publish dvb-media
   update on processing
   test on processing
-
+MI
 
 
 - server:

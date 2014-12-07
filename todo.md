@@ -6,21 +6,15 @@ This is a working list of things which will be done the next weeks.
 
 - push node-spawn
 
-MO
-  implement retry
-  test retry
-  dynamic retry timeout
-  add events
-DI
-- publish dvb-media
-  update on processing
-  test on processing
-MI
-
-
 - server:
   load multiple times on test
   cluster support
+  - at the top: if not cluster.isMaster -> start server
+  - else:
+    return class
+    -> fork workers
+    on cluster exit-> restart worker
+    master stop -> kill children
   configs
   -> restrictIP
   -> session handling
@@ -47,7 +41,22 @@ MI
 MC modules
 -------------------------------------------------
 
+MO
+  test retry
+  add events
+  - wait
+  - retry
+DI
+- publish dvb-media
+  update on processing
+  test on processing
+MI
 - dvb-prepare
+  skelett
+  git
+  config
+
+
 - mc
   - queue (redis)
   - rest

@@ -41,11 +41,6 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
-MO
-  test retry
-  add events
-  - wait
-  - retry
 DI
 - publish dvb-media
   update on processing

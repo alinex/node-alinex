@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>styleguide.md</title>
+  <title>developguide.md</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/styleguide.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/developguide.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -23,7 +23,7 @@
     <div id="tree"></div>
     <div id="headings">
       <div class="heading h1">
-        <a href="#styleguide">Styleguide</a>
+        <a href="#developer%20guideline">Developer Guideline</a>
       </div>
       <div class="heading h2">
         <a href="#general%20layout">General layout</a>
@@ -56,6 +56,9 @@
         <a href="#testing">Testing</a>
       </div>
       <div class="heading h2">
+        <a href="#publishing">Publishing</a>
+      </div>
+      <div class="heading h2">
         <a href="#configuration">Configuration</a>
       </div>
       <div class="heading h2">
@@ -65,10 +68,10 @@
   </div>
   <div id="sidebar-toggle"></div>
   <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
-<div class="pilwrap" id="styleguide">
+<div class="pilwrap" id="developer%20guideline">
   <h1>
-    <a href="#styleguide" name="styleguide" class="pilcrow">&#182;</a>
-    Styleguide
+    <a href="#developer%20guideline" name="developer%20guideline" class="pilcrow">&#182;</a>
+    Developer Guideline
   </h1>
 </div>
 
@@ -140,9 +143,9 @@ without blocking. That brings the most performance out.</p>
 
 
 <p>These code follows the node.js convention of providing a single callback as
-the last argument of your asynchronous function. </p>
+the last argument of your asynchronous function.</p>
 
-<p>To not make it too complex the async function may call it's callback synchronously 
+<p>To not make it too complex the async function may call it's callback synchronously
 in the same eventloop or later. It is no true asynchronity by definition, so
 if you need it maybe think about your code structure or call the function
 through <code>process.nextTick()</code> yourself.</p>
@@ -286,6 +289,36 @@ ending with <code>.md</code>.</p>
 
 <p>Mocha unit tests are used to check individual parts and the overall
 functionality.</p>
+
+
+<div class="pilwrap" id="publishing">
+  <h2>
+    <a href="#publishing" name="publishing" class="pilcrow">&#182;</a>
+    Publishing
+  </h2>
+</div>
+
+
+<p>To publish new packages the following steps should be done:</p>
+
+<ol>
+<li>Check dependencies and their version in package.json (maybe run <code>npm outdated</code>)</li>
+<li>Cleanup to remove test packages</li>
+<li>Install and update packages</li>
+<li>Run the test suite</li>
+<li>Push code to repository</li>
+<li>Publish new package</li>
+<li>Create and publish new documentation</li>
+</ol>
+
+<p>The steps 2 to 7 will be done using the <a href="http://alinex.github.io/node-make.html">alinex-make</a>
+build tool as follows:</p>
+
+<blockquote>
+  <p>alinex-make -c clean --auto
+  npm install
+  alinex-make -c install --update -c test -c push -c publish --minor -c doc --publish</p>
+</blockquote>
 
 
 <div class="pilwrap" id="configuration">

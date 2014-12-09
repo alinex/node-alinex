@@ -70,7 +70,7 @@
 <p>This is the base package for the alinex universe. Currently only
 containing some overall description and rules for all the individual mosules.</p>
 
-<p>Maybe later it will make a whole system out of all the modules.</p>
+<p>Maybe later it will become a whole system out of all the modules.</p>
 
 
 <div class="pilwrap" id="why%20i%20created%20it%3F">
@@ -104,7 +104,16 @@ lots of the current propagated technologies and patterns out.</p>
 It aims to help the developer to create individual solutions in a fast and easy
 but stable way.</p>
 
-<p>Till now it is only an incomplete collection mainly for the backend.</p>
+<p>The alinex package itself will become the base system which has a management
+console for easy management:</p>
+
+<ul>
+<li>search for alinex applications</li>
+<li>install new alinex packages</li>
+<li>configure</li>
+<li>remove packages</li>
+<li>start and stop applications</li>
+</ul>
 
 
 <div class="pilwrap" id="alinex%20modules">
@@ -119,23 +128,24 @@ but stable way.</p>
 used independently.</p>
 
 <ul>
-<li><a href="https://alinex.github.io/node-make/">alinex-make</a> - build tool</li>
-<li><a href="https://alinex.github.io/node-error/">alinex-error</a> - enhanced error reporting</li>
-<li><a href="https://alinex.github.io/node-fs/">alinex-fs</a> - enhanced filesystem tools</li>
-<li><a href="https://alinex.github.io/node-util/">alinex-util</a> - String, Array, Object utilities</li>
-<li><a href="https://alinex.github.io/node-config/">alinex-config</a> - configuration management</li>
-<li><a href="https://alinex.github.io/node-validator/">alinex-validator</a> - validation and sanitize of values</li>
+<li><a href="https://alinex.github.io/node-make.html/">alinex-make</a> - build tool</li>
+<li><a href="https://alinex.github.io/node-error.html/">alinex-error</a> - enhanced error reporting</li>
+<li><a href="https://alinex.github.io/node-fs.html/">alinex-fs</a> - enhanced filesystem tools</li>
+<li><a href="https://alinex.github.io/node-util.html/">alinex-util</a> - String, Array, Object utilities</li>
+<li><a href="https://alinex.github.io/node-config.html/">alinex-config</a> - configuration management</li>
+<li><a href="https://alinex.github.io/node-validator.html/">alinex-validator</a> - validation and sanitize of values</li>
+<li><a href="https://alinex.github.io/node-spawn.html/">alinex-spawn</a> - process control wrapper</li>
+<li><a href="https://alinex.github.io/node-monitor.html/">alinex-monitor</a> -
+server and service monitoring</li>
+<li><a href="https://alinex.github.io/node-monitor-sensor.html/">alinex-monitor-sensor</a> -
+sensors for monitoring</li>
 </ul>
 
 <p>In development are currently also:</p>
 
 <ul>
-<li><a href="https://alinex.github.io/node-config/">alinex-server</a> -
+<li><a href="https://alinex.github.io/node-config.html/">alinex-server</a> -
 express.js based webserver</li>
-<li><a href="https://alinex.github.io/node-monitor/">alinex-monitor</a> -
-server and service monitoring</li>
-<li><a href="https://alinex.github.io/node-monitor-sensor/">alinex-monitor-sensor</a> -
-sensors for monitoring</li>
 </ul>
 
 
@@ -149,21 +159,22 @@ sensors for monitoring</li>
 
 <p>There is no real roadmap for the time and funtionality. It all depends on my
 personal time and interests. But I will give a short overview what is planned
-for now:</p>
+for the next year:</p>
 
 <ul>
 <li>base development system - done</li>
 <li>basic web server - in work</li>
+<li>server monitor (as module) - in work</li>
 <li>modular webapp system</li>
 <li>demo context module</li>
 <li>basic login management</li>
 <li>mongo db support</li>
 <li>admin console through web (as module)</li>
-<li>server monitor (as module)</li>
 </ul>
 
-<p>After that more data storages, verification, queue support and more will come
-with modules for user management, right management...</p>
+<p>After that more data storages, queue support and more will come
+with modules for user management, right management... and of course more real
+applications.</p>
 
 
 <div class="pilwrap" id="development">
@@ -186,7 +197,7 @@ with modules for user management, right management...</p>
 
 
 <ul>
-<li><a href="src/doc/styleguide.md.html">Styleguide</a></li>
+<li><a href="src/doc/developguide.md.html">Development Guide</a></li>
 <li><a href="src/doc/filestructure.md.html">File Structure</a></li>
 <li><a href="src/doc/developtools.md.html">Development Tools</a></li>
 <li><a href="src/doc/ideas.md.html">Ideas</a></li>

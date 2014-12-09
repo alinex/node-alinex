@@ -35,19 +35,13 @@
         <a href="#password%20caching">Password caching</a>
       </div>
       <div class="heading h2">
-        <a href="#using%20the%20origin">Using the Origin</a>
+        <a href="#create%20a%20new%20server%20repository">Create a new server repository</a>
       </div>
       <div class="heading h2">
-        <a href="#development">Development</a>
+        <a href="#moving%20repository">Moving repository</a>
       </div>
       <div class="heading h2">
-        <a href="#tagging">Tagging</a>
-      </div>
-      <div class="heading h2">
-        <a href="#branching">Branching</a>
-      </div>
-      <div class="heading h2">
-        <a href="#github">GitHub</a>
+        <a href="#pull%2Fpush%20to%20origin">Pull/push to origin</a>
       </div>
     </div>
   </div>
@@ -92,10 +86,10 @@ git config --global user.email <a href='mailto:info@alinex.de'>info@alinex.de</a
 </div>
 
 
-<p>The next option will tell Git that you don't want to type your username and 
+<p>The next option will tell Git that you don't want to type your username and
 password every time your computer talks to GitHub.</p>
 
-<p>To use this option, you need to turn on the credential helper so that Git will 
+<p>To use this option, you need to turn on the credential helper so that Git will
 save your password in memory for some time:</p>
 
 
@@ -113,52 +107,135 @@ But you can also have Git store your credentials permanently using the following
 
 
 
-<p>Note: While this is convenient, Git will store your credentials in clear text 
+<p>Note: While this is convenient, Git will store your credentials in clear text
 in a local file (.git-credentials) under your "home" directory</p>
 
 
-<div class="pilwrap" id="using%20the%20origin">
+<div class="pilwrap" id="create%20a%20new%20server%20repository">
   <h2>
-    <a href="#using%20the%20origin" name="using%20the%20origin" class="pilcrow">&#182;</a>
-    Using the Origin
+    <a href="#create%20a%20new%20server%20repository" name="create%20a%20new%20server%20repository" class="pilcrow">&#182;</a>
+    Create a new server repository
   </h2>
 </div>
 
 
+<p>First create a bare repository:</p>
 
-<div class="pilwrap" id="development">
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="o">--</span><span class="nx">bare</span> <span class="nx">init</span> <span class="nx">myrepo</span>
+<span class="nx">cd</span> <span class="nx">myrepo</span>
+<span class="nx">git</span> <span class="o">--</span><span class="nx">bare</span> <span class="nx">update</span><span class="o">-</span><span class="nx">server</span><span class="o">-</span><span class="nx">info</span>
+<span class="nx">cd</span> <span class="p">..</span>
+<span class="nx">chown</span> <span class="o">-</span><span class="nx">R</span> <span class="nx">www</span><span class="o">-</span><span class="nx">data</span><span class="o">:</span><span class="nx">www</span><span class="o">-</span><span class="nx">data</span> <span class="nx">myrepo</span>
+</code></pre></div>
+
+
+
+<p>Now make a new local repository:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">init</span> <span class="o">&lt;</span><span class="nx">path</span><span class="o">&gt;</span>
+</code></pre></div>
+
+
+
+<p>After you have everything committed add the remote and push the repository:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">remote</span> <span class="nx">add</span> <span class="nx">origin</span> <span class="o">&lt;</span><span class="nx">url</span><span class="o">&gt;</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">all</span> <span class="nx">origin</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">tags</span> <span class="nx">origin</span>
+</code></pre></div>
+
+
+
+<p>Add the  login credentials in the .netrc file which is used by curl:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">$</span> <span class="nx">cat</span> <span class="o">~</span><span class="err">/.netrc</span>
+<span class="nx">machine</span> <span class="nx">git</span><span class="p">.</span><span class="nx">yourdomain</span><span class="p">.</span><span class="nx">com</span>
+<span class="nx">login</span> <span class="nx">reader</span>
+<span class="nx">password</span> <span class="nx">reader</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="moving%20repository">
   <h2>
-    <a href="#development" name="development" class="pilcrow">&#182;</a>
-    Development
+    <a href="#moving%20repository" name="moving%20repository" class="pilcrow">&#182;</a>
+    Moving repository
   </h2>
 </div>
 
 
+<p>First you have to fetach all remote branches:</p>
 
-<div class="pilwrap" id="tagging">
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">fetch</span> <span class="nx">origin</span>
+</code></pre></div>
+
+
+
+<p>Now check if all branches are local:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">branch</span> <span class="o">-</span><span class="nx">a</span>
+</code></pre></div>
+
+
+
+<p>If there are some branches listet as remote which didn't exist as local ones
+you have to check them out:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">checkout</span> <span class="o">-</span><span class="nx">b</span> <span class="o">&lt;</span><span class="nx">name</span><span class="o">&gt;</span> <span class="nx">origin</span><span class="o">/&lt;</span><span class="nx">name</span><span class="o">&gt;</span>
+</code></pre></div>
+
+
+
+<p>Now define a new remote repository:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">remote</span> <span class="nx">add</span> <span class="k">new</span><span class="o">-</span><span class="nx">origin</span> <span class="o">&lt;</span><span class="nx">url</span><span class="o">&gt;</span>
+</code></pre></div>
+
+
+
+<p>Everything set up so you may transfer the repository:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">all</span> <span class="k">new</span><span class="o">-</span><span class="nx">origin</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="o">--</span><span class="nx">tags</span> <span class="k">new</span><span class="o">-</span><span class="nx">origin</span>
+</code></pre></div>
+
+
+
+<p>At last you may delete the old origin and rename it:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">remote</span> <span class="nx">rm</span> <span class="nx">origin</span>
+<span class="nx">git</span> <span class="nx">remote</span> <span class="nx">rename</span> <span class="k">new</span><span class="o">-</span><span class="nx">origin</span> <span class="nx">origin</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="pull%2Fpush%20to%20origin">
   <h2>
-    <a href="#tagging" name="tagging" class="pilcrow">&#182;</a>
-    Tagging
+    <a href="#pull%2Fpush%20to%20origin" name="pull%2Fpush%20to%20origin" class="pilcrow">&#182;</a>
+    Pull/push to origin
   </h2>
 </div>
 
 
-
-<div class="pilwrap" id="branching">
-  <h2>
-    <a href="#branching" name="branching" class="pilcrow">&#182;</a>
-    Branching
-  </h2>
-</div>
+<p>Use the preset names:</p>
 
 
+<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">pull</span> <span class="nx">origin</span> <span class="nx">master</span>
+<span class="nx">git</span> <span class="nx">push</span> <span class="nx">origin</span> <span class="nx">master</span>
+</code></pre></div>
 
-<div class="pilwrap" id="github">
-  <h2>
-    <a href="#github" name="github" class="pilcrow">&#182;</a>
-    GitHub
-  </h2>
-</div>
 </div>
   </div>
 </body>

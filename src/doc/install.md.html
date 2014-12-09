@@ -38,7 +38,7 @@
         <a href="#alinex%20applications">Alinex Applications</a>
       </div>
       <div class="heading h3">
-        <a href="#productive%20system">Productive System</a>
+        <a href="#daemon">Daemon</a>
       </div>
     </div>
   </div>
@@ -91,6 +91,20 @@
 
 
 
+<p>And to update use the following:</p>
+
+
+<div class="highlight"><pre><code>    <span class="nx">cd</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">node</span>
+    <span class="err">#</span> <span class="nx">Compile</span> <span class="nx">and</span> <span class="nx">install</span> <span class="nx">node</span><span class="p">.</span><span class="nx">js</span>
+    <span class="nx">git</span> <span class="nx">pull</span>
+    <span class="nx">git</span> <span class="nx">checkout</span> <span class="nx">v0</span><span class="p">.</span><span class="mf">11.13</span><span class="o">-</span><span class="nx">release</span>
+    <span class="p">.</span><span class="o">/</span><span class="nx">configure</span>
+    <span class="nx">make</span>
+    <span class="nx">sudo</span> <span class="nx">make</span> <span class="nx">install</span>
+</code></pre></div>
+
+
+
 
 <div class="pilwrap" id="developmnet%20helpers">
   <h2>
@@ -135,7 +149,7 @@
 <p>To install the alinex applications you can now simply call npm:</p>
 
 
-<div class="highlight"><pre><code>    <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">alinex</span><span class="o">-</span><span class="p">...</span>
+<div class="highlight"><pre><code>    <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">alinex</span><span class="o">-</span><span class="p">...</span>
 </code></pre></div>
 
 
@@ -143,10 +157,10 @@
 <p>See <a href="npm.md.html">npm</a> for more help to use the package manager.</p>
 
 
-<div class="pilwrap" id="productive%20system">
+<div class="pilwrap" id="daemon">
   <h3>
-    <a href="#productive%20system" name="productive%20system" class="pilcrow">&#182;</a>
-    Productive System
+    <a href="#daemon" name="daemon" class="pilcrow">&#182;</a>
+    Daemon
   </h3>
 </div>
 

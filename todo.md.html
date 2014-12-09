@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>todo.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "", thisFile = "home/alex/a3/node-alinex/todo.md", defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+  <script src="fileSearch.js"></script>
+  <script src="goToLine.js"></script>
+  <link rel="stylesheet" href="fileSearch.css" />
+  <link rel="stylesheet" href="goToLine.css" />
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#todo">ToDo</a>
+      </div>
+      <div class="heading h2">
+        <a href="#mc%20modules">MC modules</a>
+      </div>
+      <div class="heading h2">
+        <a href="#towards%20monitoring%20app">Towards Monitoring app</a>
+      </div>
+      <div class="heading h3">
+        <a href="#sensors">SENSORS</a>
+      </div>
+      <div class="heading h3">
+        <a href="#others">Others</a>
+      </div>
+      <div class="heading h2">
+        <a href="#anytime">Anytime</a>
+      </div>
+      <div class="heading h2">
+        <a href="#alinex">Alinex</a>
+      </div>
+      <div class="heading h2">
+        <a href="#more%20modules">More modules</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+<div class="pilwrap" id="todo">
+  <h1>
+    <a href="#todo" name="todo" class="pilcrow">&#182;</a>
+    ToDo
+  </h1>
+</div>
+
+
+<p>This is a working list of things which will be done the next weeks.</p>
+
+<ul>
+<li><p>push node-spawn</p></li>
+<li><p>server:
+load multiple times on test
+cluster support</p>
+
+<ul><li>at the top: if not cluster.isMaster -> start server</li>
+<li>else:
+return class
+-> fork workers
+on cluster exit-> restart worker
+master stop -> kill children
+configs
+-> restrictIP
+-> session handling
+-> toobusy
+-> forceDomain
+-> logging
+-> switch uid gid
+deliver data
+-> start page
+-> static files from var structure (overloada
+-> jade
+-> stylus
+reload on config change event
+-> reload port
+REST support
+Module support
+-> mount path
+-> own routing
+-> different static dir
+-> different view dir</li></ul></li>
+</ul>
+
+
+<div class="pilwrap" id="mc%20modules">
+  <h2>
+    <a href="#mc%20modules" name="mc%20modules" class="pilcrow">&#182;</a>
+    MC modules
+  </h2>
+</div>
+
+
+<p>MI
+- make
+  -c doc --publish
+    into gh-pages
+- media1/2
+  checkout gh-pages in /nfs/git/doc/dvb-media
+  set package.json document location
+MO
+- dvb-prepare
+  skelett
+  git
+  config</p>
+
+<ul>
+<li>mc
+<ul><li>queue (redis)</li>
+<li>rest</li>
+<li>server</li>
+<li>process</li>
+<li>mongo (store)</li></ul></li>
+</ul>
+
+
+<div class="pilwrap" id="towards%20monitoring%20app">
+  <h2>
+    <a href="#towards%20monitoring%20app" name="towards%20monitoring%20app" class="pilcrow">&#182;</a>
+    Towards Monitoring app
+  </h2>
+</div>
+
+
+<ul>
+<li>sensor results mit von/bis zeit</li>
+<li>Show tree mit "partly" angabe bei down oder average</li>
+</ul>
+
+
+<div class="pilwrap" id="sensors">
+  <h3>
+    <a href="#sensors" name="sensors" class="pilcrow">&#182;</a>
+    SENSORS
+  </h3>
+</div>
+
+
+<p><a href='https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent'>https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent</a></p>
+
+<ul>
+<li><p>base display array/object in format()</p></li>
+<li><p>monitor-sensor - new minor version</p></li>
+<li><p>processes
+config:</p>
+
+<ul><li>user - user name (default is “all users”)</li>
+<li>cmdline - filter by command line (it is a regular expression)</li>
+<li>name - process name (default is “all processes”)
+values:</li>
+<li>procnum</li>
+<li>user, pid, cpu%, mem%, vss, rss, term, state, start, time,</li></ul>
+
+<p>cat /proc/<pid>/....</p></li>
+<li><p>ssh
+config:
+user
+host
+port
+password or publicKey, privateKey, passphrase
+timeout
+match
+cmd
+response
+values:
+connecttime
+matched
+matches
+responsematched
+responsematches</p></li>
+<li><p>uptime
+values:
+uptime
+boottime</p>
+
+<p>/proc/uptime -> just restarted</p></li>
+<li><p>http
+config:
+set user-agent
+set post data
+set method</p></li>
+<li><p>filestat
+config:
+path (file or dir)
+values:
+size
+type f,d,s
+mimetype
+atime, mtime, ctime</p>
+
+<p>fail if not exists</p></li>
+<li><p>dnsrecord
+config:
+dns - IP address of DNS server (leave empty for the default DNS server, ignored on Windows)
+zone - zone to test the DNS
+type - record type to be queried (default is SOA)
+timeout (ignored on Windows) - timeout for the request in seconds (default is 1 second)
+count (ignored on Windows) - number of tries for the request (default is 2)
+values:
+ip
+responsetime</p>
+
+<blockquote>
+  <p>dig +trace +additional manage.divibib.com</p>
+</blockquote></li>
+<li><p>dns (server)
+config:
+dns - IP address of DNS server (leave empty for the default DNS server, ignored on Windows)
+zone - zone to test the DNS
+type - record type to be queried (default is SOA)
+timeout (ignored on Windows) - timeout for the request in seconds (default is 1 second)
+count (ignored on Windows) - number of tries for the request (default is 2)
+values:
+num
+list array of objects</p></li>
+<li><p>users
+config:
+range (interval)
+loggedin bool</p>
+
+<p>values:
+num
+list object with login time</p>
+
+<p>'last -10' oder last | grep 'still logged in'</p></li>
+<li><p>ftp/sftp
+config:
+host
+port
+user
+password
+match server message
+values:
+responsetime
+matched
+matches</p></li>
+<li><p>smtp/pop/imap
+config:
+host
+port
+match server message
+values:
+responsetime
+matched
+matches</p></li>
+<li><p>daemon
+config:
+name
+values:
+running bool
+uptime</p></li>
+<li><p>sensor (hradware)
+<a href='https://www.zabbix.com/documentation/2.4/manual/appendix/items/sensor'>https://www.zabbix.com/documentation/2.4/manual/appendix/items/sensor</a>
+config:
+device - device name
+sensor - sensor name</p></li>
+<li><p>SNMP (printer...)
+snmpwalk -v 2c -c public <host IP> .
+snmpget -v 2c -c public -On 10.62.1.22 IF-MIB::ifInOctets.3</p></li>
+<li><p>hacking</p></li>
+<li><p>JMX
+Config:
+host
+port</p></li>
+<li><p>ODBC</p></li>
+<li><p>log (syslog,...)
+config:
+file - full path and name of log file
+date - pattern for date
+encoding - code page identifier
+match - regular expression describing the required pattern
+values:
+range (date-date)
+num
+matches</p></li>
+</ul>
+
+
+<div class="pilwrap" id="others">
+  <h3>
+    <a href="#others" name="others" class="pilcrow">&#182;</a>
+    Others
+  </h3>
+</div>
+
+
+<ul>
+<li>monitor - controller use old value while in validity</li>
+<li><p>monitor - use ref-checks</p></li>
+<li><p>browse</p>
+
+<p>use casperjs with test-routine defined in extra file</p></li>
+<li><p>monitor - watch for new controler-configs</p></li>
+<li><p>monitor - controller short NAMES
+:xxx -> adding to current name
+::xxx -> adding to parent name</p></li>
+</ul>
+
+<p>Daemon</p>
+
+<ul>
+<li>monitor -d --daemon <time> run continously</li>
+<li>using interval time</li>
+<li>logging</li>
+<li>storage system</li>
+</ul>
+
+<p>Reporting</p>
+
+<ul>
+<li>monitor-actor - class design</li>
+<li>monitor-actor - email</li>
+<li>monitor-actor - daemon</li>
+<li>monitor-actor - REST call</li>
+<li>monitor - controller rerun after time</li>
+</ul>
+
+<p>Architecture</p>
+
+<ul>
+<li>local monitor running</li>
+<li>push to collector</li>
+<li>pull by collector</li>
+<li>REST Interface
+<ul><li>POST /monitor/sensor/ping</li>
+<li>POST /monitor/actor/cmd</li>
+<li>GET /monitor/controller/name</li>
+<li>GET /monitor/collector/name</li>
+<li>http (with basic-auth)</li></ul></li>
+</ul>
+
+<p>Data collection</p>
+
+<ul>
+<li>last time ok</li>
+<li>first time of current state</li>
+</ul>
+
+
+<div class="pilwrap" id="anytime">
+  <h2>
+    <a href="#anytime" name="anytime" class="pilcrow">&#182;</a>
+    Anytime
+  </h2>
+</div>
+
+
+<ul>
+<li><p>make - istanbul using source maps</p></li>
+<li><p>validator maybe compliance to <a href='http://tools.ietf.org/html/draft-zyp-json-schema-04'>http://tools.ietf.org/html/draft-zyp-json-schema-04</a></p></li>
+<li>validator - string <code>values</code> with ref get values from string=>list, array=>values, object=>keys</li>
+<li>validator - field ref: 'sensors.*.sensor' # through any array/key element</li>
+<li>validator - ip (v4 or v6)</li>
+<li>validator - ipv4 /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/</li>
+<li><p>validator - ipv6 /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]).){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/</p></li>
+<li><p>server - cluster support</p></li>
+<li>server -> http or https selectable</li>
+<li>server -> switch uid gid</li>
+<li>server -> restrictIP</li>
+<li>server -> toobusy</li>
+<li>server -> forceDomain</li>
+<li>server -> logging</li>
+<li>server - deliver data</li>
+<li>server -> start page</li>
+<li>server -> static files from var structure (overloadable)</li>
+<li>server -> jade</li>
+<li>server -> stylus</li>
+<li>server -> 404</li>
+<li>server -> 500</li>
+<li>fs - chrono extension</li>
+<li>fs - touch (mkdirs, create, utimes)</li>
+<li>fs - watch</li>
+<li>fs - walk (like find but calling fn instead collecting)</li>
+<li>fs - lineReader (read file line by line)</li>
+<li>fs - chmods (recursive chmod)</li>
+<li>fs - chowns (recursive chown user + group)</li>
+<li>fs - mkdirs option maxlevel (number of dirs)</li>
+<li>fs - tmpdir</li>
+<li>config - support mongo db json store</li>
+<li>config - support mysql store: name, data (as YAML or JSON)</li>
+<li>make - compile with watch option</li>
+<li>make - support uglify with internal call</li>
+<li>make - support coffee source map in uglify</li>
+<li>make - deploy using ftp or ssh</li>
+</ul>
+
+
+<div class="pilwrap" id="alinex">
+  <h2>
+    <a href="#alinex" name="alinex" class="pilcrow">&#182;</a>
+    Alinex
+  </h2>
+</div>
+
+
+<ul>
+<li>alinex - logo</li>
+<li>alinex - package searching</li>
+<li>alinex - package installing</li>
+<li>alinex - start/stop application</li>
+<li>alinex - configure</li>
+</ul>
+
+
+<div class="pilwrap" id="more%20modules">
+  <h2>
+    <a href="#more%20modules" name="more%20modules" class="pilcrow">&#182;</a>
+    More modules
+  </h2>
+</div>
+
+
+<ul>
+<li>server-demo</li>
+<li>jsshell</li>
+<li>coffeeshell</li>
+<li>access</li>
+</ul></div>
+  </div>
+</body>
+</html>

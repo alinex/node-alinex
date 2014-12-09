@@ -32,7 +32,10 @@
         <a href="#requirements">Requirements</a>
       </div>
       <div class="heading h3">
-        <a href="#instructions">Instructions</a>
+        <a href="#installation">Installation</a>
+      </div>
+      <div class="heading h3">
+        <a href="#packages">Packages</a>
       </div>
     </div>
   </div>
@@ -70,61 +73,44 @@ it because of it's similarities to <a href="sublime.md.html">sublime_text</a>.</
 
 
 <ul>
-<li>OS with 64-bit architecture</li>
 <li><a href="http://nodejs.org/download/">node.js</a> v0.10.x</li>
-<li><a href="http://www.npmjs.org/">npm</a> v1.4.x  </li>
-<li>libgnome-keyring-dev </li>
+<li><a href="http://www.npmjs.org/">npm</a> v1.4.x</li>
+<li>libgnome-keyring-dev</li>
 </ul>
 
 
-<div class="pilwrap" id="instructions">
+<div class="pilwrap" id="installation">
   <h3>
-    <a href="#instructions" name="instructions" class="pilcrow">&#182;</a>
-    Instructions
+    <a href="#installation" name="installation" class="pilcrow">&#182;</a>
+    Installation
   </h3>
 </div>
 
 
-<p>Install the gnome keyring as package in your distribution:</p>
+<p>Install the debian package from the website:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">libgnome</span><span class="o">-</span><span class="nx">keyring</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">python2</span><span class="p">.</span><span class="mi">7</span> <span class="nx">git</span> <span class="nx">git</span><span class="o">-</span><span class="nx">core</span>
+<div class="highlight"><pre><code><span class="nx">wget</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//atom.io/download/deb</span>
+<span class="nx">mv</span> <span class="nx">deb</span> <span class="nx">atom</span><span class="p">.</span><span class="nx">deb</span>
+<span class="nx">sudo</span> <span class="nx">dpkg</span> <span class="o">--</span><span class="nx">install</span> <span class="nx">atom</span><span class="p">.</span><span class="nx">deb</span>
 </code></pre></div>
 
 
 
-<p>Setup python to ensure that gyp uses python 2:</p>
 
-
-<div class="highlight"><pre><code><span class="nx">npm</span> <span class="nx">config</span> <span class="nx">set</span> <span class="nx">python</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">python2</span> <span class="o">-</span><span class="nx">g</span>
-</code></pre></div>
-
-
-
-<p>Get the code from GitHub:</p>
-
-
-<div class="highlight"><pre><code><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/atom/atom</span>
-</code></pre></div>
-
-
-
-<p>Build the application (at /tmp/atom-build/Atom):</p>
-
-
-<div class="highlight"><pre><code><span class="nx">cd</span> <span class="nx">atom</span>
-<span class="nx">script</span><span class="o">/</span><span class="nx">build</span>
-</code></pre></div>
-
-
-
-<p>Install it on your system (/usr/local/bin/atom):</p>
-
-
-<div class="highlight"><pre><code><span class="nx">sudo</span> <span class="nx">script</span><span class="o">/</span><span class="nx">grunt</span> <span class="nx">install</span>
-</code></pre></div>
-
+<div class="pilwrap" id="packages">
+  <h3>
+    <a href="#packages" name="packages" class="pilcrow">&#182;</a>
+    Packages
+  </h3>
 </div>
+
+
+<p>The following packages are some of my favorites:</p>
+
+<ul>
+<li>Git Log</li>
+</ul></div>
   </div>
 </body>
 </html>

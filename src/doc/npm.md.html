@@ -26,10 +26,16 @@
         <a href="#npm%20package%20manager">NPM Package Manager</a>
       </div>
       <div class="heading h2">
+        <a href="#application%20installation">Application Installation</a>
+      </div>
+      <div class="heading h2">
         <a href="#development">Development</a>
       </div>
       <div class="heading h2">
         <a href="#small%20tricks">Small tricks</a>
+      </div>
+      <div class="heading h3">
+        <a href="#loglevel%20on%20node%20v0.10">Loglevel on node v0.10</a>
       </div>
       <div class="heading h2">
         <a href="#package%20versions">Package Versions</a>
@@ -47,6 +53,31 @@
 
 
 <p>Short description of how to best work with npm.</p>
+
+
+<div class="pilwrap" id="application%20installation">
+  <h2>
+    <a href="#application%20installation" name="application%20installation" class="pilcrow">&#182;</a>
+    Application Installation
+  </h2>
+</div>
+
+
+<p>This is done using:</p>
+
+
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="o">&lt;</span><span class="kr">package</span><span class="o">&gt;</span>
+</code></pre></div>
+
+
+
+<p>And it is updated using:</p>
+
+
+<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">update</span> <span class="o">-</span><span class="nx">g</span>
+</code></pre></div>
+
+
 
 
 <div class="pilwrap" id="development">
@@ -103,6 +134,15 @@ you may publish modules:</p>
 </div>
 
 
+
+<div class="pilwrap" id="loglevel%20on%20node%20v0.10">
+  <h3>
+    <a href="#loglevel%20on%20node%20v0.10" name="loglevel%20on%20node%20v0.10" class="pilcrow">&#182;</a>
+    Loglevel on node v0.10
+  </h3>
+</div>
+
+
 <p>If the output of npm is too noisy for you (like for me) change it with:</p>
 
 
@@ -110,6 +150,8 @@ you may publish modules:</p>
 </code></pre></div>
 
 
+
+<p>A less noisy level is <code>warn</code>.</p>
 
 
 <div class="pilwrap" id="package%20versions">

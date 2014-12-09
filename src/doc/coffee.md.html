@@ -100,8 +100,14 @@ anywhere I will use javascript so anybody can read it.</p>
 
 
 <p>The above syntax uses the tilde as bitwise or operator to get a boolean
-readable value. If the substring is found it will be true, and false (0) if it
-isn’t.</p>
+readable value. If the substring is found it will be true (any number), and
+false (0) if it isn’t. or use the following to get a real boolean type:</p>
+
+
+<div class="highlight"><pre><code><span class="nx">x</span> <span class="o">=</span> <span class="nb">Boolean</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+</code></pre></div>
+
+
 
 <p>Or use the negation:</p>
 
@@ -130,13 +136,13 @@ isn’t.</p>
 
 
 
-<div class="highlight"><pre><code><span class="nx">unless</span> <span class="nx">object</span><span class="o">?</span> <span class="nx">and</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">length</span>
+<div class="highlight"><pre><code><span class="nx">unless</span> <span class="nx">obj</span><span class="o">?</span> <span class="nx">and</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">length</span>
 </code></pre></div>
 
 
 
-<p>This will run the following code if the object under test is not defined or is
-an empty object.</p>
+<p>This will run the following code only if the object under test is not defined
+or is an empty object.</p>
 
 
 <div class="pilwrap" id="control%20flow">

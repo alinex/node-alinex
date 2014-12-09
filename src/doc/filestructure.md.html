@@ -142,6 +142,7 @@ listed with the states to which it belongs:</p>
   <span class="nx">lib</span>         <span class="c1">// productive</span>
   <span class="nx">local</span>       <span class="c1">// development, ...</span>
   <span class="nx">src</span>         <span class="c1">// source, ...</span>
+  <span class="nx">example</span>     <span class="c1">// examples</span>
 </code></pre></div>
 
 
@@ -171,6 +172,7 @@ directory and how it is used and created.</p>
   <span class="nx">mocha</span>       <span class="c1">// mocha test suites</span>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
   <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
+  <span class="nx">example</span>     <span class="c1">// examples</span>
 </code></pre></div>
 
 
@@ -204,6 +206,7 @@ directories from productive which are not listed here.</p>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
   <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
   <span class="nx">local</span>       <span class="c1">// linked or copied from src (not overridden on update)</span>
+  <span class="nx">example</span>     <span class="c1">// examples</span>
 </code></pre></div>
 
 
@@ -226,6 +229,8 @@ directories from productive which are not listed here.</p>
 <span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
 <span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
+  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
+  <span class="nx">example</span>     <span class="c1">// examples</span>
 </code></pre></div>
 
 
@@ -252,7 +257,8 @@ directories from productive which are not listed here.</p>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
   <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
   <span class="nx">local</span>       <span class="c1">// copied from src (not overridden on update)</span>
-  <span class="nx">lib</span>         <span class="c1">// linked or compiled from local (on system start or manually)</span>
+  <span class="nx">lib</span>         <span class="c1">// linked or compiled from src/local (on system start or manually)</span>
+  <span class="nx">example</span>     <span class="c1">// examples</span>
 </code></pre></div>
 
 
@@ -276,6 +282,7 @@ directories from productive which are not listed here.</p>
 <li>server statics -> <code>/var/.../static</code></li>
 <li>language packs -> <code>/var/.../locale</code></li>
 <li>cache files -> systems temp folder</li>
+<li>resources for binaries -> <code>/bin/lib</code></li>
 </ul>
 
 
@@ -305,6 +312,7 @@ installations.</p>
 <li><code>src</code> - the source files which will change with each update</li>
 <li><code>local</code> - local maybe changed files</li>
 <li><code>lib</code> - linked or compiled files from source overridden by local</li>
+<li><code>example</code> - examples to be used as template for own configuration</li>
 </ul>
 
 <p>Within these three directories you will find the following possible structure:</p>
@@ -318,11 +326,6 @@ installations.</p>
 </code></pre></div>
 
 
-
-<p>???</p>
-
-<p>For the configurations the <code>src</code> file should be loaded and merged with the
-<code>local</code> changes which overwrites the <code>src</code>.</p>
 
 <p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p></div>
   </div>

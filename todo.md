@@ -41,11 +41,9 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
-DI
-- publish dvb-media
-  update on processing
-  test on processing
 MI
+- spawn config through media
+MO
 - dvb-prepare
   skelett
   git
@@ -59,12 +57,6 @@ MI
   - process
   - mongo (store)
 
-- make
-  -c doc --publish
-    into gh-pages
-- media1/2
-  checkout gh-pages in /nfs/git/doc/dvb-media
-  set package.json document location
 
 
 Towards Monitoring app

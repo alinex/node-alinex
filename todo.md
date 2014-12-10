@@ -4,7 +4,8 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-- push node-spawn
+- publish
+  node-config
 
 - server:
   load multiple times on test
@@ -36,13 +37,20 @@ This is a working list of things which will be done the next weeks.
   -> different static dir
   -> different view dir
 
+- config
+  add modules var/src/config directories as fallback
+  multi file order
+  support flat-style: ini, rdbms
+    object.key = <json data>
+    list.0 = <json data>
+    list.1 = <json data>
+
+- validator integer 1g -> NaN ohne Fehler ?????
 
 
 MC modules
 -------------------------------------------------
 
-MI
-- spawn config through media
 MO
 - dvb-prepare
   skelett

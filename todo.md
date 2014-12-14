@@ -4,9 +4,6 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-- publish
-  node-config
-
 - server:
   load multiple times on test
   cluster support
@@ -37,34 +34,50 @@ This is a working list of things which will be done the next weeks.
   -> different static dir
   -> different view dir
 
-- config
-  add modules var/src/config directories as fallback
-  multi file order
-  support flat-style: ini, rdbms
-    object.key = <json data>
-    list.0 = <json data>
-    list.1 = <json data>
 
-- validator integer 1g -> NaN ohne Fehler ?????
+- config
+  support ini
+  support rdbms
+  watch in find
+
 
 
 MC modules
 -------------------------------------------------
 
-MO
+- media
+  neue container technik
+  neuer shuffler
+
 - dvb-prepare
   skelett
   git
   config
+  mysql module vergleichen
+  mysql support
+  media integration
+  script support
+    dvb-all
+    dvb-fail
+  set result in db
+  retry counter
 
+- dvb-worker
+  skelett
+  git
+  config
+  prepare integration
+  mysql integration
+  take job
+  run job
 
 - mc
   - queue (redis)
-  - rest
-    - server
-  - process
+  - rest server
   - mongo (store)
-
+  - 4readers prepare
+  - shell
+  - sheduler (cron/at)
 
 
 Towards Monitoring app
@@ -234,6 +247,7 @@ https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_ag
 - monitor - use ref-checks
 
 - browse
+- expire store (like rrd)
 
   use casperjs with test-routine defined in extra file
 

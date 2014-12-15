@@ -6,6 +6,7 @@ This is a working list of things which will be done the next weeks.
 
 - publish
   node-config
+  node-spawn
 
 - server:
   load multiple times on test

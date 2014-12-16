@@ -37,7 +37,7 @@ First create a bare repository:
     cd myrepo
     git --bare update-server-info
     cd ..
-    chown -R www-data:www-data myrepo
+    chown -R www-data:www-data myrepovi
 
 Now make a new local repository:
 
@@ -49,7 +49,7 @@ After you have everything committed add the remote and push the repository:
     git push --all origin
     git push --tags origin
 
-Add the  login credentials in the .netrc file which is used by curl:
+Add the login credentials in the .netrc file which is used by curl:
 
     $ cat ~/.netrc
     machine git.yourdomain.com
@@ -60,7 +60,7 @@ Add the  login credentials in the .netrc file which is used by curl:
 Moving repository
 -------------------------------------------------
 
-First you have to fetach all remote branches:
+First you have to fetch all remote branches:
 
     git fetch origin
 

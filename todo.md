@@ -4,13 +4,6 @@ ToDo
 
 This is a working list of things which will be done the next weeks.
 
-<<<<<<< HEAD
-- publish
-  node-config
-  node-spawn
-
-=======
->>>>>>> ba0b3de850b3011b6ec4032b60be84b7802177c2
 - server:
   load multiple times on test
   cluster support
@@ -57,15 +50,21 @@ MC modules
   neuer shuffler
 
 - dvb-prepare
-  skelett
-  git
-  config
+  init config
+  init cli
+
+  include https://www.npmjs.com/package/toobusy-js
+    config: lag, wait
+    timeout
+
   mysql module vergleichen
+
+
   mysql support
   media integration
   script support
-    dvb-all
-    dvb-fail
+    all
+    fail
   set result in db
   retry counter
 

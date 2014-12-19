@@ -45,10 +45,6 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
-- media
-  neue container technik
-  neuer shuffler
-
 - dvb-prepare
   init config
   init cli

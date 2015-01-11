@@ -25,6 +25,7 @@ This is a working list of things which will be done the next weeks.
   -> static files from var structure (overloada
   -> jade
   -> stylus
+  -> less
   reload on config change event
   -> reload port
   REST support
@@ -34,6 +35,7 @@ This is a working list of things which will be done the next weeks.
   -> different static dir
   -> different view dir
 
+  ? bootstrap
 
 - config
   support ini
@@ -45,24 +47,37 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
+media -version
+Error: Cannot find module './scripts/true'
+
 - dvb-prepare
+MO
   init config
+  - spawn
+  - mysql
   init cli
-
-  include https://www.npmjs.com/package/toobusy-js
-    config: lag, wait
-    timeout
-
-  mysql module vergleichen
-
-
-  mysql support
+  - give productid
+  - give mediaid
   media integration
+DI
+  mysql integration https://github.com/felixge/node-mysql/
+  use pooling
+  error handling
+  timeouts
+MI
+  get product from db
+DO
+  create new contents using media
+FR
+  remove old contents, files from db
+  add new contents, files to db
+MO
+  retry counter
+MI
   script support
     all
     fail
-  set result in db
-  retry counter
+  use mysql streaming
 
 - dvb-worker
   skelett
@@ -73,13 +88,21 @@ MC modules
   take job
   run job
 
+  include https://www.npmjs.com/package/toobusy-js
+    config: lag, wait
+    timeout
+
 - mc
   - queue (redis)
   - rest server
   - mongo (store)
+    product with meta
+    content with files
   - 4readers prepare
   - shell
-  - sheduler (cron/at)
+  - sheduler (like cron/at)
+  - manage web (old data)
+  - daemon
 
 
 Towards Monitoring app
@@ -87,6 +110,21 @@ Towards Monitoring app
 
 - sensor results mit von/bis zeit
 - Show tree mit "partly" angabe bei down oder average
+
+? configuration in db
+
+monitor client
+- ruft sensoren auf
+- sendet ergebnisse
+  - in textdateien
+  - an collector
+monitor collector
+- speichert in mongo db
+- komprimiert daten
+monitor server
+- liest daten aus collector
+- zeigt ergebnisse an
+
 
 ### SENSORS
 https://www.zabbix.com/documentation/2.4/manual/config/items/itemtypes/zabbix_agent
@@ -356,3 +394,5 @@ More modules
 - jsshell
 - coffeeshell
 - access
+
+File Upload: https://github.com/zeMirco/express-upload-progress

@@ -60,8 +60,8 @@ Data Storages
 
 ### Relational databases
 
-- [MySQL]()
-
+- [MySQL](https://github.com/felixge/node-mysql/)
+  pure node.js JavaScript Client implementing the MySql protocol
 
 ### Document stores
 

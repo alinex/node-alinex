@@ -47,39 +47,46 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
-media -version
-Error: Cannot find module './scripts/true'
+dvb-prepare
+  integrate alinex-mysql
 
-- dvb-prepare
-MO
-  init config
-  - spawn
-  - mysql
-  init cli
-  - give productid
-  - give mediaid
-  media integration
-DI
-  mysql integration https://github.com/felixge/node-mysql/
-  use pooling
-  error handling
-  timeouts
-MI
-  get product from db
-DO
-  create new contents using media
-FR
-  remove old contents, files from db
-  add new contents, files to db
-MO
-  retry counter
-MI
+  db use
+  - check pid
+  - get pid from mid
+
+  prepare step 1
+  - find softlinks
+  - update softlinks
+  - update media files in db
+
+  prepare step 2
+  - create new contentids without product reference
+  - create container
+
+  prepare failure
+  - remove contentids in db
+  - remove contents from filesystem
+
+  prepare step 3 (update)
+  - add new files to db
+  - add new content -> product references
+  - remove old contents with files in db
+  - remove old contents from filesystem
+  - store results in product
+
+  send status
+  - to divibib
+  - update warnings if declined
+
   script support
-    all
-    fail
-  use mysql streaming
+  -  all
+  -  fail
+  - use mysql streaming
 
-- dvb-worker
+
+
+
+dvb-worker
   skelett
   git
   config

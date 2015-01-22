@@ -48,14 +48,8 @@ MC modules
 -------------------------------------------------
 
 dvb-prepare
-  integrate alinex-mysql
-
-  db use
-  - check pid
-  - get pid from mid
 
   prepare step 1
-  - find softlinks
   - update softlinks
   - update media files in db
 

@@ -49,36 +49,6 @@ MC modules
 
 dvb-prepare
 
-  prepare step 1
-  - update softlinks
-  - update media files in db
-
-  prepare step 2
-  - create new contentids without product reference
-  - create container
-
-  prepare failure
-  - remove contentids in db
-  - remove contents from filesystem
-
-  prepare step 3 (update)
-  - add new files to db
-  - add new content -> product references
-  - remove old contents with files in db
-  - remove old contents from filesystem
-  - store results in product
-
-  send status
-  - to divibib
-  - update warnings if declined
-
-  script support
-  -  all
-  -  fail
-  - use mysql streaming
-
-
-
 
 dvb-worker
   skelett

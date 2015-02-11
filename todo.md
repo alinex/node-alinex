@@ -47,39 +47,10 @@ This is a working list of things which will be done the next weeks.
 MC modules
 -------------------------------------------------
 
-media -version
-Error: Cannot find module './scripts/true'
+dvb-prepare
 
-- dvb-prepare
-MO
-  init config
-  - spawn
-  - mysql
-  init cli
-  - give productid
-  - give mediaid
-  media integration
-DI
-  mysql integration https://github.com/felixge/node-mysql/
-  use pooling
-  error handling
-  timeouts
-MI
-  get product from db
-DO
-  create new contents using media
-FR
-  remove old contents, files from db
-  add new contents, files to db
-MO
-  retry counter
-MI
-  script support
-    all
-    fail
-  use mysql streaming
 
-- dvb-worker
+dvb-worker
   skelett
   git
   config

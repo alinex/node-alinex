@@ -34,6 +34,11 @@ And to update use the following:
 		make
 		sudo make install
 
+Or do it with the package manager:
+
+		curl -sL https://deb.nodesource.com/setup | sudo bash -
+		sudo apt-get install -y nodejs build-essential
+
 
 Developmnet helpers
 -----------------------------------------

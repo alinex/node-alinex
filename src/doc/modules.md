@@ -1,4 +1,4 @@
-Third Party Modules
+NPM Modules by Category
 =================================================
 
 This page gives a short description of the used and preferred npm modules in
@@ -19,9 +19,13 @@ General modules
   working with asynchronous JavaScript.
 - [Memoizee](https://github.com/medikoo/memoize)
   make a function or method using cache for results
+- [alinex-once](https://alinex.github.io/node-once/)
+  lets a function run only once also if called multiple times
+- [Debug](https://github.com/visionmedia/debug/)
+  tiny node.js & browser debugging utility for your libraries and applications
 
 
-### Others
+### Date and Time
 
 - [Moment](http://momentjs.com/docs/)
   Parse, manipulate, and display dates and times
@@ -29,7 +33,7 @@ General modules
   natural language date parser
 
 
-System Tools
+Data Storages
 -------------------------------------------------
 
 ### Filesystem
@@ -44,26 +48,18 @@ System Tools
 - POSIX
   => not used because not platform independent
 
-
-### Server Health
-
-
-Data Storages
--------------------------------------------------
-
-### Data Structures
+### File Formats
 
 - [js-yaml](https://github.com/nodeca/js-yaml)
   YAML parser (to read configurations)
 - [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
   Conversion from simple XML to JavaScript objects
 
-### Relational databases
+### Databases
 
-- [MySQL]()
-
-
-### Document stores
+- [alinex-mysql](https://alinex.github.io/node-mysql/)
+  easy to use mysql library
+  (using [mysql](https://github.com/felixge/node-mysql))
 
 
 Command line support
@@ -93,8 +89,6 @@ Server
 
 ### Maintenance
 
-- [Debug](https://github.com/visionmedia/debug/)
-  tiny node.js & browser debugging utility for your libraries and applications
 - [Winston](https://github.com/flatiron/winston/)
   extensible multi-transport async logging library
 

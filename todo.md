@@ -107,6 +107,9 @@ MI
 
 Towards Monitoring app
 -------------------------------------------------
+Shinken 2 von source installieren
+- vm im live netz?
+- mit externer ip?
 
 - sensor results mit von/bis zeit
 - Show tree mit "partly" angabe bei down oder average

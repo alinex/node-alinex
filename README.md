@@ -46,20 +46,19 @@ used independently.
 
 - [alinex-make](https://alinex.github.io/node-make/) - build tool
 - [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
-- [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
+- [alinex-once](https://alinex.github.io/node-once/) - run methods only once
 - [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
+- [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
+- [alinex-mysql](https://alinex.github.io/node-mysql/) - easy mysql queriing
 - [alinex-spawn](https://alinex.github.io/node-spawn/) - process control wrapper
+- [alinex-server](https://alinex.github.io/node-config/) -
+  express.js based webserver
 - [alinex-monitor](https://alinex.github.io/node-monitor/) -
   server and service monitoring
 - [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
   sensors for monitoring
-
-In development are currently also:
-
-- [alinex-server](https://alinex.github.io/node-config/) -
-  express.js based webserver
 
 
 Roadmap
@@ -70,7 +69,7 @@ personal time and interests. But I will give a short overview what is planned
 for the next year:
 
 - base development system - done
-- basic web server - in work
+- basic web server - done
 - server monitor (as module) - in work
 - modular webapp system
 - demo context module
@@ -106,7 +105,7 @@ Find additional information in the following documents:
 
 ### List of Helper Tools
 
-- [Third Party Modules](src/doc/3rdparty.md)
+- [Modules](src/doc/modules.md)
 
 ### General Installation and Usage
 

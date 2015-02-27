@@ -44,9 +44,19 @@ Alinex Modules
 List of modules which are released as part of the alinex universe, but may be
 used independently.
 
-- [alinex-make](https://alinex.github.io/node-make/) - build tool
+### [alinex-builder](https://alinex.github.io/node-builder/)
+This is a build tool for the developer to make the process of maintaining node
+modules as easy as possible.
+
+### [alinex-async](https://alinex.github.io/node-async/)
+Asynchronous control flow made easy. This module is a superset to the popular
+async.js and adds more usefull methods.
+
+
+
+The following modules are in a beta stadium:
+
 - [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
-- [alinex-once](https://alinex.github.io/node-once/) - run methods only once
 - [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
@@ -60,26 +70,22 @@ used independently.
 - [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
   sensors for monitoring
 
+And the outdated modules:
+
+- [alinex-make](https://alinex.github.io/node-make/) - now alinex-builder
+- [alinex-once](https://alinex.github.io/node-once/) - included in alinex-async
+
 
 Roadmap
 -------------------------------------------------
 
 There is no real roadmap for the time and funtionality. It all depends on my
 personal time and interests. But I will give a short overview what is planned
-for the next year:
+for this year:
 
-- base development system - done
-- basic web server - done
-- server monitor (as module) - in work
-- modular webapp system
-- demo context module
-- basic login management
-- mongo db support
-- admin console through web (as module)
-
-After that more data storages, queue support and more will come
-with modules for user management, right management... and of course more real
-applications.
+- make modules more robust
+- more web server module support
+- base alinex application
 
 
 Development

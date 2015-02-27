@@ -10,17 +10,28 @@ selection from the ever growing node modules list.
 General modules
 -------------------------------------------------
 
+
+### Development
+
+- [alinex-builder](https://alinex.github.io/node-builder/)
+  helps administer common development tasks on the command line
+- [mocha](https://visionmedia.github.io/mocha/)
+  Simple, flexible, javascript test framework
+- [chai](http://chaijs.com/)
+  assertion library that can be paired with mocha
+- [alinex-worktime](https://alinex.github.io/node-worktime/)
+  command line tool to log worktimes
+
+
 ### Language tools
 
 - [CoffeeScript](http://coffeescript.org/)
   a language that compiles into JavaScript but is easier to read and write
-- [Async](https://github.com/caolan/async/)
+- [alinex-async](https://github.com/alinex/node-async/)
   an utility module which provides straight-forward, powerful functions for
-  working with asynchronous JavaScript.
+  working with asynchronous code (a superset of [async](https://github.com/caolan/async/))
 - [Memoizee](https://github.com/medikoo/memoize)
   make a function or method using cache for results
-- [alinex-once](https://alinex.github.io/node-once/)
-  lets a function run only once also if called multiple times
 - [Debug](https://github.com/visionmedia/debug/)
   tiny node.js & browser debugging utility for your libraries and applications
 
@@ -129,15 +140,8 @@ Template languages
 Test
 -------------------------------------------------
 
-### Testrunner
-
-- [mocha](https://visionmedia.github.io/mocha/)
-  Simple, flexible, javascript test framework
-
 ### Helper
 
-- [Chai](http://chaijs.com/)
-  assertion library that can be paired with mocha
 - [sinon](http://sinonjs.org/)
   test spies, stubs and mocks
 - [casper.js](http://casperjs.org/)

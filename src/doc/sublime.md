@@ -2,7 +2,7 @@ Sublime Text 3 Tips and Tricks
 =================================================
 
 Since I use sublime text as editor more and more, here some tips and tricks
-I found helpful at work. 
+I found helpful at work.
 
 
 Goto
@@ -20,7 +20,7 @@ like `index:30` or `index@mkdir`.
 
 Shortcuts are also:
 
-- `Ctrl/⌘ + R` to directly open the symbol search 
+- `Ctrl/⌘ + R` to directly open the symbol search
 - `Ctrl/⌘ + G` for the goto line jump
 
 Or you may directly jump in the file:
@@ -40,9 +40,11 @@ Editing
 
 1. Use `Ctrl/⌘ + D` to duplicate the cursor to the next occurrence of the same word
   this may be done multiple times. Go back with `Ctrl/⌘ + U`.
-2. You may also manually set multiple cursors with `Ctrl/⌘ + Mouseclick`. 
+2. You may also manually set multiple cursors with `Ctrl/⌘ + Mouseclick`.
 3. `Alt + F3` (`Ctrl + ⌘ + G` on Mac) can be used to directly select all occurrences
   of the current selected word.
+4. A block may be selected and using `Ctrl/⌘ + Shift + L` sets a cursor on each
+line of the selection.
 
 If you now edit something it will change on all cursor positions.
 
@@ -52,7 +54,7 @@ The following shortcuts are available here:
 
 - `Ctrl/⌘ + L` to select the whole current line
 - `Ctrl/⌘ + D` to select the word
-- `Ctrl/⌘ + Shift + J` to select the complete block which is on the same indention 
+- `Ctrl/⌘ + Shift + J` to select the complete block which is on the same indention
   level
 - `Ctrl/⌘ + Shift + M` to select all within the same bracket
 - `Ctrl/⌘ + Shift + Space` to select everything in the same scope
@@ -62,7 +64,7 @@ The following shortcuts are available here:
 
 ### Move lines up and down
 
-You may switch lines and move the current line up or down using 
+You may switch lines and move the current line up or down using
 `Ctrl + Shift + Up` and `Ctrl + Shift + Down` (`Ctrl + ⌘ + ...` on Mac).
 
 ### Input shortcuts
@@ -75,7 +77,7 @@ Use `Ctrl/⌘ + V` to insert and `Ctrl/⌘ + Shift + V` to insert with correct i
 Also `Ctrl/⌘ + Shift + D` may be used to duplicate selected content.
 
 
-Use `Ctrl/⌘ + KK` to delete till end of line, `Ctrl/⌘ + Backspace` to delete to start 
+Use `Ctrl/⌘ + KK` to delete till end of line, `Ctrl/⌘ + Backspace` to delete to start
 of line or `Ctrl/⌘ + Shift + K` to delete the current line.
 
 `Ctrl/⌘ + KU` and `Ctrl/⌘ + KL` makes selection upper case or lower case.
@@ -110,7 +112,7 @@ You may enter a multi line search pattern, use `Ctrl + Enter` therefore.
 Commands
 -------------------------------------------------
 
-Use `Ctrl/⌘ + Shift + P_` to open the complete command list and search with some 
+Use `Ctrl/⌘ + Shift + P_` to open the complete command list and search with some
 letters within.
 
 
@@ -119,6 +121,6 @@ Display
 
 Toggle sidebar using `Ctrl/⌘ + KB`.
 
-Switch between tabs: `Ctrl/⌘ + PgUp` and `Ctrl/⌘ + PgDown` or `Ctrl/⌘ + Shift + t` 
+Switch between tabs: `Ctrl/⌘ + PgUp` and `Ctrl/⌘ + PgDown` or `Ctrl/⌘ + Shift + t`
 to open last closed tab.
 

@@ -2,7 +2,8 @@ Atom editor
 =================================================
 
 After the [Atom.io](https://atom.io) editor was launched as open source I liked
-it because of it's similarities to [sublime_text](sublime.md).
+it because of it's similarities to [sublime_text](sublime.md). But till now
+it is not as stable as I wish.
 
 
 Installation on Linux

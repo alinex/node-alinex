@@ -63,7 +63,7 @@ Alinex Applications
 
 To install the alinex applications you can now simply call npm:
 
-		npm install -g alinex-...
+		sudo npm install -g alinex-... --production
 
 See [npm](npm.md) for more help to use the package manager.
 

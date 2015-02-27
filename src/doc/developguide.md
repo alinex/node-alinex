@@ -17,15 +17,14 @@ Variables
 Over all modules some common variable names will be used for the same values:
 
 - `cb` - for the callback method
-- `done` - for the callback which gets nothing or an error as parameter
-- `err` - for an error message or object
+- `err` - for an error message object
 - `ex` - mostly the exception in a `try...catch` block
 
 Classes start with an Uppercase letter:
 
     test = new Test
 
-To mark private properties/functions they start with an underscore.
+To mark private properties/functions they may start with an underscore.
 
 
 Asynchronous code
@@ -45,7 +44,7 @@ through `process.nextTick()` yourself.
 
 ### Async module
 
-You may also use the `async` module.
+You may also use the [alinex-async](https://github.com/alinex/node-async/) module.
 
 ### Events
 
@@ -151,12 +150,13 @@ To publish new packages the following steps should be done:
 6. Publish new package
 7. Create and publish new documentation
 
-The steps 2 to 7 will be done using the [alinex-make](http://alinex.github.io/node-make)
-build tool as follows:
+The tasks are done in an easy way using the
+[alinex-builder](http://alinex.github.io/node-builder).
 
-> alinex-make -c clean --auto
-> npm install
-> alinex-make -c install --update -c test -c push -c publish --minor -c doc --publish
+    # step 1-3
+    > builder -c clean --auto -c update
+    # step 4-7
+    > builder -c test -c publish --minor -c doc --publish
 
 
 Configuration
@@ -164,6 +164,9 @@ Configuration
 The general configuration is stored in files to be also available without
 database connection. To make it easy readable and maintainable it should
 be written in yml rather than json.
+
+[alinex-config](https://github.com/alinex/node-config/) helps in working with
+such files.
 
 
 Dependencies

@@ -49,6 +49,7 @@ listed with the states to which it belongs:
     data          // productive
     doc           // development
     lib           // development, ...
+    man           // development, ...
     log           // productive
     node_modules  // development, ...
     src           // source, development
@@ -73,6 +74,7 @@ This stage contains the following directories:
     bin           // executable files
     src           // source code
       doc         // general documentation which won't belong to any specific file
+      man         // sources for manpages
     test          // test data and test suites
       data        // test data
       mocha       // mocha test suites
@@ -97,6 +99,7 @@ This stage contains the following directories:
     coverage      // coverage report from tests
     doc           // created documentation (optional)
     lib           // copied/compiled code
+    man           // created man pages
     node_modules  // npm installed packages
     src           // source code
     test          // test data and test suites
@@ -115,6 +118,7 @@ This stage contains the following directories:
 
     bin           // executable files
     lib           // copied/compiled code
+    man           // created man pages
     node_modules  // npm installed packages
     var           // data and code which maybe changed in installation
       src         // original data, will be overridden on update
@@ -131,6 +135,7 @@ This stage contains the following directories:
     bin           // executable files
     data          // runtime data storage
     lib           // copied/compiled code
+    man           // created man pages
     log           // log files and debugging data
     node_modules  // npm installed packages
     var           // data and code which maybe changed in installation
@@ -178,3 +183,6 @@ Within these three directories you will find the following possible structure:
     ...
 
 Templates and statics will be compiled from `local` or `src` to lib.
+
+If globally installed the `var/local` folder maybe replaced by a softlink
+to the global `/etc/<app>/` folder.

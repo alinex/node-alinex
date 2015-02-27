@@ -52,6 +52,10 @@ modules as easy as possible.
 Asynchronous control flow made easy. This module is a superset to the popular
 async.js and adds more usefull methods.
 
+### [alinex-worktime](https://alinex.github.io/node-worktime/)
+Asynchronous control flow made easy. This module is a superset to the popular
+async.js and adds more usefull methods.
+
 
 
 The following modules are in a beta stadium:

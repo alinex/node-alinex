@@ -38,29 +38,75 @@ console for easy management:
 - start and stop applications
 
 
+Roadmap
+-------------------------------------------------
+
+There is no real roadmap for the time and funtionality. It all depends on my
+personal time and interests. But I will give a short overview of the big
+points, what is planned for this year:
+
+- make modules more robust
+- more web server module support
+- base alinex application
+
+See the [Planning Board](https://trello.com/b/lOY5hCx7/node-js) for more up to
+date information of there I'm working at. Also the [Ideas](src/doc/ideas.md)
+page will hold some general ideas and thoughts.
+
+
+Development
+-------------------------------------------------
+
+The base rules which are used in the development of the alinex modules are:
+
+- [Development Guide](src/doc/developguide.md)
+- [File Structure](src/doc/filestructure.md)
+- [Development Tools](src/doc/developtools.md)
+- [CoffeeScript](src/doc/coffee.md) - language
+- [JavaScript](src/doc/javascript.md) - language
+- [Install](src/doc/install.md)
+- [Modules](src/doc/modules.md)
+
+And here are some help with the development tools:
+
+- [npm](src/doc/npm.md) - package manager
+- [git](src/doc/git.md) - source code repository
+- [atom](src/doc/atom.md) - editor
+- [sublime](src/doc/sublime.md) - editor
+
+
 Alinex Modules
 -------------------------------------------------
 
 List of modules which are released as part of the alinex universe, but may be
 used independently.
 
-### [alinex-builder](https://alinex.github.io/node-builder/)
-This is a build tool for the developer to make the process of maintaining node
-modules as easy as possible.
+### Tools
 
-### [alinex-async](https://alinex.github.io/node-async/)
-Asynchronous control flow made easy. This module is a superset to the popular
-async.js and adds more usefull methods.
+#### [builder](https://alinex.github.io/node-builder/)
+> This is a build tool for the developer to make the process of maintaining node
+> modules as easy as possible. All alinex modules are managed and maintained using
+> this tool and it is integrated as development dependency in all packages.
 
-### [alinex-worktime](https://alinex.github.io/node-worktime/)
-Asynchronous control flow made easy. This module is a superset to the popular
-async.js and adds more usefull methods.
+#### [worktime](https://alinex.github.io/node-worktime/)
+> Command line tool to log work times on different projects or tickets in an easy
+> way. This helps in calculation of costs based on real work times.
+
+### Helper
+
+#### [async](https://alinex.github.io/node-async/)
+> Asynchronous control flow made easy. This module is a superset to the popular
+> async.js and adds more useful methods.
+
+#### [error](https://alinex.github.io/node-error/)
+> Enhanced error reporting with support for source-maps like used in the alinex
+> coffee script modules.
+
 
 
 
 The following modules are in a beta stadium:
 
-- [alinex-error](https://alinex.github.io/node-error/) - enhanced error reporting
 - [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
@@ -78,49 +124,6 @@ And the outdated modules:
 
 - [alinex-make](https://alinex.github.io/node-make/) - now alinex-builder
 - [alinex-once](https://alinex.github.io/node-once/) - included in alinex-async
-
-
-Roadmap
--------------------------------------------------
-
-There is no real roadmap for the time and funtionality. It all depends on my
-personal time and interests. But I will give a short overview what is planned
-for this year:
-
-- make modules more robust
-- more web server module support
-- base alinex application
-
-
-Development
--------------------------------------------------
-
-Find additional information in the following documents:
-
-### Development
-
-- [Development Guide](src/doc/developguide.md)
-- [File Structure](src/doc/filestructure.md)
-- [Development Tools](src/doc/developtools.md)
-- [Ideas](src/doc/ideas.md)
-- [Planning Board](https://trello.com/b/lOY5hCx7/node-js)
-
-### Tips and Tricks
-
-- [JavaScript](src/doc/javascript.md) - language
-- [CoffeeScript](src/doc/coffee.md) - language
-- [npm](src/doc/npm.md) - package manager
-- [git](src/doc/git.md) - source code repository
-- [atom](src/doc/atom.md) - editor
-- [sublime](src/doc/sublime.md) - editor
-
-### List of Helper Tools
-
-- [Modules](src/doc/modules.md)
-
-### General Installation and Usage
-
-- [Install](src/doc/install.md)
 
 
 License

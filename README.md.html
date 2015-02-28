@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="doc-style.css" />
   <script src="doc-filelist.js"></script>
   <script>
-    var relativeDir = "", thisFile = "home/alex/a3/node-alinex/README.md", defaultSidebar = true;
+    var relativeDir = "", thisFile = "home/alex/a3/node-alinex/READMEmd", defaultSidebar = true;
   </script>
   <script src="doc-script.js"></script>
   <script src="fileSearch.js"></script>
@@ -33,6 +33,15 @@
       </div>
       <div class="heading h2">
         <a href="#alinex%20modules">Alinex Modules</a>
+      </div>
+      <div class="heading h3">
+        <a href="#alinex-builder">alinex-builder</a>
+      </div>
+      <div class="heading h3">
+        <a href="#alinex-async">alinex-async</a>
+      </div>
+      <div class="heading h3">
+        <a href="#alinex-worktime">alinex-worktime</a>
       </div>
       <div class="heading h2">
         <a href="#roadmap">Roadmap</a>
@@ -127,25 +136,65 @@ console for easy management:</p>
 <p>List of modules which are released as part of the alinex universe, but may be
 used independently.</p>
 
+
+<div class="pilwrap" id="alinex-builder">
+  <h3>
+    <a href="#alinex-builder" name="alinex-builder" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-builder/">alinex-builder</a>
+  </h3>
+</div>
+
+
+<p>This is a build tool for the developer to make the process of maintaining node
+modules as easy as possible.</p>
+
+
+<div class="pilwrap" id="alinex-async">
+  <h3>
+    <a href="#alinex-async" name="alinex-async" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-async/">alinex-async</a>
+  </h3>
+</div>
+
+
+<p>Asynchronous control flow made easy. This module is a superset to the popular
+async.js and adds more usefull methods.</p>
+
+
+<div class="pilwrap" id="alinex-worktime">
+  <h3>
+    <a href="#alinex-worktime" name="alinex-worktime" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-worktime/">alinex-worktime</a>
+  </h3>
+</div>
+
+
+<p>Asynchronous control flow made easy. This module is a superset to the popular
+async.js and adds more usefull methods.</p>
+
+<p>The following modules are in a beta stadium:</p>
+
 <ul>
-<li><a href="https://alinex.github.io/node-make.html/">alinex-make</a> - build tool</li>
-<li><a href="https://alinex.github.io/node-error.html/">alinex-error</a> - enhanced error reporting</li>
-<li><a href="https://alinex.github.io/node-fs.html/">alinex-fs</a> - enhanced filesystem tools</li>
-<li><a href="https://alinex.github.io/node-util.html/">alinex-util</a> - String, Array, Object utilities</li>
-<li><a href="https://alinex.github.io/node-config.html/">alinex-config</a> - configuration management</li>
-<li><a href="https://alinex.github.io/node-validator.html/">alinex-validator</a> - validation and sanitize of values</li>
-<li><a href="https://alinex.github.io/node-spawn.html/">alinex-spawn</a> - process control wrapper</li>
-<li><a href="https://alinex.github.io/node-monitor.html/">alinex-monitor</a> -
+<li><a href="https://alinex.github.io/node-error/">alinex-error</a> - enhanced error reporting</li>
+<li><a href="https://alinex.github.io/node-util/">alinex-util</a> - String, Array, Object utilities</li>
+<li><a href="https://alinex.github.io/node-config/">alinex-config</a> - configuration management</li>
+<li><a href="https://alinex.github.io/node-validator/">alinex-validator</a> - validation and sanitize of values</li>
+<li><a href="https://alinex.github.io/node-fs/">alinex-fs</a> - enhanced filesystem tools</li>
+<li><a href="https://alinex.github.io/node-mysql/">alinex-mysql</a> - easy mysql queriing</li>
+<li><a href="https://alinex.github.io/node-spawn/">alinex-spawn</a> - process control wrapper</li>
+<li><a href="https://alinex.github.io/node-config/">alinex-server</a> -
+express.js based webserver</li>
+<li><a href="https://alinex.github.io/node-monitor/">alinex-monitor</a> -
 server and service monitoring</li>
-<li><a href="https://alinex.github.io/node-monitor-sensor.html/">alinex-monitor-sensor</a> -
+<li><a href="https://alinex.github.io/node-monitor-sensor/">alinex-monitor-sensor</a> -
 sensors for monitoring</li>
 </ul>
 
-<p>In development are currently also:</p>
+<p>And the outdated modules:</p>
 
 <ul>
-<li><a href="https://alinex.github.io/node-config.html/">alinex-server</a> -
-express.js based webserver</li>
+<li><a href="https://alinex.github.io/node-make/">alinex-make</a> - now alinex-builder</li>
+<li><a href="https://alinex.github.io/node-once/">alinex-once</a> - included in alinex-async</li>
 </ul>
 
 
@@ -159,22 +208,13 @@ express.js based webserver</li>
 
 <p>There is no real roadmap for the time and funtionality. It all depends on my
 personal time and interests. But I will give a short overview what is planned
-for the next year:</p>
+for this year:</p>
 
 <ul>
-<li>base development system - done</li>
-<li>basic web server - in work</li>
-<li>server monitor (as module) - in work</li>
-<li>modular webapp system</li>
-<li>demo context module</li>
-<li>basic login management</li>
-<li>mongo db support</li>
-<li>admin console through web (as module)</li>
+<li>make modules more robust</li>
+<li>more web server module support</li>
+<li>base alinex application</li>
 </ul>
-
-<p>After that more data storages, queue support and more will come
-with modules for user management, right management... and of course more real
-applications.</p>
 
 
 <div class="pilwrap" id="development">
@@ -201,6 +241,7 @@ applications.</p>
 <li><a href="src/doc/filestructure.md.html">File Structure</a></li>
 <li><a href="src/doc/developtools.md.html">Development Tools</a></li>
 <li><a href="src/doc/ideas.md.html">Ideas</a></li>
+<li><a href="https://trello.com/b/lOY5hCx7/node-js">Planning Board</a></li>
 </ul>
 
 
@@ -231,7 +272,7 @@ applications.</p>
 
 
 <ul>
-<li><a href="src/doc/3rdparty.md.html">Third Party Modules</a></li>
+<li><a href="src/doc/modules.md.html">Modules</a></li>
 </ul>
 
 

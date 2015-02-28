@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructuremd", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -134,6 +134,7 @@ listed with the states to which it belongs:</p>
 <span class="nx">data</span>          <span class="c1">// productive</span>
 <span class="nx">doc</span>           <span class="c1">// development</span>
 <span class="nx">lib</span>           <span class="c1">// development, ...</span>
+<span class="nx">man</span>           <span class="c1">// development, ...</span>
 <span class="nx">log</span>           <span class="c1">// productive</span>
 <span class="nx">node_modules</span>  <span class="c1">// development, ...</span>
 <span class="nx">src</span>           <span class="c1">// source, development</span>
@@ -167,6 +168,7 @@ directory and how it is used and created.</p>
 <div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
 <span class="nx">src</span>           <span class="c1">// source code</span>
   <span class="nx">doc</span>         <span class="c1">// general documentation which won&#39;t belong to any specific file</span>
+  <span class="nx">man</span>         <span class="c1">// sources for manpages</span>
 <span class="nx">test</span>          <span class="c1">// test data and test suites</span>
   <span class="nx">data</span>        <span class="c1">// test data</span>
   <span class="nx">mocha</span>       <span class="c1">// mocha test suites</span>
@@ -200,6 +202,7 @@ directories from productive which are not listed here.</p>
 <span class="nx">coverage</span>      <span class="c1">// coverage report from tests</span>
 <span class="nx">doc</span>           <span class="c1">// created documentation (optional)</span>
 <span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">man</span>           <span class="c1">// created man pages</span>
 <span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
 <span class="nx">src</span>           <span class="c1">// source code</span>
 <span class="nx">test</span>          <span class="c1">// test data and test suites</span>
@@ -227,6 +230,7 @@ directories from productive which are not listed here.</p>
 
 <div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
 <span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">man</span>           <span class="c1">// created man pages</span>
 <span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
   <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
@@ -252,6 +256,7 @@ directories from productive which are not listed here.</p>
 <div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
 <span class="nx">data</span>          <span class="c1">// runtime data storage</span>
 <span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
+<span class="nx">man</span>           <span class="c1">// created man pages</span>
 <span class="nx">log</span>           <span class="c1">// log files and debugging data</span>
 <span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
 <span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
@@ -327,7 +332,10 @@ installations.</p>
 
 
 
-<p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p></div>
+<p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p>
+
+<p>If globally installed the <code>var/local</code> folder maybe replaced by a softlink
+to the global <code>/etc/&lt;app&gt;/</code> folder.</p></div>
   </div>
 </body>
 </html>

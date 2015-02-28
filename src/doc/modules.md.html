@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>3rdparty.md</title>
+  <title>modules.md</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/3rdparty.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/modulesmd", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -23,31 +23,34 @@
     <div id="tree"></div>
     <div id="headings">
       <div class="heading h1">
-        <a href="#third%20party%20modules">Third Party Modules</a>
+        <a href="#npm%20modules%20by%20category">NPM Modules by Category</a>
       </div>
       <div class="heading h2">
         <a href="#general%20modules">General modules</a>
       </div>
       <div class="heading h3">
+        <a href="#development">Development</a>
+      </div>
+      <div class="heading h3">
         <a href="#language%20tools">Language tools</a>
       </div>
       <div class="heading h3">
-        <a href="#others">Others</a>
-      </div>
-      <div class="heading h2">
-        <a href="#system%20tools">System Tools</a>
-      </div>
-      <div class="heading h3">
-        <a href="#filesystem">Filesystem</a>
-      </div>
-      <div class="heading h3">
-        <a href="#server%20health">Server Health</a>
+        <a href="#date%20and%20time">Date and Time</a>
       </div>
       <div class="heading h2">
         <a href="#data%20storages">Data Storages</a>
       </div>
       <div class="heading h3">
-        <a href="#data%20structures">Data Structures</a>
+        <a href="#filesystem">Filesystem</a>
+      </div>
+      <div class="heading h3">
+        <a href="#file%20formats">File Formats</a>
+      </div>
+      <div class="heading h3">
+        <a href="#databases">Databases</a>
+      </div>
+      <div class="heading h1">
+        <a href="#%20%20(using%20mysql)">  (using mysql)</a>
       </div>
       <div class="heading h3">
         <a href="#relational%20databases">Relational databases</a>
@@ -89,9 +92,6 @@
         <a href="#test">Test</a>
       </div>
       <div class="heading h3">
-        <a href="#testrunner">Testrunner</a>
-      </div>
-      <div class="heading h3">
         <a href="#helper">Helper</a>
       </div>
       <div class="heading h2">
@@ -104,10 +104,10 @@
   </div>
   <div id="sidebar-toggle"></div>
   <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
-<div class="pilwrap" id="third%20party%20modules">
+<div class="pilwrap" id="npm%20modules%20by%20category">
   <h1>
-    <a href="#third%20party%20modules" name="third%20party%20modules" class="pilcrow">&#182;</a>
-    Third Party Modules
+    <a href="#npm%20modules%20by%20category" name="npm%20modules%20by%20category" class="pilcrow">&#182;</a>
+    NPM Modules by Category
   </h1>
 </div>
 
@@ -127,6 +127,26 @@ selection from the ever growing node modules list.</p>
 
 
 
+<div class="pilwrap" id="development">
+  <h3>
+    <a href="#development" name="development" class="pilcrow">&#182;</a>
+    Development
+  </h3>
+</div>
+
+
+<ul>
+<li><a href="https://alinex.github.io/node-builder/">alinex-builder</a>
+helps administer common development tasks on the command line</li>
+<li><a href="https://visionmedia.github.io/mocha/">mocha</a>
+Simple, flexible, javascript test framework</li>
+<li><a href="http://chaijs.com/">chai</a>
+assertion library that can be paired with mocha</li>
+<li><a href="https://alinex.github.io/node-worktime/">alinex-worktime</a>
+command line tool to log worktimes</li>
+</ul>
+
+
 <div class="pilwrap" id="language%20tools">
   <h3>
     <a href="#language%20tools" name="language%20tools" class="pilcrow">&#182;</a>
@@ -138,18 +158,20 @@ selection from the ever growing node modules list.</p>
 <ul>
 <li><a href="http://coffeescript.org/">CoffeeScript</a>
 a language that compiles into JavaScript but is easier to read and write</li>
-<li><a href="https://github.com/caolan/async/">Async</a>
+<li><a href="https://github.com/alinex/node-async/">alinex-async</a>
 an utility module which provides straight-forward, powerful functions for
-working with asynchronous JavaScript.</li>
+working with asynchronous code (a superset of <a href="https://github.com/caolan/async/">async</a>)</li>
 <li><a href="https://github.com/medikoo/memoize">Memoizee</a>
 make a function or method using cache for results</li>
+<li><a href="https://github.com/visionmedia/debug/">Debug</a>
+tiny node.js &amp; browser debugging utility for your libraries and applications</li>
 </ul>
 
 
-<div class="pilwrap" id="others">
+<div class="pilwrap" id="date%20and%20time">
   <h3>
-    <a href="#others" name="others" class="pilcrow">&#182;</a>
-    Others
+    <a href="#date%20and%20time" name="date%20and%20time" class="pilcrow">&#182;</a>
+    Date and Time
   </h3>
 </div>
 
@@ -162,10 +184,10 @@ natural language date parser</li>
 </ul>
 
 
-<div class="pilwrap" id="system%20tools">
+<div class="pilwrap" id="data%20storages">
   <h2>
-    <a href="#system%20tools" name="system%20tools" class="pilcrow">&#182;</a>
-    System Tools
+    <a href="#data%20storages" name="data%20storages" class="pilcrow">&#182;</a>
+    Data Storages
   </h2>
 </div>
 
@@ -180,7 +202,7 @@ natural language date parser</li>
 
 
 <ul>
-<li><a href="https://alinex.github.io/node-fs.html/">alinex-fs</a>
+<li><a href="https://alinex.github.io/node-fs/">alinex-fs</a>
 enhancement for the node fs module
 (same as mkdirp, fs-extra, graceful-fs, ncp, rimraf, wrench and more)</li>
 <li><a href="https://github.com/paulmillr/chokidar">chokidar</a>
@@ -192,28 +214,10 @@ glob like file name matching</li>
 </ul>
 
 
-<div class="pilwrap" id="server%20health">
+<div class="pilwrap" id="file%20formats">
   <h3>
-    <a href="#server%20health" name="server%20health" class="pilcrow">&#182;</a>
-    Server Health
-  </h3>
-</div>
-
-
-
-<div class="pilwrap" id="data%20storages">
-  <h2>
-    <a href="#data%20storages" name="data%20storages" class="pilcrow">&#182;</a>
-    Data Storages
-  </h2>
-</div>
-
-
-
-<div class="pilwrap" id="data%20structures">
-  <h3>
-    <a href="#data%20structures" name="data%20structures" class="pilcrow">&#182;</a>
-    Data Structures
+    <a href="#file%20formats" name="file%20formats" class="pilcrow">&#182;</a>
+    File Formats
   </h3>
 </div>
 
@@ -225,6 +229,31 @@ YAML parser (to read configurations)</li>
 Conversion from simple XML to JavaScript objects</li>
 </ul>
 
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:src/doc/modules.md</p>
+
+
+<div class="pilwrap" id="databases">
+  <h3>
+    <a href="#databases" name="databases" class="pilcrow">&#182;</a>
+    Databases
+  </h3>
+</div>
+
+
+<ul>
+<li><a href="https://alinex.github.io/node-mysql/">alinex-mysql</a>
+easy to use mysql library</li>
+</ul>
+
+
+<div class="pilwrap" id="%20%20(using%20mysql)">
+  <h1>
+    <a href="#%20%20(using%20mysql)" name="%20%20(using%20mysql)" class="pilcrow">&#182;</a>
+      (using <a href="https://github.com/felixge/node-mysql">mysql</a>)
+  </h1>
+</div>
+
+
 
 <div class="pilwrap" id="relational%20databases">
   <h3>
@@ -235,7 +264,8 @@ Conversion from simple XML to JavaScript objects</li>
 
 
 <ul>
-<li><a href="">MySQL</a></li>
+<li><a href="https://github.com/felixge/node-mysql/">MySQL</a>
+pure node.js JavaScript Client implementing the MySql protocol</li>
 </ul>
 
 
@@ -246,6 +276,22 @@ Conversion from simple XML to JavaScript objects</li>
   </h3>
 </div>
 
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <p>ae8beede17d1dcba1ca640a8c3a98a016f7dccbe:src/doc/3rdparty.md</p>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
 
 
 <div class="pilwrap" id="command%20line%20support">
@@ -312,8 +358,6 @@ a simple CLI tool for ensuring that a given node script runs continuously</li>
 
 
 <ul>
-<li><a href="https://github.com/visionmedia/debug/">Debug</a>
-tiny node.js &amp; browser debugging utility for your libraries and applications</li>
 <li><a href="https://github.com/flatiron/winston/">Winston</a>
 extensible multi-transport async logging library</li>
 </ul>
@@ -393,20 +437,6 @@ with <a href="http://visionmedia.github.io/nib/">nib</a></li>
 
 
 
-<div class="pilwrap" id="testrunner">
-  <h3>
-    <a href="#testrunner" name="testrunner" class="pilcrow">&#182;</a>
-    Testrunner
-  </h3>
-</div>
-
-
-<ul>
-<li><a href="https://visionmedia.github.io/mocha/">mocha</a>
-Simple, flexible, javascript test framework</li>
-</ul>
-
-
 <div class="pilwrap" id="helper">
   <h3>
     <a href="#helper" name="helper" class="pilcrow">&#182;</a>
@@ -416,8 +446,6 @@ Simple, flexible, javascript test framework</li>
 
 
 <ul>
-<li><a href="http://chaijs.com/">Chai</a>
-assertion library that can be paired with mocha</li>
 <li><a href="http://sinonjs.org/">sinon</a>
 test spies, stubs and mocks</li>
 <li><a href="http://casperjs.org/">casper.js</a>

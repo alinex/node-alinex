@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/developguide.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/developguidemd", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -106,8 +106,7 @@ spaces.</p>
 
 <ul>
 <li><code>cb</code> - for the callback method</li>
-<li><code>done</code> - for the callback which gets nothing or an error as parameter</li>
-<li><code>err</code> - for an error message or object</li>
+<li><code>err</code> - for an error message object</li>
 <li><code>ex</code> - mostly the exception in a <code>try...catch</code> block</li>
 </ul>
 
@@ -119,7 +118,7 @@ spaces.</p>
 
 
 
-<p>To mark private properties/functions they start with an underscore.</p>
+<p>To mark private properties/functions they may start with an underscore.</p>
 
 
 <div class="pilwrap" id="asynchronous%20code">
@@ -159,7 +158,7 @@ through <code>process.nextTick()</code> yourself.</p>
 </div>
 
 
-<p>You may also use the <code>async</code> module.</p>
+<p>You may also use the <a href="https://github.com/alinex/node-async/">alinex-async</a> module.</p>
 
 
 <div class="pilwrap" id="events">
@@ -311,14 +310,17 @@ functionality.</p>
 <li>Create and publish new documentation</li>
 </ol>
 
-<p>The steps 2 to 7 will be done using the <a href="http://alinex.github.io/node-make.html">alinex-make</a>
-build tool as follows:</p>
+<p>The tasks are done in an easy way using the
+<a href="http://alinex.github.io/node-builder">alinex-builder</a>.</p>
 
-<blockquote>
-  <p>alinex-make -c clean --auto
-  npm install
-  alinex-make -c install --update -c test -c push -c publish --minor -c doc --publish</p>
-</blockquote>
+
+<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">step</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span>
+<span class="o">&gt;</span> <span class="nx">builder</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">clean</span> <span class="o">--</span><span class="nx">auto</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">update</span>
+<span class="err">#</span> <span class="nx">step</span> <span class="mi">4</span><span class="o">-</span><span class="mi">7</span>
+<span class="o">&gt;</span> <span class="nx">builder</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">test</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">publish</span> <span class="o">--</span><span class="nx">minor</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">doc</span> <span class="o">--</span><span class="nx">publish</span>
+</code></pre></div>
+
+
 
 
 <div class="pilwrap" id="configuration">
@@ -332,6 +334,9 @@ build tool as follows:</p>
 <p>The general configuration is stored in files to be also available without
 database connection. To make it easy readable and maintainable it should
 be written in yml rather than json.</p>
+
+<p><a href="https://github.com/alinex/node-config/">alinex-config</a> helps in working with
+such files.</p>
 
 
 <div class="pilwrap" id="dependencies">

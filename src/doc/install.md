@@ -9,6 +9,13 @@ You may install node from your repository or with the following manual steps.
 
 ### Linux system based on debian 7
 
+Best choice is to use the package manager:
+
+		curl -sL https://deb.nodesource.com/setup | sudo bash -
+		sudo apt-get install -y nodejs build-essential
+
+Or you may install it from source and compile:
+
 		# Install dependencies from repository
 		sudo apt-get update
 		sudo apt-get install -y g++ curl libssl-dev git-core
@@ -33,11 +40,6 @@ And to update use the following:
 		./configure
 		make
 		sudo make install
-
-Or do it with the package manager:
-
-		curl -sL https://deb.nodesource.com/setup | sudo bash -
-		sudo apt-get install -y nodejs build-essential
 
 
 Developmnet helpers

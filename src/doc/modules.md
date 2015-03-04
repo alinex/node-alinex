@@ -15,7 +15,7 @@ General modules
 
 - [alinex-builder](https://alinex.github.io/node-builder/)
   helps administer common development tasks on the command line
-- [mocha](https://visionmedia.github.io/mocha/)
+- [mocha](https://github.com/mochajs/mocha)
   Simple, flexible, javascript test framework
 - [chai](http://chaijs.com/)
   assertion library that can be paired with mocha
@@ -66,20 +66,11 @@ Data Storages
 - [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
   Conversion from simple XML to JavaScript objects
 
-<<<<<<< HEAD:src/doc/modules.md
 ### Databases
 
 - [alinex-mysql](https://alinex.github.io/node-mysql/)
   easy to use mysql library
   (using [mysql](https://github.com/felixge/node-mysql))
-=======
-### Relational databases
-
-- [MySQL](https://github.com/felixge/node-mysql/)
-  pure node.js JavaScript Client implementing the MySql protocol
-
-### Document stores
->>>>>>> ae8beede17d1dcba1ca640a8c3a98a016f7dccbe:src/doc/3rdparty.md
 
 
 Command line support

@@ -92,7 +92,7 @@ used independently.
 > Command line tool to log work times on different projects or tickets in an easy
 > way. This helps in calculation of costs based on real work times.
 
-### Helper
+### General Helper
 
 #### [async](https://alinex.github.io/node-async/)
 > Asynchronous control flow made easy. This module is a superset to the popular
@@ -102,14 +102,16 @@ used independently.
 > Enhanced error reporting with support for source-maps like used in the alinex
 > coffee script modules.
 
+#### [util](https://alinex.github.io/node-util/)
+> String, Array and Object utilities which makes coding easier and more clear to read.
 
+#### [validator](https://alinex.github.io/node-validator/)
+> Validation and sanitization of values and value structures with clear error descriptions.
 
 
 The following modules are in a beta stadium:
 
-- [alinex-util](https://alinex.github.io/node-util/) - String, Array, Object utilities
 - [alinex-config](https://alinex.github.io/node-config/) - configuration management
-- [alinex-validator](https://alinex.github.io/node-validator/) - validation and sanitize of values
 - [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
 - [alinex-mysql](https://alinex.github.io/node-mysql/) - easy mysql queriing
 - [alinex-spawn](https://alinex.github.io/node-spawn/) - process control wrapper

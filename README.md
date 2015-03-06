@@ -21,6 +21,35 @@ With this project I went to new land (for me) in the web technologies and tried
 lots of the current propagated technologies and patterns out.
 
 
+TEST
+-------------------------------------------------
+
+1)
+
+    if test is true
+      # then it's perfect
+
+2)
+
+---
+if test is true
+  # then it's perfect
+---
+
+3)
+
+---
+    if test is true
+      # then it's perfect
+---
+
+4)
+
+--- coffee
+if test is true
+  # then it's perfect
+---
+
 What is alinex?
 -------------------------------------------------
 

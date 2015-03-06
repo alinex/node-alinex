@@ -31,24 +31,24 @@ TEST
 
 2)
 
----
+```
 if test is true
   # then it's perfect
----
+```
 
 3)
 
----
+```
     if test is true
       # then it's perfect
----
+```
 
 4)
 
---- coffee
+``` coffee
 if test is true
   # then it's perfect
----
+```
 
 What is alinex?
 -------------------------------------------------

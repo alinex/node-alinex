@@ -44,21 +44,23 @@ Possible directories
 The following list displays all directories of any state which may exist each
 listed with the states to which it belongs:
 
-    bin           // all
-    coverage      // development
-    data          // productive
-    doc           // development
-    lib           // development, ...
-    man           // development, ...
-    log           // productive
-    node_modules  // development, ...
-    src           // source, development
-    test          // source, development
-    var           // source, ...
-      lib         // productive
-      local       // development, ...
-      src         // source, ...
-      example     // examples
+``` text
+bin           // all
+coverage      // development
+data          // productive
+doc           // development
+lib           // development, ...
+man           // development, ...
+log           // productive
+node_modules  // development, ...
+src           // source, development
+test          // source, development
+var           // source, ...
+  lib         // productive
+  local       // development, ...
+  src         // source, ...
+  example     // examples
+```
 
 Read the further sections to get more information of what resides in which
 directory and how it is used and created.
@@ -71,16 +73,18 @@ The source specifies what is stored in the code repository.
 
 This stage contains the following directories:
 
-    bin           // executable files
-    src           // source code
-      doc         // general documentation which won't belong to any specific file
-      man         // sources for manpages
-    test          // test data and test suites
-      data        // test data
-      mocha       // mocha test suites
-    var           // data and code which maybe changed in installation
-      src         // original data, will be overridden on update
-      example     // examples
+``` text
+bin           // executable files
+src           // source code
+  doc         // general documentation which won't belong to any specific file
+  man         // sources for manpages
+test          // test data and test suites
+  data        // test data
+  mocha       // mocha test suites
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
+```
 
 The source code resides in the `src` folder and will be copied/compiled into
 `lib` to run. This step is done on prepublication of package.
@@ -95,18 +99,20 @@ directories from productive which are not listed here.
 
 This stage contains the following directories:
 
-    bin           // executable files
-    coverage      // coverage report from tests
-    doc           // created documentation (optional)
-    lib           // copied/compiled code
-    man           // created man pages
-    node_modules  // npm installed packages
-    src           // source code
-    test          // test data and test suites
-    var           // data and code which maybe changed in installation
-      src         // original data, will be overridden on update
-      local       // linked or copied from src (not overridden on update)
-      example     // examples
+``` text
+bin           // executable files
+coverage      // coverage report from tests
+doc           // created documentation (optional)
+lib           // copied/compiled code
+man           // created man pages
+node_modules  // npm installed packages
+src           // source code
+test          // test data and test suites
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  local       // linked or copied from src (not overridden on update)
+  example     // examples
+```
 
 
 Installed
@@ -116,13 +122,15 @@ This is what you get after a fresh npm installation.
 
 This stage contains the following directories:
 
-    bin           // executable files
-    lib           // copied/compiled code
-    man           // created man pages
-    node_modules  // npm installed packages
-    var           // data and code which maybe changed in installation
-      src         // original data, will be overridden on update
-      example     // examples
+``` text
+bin           // executable files
+lib           // copied/compiled code
+man           // created man pages
+node_modules  // npm installed packages
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
+```
 
 
 Productive
@@ -132,17 +140,19 @@ And finally this shows what resides on the productive server.
 
 This stage contains the following directories:
 
-    bin           // executable files
-    data          // runtime data storage
-    lib           // copied/compiled code
-    man           // created man pages
-    log           // log files and debugging data
-    node_modules  // npm installed packages
-    var           // data and code which maybe changed in installation
-      src         // original data, will be overridden on update
-      local       // copied from src (not overridden on update)
-      lib         // linked or compiled from src/local (on system start or manually)
-      example     // examples
+``` text
+bin           // executable files
+data          // runtime data storage
+lib           // copied/compiled code
+man           // created man pages
+log           // log files and debugging data
+node_modules  // npm installed packages
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  local       // copied from src (not overridden on update)
+  lib         // linked or compiled from src/local (on system start or manually)
+  example     // examples
+```
 
 
 Where belongs what?
@@ -176,13 +186,33 @@ It contains the three sub folders:
 
 Within these three directories you will find the following possible structure:
 
-    config
-    template
-      <theme>
-    static
-    ...
+``` text
+config
+template
+  <theme>
+static
+...
+```
 
 Templates and statics will be compiled from `local` or `src` to lib.
 
 If globally installed the `var/local` folder maybe replaced by a softlink
 to the global `/etc/<app>/` folder.
+
+
+Global installation
+-------------------------------------------------
+The application modules often allow to store their data out of the programs
+directory:
+
+__User specific:__
+
+Here the contents of the `var/local` folder should be under `~/.<program>/`.
+
+__Globally:__
+
+- configs... under `/etc/<program>/` instead of `var/local/`
+- data under `/var/<program>/` instead of `var/data/`
+- logs under `/var/log/<program>/` instead of 'log/'
+
+

@@ -61,6 +61,8 @@ interpretation you may escape the signs with an backslash `\`.
 
 ### Strikethrough
 
+__Currently not supported in the document generation but in github view!__
+
 Use a double tilde sign before and after the text:
 
 ```
@@ -125,11 +127,11 @@ info@alinex.de and <info@alinex.de>
 You may also give a special link text by writing the text in square brackets and
 the link in round brackets behind:
 
-    This is the alinex [homne](http://alinex.github.io/node-alinex).
+    This is the alinex [home](http://alinex.github.io/node-alinex).
 
 becomes
 
-This is the alinex [homne](http://alinex.github.io/node-alinex).
+This is the alinex [home](http://alinex.github.io/node-alinex).
 
 And at last you may use referenced links like that
 
@@ -266,6 +268,8 @@ becomes
 
 Tables
 -------------------------------------------------
+
+__Currently not supported in the document generation but in github view!__
 
 Tables will be created by dividing cells with a pipe `|` and the header row with
 hyphens `-`:

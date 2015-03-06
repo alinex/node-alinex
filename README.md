@@ -21,35 +21,6 @@ With this project I went to new land (for me) in the web technologies and tried
 lots of the current propagated technologies and patterns out.
 
 
-TEST
--------------------------------------------------
-
-1)
-
-    if test is true
-      # then it's perfect
-
-2)
-
-```
-if test is true
-  # then it's perfect
-```
-
-3)
-
-```
-    if test is true
-      # then it's perfect
-```
-
-4)
-
-``` coffee
-if test is true
-  # then it's perfect
-```
-
 What is alinex?
 -------------------------------------------------
 
@@ -88,13 +59,14 @@ Development
 
 The base rules which are used in the development of the alinex modules are:
 
-- [Development Guide](src/doc/developguide.md)
+- [Development Guide](src/doc/developguide.md) - styleguide
 - [File Structure](src/doc/filestructure.md)
-- [Development Tools](src/doc/developtools.md)
+- [Development Tools](src/doc/developtools.md) - text editors and ide
 - [CoffeeScript](src/doc/coffee.md) - language
 - [JavaScript](src/doc/javascript.md) - language
-- [Install](src/doc/install.md)
-- [Modules](src/doc/modules.md)
+- [Markdown](src/doc/markdown.md) - how to document
+- [Install](src/doc/install.md) - instructions
+- [Modules](src/doc/modules.md) - links
 
 And here are some help with the development tools:
 

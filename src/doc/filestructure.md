@@ -51,7 +51,6 @@ data          // productive
 doc           // development
 lib           // development, ...
 man           // development, ...
-log           // productive
 node_modules  // development, ...
 src           // source, development
 test          // source, development
@@ -110,8 +109,8 @@ src           // source code
 test          // test data and test suites
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
-  local       // linked or copied from src (not overridden on update)
   example     // examples
+  local       // linked or copied from src (not overridden on update)
 ```
 
 
@@ -130,6 +129,7 @@ node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
+  local       // linked or copied from src (not overridden on update)
 ```
 
 
@@ -149,9 +149,9 @@ log           // log files and debugging data
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
+  example     // examples
   local       // copied from src (not overridden on update)
   lib         // linked or compiled from src/local (on system start or manually)
-  example     // examples
 ```
 
 
@@ -159,14 +159,13 @@ Where belongs what?
 -------------------------------------------------
 The following list should give an overview of there to store what:
 
-- specific build steps -> `/bin/develop/`
+- cache files -> systems temp folder
+- configuration -> `/var/.../config`
+- language packs -> `/var/.../locale`
+- resources for binaries -> `/bin/lib`
+- server statics -> `/var/.../static`
 - templates -> `/var/.../tèmplate`
 - temporary files -> systems temp folder
-- configuration -> `/var/.../config`
-- server statics -> `/var/.../static`
-- language packs -> `/var/.../locale`
-- cache files -> systems temp folder
-- resources for binaries -> `/bin/lib`
 
 
 More details about some sections
@@ -180,24 +179,29 @@ installations.
 It contains the three sub folders:
 
 - `src` - the source files which will change with each update
+- `example` - examples to be used as template for own configuration
 - `local` - local maybe changed files
 - `lib` - linked or compiled files from source overridden by local
-- `example` - examples to be used as template for own configuration
 
-Within these three directories you will find the following possible structure:
+Within these directories you will find the following possible structure:
 
 ``` text
 config
+locale
+static
 template
   <theme>
-static
-...
 ```
 
 Templates and statics will be compiled from `local` or `src` to lib.
 
-If globally installed the `var/local` folder maybe replaced by a softlink
-to the global `/etc/<app>/` folder.
+You may also use softlinks for `var/local` or within it to move your files to
+any other position on your filesystem.
+
+For global installed packages it is also possible that they include the
+`/etc/<app>/` folder for configs or the `~/.<app>/...` folder as a replacement for
+`var/local`.
+
 
 
 Global installation

@@ -106,16 +106,20 @@ used independently.
 #### [util](https://alinex.github.io/node-util/)
 > String, Array and Object utilities which makes coding easier and more clear to read.
 
+#### [config](https://alinex.github.io/node-config/)
+> Easy configuration management with different file formats.
+
 #### [validator](https://alinex.github.io/node-validator/)
 > Validation and sanitization of values and value structures with clear error descriptions.
+
+#### [spawn](https://alinex.github.io/node-spawn/)
+> Process manager and control wrapper to run external commands.
 
 
 The following modules are in a beta stadium:
 
-- [alinex-config](https://alinex.github.io/node-config/) - configuration management
 - [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
 - [alinex-mysql](https://alinex.github.io/node-mysql/) - easy mysql queriing
-- [alinex-spawn](https://alinex.github.io/node-spawn/) - process control wrapper
 - [alinex-server](https://alinex.github.io/node-config/) -
   express.js based webserver
 - [alinex-monitor](https://alinex.github.io/node-monitor/) -

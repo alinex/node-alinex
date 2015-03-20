@@ -34,6 +34,7 @@ General modules
   make a function or method using cache for results
 - [Debug](https://github.com/visionmedia/debug/)
   tiny node.js & browser debugging utility for your libraries and applications
+- [carrier](https://github.com/pgte/carrier) stream line reader
 
 
 ### Date and Time
@@ -117,6 +118,10 @@ Server
 
 Template languages
 -------------------------------------------------
+
+### General
+
+- [handlebars](http://handlebarsjs.com/)
 
 ### HTML
 

@@ -29,4 +29,11 @@ Install the debian package from the website:
 
 The following packages are some of my favorites:
 
-- Git Log
+- linter
+- minimap
+- Git Plus
+- merge-conflicts
+- Coffee Navigator
+  `Ctrl-Alt-N` to toggle
+- Coffee-lint
+  `Cmd-Ctrl-L` to run on current file

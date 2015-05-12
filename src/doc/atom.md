@@ -29,6 +29,7 @@ Install the debian package from the website:
 
 The following packages are some of my favorites:
 
+- keybinding-cheatsheet
 - linter
 - minimap
 - Git Plus

@@ -5,6 +5,15 @@ Since I use sublime text as editor more and more, here some tips and tricks
 I found helpful at work.
 
 
+Specific Key Bindings
+-------------------------------------------------
+
+[
+  { "keys": ["alt+g"], "command": "git_status" },
+  { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"github"} }
+]
+
+
 Goto
 -------------------------------------------------
 

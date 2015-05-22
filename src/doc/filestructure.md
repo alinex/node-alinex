@@ -154,6 +154,25 @@ var           // data and code which maybe changed in installation
   lib         // linked or compiled from src/local (on system start or manually)
 ```
 
+Data & Settings
+-------------------------------------------------
+In the productive system the settings and data locations may vary. Therefore
+the system will look in the following places: the later has the higher precedence.
+
+__Local__
+
+config: <app>/var/local/config/
+data: <app>/var/local/data/
+
+__Global__
+
+config: /etc/<app>/
+data: /var/<app>/data/
+
+__User__
+
+config: ~/.<app>/config/
+data: ~/.<app>/data/
 
 Where belongs what?
 -------------------------------------------------

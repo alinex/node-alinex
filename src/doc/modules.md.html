@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/modulesmd", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/modules.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="../../goToLine.css" />
 </head>
 <body>
-  <div id="sidebar_wrapper">
+  <nav>
+<div class="logo"><a href="http://alinex.github.io" onmouseover="lllogo.src='http://alinex.github.io/images/Alinex-200.png'" onmouseout="lllogo.src='http://alinex.github.io/images/Alinex-black-200.png'">
+  <img name="lllogo" src="http://alinex.github.io/images/Alinex-black-200.png" width="150" title="Alinex Universe Homepage" />
+  </a>
+  <img src="http://alinex.github.io/images/Alinex-200.png" style="display:none" alt="preloading" />
+</div>
+<div class="links">
+  <a href="http://alinex.github.io/blog.html" class="btn btn-primary"><span class="glyphicon-cog"></span> Blog</a>
+  <a href="http://alinex.github.io/code.html" class="btn btn-warning"><span class="glyphicon-pencil"></span> Code</a>
+</div>
+</nav><div id="sidebar_wrapper">
     <div id="sidebar_switch">
       <span class="tree">Files</span>
       <span class="headings">Headings</span>
@@ -49,15 +59,6 @@
       <div class="heading h3">
         <a href="#databases">Databases</a>
       </div>
-      <div class="heading h1">
-        <a href="#%20%20(using%20mysql)">  (using mysql)</a>
-      </div>
-      <div class="heading h3">
-        <a href="#relational%20databases">Relational databases</a>
-      </div>
-      <div class="heading h3">
-        <a href="#document%20stores">Document stores</a>
-      </div>
       <div class="heading h2">
         <a href="#command%20line%20support">Command line support</a>
       </div>
@@ -83,6 +84,9 @@
         <a href="#template%20languages">Template languages</a>
       </div>
       <div class="heading h3">
+        <a href="#general">General</a>
+      </div>
+      <div class="heading h3">
         <a href="#html">HTML</a>
       </div>
       <div class="heading h3">
@@ -103,7 +107,7 @@
     </div>
   </div>
   <div id="sidebar-toggle"></div>
-  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+  <div id="container" tabindex="0"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
 <div class="pilwrap" id="npm%20modules%20by%20category">
   <h1>
     <a href="#npm%20modules%20by%20category" name="npm%20modules%20by%20category" class="pilcrow">&#182;</a>
@@ -138,7 +142,7 @@ selection from the ever growing node modules list.</p>
 <ul>
 <li><a href="https://alinex.github.io/node-builder/">alinex-builder</a>
 helps administer common development tasks on the command line</li>
-<li><a href="https://visionmedia.github.io/mocha/">mocha</a>
+<li><a href="https://github.com/mochajs/mocha">mocha</a>
 Simple, flexible, javascript test framework</li>
 <li><a href="http://chaijs.com/">chai</a>
 assertion library that can be paired with mocha</li>
@@ -165,6 +169,7 @@ working with asynchronous code (a superset of <a href="https://github.com/caolan
 make a function or method using cache for results</li>
 <li><a href="https://github.com/visionmedia/debug/">Debug</a>
 tiny node.js &amp; browser debugging utility for your libraries and applications</li>
+<li><a href="https://github.com/pgte/carrier">carrier</a> stream line reader</li>
 </ul>
 
 
@@ -229,8 +234,6 @@ YAML parser (to read configurations)</li>
 Conversion from simple XML to JavaScript objects</li>
 </ul>
 
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:src/doc/modules.md</p>
-
 
 <div class="pilwrap" id="databases">
   <h3>
@@ -242,56 +245,9 @@ Conversion from simple XML to JavaScript objects</li>
 
 <ul>
 <li><a href="https://alinex.github.io/node-mysql/">alinex-mysql</a>
-easy to use mysql library</li>
+easy to use mysql library
+(using <a href="https://github.com/felixge/node-mysql">mysql</a>)</li>
 </ul>
-
-
-<div class="pilwrap" id="%20%20(using%20mysql)">
-  <h1>
-    <a href="#%20%20(using%20mysql)" name="%20%20(using%20mysql)" class="pilcrow">&#182;</a>
-      (using <a href="https://github.com/felixge/node-mysql">mysql</a>)
-  </h1>
-</div>
-
-
-
-<div class="pilwrap" id="relational%20databases">
-  <h3>
-    <a href="#relational%20databases" name="relational%20databases" class="pilcrow">&#182;</a>
-    Relational databases
-  </h3>
-</div>
-
-
-<ul>
-<li><a href="https://github.com/felixge/node-mysql/">MySQL</a>
-pure node.js JavaScript Client implementing the MySql protocol</li>
-</ul>
-
-
-<div class="pilwrap" id="document%20stores">
-  <h3>
-    <a href="#document%20stores" name="document%20stores" class="pilcrow">&#182;</a>
-    Document stores
-  </h3>
-</div>
-
-
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <blockquote>
-        <blockquote>
-          <blockquote>
-            <blockquote>
-              <p>ae8beede17d1dcba1ca640a8c3a98a016f7dccbe:src/doc/3rdparty.md</p>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-    </blockquote>
-  </blockquote>
-</blockquote>
 
 
 <div class="pilwrap" id="command%20line%20support">
@@ -399,6 +355,19 @@ extensible multi-transport async logging library</li>
   </h2>
 </div>
 
+
+
+<div class="pilwrap" id="general">
+  <h3>
+    <a href="#general" name="general" class="pilcrow">&#182;</a>
+    General
+  </h3>
+</div>
+
+
+<ul>
+<li><a href="http://handlebarsjs.com/">handlebars</a></li>
+</ul>
 
 
 <div class="pilwrap" id="html">

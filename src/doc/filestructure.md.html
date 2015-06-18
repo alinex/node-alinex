@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructuremd", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="../../goToLine.css" />
 </head>
 <body>
-  <div id="sidebar_wrapper">
+  <nav>
+<div class="logo"><a href="http://alinex.github.io" onmouseover="lllogo.src='http://alinex.github.io/images/Alinex-200.png'" onmouseout="lllogo.src='http://alinex.github.io/images/Alinex-black-200.png'">
+  <img name="lllogo" src="http://alinex.github.io/images/Alinex-black-200.png" width="150" title="Alinex Universe Homepage" />
+  </a>
+  <img src="http://alinex.github.io/images/Alinex-200.png" style="display:none" alt="preloading" />
+</div>
+<div class="links">
+  <a href="http://alinex.github.io/blog.html" class="btn btn-primary"><span class="glyphicon-cog"></span> Blog</a>
+  <a href="http://alinex.github.io/code.html" class="btn btn-warning"><span class="glyphicon-pencil"></span> Code</a>
+</div>
+</nav><div id="sidebar_wrapper">
     <div id="sidebar_switch">
       <span class="tree">Files</span>
       <span class="headings">Headings</span>
@@ -44,6 +54,9 @@
         <a href="#productive">Productive</a>
       </div>
       <div class="heading h2">
+        <a href="#data%20%26amp%3B%20settings">Data &amp; Settings</a>
+      </div>
+      <div class="heading h2">
         <a href="#where%20belongs%20what%3F">Where belongs what?</a>
       </div>
       <div class="heading h2">
@@ -52,10 +65,13 @@
       <div class="heading h3">
         <a href="#var%20folder">var folder</a>
       </div>
+      <div class="heading h2">
+        <a href="#global%20installation">Global installation</a>
+      </div>
     </div>
   </div>
   <div id="sidebar-toggle"></div>
-  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+  <div id="container" tabindex="0"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
 <div class="pilwrap" id="file%20structure">
   <h1>
     <a href="#file%20structure" name="file%20structure" class="pilcrow">&#182;</a>
@@ -129,21 +145,20 @@ be referenced in the further description.</p>
 listed with the states to which it belongs:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// all</span>
-<span class="nx">coverage</span>      <span class="c1">// development</span>
-<span class="nx">data</span>          <span class="c1">// productive</span>
-<span class="nx">doc</span>           <span class="c1">// development</span>
-<span class="nx">lib</span>           <span class="c1">// development, ...</span>
-<span class="nx">man</span>           <span class="c1">// development, ...</span>
-<span class="nx">log</span>           <span class="c1">// productive</span>
-<span class="nx">node_modules</span>  <span class="c1">// development, ...</span>
-<span class="nx">src</span>           <span class="c1">// source, development</span>
-<span class="nx">test</span>          <span class="c1">// source, development</span>
-<span class="kd">var</span>           <span class="c1">// source, ...</span>
-  <span class="nx">lib</span>         <span class="c1">// productive</span>
-  <span class="nx">local</span>       <span class="c1">// development, ...</span>
-  <span class="nx">src</span>         <span class="c1">// source, ...</span>
-  <span class="nx">example</span>     <span class="c1">// examples</span>
+<div class="highlight"><pre><code>bin           // all
+coverage      // development
+data          // productive
+doc           // development
+lib           // development, ...
+man           // development, ...
+node_modules  // development, ...
+src           // source, development
+test          // source, development
+var           // source, ...
+  lib         // productive
+  local       // development, ...
+  src         // source, ...
+  example     // examples
 </code></pre></div>
 
 
@@ -165,16 +180,16 @@ directory and how it is used and created.</p>
 <p>This stage contains the following directories:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
-<span class="nx">src</span>           <span class="c1">// source code</span>
-  <span class="nx">doc</span>         <span class="c1">// general documentation which won&#39;t belong to any specific file</span>
-  <span class="nx">man</span>         <span class="c1">// sources for manpages</span>
-<span class="nx">test</span>          <span class="c1">// test data and test suites</span>
-  <span class="nx">data</span>        <span class="c1">// test data</span>
-  <span class="nx">mocha</span>       <span class="c1">// mocha test suites</span>
-<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
-  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
-  <span class="nx">example</span>     <span class="c1">// examples</span>
+<div class="highlight"><pre><code>bin           // executable files
+src           // source code
+  doc         // general documentation which won&#39;t belong to any specific file
+  man         // sources for manpages
+test          // test data and test suites
+  data        // test data
+  mocha       // mocha test suites
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
 </code></pre></div>
 
 
@@ -198,18 +213,18 @@ directories from productive which are not listed here.</p>
 <p>This stage contains the following directories:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
-<span class="nx">coverage</span>      <span class="c1">// coverage report from tests</span>
-<span class="nx">doc</span>           <span class="c1">// created documentation (optional)</span>
-<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
-<span class="nx">man</span>           <span class="c1">// created man pages</span>
-<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
-<span class="nx">src</span>           <span class="c1">// source code</span>
-<span class="nx">test</span>          <span class="c1">// test data and test suites</span>
-<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
-  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
-  <span class="nx">local</span>       <span class="c1">// linked or copied from src (not overridden on update)</span>
-  <span class="nx">example</span>     <span class="c1">// examples</span>
+<div class="highlight"><pre><code>bin           // executable files
+coverage      // coverage report from tests
+doc           // created documentation (optional)
+lib           // copied/compiled code
+man           // created man pages
+node_modules  // npm installed packages
+src           // source code
+test          // test data and test suites
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
+  local       // linked or copied from src (not overridden on update)
 </code></pre></div>
 
 
@@ -228,13 +243,14 @@ directories from productive which are not listed here.</p>
 <p>This stage contains the following directories:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
-<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
-<span class="nx">man</span>           <span class="c1">// created man pages</span>
-<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
-<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
-  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
-  <span class="nx">example</span>     <span class="c1">// examples</span>
+<div class="highlight"><pre><code>bin           // executable files
+lib           // copied/compiled code
+man           // created man pages
+node_modules  // npm installed packages
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
+  local       // linked or copied from src (not overridden on update)
 </code></pre></div>
 
 
@@ -253,20 +269,47 @@ directories from productive which are not listed here.</p>
 <p>This stage contains the following directories:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">bin</span>           <span class="c1">// executable files</span>
-<span class="nx">data</span>          <span class="c1">// runtime data storage</span>
-<span class="nx">lib</span>           <span class="c1">// copied/compiled code</span>
-<span class="nx">man</span>           <span class="c1">// created man pages</span>
-<span class="nx">log</span>           <span class="c1">// log files and debugging data</span>
-<span class="nx">node_modules</span>  <span class="c1">// npm installed packages</span>
-<span class="kd">var</span>           <span class="c1">// data and code which maybe changed in installation</span>
-  <span class="nx">src</span>         <span class="c1">// original data, will be overridden on update</span>
-  <span class="nx">local</span>       <span class="c1">// copied from src (not overridden on update)</span>
-  <span class="nx">lib</span>         <span class="c1">// linked or compiled from src/local (on system start or manually)</span>
-  <span class="nx">example</span>     <span class="c1">// examples</span>
+<div class="highlight"><pre><code>bin           // executable files
+data          // runtime data storage
+lib           // copied/compiled code
+man           // created man pages
+log           // log files and debugging data
+node_modules  // npm installed packages
+var           // data and code which maybe changed in installation
+  src         // original data, will be overridden on update
+  example     // examples
+  local       // copied from src (not overridden on update)
+  lib         // linked or compiled from src/local (on system start or manually)
 </code></pre></div>
 
 
+
+
+<div class="pilwrap" id="data%20%26amp%3B%20settings">
+  <h2>
+    <a href="#data%20%26amp%3B%20settings" name="data%20%26amp%3B%20settings" class="pilcrow">&#182;</a>
+    Data &amp; Settings
+  </h2>
+</div>
+
+
+<p>In the productive system the settings and data locations may vary. Therefore
+the system will look in the following places: the later has the higher precedence.</p>
+
+<p><strong>Local</strong></p>
+
+<p>config: <app>/var/local/config/
+data: <app>/var/local/data/</p>
+
+<p><strong>Global</strong></p>
+
+<p>config: /etc/<app>/
+data: /var/<app>/data/</p>
+
+<p><strong>User</strong></p>
+
+<p>config: ~/.<app>/config/
+data: ~/.<app>/data/</p>
 
 
 <div class="pilwrap" id="where%20belongs%20what%3F">
@@ -280,14 +323,13 @@ directories from productive which are not listed here.</p>
 <p>The following list should give an overview of there to store what:</p>
 
 <ul>
-<li>specific build steps -> <code>/bin/develop/</code></li>
+<li>cache files -> systems temp folder</li>
+<li>configuration -> <code>/var/.../config</code></li>
+<li>language packs -> <code>/var/.../locale</code></li>
+<li>resources for binaries -> <code>/bin/lib</code></li>
+<li>server statics -> <code>/var/.../static</code></li>
 <li>templates -> <code>/var/.../tèmplate</code></li>
 <li>temporary files -> systems temp folder</li>
-<li>configuration -> <code>/var/.../config</code></li>
-<li>server statics -> <code>/var/.../static</code></li>
-<li>language packs -> <code>/var/.../locale</code></li>
-<li>cache files -> systems temp folder</li>
-<li>resources for binaries -> <code>/bin/lib</code></li>
 </ul>
 
 
@@ -315,27 +357,55 @@ installations.</p>
 
 <ul>
 <li><code>src</code> - the source files which will change with each update</li>
+<li><code>example</code> - examples to be used as template for own configuration</li>
 <li><code>local</code> - local maybe changed files</li>
 <li><code>lib</code> - linked or compiled files from source overridden by local</li>
-<li><code>example</code> - examples to be used as template for own configuration</li>
 </ul>
 
-<p>Within these three directories you will find the following possible structure:</p>
+<p>Within these directories you will find the following possible structure:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">config</span>
-<span class="nx">template</span>
-  <span class="o">&lt;</span><span class="nx">theme</span><span class="o">&gt;</span>
-<span class="kr">static</span>
-<span class="p">...</span>
+<div class="highlight"><pre><code>config
+locale
+static
+template
+  &lt;theme&gt;
 </code></pre></div>
 
 
 
 <p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p>
 
-<p>If globally installed the <code>var/local</code> folder maybe replaced by a softlink
-to the global <code>/etc/&lt;app&gt;/</code> folder.</p></div>
+<p>You may also use softlinks for <code>var/local</code> or within it to move your files to
+any other position on your filesystem.</p>
+
+<p>For global installed packages it is also possible that they include the
+<code>/etc/&lt;app&gt;/</code> folder for configs or the <code>~/.&lt;app&gt;/...</code> folder as a replacement for
+<code>var/local</code>.</p>
+
+
+<div class="pilwrap" id="global%20installation">
+  <h2>
+    <a href="#global%20installation" name="global%20installation" class="pilcrow">&#182;</a>
+    Global installation
+  </h2>
+</div>
+
+
+<p>The application modules often allow to store their data out of the programs
+directory:</p>
+
+<p><strong>User specific:</strong></p>
+
+<p>Here the contents of the <code>var/local</code> folder should be under <code>~/.&lt;program&gt;/</code>.</p>
+
+<p><strong>Globally:</strong></p>
+
+<ul>
+<li>configs... under <code>/etc/&lt;program&gt;/</code> instead of <code>var/local/</code></li>
+<li>data under <code>/var/&lt;program&gt;/</code> instead of <code>var/data/</code></li>
+<li>logs under <code>/var/log/&lt;program&gt;/</code> instead of 'log/'</li>
+</ul></div>
   </div>
 </body>
 </html>

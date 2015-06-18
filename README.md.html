@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="doc-style.css" />
   <script src="doc-filelist.js"></script>
   <script>
-    var relativeDir = "", thisFile = "home/alex/a3/node-alinex/READMEmd", defaultSidebar = true;
+    var relativeDir = "", thisFile = "home/alex/a3/node-alinex/README.md", defaultSidebar = true;
   </script>
   <script src="doc-script.js"></script>
   <script src="fileSearch.js"></script>
@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="goToLine.css" />
 </head>
 <body>
-  <div id="sidebar_wrapper">
+  <nav>
+<div class="logo"><a href="http://alinex.github.io" onmouseover="lllogo.src='http://alinex.github.io/images/Alinex-200.png'" onmouseout="lllogo.src='http://alinex.github.io/images/Alinex-black-200.png'">
+  <img name="lllogo" src="http://alinex.github.io/images/Alinex-black-200.png" width="150" title="Alinex Universe Homepage" />
+  </a>
+  <img src="http://alinex.github.io/images/Alinex-200.png" style="display:none" alt="preloading" />
+</div>
+<div class="links">
+  <a href="http://alinex.github.io/blog.html" class="btn btn-primary"><span class="glyphicon-cog"></span> Blog</a>
+  <a href="http://alinex.github.io/code.html" class="btn btn-warning"><span class="glyphicon-pencil"></span> Code</a>
+</div>
+</nav><div id="sidebar_wrapper">
     <div id="sidebar_switch">
       <span class="tree">Files</span>
       <span class="headings">Headings</span>
@@ -50,13 +60,25 @@
         <a href="#worktime">worktime</a>
       </div>
       <div class="heading h3">
-        <a href="#helper">Helper</a>
+        <a href="#general%20helper">General Helper</a>
       </div>
       <div class="heading h4">
         <a href="#async">async</a>
       </div>
       <div class="heading h4">
-        <a href="#alinex-error">alinex-error</a>
+        <a href="#error">error</a>
+      </div>
+      <div class="heading h4">
+        <a href="#util">util</a>
+      </div>
+      <div class="heading h4">
+        <a href="#config">config</a>
+      </div>
+      <div class="heading h4">
+        <a href="#validator">validator</a>
+      </div>
+      <div class="heading h4">
+        <a href="#spawn">spawn</a>
       </div>
       <div class="heading h2">
         <a href="#license">License</a>
@@ -64,7 +86,7 @@
     </div>
   </div>
   <div id="sidebar-toggle"></div>
-  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+  <div id="container" tabindex="0"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
 <div class="pilwrap" id="package%3A%20alinex">
   <h1>
     <a href="#package%3A%20alinex" name="package%3A%20alinex" class="pilcrow">&#182;</a>
@@ -156,13 +178,14 @@ page will hold some general ideas and thoughts.</p>
 <p>The base rules which are used in the development of the alinex modules are:</p>
 
 <ul>
-<li><a href="src/doc/developguide.md.html">Development Guide</a></li>
+<li><a href="src/doc/developguide.md.html">Development Guide</a> - styleguide</li>
 <li><a href="src/doc/filestructure.md.html">File Structure</a></li>
-<li><a href="src/doc/developtools.md.html">Development Tools</a></li>
+<li><a href="src/doc/developtools.md.html">Development Tools</a> - text editors and ide</li>
 <li><a href="src/doc/coffee.md.html">CoffeeScript</a> - language</li>
 <li><a href="src/doc/javascript.md.html">JavaScript</a> - language</li>
-<li><a href="src/doc/install.md.html">Install</a></li>
-<li><a href="src/doc/modules.md.html">Modules</a></li>
+<li><a href="src/doc/markdown.md.html">Markdown</a> - how to document</li>
+<li><a href="src/doc/install.md.html">Install</a> - instructions</li>
+<li><a href="src/doc/modules.md.html">Modules</a> - links</li>
 </ul>
 
 <p>And here are some help with the development tools:</p>
@@ -225,10 +248,10 @@ used independently.</p>
 </blockquote>
 
 
-<div class="pilwrap" id="helper">
+<div class="pilwrap" id="general%20helper">
   <h3>
-    <a href="#helper" name="helper" class="pilcrow">&#182;</a>
-    Helper
+    <a href="#general%20helper" name="general%20helper" class="pilcrow">&#182;</a>
+    General Helper
   </h3>
 </div>
 
@@ -248,10 +271,10 @@ used independently.</p>
 </blockquote>
 
 
-<div class="pilwrap" id="alinex-error">
+<div class="pilwrap" id="error">
   <h4>
-    <a href="#alinex-error" name="alinex-error" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-error/">alinex-error</a>
+    <a href="#error" name="error" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-error/">error</a>
   </h4>
 </div>
 
@@ -261,15 +284,63 @@ used independently.</p>
   coffee script modules.</p>
 </blockquote>
 
+
+<div class="pilwrap" id="util">
+  <h4>
+    <a href="#util" name="util" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-util/">util</a>
+  </h4>
+</div>
+
+
+<blockquote>
+  <p>String, Array and Object utilities which makes coding easier and more clear to read.</p>
+</blockquote>
+
+
+<div class="pilwrap" id="config">
+  <h4>
+    <a href="#config" name="config" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-config/">config</a>
+  </h4>
+</div>
+
+
+<blockquote>
+  <p>Easy configuration management with different file formats.</p>
+</blockquote>
+
+
+<div class="pilwrap" id="validator">
+  <h4>
+    <a href="#validator" name="validator" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-validator/">validator</a>
+  </h4>
+</div>
+
+
+<blockquote>
+  <p>Validation and sanitization of values and value structures with clear error descriptions.</p>
+</blockquote>
+
+
+<div class="pilwrap" id="spawn">
+  <h4>
+    <a href="#spawn" name="spawn" class="pilcrow">&#182;</a>
+    <a href="https://alinex.github.io/node-spawn/">spawn</a>
+  </h4>
+</div>
+
+
+<blockquote>
+  <p>Process manager and control wrapper to run external commands.</p>
+</blockquote>
+
 <p>The following modules are in a beta stadium:</p>
 
 <ul>
-<li><a href="https://alinex.github.io/node-util/">alinex-util</a> - String, Array, Object utilities</li>
-<li><a href="https://alinex.github.io/node-config/">alinex-config</a> - configuration management</li>
-<li><a href="https://alinex.github.io/node-validator/">alinex-validator</a> - validation and sanitize of values</li>
 <li><a href="https://alinex.github.io/node-fs/">alinex-fs</a> - enhanced filesystem tools</li>
 <li><a href="https://alinex.github.io/node-mysql/">alinex-mysql</a> - easy mysql queriing</li>
-<li><a href="https://alinex.github.io/node-spawn/">alinex-spawn</a> - process control wrapper</li>
 <li><a href="https://alinex.github.io/node-config/">alinex-server</a> -
 express.js based webserver</li>
 <li><a href="https://alinex.github.io/node-monitor/">alinex-monitor</a> -

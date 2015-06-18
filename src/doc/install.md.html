@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/installmd", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/install.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="../../goToLine.css" />
 </head>
 <body>
-  <div id="sidebar_wrapper">
+  <nav>
+<div class="logo"><a href="http://alinex.github.io" onmouseover="lllogo.src='http://alinex.github.io/images/Alinex-200.png'" onmouseout="lllogo.src='http://alinex.github.io/images/Alinex-black-200.png'">
+  <img name="lllogo" src="http://alinex.github.io/images/Alinex-black-200.png" width="150" title="Alinex Universe Homepage" />
+  </a>
+  <img src="http://alinex.github.io/images/Alinex-200.png" style="display:none" alt="preloading" />
+</div>
+<div class="links">
+  <a href="http://alinex.github.io/blog.html" class="btn btn-primary"><span class="glyphicon-cog"></span> Blog</a>
+  <a href="http://alinex.github.io/code.html" class="btn btn-warning"><span class="glyphicon-pencil"></span> Code</a>
+</div>
+</nav><div id="sidebar_wrapper">
     <div id="sidebar_switch">
       <span class="tree">Files</span>
       <span class="headings">Headings</span>
@@ -43,7 +53,7 @@
     </div>
   </div>
   <div id="sidebar-toggle"></div>
-  <div id="container"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
+  <div id="container" tabindex="0"><a id="fork" href="https://github.com/alinex/node-alinex" title="Fork me on GitHub"></a><div class="docs markdown">
 <div class="pilwrap" id="installation">
   <h1>
     <a href="#installation" name="installation" class="pilcrow">&#182;</a>
@@ -71,6 +81,26 @@
   </h3>
 </div>
 
+
+<p>Best choice is to use the package manager:</p>
+
+
+<div class="highlight"><pre><code>    <span class="nx">curl</span> <span class="o">-</span><span class="nx">sL</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//deb.nodesource.com/setup_0.12 | sudo bash -</span>
+    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">nodejs</span> <span class="nx">build</span><span class="o">-</span><span class="nx">essential</span>
+</code></pre></div>
+
+
+
+<p>or</p>
+
+
+<div class="highlight"><pre><code>    <span class="nx">curl</span> <span class="o">-</span><span class="nx">sL</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//deb.nodesource.com/setup | sudo bash -</span>
+    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">nodejs</span> <span class="nx">build</span><span class="o">-</span><span class="nx">essential</span>
+</code></pre></div>
+
+
+
+<p>Or you may install it from source and compile:</p>
 
 
 <div class="highlight"><pre><code>    <span class="err">#</span> <span class="nx">Install</span> <span class="nx">dependencies</span> <span class="nx">from</span> <span class="nx">repository</span>
@@ -101,15 +131,6 @@
     <span class="p">.</span><span class="o">/</span><span class="nx">configure</span>
     <span class="nx">make</span>
     <span class="nx">sudo</span> <span class="nx">make</span> <span class="nx">install</span>
-</code></pre></div>
-
-
-
-<p>Or do it with the package manager:</p>
-
-
-<div class="highlight"><pre><code>    <span class="nx">curl</span> <span class="o">-</span><span class="nx">sL</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//deb.nodesource.com/setup | sudo bash -</span>
-    <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">nodejs</span> <span class="nx">build</span><span class="o">-</span><span class="nx">essential</span>
 </code></pre></div>
 
 

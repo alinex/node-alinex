@@ -11,6 +11,11 @@ You may install node from your repository or with the following manual steps.
 
 Best choice is to use the package manager:
 
+		curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+		sudo apt-get install -y nodejs build-essential
+
+or
+
 		curl -sL https://deb.nodesource.com/setup | sudo bash -
 		sudo apt-get install -y nodejs build-essential
 

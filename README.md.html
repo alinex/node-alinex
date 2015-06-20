@@ -36,49 +36,19 @@
         <a href="#package%3A%20alinex">Package: alinex</a>
       </div>
       <div class="heading h2">
-        <a href="#why%20i%20created%20it%3F">Why I created it?</a>
+        <a href="#general%20documentation">General Documentation</a>
       </div>
       <div class="heading h2">
         <a href="#what%20is%20alinex%3F">What is alinex?</a>
       </div>
       <div class="heading h2">
+        <a href="#why%20i%20created%20it%3F">Why I created it?</a>
+      </div>
+      <div class="heading h2">
         <a href="#roadmap">Roadmap</a>
       </div>
       <div class="heading h2">
-        <a href="#development">Development</a>
-      </div>
-      <div class="heading h2">
         <a href="#alinex%20modules">Alinex Modules</a>
-      </div>
-      <div class="heading h3">
-        <a href="#tools">Tools</a>
-      </div>
-      <div class="heading h4">
-        <a href="#builder">builder</a>
-      </div>
-      <div class="heading h4">
-        <a href="#worktime">worktime</a>
-      </div>
-      <div class="heading h3">
-        <a href="#general%20helper">General Helper</a>
-      </div>
-      <div class="heading h4">
-        <a href="#async">async</a>
-      </div>
-      <div class="heading h4">
-        <a href="#error">error</a>
-      </div>
-      <div class="heading h4">
-        <a href="#util">util</a>
-      </div>
-      <div class="heading h4">
-        <a href="#config">config</a>
-      </div>
-      <div class="heading h4">
-        <a href="#validator">validator</a>
-      </div>
-      <div class="heading h4">
-        <a href="#spawn">spawn</a>
       </div>
       <div class="heading h2">
         <a href="#license">License</a>
@@ -96,9 +66,70 @@
 
 
 <p>This is the base package for the alinex universe. Currently only
-containing some overall description and rules for all the individual mosules.</p>
+containing some overall description and rules for all the individual modules.</p>
 
 <p>Maybe later it will become a whole system out of all the modules.</p>
+
+
+<div class="pilwrap" id="general%20documentation">
+  <h2>
+    <a href="#general%20documentation" name="general%20documentation" class="pilcrow">&#182;</a>
+    General Documentation
+  </h2>
+</div>
+
+
+<p>The base rules which are used in the development of the alinex modules are:</p>
+
+<ul>
+<li><a href="src/doc/developguide.md.html">Development Guide</a> - styleguide</li>
+<li><a href="src/doc/install.md.html">Install</a> - instructions</li>
+<li><a href="src/doc/filestructure.md.html">File Structure</a></li>
+<li><a href="src/doc/modules.md.html">Modules</a> - overview</li>
+<li><a href="src/doc/category.md.html">Modules by category</a> - with links</li>
+</ul>
+
+<p>Some language help collections:</p>
+
+<ul>
+<li><a href="src/doc/coffee.md.html">CoffeeScript</a> - language</li>
+<li><a href="src/doc/javascript.md.html">JavaScript</a> - language</li>
+<li><a href="src/doc/markdown.md.html">Markdown</a> - how to document</li>
+</ul>
+
+<p>And finally some development tools:</p>
+
+<ul>
+<li><a href="src/doc/developtools.md.html">Developer Tools</a> - overview</li>
+<li><a href="src/doc/npm.md.html">npm</a> - package manager</li>
+<li><a href="src/doc/git.md.html">git</a> - source code repository</li>
+<li><a href="src/doc/atom.md.html">atom</a> - editor</li>
+<li><a href="src/doc/sublime.md.html">sublime</a> - editor</li>
+</ul>
+
+
+<div class="pilwrap" id="what%20is%20alinex%3F">
+  <h2>
+    <a href="#what%20is%20alinex%3F" name="what%20is%20alinex%3F" class="pilcrow">&#182;</a>
+    What is alinex?
+  </h2>
+</div>
+
+
+<p>Just now it is a modular, flexible and powerful tool set for web applications.
+It aims to help the developer to create individual solutions in a fast and easy
+but stable way.</p>
+
+<p>The alinex package itself will become the base system which has a management
+console for easy management:</p>
+
+<ul>
+<li>search for alinex applications</li>
+<li>install new alinex packages</li>
+<li>configure</li>
+<li>remove packages</li>
+<li>start and stop applications</li>
+</ul>
 
 
 <div class="pilwrap" id="why%20i%20created%20it%3F">
@@ -120,30 +151,6 @@ With this project I went to new land (for me) in the web technologies and tried
 lots of the current propagated technologies and patterns out.</p>
 
 
-<div class="pilwrap" id="what%20is%20alinex%3F">
-  <h2>
-    <a href="#what%20is%20alinex%3F" name="what%20is%20alinex%3F" class="pilcrow">&#182;</a>
-    What is alinex?
-  </h2>
-</div>
-
-
-<p>Just now it is a modular, flexible and powerful toolset for web applications.
-It aims to help the developer to create individual solutions in a fast and easy
-but stable way.</p>
-
-<p>The alinex package itself will become the base system which has a management
-console for easy management:</p>
-
-<ul>
-<li>search for alinex applications</li>
-<li>install new alinex packages</li>
-<li>configure</li>
-<li>remove packages</li>
-<li>start and stop applications</li>
-</ul>
-
-
 <div class="pilwrap" id="roadmap">
   <h2>
     <a href="#roadmap" name="roadmap" class="pilcrow">&#182;</a>
@@ -152,50 +159,19 @@ console for easy management:</p>
 </div>
 
 
-<p>There is no real roadmap for the time and funtionality. It all depends on my
+<p>There is no real roadmap for the time and functionality. It all depends on my
 personal time and interests. But I will give a short overview of the big
 points, what is planned for this year:</p>
 
 <ul>
 <li>make modules more robust</li>
-<li>more web server module support</li>
 <li>base alinex application</li>
+<li>exec library working local and remote</li>
 </ul>
 
 <p>See the <a href="https://trello.com/b/lOY5hCx7/node-js">Planning Board</a> for more up to
 date information of there I'm working at. Also the <a href="src/doc/ideas.md.html">Ideas</a>
 page will hold some general ideas and thoughts.</p>
-
-
-<div class="pilwrap" id="development">
-  <h2>
-    <a href="#development" name="development" class="pilcrow">&#182;</a>
-    Development
-  </h2>
-</div>
-
-
-<p>The base rules which are used in the development of the alinex modules are:</p>
-
-<ul>
-<li><a href="src/doc/developguide.md.html">Development Guide</a> - styleguide</li>
-<li><a href="src/doc/filestructure.md.html">File Structure</a></li>
-<li><a href="src/doc/developtools.md.html">Development Tools</a> - text editors and ide</li>
-<li><a href="src/doc/coffee.md.html">CoffeeScript</a> - language</li>
-<li><a href="src/doc/javascript.md.html">JavaScript</a> - language</li>
-<li><a href="src/doc/markdown.md.html">Markdown</a> - how to document</li>
-<li><a href="src/doc/install.md.html">Install</a> - instructions</li>
-<li><a href="src/doc/modules.md.html">Modules</a> - links</li>
-</ul>
-
-<p>And here are some help with the development tools:</p>
-
-<ul>
-<li><a href="src/doc/npm.md.html">npm</a> - package manager</li>
-<li><a href="src/doc/git.md.html">git</a> - source code repository</li>
-<li><a href="src/doc/atom.md.html">atom</a> - editor</li>
-<li><a href="src/doc/sublime.md.html">sublime</a> - editor</li>
-</ul>
 
 
 <div class="pilwrap" id="alinex%20modules">
@@ -206,155 +182,8 @@ page will hold some general ideas and thoughts.</p>
 </div>
 
 
-<p>List of modules which are released as part of the alinex universe, but may be
-used independently.</p>
-
-
-<div class="pilwrap" id="tools">
-  <h3>
-    <a href="#tools" name="tools" class="pilcrow">&#182;</a>
-    Tools
-  </h3>
-</div>
-
-
-
-<div class="pilwrap" id="builder">
-  <h4>
-    <a href="#builder" name="builder" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-builder/">builder</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>This is a build tool for the developer to make the process of maintaining node
-  modules as easy as possible. All alinex modules are managed and maintained using
-  this tool and it is integrated as development dependency in all packages.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="worktime">
-  <h4>
-    <a href="#worktime" name="worktime" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-worktime/">worktime</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Command line tool to log work times on different projects or tickets in an easy
-  way. This helps in calculation of costs based on real work times.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="general%20helper">
-  <h3>
-    <a href="#general%20helper" name="general%20helper" class="pilcrow">&#182;</a>
-    General Helper
-  </h3>
-</div>
-
-
-
-<div class="pilwrap" id="async">
-  <h4>
-    <a href="#async" name="async" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-async/">async</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Asynchronous control flow made easy. This module is a superset to the popular
-  async.js and adds more useful methods.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="error">
-  <h4>
-    <a href="#error" name="error" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-error/">error</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Enhanced error reporting with support for source-maps like used in the alinex
-  coffee script modules.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="util">
-  <h4>
-    <a href="#util" name="util" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-util/">util</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>String, Array and Object utilities which makes coding easier and more clear to read.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="config">
-  <h4>
-    <a href="#config" name="config" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-config/">config</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Easy configuration management with different file formats.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="validator">
-  <h4>
-    <a href="#validator" name="validator" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-validator/">validator</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Validation and sanitization of values and value structures with clear error descriptions.</p>
-</blockquote>
-
-
-<div class="pilwrap" id="spawn">
-  <h4>
-    <a href="#spawn" name="spawn" class="pilcrow">&#182;</a>
-    <a href="https://alinex.github.io/node-spawn/">spawn</a>
-  </h4>
-</div>
-
-
-<blockquote>
-  <p>Process manager and control wrapper to run external commands.</p>
-</blockquote>
-
-<p>The following modules are in a beta stadium:</p>
-
-<ul>
-<li><a href="https://alinex.github.io/node-fs/">alinex-fs</a> - enhanced filesystem tools</li>
-<li><a href="https://alinex.github.io/node-mysql/">alinex-mysql</a> - easy mysql queriing</li>
-<li><a href="https://alinex.github.io/node-config/">alinex-server</a> -
-express.js based webserver</li>
-<li><a href="https://alinex.github.io/node-monitor/">alinex-monitor</a> -
-server and service monitoring</li>
-<li><a href="https://alinex.github.io/node-monitor-sensor/">alinex-monitor-sensor</a> -
-sensors for monitoring</li>
-</ul>
-
-<p>And the outdated modules:</p>
-
-<ul>
-<li><a href="https://alinex.github.io/node-make/">alinex-make</a> - now alinex-builder</li>
-<li><a href="https://alinex.github.io/node-once/">alinex-once</a> - included in alinex-async</li>
-</ul>
+<p>Look at my <a href="http://alinex.github.io/code.html">Code page</a> (button on the top)
+to get a list of currently finished modules.</p>
 
 
 <div class="pilwrap" id="license">

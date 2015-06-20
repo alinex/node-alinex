@@ -123,12 +123,15 @@ spaces.</p>
 <p>Classes start with an Uppercase letter:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Test</span>
+<div class="highlight"><pre><code><span class="nv">test = </span><span class="k">new</span> <span class="nx">Test</span>
 </code></pre></div>
 
 
 
 <p>To mark private properties/functions they may start with an underscore.</p>
+
+<p>Modules are always imported into a variable which is named after the module
+and if the module exports a class the uppercase name is used.</p>
 
 
 <div class="pilwrap" id="asynchronous%20code">
@@ -168,7 +171,8 @@ through <code>process.nextTick()</code> yourself.</p>
 </div>
 
 
-<p>You may also use the <a href="https://github.com/alinex/node-async/">alinex-async</a> module.</p>
+<p>You may also use the <a href="https://github.com/alinex/node-async/">Async</a> module. It
+brings you a lot of methods to make asynchronous calls parallel or serial.</p>
 
 
 <div class="pilwrap" id="events">
@@ -195,31 +199,45 @@ objects.</p>
 following ways:</p>
 
 <ul>
-<li><p>Synchronous code will return an Error object instead of the normal return
-value:</p>
+<li>Synchronous code will return an Error object instead of the normal return
+value:</li>
+</ul>
 
-<p>myfuncSync = () ->
-x = doSomething()
-if x == 1
-  return new Error "Failed calculation"
-return x</p>
 
-<p>result = myfuncSync()
-if result instanceof Error
-console.error result.message</p></li>
-<li><p>Asynchronouse code should send the error as first parameter to the callback
-method or <code>null</code> if no error occurred:</p>
+<div class="highlight"><pre><code>    <span class="nv">myfuncSync = </span><span class="p">()</span> <span class="nf">-&gt;</span>
+      <span class="nv">x = </span><span class="nx">doSomething</span><span class="p">()</span>
+      <span class="k">if</span> <span class="nx">x</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Error</span> <span class="s">&quot;Failed calculation&quot;</span>
+      <span class="k">return</span> <span class="nx">x</span>
 
-<p>myfunc = (cb) ->
-x = doSomething()
-if x == 1
-  cb new Error "Failed calculation"
-else
-  cb null, x</p>
+    <span class="nv">result = </span><span class="nx">myfuncSync</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">result</span> <span class="k">instanceof</span> <span class="nb">Error</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span> <span class="nx">result</span><span class="p">.</span><span class="nx">message</span>
+</code></pre></div>
 
-<p>myfunc (err, result) ->
-if err
-  console.error err.message</p></li>
+
+
+<ul>
+<li>Asynchronouse code should send the error as first parameter to the callback
+method or <code>null</code> if no error occurred:</li>
+</ul>
+
+
+<div class="highlight"><pre><code>    <span class="nv">myfunc = </span><span class="nf">(cb) -&gt;</span>
+      <span class="nv">x = </span><span class="nx">doSomething</span><span class="p">()</span>
+      <span class="k">if</span> <span class="nx">x</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="nx">cb</span> <span class="k">new</span> <span class="nb">Error</span> <span class="s">&quot;Failed calculation&quot;</span>
+      <span class="k">else</span>
+        <span class="nx">cb</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">x</span>
+
+    <span class="nx">myfunc</span> <span class="nf">(err, result) -&gt;</span>
+      <span class="k">if</span> <span class="nx">err</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span> <span class="nx">err</span><span class="p">.</span><span class="nx">message</span>
+</code></pre></div>
+
+
+
+<ul>
 <li><p>And at last an error may be thrown only if it is a hard error which signals
 an fatal error which may stop the overall process.</p>
 
@@ -247,7 +265,7 @@ as fast as possible.</p>
 
 
 <div class="highlight"><pre><code><span class="k">if</span> <span class="nx">err</span>
-  <span class="nx">doSomething</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">doSomething</span> <span class="nf">(err) -&gt;</span>
     <span class="k">return</span> <span class="nx">cb</span> <span class="nx">err</span>
 <span class="k">else</span>
   <span class="k">return</span> <span class="kc">true</span>
@@ -258,8 +276,8 @@ as fast as possible.</p>
 <p>Good:</p>
 
 
-<div class="highlight"><pre><code><span class="k">return</span> <span class="kc">true</span> <span class="nx">unless</span> <span class="nx">err</span>
-<span class="nx">doSomething</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">-&gt;</span>
+<div class="highlight"><pre><code><span class="k">return</span> <span class="kc">true</span> <span class="k">unless</span> <span class="nx">err</span>
+<span class="nx">doSomething</span> <span class="nf">(err) -&gt;</span>
   <span class="k">return</span> <span class="nx">cb</span> <span class="nx">err</span>
 </code></pre></div>
 
@@ -324,10 +342,10 @@ functionality.</p>
 <a href="http://alinex.github.io/node-builder">alinex-builder</a>.</p>
 
 
-<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">step</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span>
-<span class="o">&gt;</span> <span class="nx">builder</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">clean</span> <span class="o">--</span><span class="nx">auto</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">update</span>
-<span class="err">#</span> <span class="nx">step</span> <span class="mi">4</span><span class="o">-</span><span class="mi">7</span>
-<span class="o">&gt;</span> <span class="nx">builder</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">test</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">publish</span> <span class="o">--</span><span class="nx">minor</span> <span class="o">-</span><span class="nx">c</span> <span class="nx">doc</span> <span class="o">--</span><span class="nx">publish</span>
+<div class="highlight"><pre><code><span class="c"># step 1-3</span>
+builder -c clean --auto -c update
+<span class="c"># step 4-7</span>
+builder -c <span class="nb">test</span> -c publish --minor -c doc --publish
 </code></pre></div>
 
 
@@ -361,7 +379,7 @@ such files.</p>
 open as possible. This makes it possible to use:</p>
 
 
-<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">dedupe</span>
+<div class="highlight"><pre><code>npm dedupe
 </code></pre></div>
 
 

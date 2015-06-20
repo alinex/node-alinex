@@ -2,9 +2,52 @@ Package: alinex
 =================================================
 
 This is the base package for the alinex universe. Currently only
-containing some overall description and rules for all the individual mosules.
+containing some overall description and rules for all the individual modules.
 
 Maybe later it will become a whole system out of all the modules.
+
+
+General Documentation
+-------------------------------------------------
+
+The base rules which are used in the development of the alinex modules are:
+
+- [Development Guide](src/doc/developguide.md) - styleguide
+- [Install](src/doc/install.md) - instructions
+- [File Structure](src/doc/filestructure.md)
+- [Modules](src/doc/modules.md) - overview
+- [Modules by category](src/doc/category.md) - with links
+
+Some language help collections:
+
+- [CoffeeScript](src/doc/coffee.md) - language
+- [JavaScript](src/doc/javascript.md) - language
+- [Markdown](src/doc/markdown.md) - how to document
+
+And finally some development tools:
+
+- [Developer Tools](src/doc/developtools.md) - overview
+- [npm](src/doc/npm.md) - package manager
+- [git](src/doc/git.md) - source code repository
+- [atom](src/doc/atom.md) - editor
+- [sublime](src/doc/sublime.md) - editor
+
+
+What is alinex?
+-------------------------------------------------
+
+Just now it is a modular, flexible and powerful tool set for web applications.
+It aims to help the developer to create individual solutions in a fast and easy
+but stable way.
+
+The alinex package itself will become the base system which has a management
+console for easy management:
+
+- search for alinex applications
+- install new alinex packages
+- configure
+- remove packages
+- start and stop applications
 
 
 Why I created it?
@@ -21,116 +64,27 @@ With this project I went to new land (for me) in the web technologies and tried
 lots of the current propagated technologies and patterns out.
 
 
-What is alinex?
--------------------------------------------------
-
-Just now it is a modular, flexible and powerful toolset for web applications.
-It aims to help the developer to create individual solutions in a fast and easy
-but stable way.
-
-The alinex package itself will become the base system which has a management
-console for easy management:
-
-- search for alinex applications
-- install new alinex packages
-- configure
-- remove packages
-- start and stop applications
-
-
 Roadmap
 -------------------------------------------------
 
-There is no real roadmap for the time and funtionality. It all depends on my
+There is no real roadmap for the time and functionality. It all depends on my
 personal time and interests. But I will give a short overview of the big
 points, what is planned for this year:
 
 - make modules more robust
-- more web server module support
 - base alinex application
+- exec library working local and remote
 
 See the [Planning Board](https://trello.com/b/lOY5hCx7/node-js) for more up to
 date information of there I'm working at. Also the [Ideas](src/doc/ideas.md)
 page will hold some general ideas and thoughts.
 
 
-Development
--------------------------------------------------
-
-The base rules which are used in the development of the alinex modules are:
-
-- [Development Guide](src/doc/developguide.md) - styleguide
-- [File Structure](src/doc/filestructure.md)
-- [Development Tools](src/doc/developtools.md) - text editors and ide
-- [CoffeeScript](src/doc/coffee.md) - language
-- [JavaScript](src/doc/javascript.md) - language
-- [Markdown](src/doc/markdown.md) - how to document
-- [Install](src/doc/install.md) - instructions
-- [Modules](src/doc/modules.md) - links
-
-And here are some help with the development tools:
-
-- [npm](src/doc/npm.md) - package manager
-- [git](src/doc/git.md) - source code repository
-- [atom](src/doc/atom.md) - editor
-- [sublime](src/doc/sublime.md) - editor
-
-
 Alinex Modules
 -------------------------------------------------
 
-List of modules which are released as part of the alinex universe, but may be
-used independently.
-
-### Tools
-
-#### [builder](https://alinex.github.io/node-builder/)
-> This is a build tool for the developer to make the process of maintaining node
-> modules as easy as possible. All alinex modules are managed and maintained using
-> this tool and it is integrated as development dependency in all packages.
-
-#### [worktime](https://alinex.github.io/node-worktime/)
-> Command line tool to log work times on different projects or tickets in an easy
-> way. This helps in calculation of costs based on real work times.
-
-### General Helper
-
-#### [async](https://alinex.github.io/node-async/)
-> Asynchronous control flow made easy. This module is a superset to the popular
-> async.js and adds more useful methods.
-
-#### [error](https://alinex.github.io/node-error/)
-> Enhanced error reporting with support for source-maps like used in the alinex
-> coffee script modules.
-
-#### [util](https://alinex.github.io/node-util/)
-> String, Array and Object utilities which makes coding easier and more clear to read.
-
-#### [config](https://alinex.github.io/node-config/)
-> Easy configuration management with different file formats.
-
-#### [validator](https://alinex.github.io/node-validator/)
-> Validation and sanitization of values and value structures with clear error descriptions.
-
-#### [spawn](https://alinex.github.io/node-spawn/)
-> Process manager and control wrapper to run external commands.
-
-
-The following modules are in a beta stadium:
-
-- [alinex-fs](https://alinex.github.io/node-fs/) - enhanced filesystem tools
-- [alinex-mysql](https://alinex.github.io/node-mysql/) - easy mysql queriing
-- [alinex-server](https://alinex.github.io/node-config/) -
-  express.js based webserver
-- [alinex-monitor](https://alinex.github.io/node-monitor/) -
-  server and service monitoring
-- [alinex-monitor-sensor](https://alinex.github.io/node-monitor-sensor/) -
-  sensors for monitoring
-
-And the outdated modules:
-
-- [alinex-make](https://alinex.github.io/node-make/) - now alinex-builder
-- [alinex-once](https://alinex.github.io/node-once/) - included in alinex-async
+Look at my [Code page](http://alinex.github.io/code.html) (button on the top)
+to get a list of currently finished modules.
 
 
 License

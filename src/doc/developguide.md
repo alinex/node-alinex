@@ -22,9 +22,14 @@ Over all modules some common variable names will be used for the same values:
 
 Classes start with an Uppercase letter:
 
-    test = new Test
+``` coffee
+test = new Test
+```
 
 To mark private properties/functions they may start with an underscore.
+
+Modules are always imported into a variable which is named after the module
+and if the module exports a class the uppercase name is used.
 
 
 Asynchronous code
@@ -44,7 +49,8 @@ through `process.nextTick()` yourself.
 
 ### Async module
 
-You may also use the [alinex-async](https://github.com/alinex/node-async/) module.
+You may also use the [Async](https://github.com/alinex/node-async/) module. It
+brings you a lot of methods to make asynchronous calls parallel or serial.
 
 ### Events
 
@@ -60,29 +66,33 @@ following ways:
 - Synchronous code will return an Error object instead of the normal return
   value:
 
-  myfuncSync = () ->
-    x = doSomething()
-    if x == 1
-      return new Error "Failed calculation"
-    return x
+``` coffee
+    myfuncSync = () ->
+      x = doSomething()
+      if x == 1
+        return new Error "Failed calculation"
+      return x
 
-  result = myfuncSync()
-  if result instanceof Error
-    console.error result.message
+    result = myfuncSync()
+    if result instanceof Error
+      console.error result.message
+```
 
 - Asynchronouse code should send the error as first parameter to the callback
   method or `null` if no error occurred:
 
-  myfunc = (cb) ->
-    x = doSomething()
-    if x == 1
-      cb new Error "Failed calculation"
-    else
-      cb null, x
+``` coffee
+    myfunc = (cb) ->
+      x = doSomething()
+      if x == 1
+        cb new Error "Failed calculation"
+      else
+        cb null, x
 
-  myfunc (err, result) ->
-    if err
-      console.error err.message
+    myfunc (err, result) ->
+      if err
+        console.error err.message
+```
 
 - And at last an error may be thrown only if it is a hard error which signals
   an fatal error which may stop the overall process.
@@ -103,17 +113,21 @@ as fast as possible.
 
 Bad:
 
-    if err
-      doSomething (err) ->
-        return cb err
-    else
-      return true
+``` coffee
+if err
+  doSomething (err) ->
+    return cb err
+else
+  return true
+```
 
 Good:
 
-    return true unless err
-    doSomething (err) ->
-      return cb err
+``` coffee
+return true unless err
+doSomething (err) ->
+  return cb err
+```
 
 
 Documentation
@@ -153,11 +167,12 @@ To publish new packages the following steps should be done:
 The tasks are done in an easy way using the
 [alinex-builder](http://alinex.github.io/node-builder).
 
-    # step 1-3
-    > builder -c clean --auto -c update
-    # step 4-7
-    > builder -c test -c publish --minor -c doc --publish
-
+``` bash
+# step 1-3
+builder -c clean --auto -c update
+# step 4-7
+builder -c test -c publish --minor -c doc --publish
+```
 
 Configuration
 -------------------------------------------------
@@ -174,7 +189,9 @@ Dependencies
 To use singleton modules the dependencies for specific versions should be as
 open as possible. This makes it possible to use:
 
-    > npm dedupe
+``` bash
+npm dedupe
+```
 
 This will flatten down the modules to the uppermost common module in hierarchy.
 

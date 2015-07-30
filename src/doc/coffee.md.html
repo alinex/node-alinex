@@ -104,7 +104,7 @@ anywhere I will use javascript so anybody can read it.</p>
 
 
 
-<div class="highlight"><pre><code><span class="k">if</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+<div class="highlight"><pre><code><span class="k">if</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s">&#39;test&#39;</span>
 </code></pre></div>
 
 
@@ -114,7 +114,7 @@ readable value. If the substring is found it will be true (any number), and
 false (0) if it isn’t. or use the following to get a real boolean type:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">x</span> <span class="o">=</span> <span class="nb">Boolean</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+<div class="highlight"><pre><code><span class="nv">x = </span><span class="nb">Boolean</span> <span class="o">~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s">&#39;test&#39;</span>
 </code></pre></div>
 
 
@@ -122,7 +122,7 @@ false (0) if it isn’t. or use the following to get a real boolean type:</p>
 <p>Or use the negation:</p>
 
 
-<div class="highlight"><pre><code><span class="k">if</span> <span class="o">!~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s1">&#39;test&#39;</span>
+<div class="highlight"><pre><code><span class="k">if</span> <span class="o">!~</span><span class="nx">message</span><span class="p">.</span><span class="nx">indexOf</span> <span class="s">&#39;test&#39;</span>
 </code></pre></div>
 
 
@@ -146,7 +146,7 @@ false (0) if it isn’t. or use the following to get a real boolean type:</p>
 
 
 
-<div class="highlight"><pre><code><span class="nx">unless</span> <span class="nx">obj</span><span class="o">?</span> <span class="nx">and</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">length</span>
+<div class="highlight"><pre><code><span class="k">unless</span> <span class="nx">obj</span><span class="o">?</span> <span class="o">and</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">length</span>
 </code></pre></div>
 
 
@@ -209,7 +209,7 @@ or is an empty object.</p>
 <p>Counting loop:</p>
 
 
-<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="nx">n</span><span class="p">]</span> <span class="nx">by</span> <span class="mi">1</span>
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="nx">n</span><span class="p">]</span> <span class="k">by</span> <span class="mi">1</span>
 </code></pre></div>
 
 
@@ -217,7 +217,7 @@ or is an empty object.</p>
 <p>Reverse loop:</p>
 
 
-<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span> <span class="nx">by</span> <span class="o">-</span><span class="mi">1</span>
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span> <span class="k">by</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
 
 
@@ -225,8 +225,10 @@ or is an empty object.</p>
 <p>Loop over object:</p>
 
 
-<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">key</span> <span class="nx">of</span> <span class="nx">object</span>
-<span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="nx">of</span> <span class="nx">object</span>
+<div class="highlight"><pre><code><span class="k">for</span> <span class="nx">key</span> <span class="k">of</span> <span class="nx">object</span>
+  <span class="p">...</span>
+<span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="k">of</span> <span class="nx">object</span>
+  <span class="p">...</span>
 </code></pre></div>
 
 
@@ -244,8 +246,8 @@ or is an empty object.</p>
 an empty default function on parameter definition:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">test</span> <span class="o">=</span> <span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">cb</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">)</span> <span class="o">-&gt;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s1">&#39;do something&#39;</span>
+<div class="highlight"><pre><code><span class="nv">test = </span><span class="nf">(src, cb = -&gt; ) -&gt;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&#39;do something&#39;</span>
   <span class="nx">cb</span><span class="p">()</span>
 </code></pre></div>
 
@@ -263,13 +265,13 @@ an empty default function on parameter definition:</p>
 <p>Classes are made really easy using CoffeeScript:</p>
 
 
-<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">define</span> <span class="nx">a</span> <span class="kr">class</span>
-<span class="kr">class</span> <span class="nx">Test</span>
-  <span class="err">#</span> <span class="nx">make</span> <span class="nx">a</span> <span class="nx">constructor</span> <span class="nx">method</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
+<div class="highlight"><pre><code><span class="c1"># define a class</span>
+<span class="k">class</span> <span class="nx">Test</span>
+  <span class="c1"># make a constructor method</span>
+  <span class="nv">constructor: </span><span class="nf">-&gt;</span>
 
-<span class="err">#</span> <span class="nx">create</span> <span class="nx">instance</span>
-<span class="nx">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Test</span>
+<span class="c1"># create instance</span>
+<span class="nv">t = </span><span class="k">new</span> <span class="nx">Test</span>
 </code></pre></div>
 
 
@@ -277,12 +279,12 @@ an empty default function on parameter definition:</p>
 <p>Use the <code>@</code> sign in parameters to store the value in the same instance property:</p>
 
 
-<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
-  <span class="err">#</span> <span class="nx">store</span> <span class="nx">given</span> <span class="nx">name</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+<div class="highlight"><pre><code><span class="k">class</span> <span class="nx">Test</span>
+  <span class="c1"># store given name in this.name</span>
+  <span class="nv">constructor: </span><span class="nf">(@name) -&gt;</span>
 
-<span class="err">#</span> <span class="nx">add</span> <span class="nx">another</span> <span class="nx">prototype</span> <span class="nx">to</span> <span class="kr">class</span>
-<span class="nx">Test</span><span class="o">::</span><span class="nx">done</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="c1"># add another prototype to class</span>
+<span class="nv">Test::done = </span><span class="kc">true</span>
 </code></pre></div>
 
 
@@ -290,14 +292,14 @@ an empty default function on parameter definition:</p>
 <p>Inheritance is also made easy:</p>
 
 
-<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="p">(</span><span class="err">@</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+<div class="highlight"><pre><code><span class="k">class</span> <span class="nx">Test</span>
+  <span class="nv">constructor: </span><span class="nf">(@name) -&gt;</span>
 
-<span class="err">#</span> <span class="nx">extend</span> <span class="nx">the</span> <span class="kr">class</span>
-<span class="kr">class</span> <span class="nx">Test2</span> <span class="kr">extends</span> <span class="nx">Test</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
-    <span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="nx">parent</span> <span class="nx">constructor</span>
-    <span class="kr">super</span> <span class="s1">&#39;numberTwo&#39;</span>
+<span class="c1"># extend the class</span>
+<span class="k">class</span> <span class="nx">Test2</span> <span class="k">extends</span> <span class="nx">Test</span>
+  <span class="nv">constructor: </span><span class="nf">-&gt;</span>
+    <span class="c1"># call the parent constructor</span>
+    <span class="k">super</span> <span class="s">&#39;numberTwo&#39;</span>
 </code></pre></div>
 
 
@@ -305,14 +307,14 @@ an empty default function on parameter definition:</p>
 <p>Local variables are created using <code>=</code> but properties are defined using <code>:</code>:</p>
 
 
-<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
-  <span class="err">#</span> <span class="nx">local</span> <span class="kr">class</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
-  <span class="nx">foo</span> <span class="o">=</span> <span class="mi">1</span>
-  <span class="err">#</span> <span class="nx">instance</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
-  <span class="nx">bar</span><span class="o">:</span> <span class="mi">2</span>
-  <span class="err">#</span> <span class="nx">or</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">constructor</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
-    <span class="err">@</span><span class="nx">baz</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><pre><code><span class="k">class</span> <span class="nx">Test</span>
+  <span class="c1"># local class variable/function</span>
+  <span class="nv">foo = </span><span class="mi">1</span>
+  <span class="c1"># instance variable/function</span>
+  <span class="nv">bar: </span><span class="mi">2</span>
+  <span class="c1"># or from the constructor</span>
+  <span class="nv">constructor: </span><span class="nf">-&gt;</span>
+    <span class="vi">@baz = </span><span class="mi">3</span>
 </code></pre></div>
 
 
@@ -320,20 +322,20 @@ an empty default function on parameter definition:</p>
 <p>You may also use class properties/funtions</p>
 
 
-<div class="highlight"><pre><code><span class="kr">class</span> <span class="nx">Test</span>
-  <span class="err">#</span> <span class="kr">static</span> <span class="kr">class</span> <span class="nx">variable</span><span class="o">/</span><span class="kd">function</span>
-  <span class="err">@</span><span class="nx">foo</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="err">@</span><span class="nx">bar</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">-&gt;</span>
-  <span class="nx">constructor</span><span class="o">:</span> <span class="o">-&gt;</span>
-    <span class="err">#</span> <span class="nx">access</span> <span class="nx">statics</span>
+<div class="highlight"><pre><code><span class="k">class</span> <span class="nx">Test</span>
+  <span class="c1"># static class variable/function</span>
+  <span class="vi">@foo: </span><span class="mi">1</span>
+  <span class="vi">@bar: </span><span class="nf">(name) -&gt;</span>
+  <span class="nv">constructor: </span><span class="nf">-&gt;</span>
+    <span class="c1"># access statics</span>
     <span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
-    <span class="err">#</span> <span class="nx">or</span>
-    <span class="err">@</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
+    <span class="c1"># or</span>
+    <span class="nx">@constructor</span><span class="p">.</span><span class="nx">bar</span><span class="p">()</span>
 
-<span class="err">#</span> <span class="nx">access</span> <span class="nx">from</span> <span class="nx">outside</span>
+<span class="c1"># access from outside</span>
 <span class="nx">Test</span><span class="p">.</span><span class="nx">foo</span>
-<span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span> <span class="s1">&#39;baz&#39;</span>
-<span class="nx">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Test</span>
+<span class="nx">Test</span><span class="p">.</span><span class="nx">bar</span> <span class="s">&#39;baz&#39;</span>
+<span class="nv">test = </span><span class="k">new</span> <span class="nx">Test</span>
 <span class="nx">test</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">foo</span>
 </code></pre></div>
 

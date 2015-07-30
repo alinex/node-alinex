@@ -92,7 +92,7 @@
 </div>
 
 
-<p>The easiest way to document is to use markdown syntax. >ou write the code in plain
+<p>The easiest way to document is to use markdown syntax. You write the code in plain
 text with some easy formatting rules. This can be transformed into html or other
 formats. But it's not an inherent standard, different flavors exist.</p>
 
@@ -113,11 +113,11 @@ interpreted by github and the integrated document generation of the
 <p>Two formats of headers are supported. First you may use double or single underlines:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">1</span>
-<span class="o">==========================================</span>
+<div class="highlight"><pre><code>Heading Level 1
+==========================================
 
-<span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">2</span>
-<span class="o">------------------------------------------</span>
+Heading Level 2
+------------------------------------------
 </code></pre></div>
 
 
@@ -125,17 +125,17 @@ interpreted by github and the integrated document generation of the
 <p>Or you can define the headings with starting hash signs:</p>
 
 
-<div class="highlight"><pre><code><span class="err">#</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">1</span>
+<div class="highlight"><pre><code># Heading Level 1
 
-<span class="err">##</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">2</span>
+## Heading Level 2
 
-<span class="err">###</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">4</span>
+### Heading Level 4
 
-<span class="err">####</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">3</span>
+#### Heading Level 3
 
-<span class="err">#####</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">5</span>
+##### Heading Level 5
 
-<span class="err">######</span> <span class="nx">Heading</span> <span class="nx">Level</span> <span class="mi">6</span>
+###### Heading Level 6
 </code></pre></div>
 
 
@@ -153,9 +153,9 @@ interpreted by github and the integrated document generation of the
 <code>&lt;br /&gt;</code> Tag if you want:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">This</span> <span class="nx">text</span>
-<span class="nx">will</span> <span class="nx">be</span> <span class="k">in</span> <span class="nx">one</span> <span class="nx">line</span>
-<span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;</span><span class="nx">And</span> <span class="k">this</span> <span class="k">in</span> <span class="nx">a</span> <span class="k">new</span> <span class="nx">one</span><span class="p">.</span>
+<div class="highlight"><pre><code>This text
+will be in one line
+&lt;br&gt;And this in a new one.
 </code></pre></div>
 
 
@@ -191,8 +191,11 @@ interpretation you may escape the signs with an backslash <code>\</code>.</p>
 
 <p>Use a double tilde sign before and after the text:</p>
 
-<div class='highlight'><pre><code language=''>Here is the ~~wrong text~~ right text.
+
+<div class="highlight"><pre><code>Here is the ~~wrong text~~ right text.
 </code></pre></div>
+
+
 
 <p>becomes</p>
 
@@ -208,9 +211,9 @@ interpretation you may escape the signs with an backslash <code>\</code>.</p>
 
 
 
-<div class="highlight"><pre><code><span class="o">*</span><span class="nx">single</span> <span class="nx">asterisks</span><span class="o">*</span>
+<div class="highlight"><pre><code>*single asterisks*
 
-<span class="nx">_single</span> <span class="nx">underscores_</span>
+_single underscores_
 </code></pre></div>
 
 
@@ -231,9 +234,9 @@ interpretation you may escape the signs with an backslash <code>\</code>.</p>
 
 
 
-<div class="highlight"><pre><code><span class="o">**</span><span class="kr">double</span> <span class="nx">asterisks</span><span class="o">**</span>
+<div class="highlight"><pre><code>**double asterisks**
 
-<span class="nx">__double</span> <span class="nx">underscores__</span>
+__double underscores__
 </code></pre></div>
 
 
@@ -254,14 +257,18 @@ interpretation you may escape the signs with an backslash <code>\</code>.</p>
 
 
 
-<div class="highlight"><pre><code><span class="err">`</span><span class="nx">code</span> <span class="k">in</span> <span class="nx">backquotes</span><span class="err">`</span>
+<div class="highlight"><pre><code>`code in backquotes`
 </code></pre></div>
 
 
 
 <p>becomes</p>
 
-<p><code>code in backquotes</code></p>
+
+<div class="highlight"><pre><code>`code in backquotes`
+</code></pre></div>
+
+
 
 
 <div class="pilwrap" id="links">
@@ -275,7 +282,7 @@ interpretation you may escape the signs with an backslash <code>\</code>.</p>
 <p>If you give a standard URL in the text an link will be added automatically. You
 can also surround them with <code>&lt;...&gt;</code>:</p>
 
-<pre><code language=''>http://example.com and &lt;http://example.com&gt;
+<pre><code language='text'>http://example.com and &lt;http://example.com&gt;
 
 <a href='mailto:info@alinex.de'>info@alinex.de</a> and &lt;<a href='mailto:info@alinex.de'>info@alinex.de</a>&gt;
 </code></pre>
@@ -284,13 +291,13 @@ can also surround them with <code>&lt;...&gt;</code>:</p>
 
 <p><a href='http://example.com'>http://example.com</a> and <a href="http://example.com">http://example.com</a></p>
 
-<p><a href='mailto:info@alinex.de'>info@alinex.de</a> and <a href="&#109;&#97;il&#116;&#x6F;:&#105;&#x6E;&#102;&#111;&#x40;&#97;&#108;&#x69;&#110;&#x65;&#x78;&#x2E;&#x64;&#101;">&#105;&#x6E;&#102;&#111;&#x40;&#97;&#108;&#x69;&#110;&#x65;&#x78;&#x2E;&#x64;&#101;</a></p>
+<p><a href='mailto:info@alinex.de'>info@alinex.de</a> and <a href="&#109;a&#x69;l&#x74;&#x6F;:&#x69;&#x6E;&#102;&#111;&#x40;&#97;&#x6C;&#105;&#110;&#x65;&#120;&#46;&#100;&#x65;">&#x69;&#x6E;&#102;&#111;&#x40;&#97;&#x6C;&#105;&#110;&#x65;&#120;&#46;&#100;&#x65;</a></p>
 
 <p>You may also give a special link text by writing the text in square brackets and
 the link in round brackets behind:</p>
 
 
-<div class="highlight"><pre><code><span class="nx">This</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">alinex</span> <span class="p">[</span><span class="nx">home</span><span class="p">](</span><span class="nx">http</span><span class="o">:</span><span class="c1">//alinex.github.io/node-alinex).</span>
+<div class="highlight"><pre><code>This is the alinex [home](http://alinex.github.io/node-alinex).
 </code></pre></div>
 
 
@@ -302,9 +309,9 @@ the link in round brackets behind:</p>
 <p>And at last you may use referenced links like that</p>
 
 
-<div class="highlight"><pre><code><span class="nx">This</span> <span class="nx">is</span> <span class="p">[</span><span class="nx">an</span> <span class="nx">example</span><span class="p">][</span><span class="nx">id</span><span class="p">]</span> <span class="nx">reference</span><span class="o">-</span><span class="nx">style</span> <span class="nx">link</span><span class="p">.</span>
+<div class="highlight"><pre><code>This is [an example][id] reference-style link.
 
-<span class="p">[</span><span class="nx">id</span><span class="p">]</span><span class="o">:</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//example.com/  &quot;Optional Title Here&quot;</span>
+[id]: http://example.com/  &quot;Optional Title Here&quot;
 </code></pre></div>
 
 
@@ -328,9 +335,9 @@ more readable. You may also keep the id empty to use the name also as the id.</p
 <p>You can write unordered lists like:</p>
 
 
-<div class="highlight"><pre><code><span class="o">*</span> <span class="nx">red</span>
-<span class="o">*</span> <span class="nx">green</span>
-<span class="o">*</span> <span class="nx">blue</span>
+<div class="highlight"><pre><code>* red
+* green
+* blue
 </code></pre></div>
 
 
@@ -348,9 +355,9 @@ more readable. You may also keep the id empty to use the name also as the id.</p
 <p>Ordered lists are written with the numbers following by periods:</p>
 
 
-<div class="highlight"><pre><code><span class="mi">1</span><span class="p">.</span> <span class="nx">red</span>
-<span class="mi">2</span><span class="p">.</span> <span class="nx">green</span>
-<span class="mi">3</span><span class="p">.</span> <span class="nx">blue</span>
+<div class="highlight"><pre><code>1. red
+2. green
+3. blue
 </code></pre></div>
 
 
@@ -382,13 +389,13 @@ multiple <code>&gt;</code>. You can also be lazy and put the sign only on the fi
 paragraph.</p>
 
 
-<div class="highlight"><pre><code><span class="nx">I</span> <span class="nx">answered</span>
+<div class="highlight"><pre><code>I answered
 
-<span class="o">&gt;</span> <span class="nx">Hello</span>
-<span class="o">&gt;</span>
-<span class="o">&gt;</span> <span class="o">&gt;</span> <span class="nx">Is</span> <span class="k">this</span> <span class="nx">code</span> <span class="nx">written</span> <span class="k">in</span> <span class="nx">coffeescript</span><span class="o">?</span>
-<span class="o">&gt;</span>
-<span class="o">&gt;</span> <span class="nx">Thats</span> <span class="nx">correct</span><span class="p">.</span>
+&gt; Hello
+&gt;
+&gt; &gt; Is this code written in coffeescript?
+&gt;
+&gt; Thats correct.
 </code></pre></div>
 
 
@@ -421,9 +428,9 @@ paragraph.</p>
 <p>Standard Markup Syntax is to indent code blocks with four spaces:</p>
 
 
-<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test succeeded!&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight"><pre><code>function test() {
+  console.log(&#39;Test succeeded!&#39;);
+}
 </code></pre></div>
 
 
@@ -479,7 +486,7 @@ specify the language used (needed for syntax highlighting):</p>
 <code>*</code> or  <code>-</code> signs:</p>
 
 
-<div class="highlight"><pre><code><span class="o">----------------------</span>
+<div class="highlight"><pre><code>----------------------
 </code></pre></div>
 
 
@@ -503,11 +510,11 @@ specify the language used (needed for syntax highlighting):</p>
 hyphens <code>-</code>:</p>
 
 
-<div class="highlight"><pre><code><span class="o">|</span> <span class="nx">Color</span>  <span class="o">|</span> <span class="nx">Value</span>  <span class="o">|</span>
-<span class="o">|</span> <span class="o">------</span> <span class="o">|</span> <span class="o">------</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">red</span>    <span class="o">|</span> <span class="nx">ff0000</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">green</span>  <span class="o">|</span> <span class="mi">00</span><span class="nx">ff00</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">blue</span>   <span class="o">|</span> <span class="mi">0000</span><span class="nx">ff</span> <span class="o">|</span>
+<div class="highlight"><pre><code>    | Color  | Value  |
+    | ------ | ------ |
+    | red    | ff0000 |
+    | green  | 00ff00 |
+    | blue   | 0000ff |
 </code></pre></div>
 
 
@@ -527,11 +534,11 @@ And you may put inline markup into the cell like <code>bold</code>, <code>italic
 body:</p>
 
 
-<div class="highlight"><pre><code><span class="o">|</span> <span class="nx">Left</span> <span class="o">|</span> <span class="nx">Center</span> <span class="o">|</span> <span class="nx">Right</span> <span class="o">|</span>
-<span class="o">|</span> <span class="o">:-----</span> <span class="o">|</span> <span class="o">:----:</span> <span class="o">|</span> <span class="o">-----:</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">first</span> <span class="nx">entry</span> <span class="o">|</span> <span class="nx">first</span> <span class="nx">entry</span> <span class="o">|</span> <span class="nx">first</span> <span class="nx">entry</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">another</span> <span class="o">|</span> <span class="nx">another</span> <span class="o">|</span> <span class="nx">another</span> <span class="o">|</span>
-<span class="o">|</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">entry</span> <span class="o">|</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">entry</span> <span class="o">|</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">entry</span> <span class="o">|</span>
+<div class="highlight"><pre><code>| Left | Center | Right |
+| :----- | :----: | -----: |
+| first entry | first entry | first entry |
+| another | another | another |
+| and the last entry | and the last entry | and the last entry |
 </code></pre></div>
 
 
@@ -556,7 +563,7 @@ body:</p>
 <p>You may also use some HTML symbols or tags but only as less as possible:</p>
 
 
-<div class="highlight"><pre><code><span class="o">&amp;</span><span class="nx">copy</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;&amp;</span><span class="nx">frac12</span><span class="p">;</span>
+<div class="highlight"><pre><code>&amp;copy;&lt;br /&gt;&amp;frac12;
 </code></pre></div>
 
 
@@ -577,7 +584,7 @@ body:</p>
 <p>Images may be placed like links but start with an exclamation mark <code>!</code>:</p>
 
 
-<div class="highlight"><pre><code><span class="o">!</span><span class="p">[</span><span class="nx">Alinex</span> <span class="nx">Logo</span><span class="p">](</span><span class="nx">logo</span><span class="o">-</span><span class="nx">trans</span><span class="o">-</span><span class="mi">200</span><span class="p">.</span><span class="nx">png</span> <span class="s2">&quot;ALINEX&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><code>![Alinex Logo](logo-trans-200.png &quot;ALINEX&quot;)
 </code></pre></div>
 
 
@@ -591,9 +598,9 @@ body:</p>
 <p>Like for links you may use the reference style here, too:</p>
 
 
-<div class="highlight"><pre><code><span class="o">!</span><span class="p">[</span><span class="nx">Alinex</span> <span class="nx">Logo</span><span class="p">][</span><span class="nx">id</span><span class="p">]</span>
+<div class="highlight"><pre><code>![Alinex Logo][id]
 
-<span class="p">[</span><span class="nx">id</span><span class="p">]</span><span class="o">:</span> <span class="nx">logo</span><span class="o">-</span><span class="nx">trans</span><span class="o">-</span><span class="mi">200</span><span class="p">.</span><span class="nx">png</span> <span class="s2">&quot;ALINEX&quot;</span>
+[id]: logo-trans-200.png &quot;ALINEX&quot;
 </code></pre></div>
 
 

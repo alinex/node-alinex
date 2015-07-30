@@ -26,7 +26,7 @@ Build Tool
 
 To best support the developer and make the daily tasks and calls to the
 different tools like git, coffee, mocha... slim and easy I use the
-[alinex-builder](https://alinex.github.io/node-builder/) tool.
+[Builder](https://alinex.github.io/node-builder/) tool.
 
 
 Operating System

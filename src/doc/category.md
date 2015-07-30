@@ -27,7 +27,7 @@ General modules
 
 - [CoffeeScript](http://coffeescript.org/)
   a language that compiles into JavaScript but is easier to read and write
-- [Async](https://github.com/alinex/node-async/)
+- [Async](http://alinex.github.io/node-async/)
   an utility module which provides straight-forward, powerful functions for
   working with asynchronous code (a superset of [async](https://github.com/caolan/async/))
 - [Memoizee](https://github.com/medikoo/memoize)
@@ -50,7 +50,7 @@ Data Storages
 
 ### Filesystem
 
-- [Fs](https://alinex.github.io/node-fs/)
+- [Fs](http://alinex.github.io/node-fs/)
   enhancement for the node fs module
   (same as mkdirp, fs-extra, graceful-fs, ncp, rimraf, wrench and more)
 - [chokidar](https://github.com/paulmillr/chokidar)

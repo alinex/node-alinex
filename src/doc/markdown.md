@@ -1,7 +1,7 @@
 Markdown Syntax
 =================================================
 
-The easiest way to document is to use markdown syntax. >ou write the code in plain
+The easiest way to document is to use markdown syntax. You write the code in plain
 text with some easy formatting rules. This can be transformed into html or other
 formats. But it's not an inherent standard, different flavors exist.
 
@@ -16,25 +16,29 @@ Headings
 
 Two formats of headers are supported. First you may use double or single underlines:
 
-    Heading Level 1
-    ==========================================
+``` text
+Heading Level 1
+==========================================
 
-    Heading Level 2
-    ------------------------------------------
+Heading Level 2
+------------------------------------------
+```
 
 Or you can define the headings with starting hash signs:
 
-    # Heading Level 1
+``` text
+# Heading Level 1
 
-    ## Heading Level 2
+## Heading Level 2
 
-    ### Heading Level 4
+### Heading Level 4
 
-    #### Heading Level 3
+#### Heading Level 3
 
-    ##### Heading Level 5
+##### Heading Level 5
 
-    ###### Heading Level 6
+###### Heading Level 6
+```
 
 Paragraphs
 -------------------------------------------------
@@ -42,9 +46,11 @@ Paragraphs
 Paragraphs are written with an empty line. Newlines are ignored but you may add an
 `<br />` Tag if you want:
 
-    This text
-    will be in one line
-    <br>And this in a new one.
+``` text
+This text
+will be in one line
+<br>And this in a new one.
+```
 
 becomes
 
@@ -65,7 +71,7 @@ __Currently not supported in the document generation but in github view!__
 
 Use a double tilde sign before and after the text:
 
-```
+``` text
 Here is the ~~wrong text~~ right text.
 ```
 
@@ -75,9 +81,11 @@ Here is the ~~wrong text~~ right text.
 
 ### Emphasis
 
-    *single asterisks*
+``` text
+*single asterisks*
 
-    _single underscores_
+_single underscores_
+```
 
 becomes
 
@@ -87,9 +95,11 @@ _single underscores_
 
 ### Strong
 
-    **double asterisks**
+``` text
+**double asterisks**
 
-    __double underscores__
+__double underscores__
+```
 
 becomes
 
@@ -99,11 +109,15 @@ __double underscores__
 
 ### Code
 
-    `code in backquotes`
+``` text
+`code in backquotes`
+```
 
 becomes
 
+``` text
 `code in backquotes`
+```
 
 
 Links
@@ -112,7 +126,7 @@ Links
 If you give a standard URL in the text an link will be added automatically. You
 can also surround them with `<...>`:
 
-```
+``` text
 http://example.com and <http://example.com>
 
 info@alinex.de and <info@alinex.de>
@@ -127,7 +141,9 @@ info@alinex.de and <info@alinex.de>
 You may also give a special link text by writing the text in square brackets and
 the link in round brackets behind:
 
-    This is the alinex [home](http://alinex.github.io/node-alinex).
+``` text
+This is the alinex [home](http://alinex.github.io/node-alinex).
+```
 
 becomes
 
@@ -135,9 +151,11 @@ This is the alinex [home](http://alinex.github.io/node-alinex).
 
 And at last you may use referenced links like that
 
-    This is [an example][id] reference-style link.
+``` text
+This is [an example][id] reference-style link.
 
-    [id]: http://example.com/  "Optional Title Here"
+[id]: http://example.com/  "Optional Title Here"
+```
 
 becomes
 
@@ -154,9 +172,11 @@ Lists
 
 You can write unordered lists like:
 
-    * red
-    * green
-    * blue
+``` text
+* red
+* green
+* blue
+```
 
 which becomes
 
@@ -168,9 +188,11 @@ You can do the exactly same with an `*`, `+` or `-` sign.
 
 Ordered lists are written with the numbers following by periods:
 
-    1. red
-    2. green
-    3. blue
+``` text
+1. red
+2. green
+3. blue
+```
 
 will become
 
@@ -191,13 +213,15 @@ You may use email like block indenting with lines beginning with one or
 multiple `>`. You can also be lazy and put the sign only on the first line of an
 paragraph.
 
-    I answered
+``` text
+I answered
 
-    > Hello
-    >
-    > > Is this code written in coffeescript?
-    >
-    > Thats correct.
+> Hello
+>
+> > Is this code written in coffeescript?
+>
+> Thats correct.
+```
 
 becomes
 
@@ -218,9 +242,11 @@ Code blocks
 
 Standard Markup Syntax is to indent code blocks with four spaces:
 
-    function test() {
-      console.log('Test succeeded!');
-    }
+``` text
+function test() {
+  console.log('Test succeeded!');
+}
+```
 
 A better way is to fence the code like below. This also adds the ability to
 specify the language used (needed for syntax highlighting):
@@ -259,7 +285,9 @@ Horizontal lines
 You can add them by writing a paragraph which consists of only three or more
 `*` or  `-` signs:
 
-    ----------------------
+``` text
+----------------------
+```
 
 becomes
 
@@ -274,11 +302,13 @@ __Currently not supported in the document generation but in github view!__
 Tables will be created by dividing cells with a pipe `|` and the header row with
 hyphens `-`:
 
+``` text
     | Color  | Value  |
     | ------ | ------ |
     | red    | ff0000 |
     | green  | 00ff00 |
     | blue   | 0000ff |
+```
 
 becomes
 
@@ -294,11 +324,13 @@ And you may put inline markup into the cell like `bold`, `italic`...
 To align columns you have to add a collon in the divider line between header and
 body:
 
-    | Left | Center | Right |
-    | :----- | :----: | -----: |
-    | first entry | first entry | first entry |
-    | another | another | another |
-    | and the last entry | and the last entry | and the last entry |
+``` text
+| Left | Center | Right |
+| :----- | :----: | -----: |
+| first entry | first entry | first entry |
+| another | another | another |
+| and the last entry | and the last entry | and the last entry |
+```
 
 becomes
 
@@ -314,8 +346,9 @@ Symbols & HTML
 
 You may also use some HTML symbols or tags but only as less as possible:
 
-    &copy;<br />&frac12;
-
+``` text
+&copy;<br />&frac12;
+```
 
 becomes
 
@@ -327,7 +360,9 @@ Images
 
 Images may be placed like links but start with an exclamation mark `!`:
 
-    ![Alinex Logo](logo-trans-200.png "ALINEX")
+``` text
+![Alinex Logo](logo-trans-200.png "ALINEX")
+```
 
 becomes
 
@@ -337,9 +372,11 @@ The title at the end is optional but will output as the tooltip.
 
 Like for links you may use the reference style here, too:
 
-    ![Alinex Logo][id]
+``` text
+![Alinex Logo][id]
 
-    [id]: logo-trans-200.png "ALINEX"
+[id]: logo-trans-200.png "ALINEX"
+```
 
 becomes
 

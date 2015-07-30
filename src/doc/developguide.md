@@ -69,7 +69,7 @@ following ways:
 ``` coffee
     myfuncSync = () ->
       x = doSomething()
-      if x == 1
+      if x is 1
         return new Error "Failed calculation"
       return x
 
@@ -84,7 +84,7 @@ following ways:
 ``` coffee
     myfunc = (cb) ->
       x = doSomething()
-      if x == 1
+      if x is 1
         cb new Error "Failed calculation"
       else
         cb null, x
@@ -146,10 +146,12 @@ ending with `.md`.
 
 Testing
 -------------------------------------------------
-Linting is used to precheck the code,
+Linting is used to precheck the code. This will not only check the syntax but also
+the style and the above conventions of the styleguide.
 
 Mocha unit tests are used to check individual parts and the overall
-functionality.
+functionality. As much as possible should be tested but not only single units
+but all interface calls. An test coverage of 100% should be the goal.
 
 
 Publishing

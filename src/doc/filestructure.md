@@ -59,6 +59,9 @@ var           // source, ...
   local       // development, ...
   src         // source, ...
   example     // examples
+www           // only webserver
+  lib         // productive
+  src         // source, development
 ```
 
 Read the further sections to get more information of what resides in which
@@ -83,6 +86,8 @@ test          // test data and test suites
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
+www           // only webserver
+  src         // source, development
 ```
 
 The source code resides in the `src` folder and will be copied/compiled into
@@ -111,6 +116,8 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
+www           // only webserver
+  src         // source, development
 ```
 
 
@@ -130,6 +137,8 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
+www           // only webserver
+  lib         // productive
 ```
 
 
@@ -152,12 +161,18 @@ var           // data and code which maybe changed in installation
   example     // examples
   local       // copied from src (not overridden on update)
   lib         // linked or compiled from src/local (on system start or manually)
+www           // only webserver
+  lib         // productive
 ```
 
 Data & Settings
 -------------------------------------------------
 In the productive system the settings and data locations may vary. Therefore
 the system will look in the following places: the later has the higher precedence.
+
+__Source__
+
+config: <app>/var/src/config/
 
 __Local__
 
@@ -173,6 +188,7 @@ __User__
 
 config: ~/.<app>/config/
 data: ~/.<app>/data/
+
 
 Where belongs what?
 -------------------------------------------------
@@ -195,7 +211,7 @@ More details about some sections
 The var folder contains everything that may be changed for the individual
 installations.
 
-It contains the three sub folders:
+It contains up to four sub folders:
 
 - `src` - the source files which will change with each update
 - `example` - examples to be used as template for own configuration
@@ -205,11 +221,15 @@ It contains the three sub folders:
 Within these directories you will find the following possible structure:
 
 ``` text
-config
-locale
-static
-template
-  <theme>
+config        // configuration
+locale        // localization
+static        // static files
+  ftp         // for ftp server
+  www         // for webserver
+templates     // templates
+  <theme>     // with theme/mandant
+    mail      // for mail
+    www       // for webserver
 ```
 
 Templates and statics will be compiled from `local` or `src` to lib.
@@ -220,7 +240,6 @@ any other position on your filesystem.
 For global installed packages it is also possible that they include the
 `/etc/<app>/` folder for configs or the `~/.<app>/...` folder as a replacement for
 `var/local`.
-
 
 
 Global installation

@@ -18,17 +18,23 @@ Strings
 
 ### Check for substring
 
-    if ~message.indexOf 'test'
+``` coffee
+if ~message.indexOf 'test'
+```
 
 The above syntax uses the tilde as bitwise or operator to get a boolean
 readable value. If the substring is found it will be true (any number), and
 false (0) if it isn’t. or use the following to get a real boolean type:
 
-    x = Boolean ~message.indexOf 'test'
+``` coffee
+x = Boolean ~message.indexOf 'test'
+```
 
 Or use the negation:
 
-    if !~message.indexOf 'test'
+``` coffee
+if !~message.indexOf 'test'
+```
 
 
 Objects
@@ -36,7 +42,9 @@ Objects
 
 ### Check for empty object
 
-    unless obj? and Object.keys(obj).length
+``` coffee
+unless obj? and Object.keys(obj).length
+```
 
 This will run the following code only if the object under test is not defined
 or is an empty object.
@@ -47,14 +55,18 @@ Control flow
 
 ### Try without catch
 
-    try
-      funcWhichMayThrowError()
+``` coffee
+try
+  funcWhichMayThrowError()
+```
 
 If you ommit the catch the error will be supressed.
 
-    try {
-      funcWhichMayThrowError();
-    } catch (_error) {}
+``` coffee
+try {
+  funcWhichMayThrowError();
+} catch (_error) {}
+```
 
 
 For loops
@@ -62,20 +74,30 @@ For loops
 
 Loop over array:
 
-    for element in arr
+``` coffee
+for element in arr
+```
 
 Counting loop:
 
-    for i in [0..n] by 1
+``` coffee
+for i in [0..n] by 1
+```
 
 Reverse loop:
 
-    for i in arr by -1
+``` coffee
+for i in arr by -1
+```
 
 Loop over object:
 
-    for key of object
-    for key, value of object
+``` coffee
+for key of object
+  ...
+for key, value of object
+  ...
+```
 
 
 Callbacks
@@ -84,9 +106,11 @@ Callbacks
 To prevent checking for a given callback method on every call you may give it
 an empty default function on parameter definition:
 
-    test = (src, cb = -> ) ->
-      console.log 'do something'
-      cb()
+``` coffee
+test = (src, cb = -> ) ->
+  console.log 'do something'
+  cb()
+```
 
 
 Classes
@@ -94,59 +118,69 @@ Classes
 
 Classes are made really easy using CoffeeScript:
 
-    # define a class
-    class Test
-      # make a constructor method
-      constructor: ->
+``` coffee
+# define a class
+class Test
+  # make a constructor method
+  constructor: ->
 
-    # create instance
-    t = new Test
+# create instance
+t = new Test
+```
 
 Use the `@` sign in parameters to store the value in the same instance property:
 
-    class Test
-      # store given name in this.name
-      constructor: (@name) ->
+``` coffee
+class Test
+  # store given name in this.name
+  constructor: (@name) ->
 
-    # add another prototype to class
-    Test::done = true
+# add another prototype to class
+Test::done = true
+```
 
 Inheritance is also made easy:
 
-    class Test
-      constructor: (@name) ->
+``` coffee
+class Test
+  constructor: (@name) ->
 
-    # extend the class
-    class Test2 extends Test
-      constructor: ->
-        # call the parent constructor
-        super 'numberTwo'
+# extend the class
+class Test2 extends Test
+  constructor: ->
+    # call the parent constructor
+    super 'numberTwo'
+```
 
 Local variables are created using `=` but properties are defined using `:`:
 
-    class Test
-      # local class variable/function
-      foo = 1
-      # instance variable/function
-      bar: 2
-      # or from the constructor
-      constructor: ->
-        @baz = 3
+``` coffee
+class Test
+  # local class variable/function
+  foo = 1
+  # instance variable/function
+  bar: 2
+  # or from the constructor
+  constructor: ->
+    @baz = 3
+```
 
 You may also use class properties/funtions
 
-    class Test
-      # static class variable/function
-      @foo: 1
-      @bar: (name) ->
-      constructor: ->
-        # access statics
-        Test.bar()
-        # or
-        @constructor.bar()
+``` coffee
+class Test
+  # static class variable/function
+  @foo: 1
+  @bar: (name) ->
+  constructor: ->
+    # access statics
+    Test.bar()
+    # or
+    @constructor.bar()
 
-    # access from outside
-    Test.foo
-    Test.bar 'baz'
-    test = new Test
-    test.constructor.foo
+# access from outside
+Test.foo
+Test.bar 'baz'
+test = new Test
+test.constructor.foo
+```

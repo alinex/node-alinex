@@ -45,8 +45,9 @@ Upgrade to newest package
 -------------------------------------------------
 
 ``` bash
-npm install -g npm-check-updates
-ncu -u # the -u flag updates the properties.json
+npm install -g npm-check
+npm-check    # to test
+npm-check -u # to update
 ```
 
 
@@ -60,6 +61,15 @@ If the output of npm is too noisy for you (like for me) change it with:
     > npm config set loglevel
 
 A less noisy level is `warn`.
+
+### NPM Failure
+
+This can often be caused by permission problems or wrong files in cache. Best is
+to first remove the local cache and try again.
+
+``` bash
+sudo rm -rf ~/.npm
+```
 
 
 Package Versions

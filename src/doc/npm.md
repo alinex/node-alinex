@@ -38,7 +38,16 @@ To publish to npm you have to call:
 This will ask you about your user details (name, password, email). Afterwards
 you may publish modules:
 
-    > npm publish  // called from the modules directory
+    npm publish  // called from the modules directory
+
+
+Upgrade to newest package
+-------------------------------------------------
+
+``` bash
+npm install -g npm-check-updates
+ncu -u # the -u flag updates the properties.json
+```
 
 
 Small tricks

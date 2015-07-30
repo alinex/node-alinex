@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructure.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "src/doc/filestructure.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -159,6 +159,9 @@ var           // source, ...
   local       // development, ...
   src         // source, ...
   example     // examples
+www           // only webserver
+  lib         // productive
+  src         // source, development
 </code></pre></div>
 
 
@@ -190,6 +193,8 @@ test          // test data and test suites
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
+www           // only webserver
+  src         // source, development
 </code></pre></div>
 
 
@@ -225,6 +230,8 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
+www           // only webserver
+  src         // source, development
 </code></pre></div>
 
 
@@ -251,6 +258,8 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
+www           // only webserver
+  lib         // productive
 </code></pre></div>
 
 
@@ -280,6 +289,8 @@ var           // data and code which maybe changed in installation
   example     // examples
   local       // copied from src (not overridden on update)
   lib         // linked or compiled from src/local (on system start or manually)
+www           // only webserver
+  lib         // productive
 </code></pre></div>
 
 
@@ -295,6 +306,10 @@ var           // data and code which maybe changed in installation
 
 <p>In the productive system the settings and data locations may vary. Therefore
 the system will look in the following places: the later has the higher precedence.</p>
+
+<p><strong>Source</strong></p>
+
+<p>config: <app>/var/src/config/</p>
 
 <p><strong>Local</strong></p>
 
@@ -353,7 +368,7 @@ data: ~/.<app>/data/</p>
 <p>The var folder contains everything that may be changed for the individual
 installations.</p>
 
-<p>It contains the three sub folders:</p>
+<p>It contains up to four sub folders:</p>
 
 <ul>
 <li><code>src</code> - the source files which will change with each update</li>
@@ -365,11 +380,15 @@ installations.</p>
 <p>Within these directories you will find the following possible structure:</p>
 
 
-<div class="highlight"><pre><code>config
-locale
-static
-template
-  &lt;theme&gt;
+<div class="highlight"><pre><code>config        // configuration
+locale        // localization
+static        // static files
+  ftp         // for ftp server
+  www         // for webserver
+templates     // templates
+  &lt;theme&gt;     // with theme/mandant
+    mail      // for mail
+    www       // for webserver
 </code></pre></div>
 
 

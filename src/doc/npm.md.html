@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/npm.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "src/doc/npm.md", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -42,10 +42,16 @@
         <a href="#development">Development</a>
       </div>
       <div class="heading h2">
+        <a href="#upgrade%20to%20newest%20package">Upgrade to newest package</a>
+      </div>
+      <div class="heading h2">
         <a href="#small%20tricks">Small tricks</a>
       </div>
       <div class="heading h3">
         <a href="#loglevel%20on%20node%20v0.10">Loglevel on node v0.10</a>
+      </div>
+      <div class="heading h3">
+        <a href="#npm%20failure">NPM Failure</a>
       </div>
       <div class="heading h2">
         <a href="#package%20versions">Package Versions</a>
@@ -130,7 +136,24 @@ there you may add packages which are specified in package.json:</p>
 you may publish modules:</p>
 
 
-<div class="highlight"><pre><code><span class="o">&gt;</span> <span class="nx">npm</span> <span class="nx">publish</span>  <span class="c1">// called from the modules directory</span>
+<div class="highlight"><pre><code><span class="nx">npm</span> <span class="nx">publish</span>  <span class="c1">// called from the modules directory</span>
+</code></pre></div>
+
+
+
+
+<div class="pilwrap" id="upgrade%20to%20newest%20package">
+  <h2>
+    <a href="#upgrade%20to%20newest%20package" name="upgrade%20to%20newest%20package" class="pilcrow">&#182;</a>
+    Upgrade to newest package
+  </h2>
+</div>
+
+
+
+<div class="highlight"><pre><code>npm install -g npm-check
+npm-check    <span class="c"># to test</span>
+npm-check -u <span class="c"># to update</span>
 </code></pre></div>
 
 
@@ -162,6 +185,24 @@ you may publish modules:</p>
 
 
 <p>A less noisy level is <code>warn</code>.</p>
+
+
+<div class="pilwrap" id="npm%20failure">
+  <h3>
+    <a href="#npm%20failure" name="npm%20failure" class="pilcrow">&#182;</a>
+    NPM Failure
+  </h3>
+</div>
+
+
+<p>This can often be caused by permission problems or wrong files in cache. Best is
+to first remove the local cache and try again.</p>
+
+
+<div class="highlight"><pre><code>sudo rm -rf ~/.npm
+</code></pre></div>
+
+
 
 
 <div class="pilwrap" id="package%20versions">

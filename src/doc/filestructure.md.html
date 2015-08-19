@@ -54,19 +54,10 @@
         <a href="#productive">Productive</a>
       </div>
       <div class="heading h2">
-        <a href="#data%20%26amp%3B%20settings">Data &amp; Settings</a>
+        <a href="#var%20data">VAR Data</a>
       </div>
       <div class="heading h2">
         <a href="#where%20belongs%20what%3F">Where belongs what?</a>
-      </div>
-      <div class="heading h2">
-        <a href="#more%20details%20about%20some%20sections">More details about some sections</a>
-      </div>
-      <div class="heading h3">
-        <a href="#var%20folder">var folder</a>
-      </div>
-      <div class="heading h2">
-        <a href="#global%20installation">Global installation</a>
       </div>
     </div>
   </div>
@@ -159,9 +150,6 @@ var           // source, ...
   local       // development, ...
   src         // source, ...
   example     // examples
-www           // only webserver
-  lib         // productive
-  src         // source, development
 </code></pre></div>
 
 
@@ -193,8 +181,6 @@ test          // test data and test suites
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
-www           // only webserver
-  src         // source, development
 </code></pre></div>
 
 
@@ -258,8 +244,6 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
-www           // only webserver
-  lib         // productive
 </code></pre></div>
 
 
@@ -289,27 +273,66 @@ var           // data and code which maybe changed in installation
   example     // examples
   local       // copied from src (not overridden on update)
   lib         // linked or compiled from src/local (on system start or manually)
-www           // only webserver
-  lib         // productive
 </code></pre></div>
 
 
 
 
-<div class="pilwrap" id="data%20%26amp%3B%20settings">
+<div class="pilwrap" id="var%20data">
   <h2>
-    <a href="#data%20%26amp%3B%20settings" name="data%20%26amp%3B%20settings" class="pilcrow">&#182;</a>
-    Data &amp; Settings
+    <a href="#var%20data" name="var%20data" class="pilcrow">&#182;</a>
+    VAR Data
   </h2>
 </div>
 
 
+<p>The var folder contains everything that may be changed for the individual
+installations.</p>
+
+<p>It contains up to four sub folders:</p>
+
+<ul>
+<li><code>example</code> - examples to be used as template for own configuration</li>
+<li><code>src</code> - the source files which will change with each update</li>
+<li><code>local</code> - local maybe changed files</li>
+<li><code>lib</code> - linked or compiled files from source overridden by local</li>
+</ul>
+
+<p>Within these directories you will find the following possible structure:</p>
+
+
+<div class="highlight"><pre><code>config        // configuration
+locale        // localization
+data          // static files
+  ftp         // for ftp server
+    &lt;theme&gt;   // or use &#39;default&#39;
+  www         // for webserver
+    &lt;theme&gt;   // or use &#39;default&#39;
+  mail        // for mail
+    &lt;theme&gt;   // or use &#39;default&#39;
+</code></pre></div>
+
+
+
+<p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to <code>lib</code>. This is done:</p>
+
+<ul>
+<li>on server start the maybe changed ones</li>
+<li>on file change the maybe changed ones</li>
+<li>after software update all</li>
+</ul>
+
+<p>Therefore dependency have to be held (<code>.dependency.map</code>). To know which one is
+made from which.</p>
+
 <p>In the productive system the settings and data locations may vary. Therefore
-the system will look in the following places: the later has the higher precedence.</p>
+the system will look in the following places and the later has the higher precedence:</p>
 
 <p><strong>Source</strong></p>
 
-<p>config: <app>/var/src/config/</p>
+<p>config: <app>/var/src/config/
+locale: <app>/var/src/locale/
+data: <app>/var/src/data/</p>
 
 <p><strong>Local</strong></p>
 
@@ -319,12 +342,21 @@ data: <app>/var/local/data/</p>
 <p><strong>Global</strong></p>
 
 <p>config: /etc/<app>/
-data: /var/<app>/data/</p>
+data: /var/lib/<app>/</p>
 
 <p><strong>User</strong></p>
 
 <p>config: ~/.<app>/config/
 data: ~/.<app>/data/</p>
+
+<p>You may also use softlinks for <code>var/local</code> or within it to move your files to
+any other position on your filesystem.</p>
+
+<p>On server start these files will be copied or linked into the var/lib/data
+folder. If they are newer than the files there. And the files will be removed
+if no longer existent.</p>
+
+<p>This enables the user to upgrade the base system without losing the own changes.</p>
 
 
 <div class="pilwrap" id="where%20belongs%20what%3F">
@@ -342,88 +374,8 @@ data: ~/.<app>/data/</p>
 <li>configuration -> <code>/var/.../config</code></li>
 <li>language packs -> <code>/var/.../locale</code></li>
 <li>resources for binaries -> <code>/bin/lib</code></li>
-<li>server statics -> <code>/var/.../static</code></li>
-<li>templates -> <code>/var/.../tèmplate</code></li>
+<li>webserver statics -> <code>/var/.../www/default/</code></li>
 <li>temporary files -> systems temp folder</li>
-</ul>
-
-
-<div class="pilwrap" id="more%20details%20about%20some%20sections">
-  <h2>
-    <a href="#more%20details%20about%20some%20sections" name="more%20details%20about%20some%20sections" class="pilcrow">&#182;</a>
-    More details about some sections
-  </h2>
-</div>
-
-
-
-<div class="pilwrap" id="var%20folder">
-  <h3>
-    <a href="#var%20folder" name="var%20folder" class="pilcrow">&#182;</a>
-    var folder
-  </h3>
-</div>
-
-
-<p>The var folder contains everything that may be changed for the individual
-installations.</p>
-
-<p>It contains up to four sub folders:</p>
-
-<ul>
-<li><code>src</code> - the source files which will change with each update</li>
-<li><code>example</code> - examples to be used as template for own configuration</li>
-<li><code>local</code> - local maybe changed files</li>
-<li><code>lib</code> - linked or compiled files from source overridden by local</li>
-</ul>
-
-<p>Within these directories you will find the following possible structure:</p>
-
-
-<div class="highlight"><pre><code>config        // configuration
-locale        // localization
-static        // static files
-  ftp         // for ftp server
-  www         // for webserver
-templates     // templates
-  &lt;theme&gt;     // with theme/mandant
-    mail      // for mail
-    www       // for webserver
-</code></pre></div>
-
-
-
-<p>Templates and statics will be compiled from <code>local</code> or <code>src</code> to lib.</p>
-
-<p>You may also use softlinks for <code>var/local</code> or within it to move your files to
-any other position on your filesystem.</p>
-
-<p>For global installed packages it is also possible that they include the
-<code>/etc/&lt;app&gt;/</code> folder for configs or the <code>~/.&lt;app&gt;/...</code> folder as a replacement for
-<code>var/local</code>.</p>
-
-
-<div class="pilwrap" id="global%20installation">
-  <h2>
-    <a href="#global%20installation" name="global%20installation" class="pilcrow">&#182;</a>
-    Global installation
-  </h2>
-</div>
-
-
-<p>The application modules often allow to store their data out of the programs
-directory:</p>
-
-<p><strong>User specific:</strong></p>
-
-<p>Here the contents of the <code>var/local</code> folder should be under <code>~/.&lt;program&gt;/</code>.</p>
-
-<p><strong>Globally:</strong></p>
-
-<ul>
-<li>configs... under <code>/etc/&lt;program&gt;/</code> instead of <code>var/local/</code></li>
-<li>data under <code>/var/&lt;program&gt;/</code> instead of <code>var/data/</code></li>
-<li>logs under <code>/var/log/&lt;program&gt;/</code> instead of 'log/'</li>
 </ul></div>
   </div>
 </body>

@@ -59,9 +59,6 @@ var           // source, ...
   local       // development, ...
   src         // source, ...
   example     // examples
-www           // only webserver
-  lib         // productive
-  src         // source, development
 ```
 
 Read the further sections to get more information of what resides in which
@@ -86,8 +83,6 @@ test          // test data and test suites
 var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
-www           // only webserver
-  src         // source, development
 ```
 
 The source code resides in the `src` folder and will be copied/compiled into
@@ -137,8 +132,6 @@ var           // data and code which maybe changed in installation
   src         // original data, will be overridden on update
   example     // examples
   local       // linked or copied from src (not overridden on update)
-www           // only webserver
-  lib         // productive
 ```
 
 
@@ -161,18 +154,51 @@ var           // data and code which maybe changed in installation
   example     // examples
   local       // copied from src (not overridden on update)
   lib         // linked or compiled from src/local (on system start or manually)
-www           // only webserver
-  lib         // productive
 ```
 
-Data & Settings
+VAR Data
 -------------------------------------------------
+The var folder contains everything that may be changed for the individual
+installations.
+
+It contains up to four sub folders:
+
+- `example` - examples to be used as template for own configuration
+- `src` - the source files which will change with each update
+- `local` - local maybe changed files
+- `lib` - linked or compiled files from source overridden by local
+
+Within these directories you will find the following possible structure:
+
+``` text
+config        // configuration
+locale        // localization
+data          // static files
+  ftp         // for ftp server
+    <theme>   // or use 'default'
+  www         // for webserver
+    <theme>   // or use 'default'
+  mail        // for mail
+    <theme>   // or use 'default'
+```
+
+Templates and statics will be compiled from `local` or `src` to `lib`. This is done:
+
+- on server start the maybe changed ones
+- on file change the maybe changed ones
+- after software update all
+
+Therefore dependency have to be held (`.dependency.map`). To know which one is
+made from which.
+
 In the productive system the settings and data locations may vary. Therefore
-the system will look in the following places: the later has the higher precedence.
+the system will look in the following places and the later has the higher precedence:
 
 __Source__
 
 config: <app>/var/src/config/
+locale: <app>/var/src/locale/
+data: <app>/var/src/data/
 
 __Local__
 
@@ -182,12 +208,21 @@ data: <app>/var/local/data/
 __Global__
 
 config: /etc/<app>/
-data: /var/<app>/data/
+data: /var/lib/<app>/
 
 __User__
 
 config: ~/.<app>/config/
 data: ~/.<app>/data/
+
+You may also use softlinks for `var/local` or within it to move your files to
+any other position on your filesystem.
+
+On server start these files will be copied or linked into the var/lib/data
+folder. If they are newer than the files there. And the files will be removed
+if no longer existent.
+
+This enables the user to upgrade the base system without losing the own changes.
 
 
 Where belongs what?
@@ -198,63 +233,7 @@ The following list should give an overview of there to store what:
 - configuration -> `/var/.../config`
 - language packs -> `/var/.../locale`
 - resources for binaries -> `/bin/lib`
-- server statics -> `/var/.../static`
-- templates -> `/var/.../tèmplate`
+- webserver statics -> `/var/.../www/default/`
 - temporary files -> systems temp folder
-
-
-More details about some sections
--------------------------------------------------
-
-### var folder
-
-The var folder contains everything that may be changed for the individual
-installations.
-
-It contains up to four sub folders:
-
-- `src` - the source files which will change with each update
-- `example` - examples to be used as template for own configuration
-- `local` - local maybe changed files
-- `lib` - linked or compiled files from source overridden by local
-
-Within these directories you will find the following possible structure:
-
-``` text
-config        // configuration
-locale        // localization
-static        // static files
-  ftp         // for ftp server
-  www         // for webserver
-templates     // templates
-  <theme>     // with theme/mandant
-    mail      // for mail
-    www       // for webserver
-```
-
-Templates and statics will be compiled from `local` or `src` to lib.
-
-You may also use softlinks for `var/local` or within it to move your files to
-any other position on your filesystem.
-
-For global installed packages it is also possible that they include the
-`/etc/<app>/` folder for configs or the `~/.<app>/...` folder as a replacement for
-`var/local`.
-
-
-Global installation
--------------------------------------------------
-The application modules often allow to store their data out of the programs
-directory:
-
-__User specific:__
-
-Here the contents of the `var/local` folder should be under `~/.<program>/`.
-
-__Globally:__
-
-- configs... under `/etc/<program>/` instead of `var/local/`
-- data under `/var/<program>/` instead of `var/data/`
-- logs under `/var/log/<program>/` instead of 'log/'
 
 

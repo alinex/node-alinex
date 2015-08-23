@@ -142,18 +142,16 @@ This stage contains the following directories:
 
 ``` text
 bin           // executable files
-data          // runtime data storage
 lib           // copied/compiled code
-log           // log files and debugging data
 man           // created man pages
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
   example     // examples
   data        // persistent data stores (if needed)
   lib         // linked or compiled from src/local (on system start)
-  local       // specific settings for this installation
+  local       // customized settings for this installation
   log         // log files
-  src         // original data, will be overridden on update
+  src         // base settings, will be updated with package
 ```
 
 VAR Data
@@ -172,12 +170,9 @@ Within these directories you will find the following possible structure:
 
 ``` text
 config        // configuration
+htdocs        // for webserver
+  <theme>     // or use 'default'
 locale        // localization
-data          // static files
-  www         // for webserver
-    <theme>   // or use 'default'
-  mail        // for mail
-    <theme>   // or use 'default'
 ```
 
 Templates and statics will be compiled from `local` or `src` to `lib`. This is done:

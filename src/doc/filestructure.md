@@ -47,7 +47,6 @@ listed with the states to which it belongs:
 ``` text
 bin           // all
 coverage      // development
-data          // productive
 doc           // development
 lib           // development, ...
 man           // development, ...
@@ -55,10 +54,12 @@ node_modules  // development, ...
 src           // source, development
 test          // source, development
 var           // source, ...
+  data        // productive
+  example     // development, ...
   lib         // productive
   local       // development, ...
+  log         // productive
   src         // source, ...
-  example     // examples
 ```
 
 Read the further sections to get more information of what resides in which
@@ -81,8 +82,8 @@ test          // test data and test suites
   data        // test data
   mocha       // mocha test suites
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
+  src         // original data, will be overridden on update
 ```
 
 The source code resides in the `src` folder and will be copied/compiled into
@@ -108,11 +109,8 @@ node_modules  // npm installed packages
 src           // source code
 test          // test data and test suites
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // linked or copied from src (not overridden on update)
-www           // only webserver
-  src         // source, development
+  src         // original data, will be overridden on update
 ```
 
 
@@ -129,9 +127,9 @@ lib           // copied/compiled code
 man           // created man pages
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // linked or copied from src (not overridden on update)
+  local       // specific settings for this installation
+  src         // original data, will be overridden on update
 ```
 
 
@@ -146,14 +144,16 @@ This stage contains the following directories:
 bin           // executable files
 data          // runtime data storage
 lib           // copied/compiled code
-man           // created man pages
 log           // log files and debugging data
+man           // created man pages
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // copied from src (not overridden on update)
-  lib         // linked or compiled from src/local (on system start or manually)
+  data        // persistent data stores (if needed)
+  lib         // linked or compiled from src/local (on system start)
+  local       // specific settings for this installation
+  log         // log files
+  src         // original data, will be overridden on update
 ```
 
 VAR Data
@@ -174,8 +174,6 @@ Within these directories you will find the following possible structure:
 config        // configuration
 locale        // localization
 data          // static files
-  ftp         // for ftp server
-    <theme>   // or use 'default'
   www         // for webserver
     <theme>   // or use 'default'
   mail        // for mail

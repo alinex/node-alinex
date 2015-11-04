@@ -5,44 +5,45 @@ Installation
 Installation of node.js and npm
 -----------------------------------------
 
-You may install node from your repository on any system or withUSE the following
-manual steps.
+You may install node from your repository on any system or with USE the following
+manual steps. The repository mostly has a very old version in debian.
 
-### Linux system based on debian 7
+### Linux systems
 
-Best choice is to use the package manager with the additional repository:
+Here you find a good documentation under (NodeSource)[https://github.com/nodesource/distributions].
+This will help you to install on an productive system.
 
-``` bash
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs build-essential
-```
+For development systems better use NVM to easily switch between versions. With NVM,
+everything is kept in your home folder (so no need for sudo), and you can install
+multiple versions of Node (including 4.0) and switch between them with ease.
 
-This will install everything you need. But if you want to install a special version
-you may also specify it:
-
-``` bash
-curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
-sudo apt-get install -y nodejs build-essential
-```
-
-Another possibility is to install it from source and compile it yourself:
+Like documented on the (NVM Site)[https://github.com/creationix/nvm#installation]:
 
 ``` bash
-# Install dependencies from repository
-sudo apt-get update
-sudo apt-get install -y g++ curl libssl-dev git-core
-# Download node.js source
-cd /usr/src
-sudo mkdir node
-sudo chmod 777 node
-git clone https://github.com/joyent/node.git
-# Compile and install node.js
-cd node
-git checkout v0.11.13-release
-./configure
-make
-sudo make install
+sudo apt-get install -y curl
+sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 ```
+
+Tell your shell to use nvm (if not already added):
+``` bash
+echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+```
+
+Now you may install the latest node version:
+
+``` bash
+nvm install 4.2
+```
+
+And tell nvm which version of Node you want to use in this session:
+
+``` bash
+nvm use 4.2
+```
+
+You may also want to add this line also to ~/.bashrc, so that you don't have to
+pick a node version each time you start your terminal.
+
 
 Developmnet helpers
 -----------------------------------------

@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "src/doc/install.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/installmd", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -39,7 +39,7 @@
         <a href="#installation%20of%20node.js%20and%20npm">Installation of node.js and npm</a>
       </div>
       <div class="heading h3">
-        <a href="#linux%20system%20based%20on%20debian%207">Linux system based on debian 7</a>
+        <a href="#linux%20systems">Linux systems</a>
       </div>
       <div class="heading h2">
         <a href="#developmnet%20helpers">Developmnet helpers</a>
@@ -71,57 +71,61 @@
 </div>
 
 
-<p>You may install node from your repository on any system or withUSE the following
-manual steps.</p>
+<p>You may install node from your repository on any system or with USE the following
+manual steps. The repository mostly has a very old version in debian.</p>
 
 
-<div class="pilwrap" id="linux%20system%20based%20on%20debian%207">
+<div class="pilwrap" id="linux%20systems">
   <h3>
-    <a href="#linux%20system%20based%20on%20debian%207" name="linux%20system%20based%20on%20debian%207" class="pilcrow">&#182;</a>
-    Linux system based on debian 7
+    <a href="#linux%20systems" name="linux%20systems" class="pilcrow">&#182;</a>
+    Linux systems
   </h3>
 </div>
 
 
-<p>Best choice is to use the package manager with the additional repository:</p>
+<p>Here you find a good documentation under (NodeSource)[<a href='https://github.com/nodesource/distributions'>https://github.com/nodesource/distributions</a>].
+This will help you to install on an productive system.</p>
+
+<p>For development systems better use NVM to easily switch between versions. With NVM,
+everything is kept in your home folder (so no need for sudo), and you can install
+multiple versions of Node (including 4.0) and switch between them with ease.</p>
+
+<p>Like documented on the (NVM Site)[<a href='https://github.com/creationix/nvm#installation'>https://github.com/creationix/nvm#installation</a>]:</p>
 
 
-<div class="highlight"><pre><code>curl -sL https://deb.nodesource.com/setup <span class="p">|</span> sudo bash -
-sudo apt-get install -y nodejs build-essential
+<div class="highlight"><pre><code>sudo apt-get install -y curl
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh <span class="p">|</span> bash
 </code></pre></div>
 
 
 
-<p>This will install everything you need. But if you want to install a special version
-you may also specify it:</p>
+<p>Tell your shell to use nvm (if not already added):</p>
 
 
-<div class="highlight"><pre><code>curl -sL https://deb.nodesource.com/setup_0.12 <span class="p">|</span> sudo bash -
-sudo apt-get install -y nodejs build-essential
+<div class="highlight"><pre><code><span class="nb">echo</span> <span class="s2">&quot;source ~/.nvm/nvm.sh&quot;</span> &gt;&gt; ~/.bashrc
 </code></pre></div>
 
 
 
-<p>Another possibility is to install it from source and compile it yourself:</p>
+<p>Now you may install the latest node version:</p>
 
 
-<div class="highlight"><pre><code><span class="c"># Install dependencies from repository</span>
-sudo apt-get update
-sudo apt-get install -y g++ curl libssl-dev git-core
-<span class="c"># Download node.js source</span>
-<span class="nb">cd</span> /usr/src
-sudo mkdir node
-sudo chmod 777 node
-git clone https://github.com/joyent/node.git
-<span class="c"># Compile and install node.js</span>
-<span class="nb">cd </span>node
-git checkout v0.11.13-release
-./configure
-make
-sudo make install
+<div class="highlight"><pre><code>nvm install 4.2
 </code></pre></div>
 
 
+
+<p>And tell nvm which version of Node you want to use in your session if you want to change:</p>
+
+
+<div class="highlight"><pre><code>nvm use 4.2 <span class="c"># specific version</span>
+nvm use system <span class="c"># back to default installed node</span>
+</code></pre></div>
+
+
+
+<p>You may also want to add this line also to ~/.bashrc, so that you don't have to
+pick a node version each time you start your terminal.</p>
 
 
 <div class="pilwrap" id="developmnet%20helpers">

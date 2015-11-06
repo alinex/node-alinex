@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="../../doc-style.css" />
   <script src="../../doc-filelist.js"></script>
   <script>
-    var relativeDir = "../../", thisFile = "src/doc/filestructure.md", defaultSidebar = true;
+    var relativeDir = "../../", thisFile = "home/alex/a3/node-alinex/src/doc/filestructuremd", defaultSidebar = true;
   </script>
   <script src="../../doc-script.js"></script>
   <script src="../../fileSearch.js"></script>
@@ -138,7 +138,6 @@ listed with the states to which it belongs:</p>
 
 <div class="highlight"><pre><code>bin           // all
 coverage      // development
-data          // productive
 doc           // development
 lib           // development, ...
 man           // development, ...
@@ -146,10 +145,12 @@ node_modules  // development, ...
 src           // source, development
 test          // source, development
 var           // source, ...
+  data        // productive
+  example     // development, ...
   lib         // productive
   local       // development, ...
+  log         // productive
   src         // source, ...
-  example     // examples
 </code></pre></div>
 
 
@@ -179,8 +180,8 @@ test          // test data and test suites
   data        // test data
   mocha       // mocha test suites
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
+  src         // original data, will be overridden on update
 </code></pre></div>
 
 
@@ -213,11 +214,8 @@ node_modules  // npm installed packages
 src           // source code
 test          // test data and test suites
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // linked or copied from src (not overridden on update)
-www           // only webserver
-  src         // source, development
+  src         // original data, will be overridden on update
 </code></pre></div>
 
 
@@ -241,9 +239,9 @@ lib           // copied/compiled code
 man           // created man pages
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // linked or copied from src (not overridden on update)
+  local       // specific settings for this installation
+  src         // original data, will be overridden on update
 </code></pre></div>
 
 
@@ -263,16 +261,16 @@ var           // data and code which maybe changed in installation
 
 
 <div class="highlight"><pre><code>bin           // executable files
-data          // runtime data storage
 lib           // copied/compiled code
 man           // created man pages
-log           // log files and debugging data
 node_modules  // npm installed packages
 var           // data and code which maybe changed in installation
-  src         // original data, will be overridden on update
   example     // examples
-  local       // copied from src (not overridden on update)
-  lib         // linked or compiled from src/local (on system start or manually)
+  data        // persistent data stores (if needed)
+  lib         // linked or compiled from src/local (on system start)
+  local       // customized settings for this installation
+  log         // log files
+  src         // base settings, will be updated with package
 </code></pre></div>
 
 
@@ -302,14 +300,9 @@ installations.</p>
 
 
 <div class="highlight"><pre><code>config        // configuration
+htdocs        // for webserver
+  &lt;theme&gt;     // or use &#39;default&#39;
 locale        // localization
-data          // static files
-  ftp         // for ftp server
-    &lt;theme&gt;   // or use &#39;default&#39;
-  www         // for webserver
-    &lt;theme&gt;   // or use &#39;default&#39;
-  mail        // for mail
-    &lt;theme&gt;   // or use &#39;default&#39;
 </code></pre></div>
 
 

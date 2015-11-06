@@ -21,7 +21,7 @@ Like documented on the (NVM Site)[https://github.com/creationix/nvm#installation
 
 ``` bash
 sudo apt-get install -y curl
-sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 ```
 
 Tell your shell to use nvm (if not already added):
@@ -35,10 +35,11 @@ Now you may install the latest node version:
 nvm install 4.2
 ```
 
-And tell nvm which version of Node you want to use in this session:
+And tell nvm which version of Node you want to use in your session if you want to change:
 
 ``` bash
-nvm use 4.2
+nvm use 4.2 # specific version
+nvm use system # back to default installed node
 ```
 
 You may also want to add this line also to ~/.bashrc, so that you don't have to

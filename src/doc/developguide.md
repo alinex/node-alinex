@@ -144,6 +144,17 @@ Some overall documentation like this will be stored in special markup files
 ending with `.md`.
 
 
+Debugging
+-------------------------------------------------
+Best use the node-inspector for this:
+
+``` bash
+sudo npm install -g node-inspector
+node-inspector
+node --debug-brk lib/cli.js -v
+```
+
+
 Testing
 -------------------------------------------------
 Linting is used to precheck the code. This will not only check the syntax but also

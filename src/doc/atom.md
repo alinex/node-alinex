@@ -29,6 +29,9 @@ Install the debian package from the website:
 
 The following packages are some of my favorites:
 
+- rest-client
+- highlight-selected
+
 - keybinding-cheatsheet
 - linter
 - minimap

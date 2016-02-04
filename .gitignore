@@ -1,7 +1,7 @@
 .project
 .settings
 .DS_Store
-/coverage/
+/report/
 /data/
 /doc/
 /lib/
@@ -10,4 +10,3 @@ node_modules/
 /var/lib/
 /var/local/
 npm-debug.log
-src/doc/.~lock.packages.odg#

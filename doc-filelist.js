@@ -1,1 +1,1 @@
-var tree={"files":["Changelog.md","README.md"],"dirs":{"src":{"dirs":{"doc":{"files":["atom.md","category.md","coffee.md","developguide.md","developtools.md","filestructure.md","git.md","ideas.md","install.md","javascript.md","markdown.md","modules.md","npm.md","sublime.md"]}}}}};
+var tree={"files":["Changelog.md","README.md"],"dirs":{"src":{"files":["index.coffee","logo.coffee"]}}};

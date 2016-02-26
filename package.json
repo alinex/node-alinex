@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Central module for the alinex systems.",
   "copyright": "Alexander Schilling 2016",
-  "private": true,
+  "private": false,
   "keywords": "alinex",
   "homepage": "http://alinex.github.io/node-alinex/",
   "repository": {

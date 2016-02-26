@@ -28,9 +28,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "alinex-builder": "1.0.0",
-    "mocha": "1.x",
-    "chai": "1.x"
+    "alinex-builder": "^1.2.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   },
   "optionalDependencies": {},
   "engines": {

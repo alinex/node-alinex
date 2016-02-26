@@ -1,10 +1,10 @@
 {
   "name": "alinex",
   "version": "0.0.0",
-  "description": "Description of the alinex universe which may later yield into a complete alinex system.",
-  "copyright": "Alexander Schilling 2014",
+  "description": "Central module for the alinex systems.",
+  "copyright": "Alexander Schilling 2016",
   "private": true,
-  "keywords": "",
+  "keywords": "alinex",
   "homepage": "http://alinex.github.io/node-alinex/",
   "repository": {
     "type": "git",
@@ -20,19 +20,17 @@
   "license": "Apache-2.0",
   "main": "./lib/index.js",
   "scripts": {
-    "prepublish": "node_modules/.bin/coffee -c -m -o lib src",
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register --reporter spec -c"
+    "prepublish": "node_modules/.bin/builder -c compile --uglify",
+    "test": "node_modules/.bin/builder -c test"
   },
   "directories": {
     "lib": "./lib"
   },
   "dependencies": {},
   "devDependencies": {
-    "coffee-script": ">=1.7.0",
+    "alinex-builder": "1.0.0",
     "mocha": "1.x",
     "chai": "1.x",
-    "istanbul": "0.2.x",
-    "coveralls": "2.x"
   },
   "optionalDependencies": {},
   "engines": {

@@ -4,3 +4,201 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.1.0 (2016-02-26)
+-------------------------------------------------
+- Added tests for logo display.
+- Fixed package.json
+- Restructure module to include logo code.
+- Added Atom editor description from blog.
+- updated ignore files.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Added some packages.
+- Add help for debugging with node-inspector.
+- Updated install docs for newer node versions and nvm.
+- Updated node installation instructions.
+- Made htdocs more specific.
+- Change location for log and data stores into var folder.
+- Updated file structure.
+- Updated description.
+- Updated filestructure and optimized documentation structure.
+- Change ncu to npm-check because more stable.
+- Add ncu tool.
+- Added structure image.
+- Updated install doc.
+- Updated again.
+- Updated package structure diagram.
+- Created new logo.
+- Locations of files localy vs globaly.
+- Add info about user specific key-bindings.
+- Weitere atom packages.
+- Added modules to use in Atom.
+- List the modules which are productive.
+- Added new modules.
+- Updated filestructure.
+- Updated documentation.
+- Added markdown examples.
+- test markdown syntax
+- test markdown syntax
+- updated list of packages
+- Updated module list.
+- Updated install documentation.
+- Updated list of alinex modules.
+- Added trello board.
+- Added worktime module.
+- Updated development rules and added new packages.
+- Updated package overview.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Updated module lists.
+- Remove prepare details and moved them to code.
+- Updated todo list.
+- Updated roadmap.
+- Updated todo.
+- Changed todo list.
+- Changed todo list.
+- changes.
+- Changes.
+- Next planing.
+- Next things todo and somethin done.
+- Changed something.
+- Done something.
+- Updated todo of server.
+- Updated todo list.
+- Updated todo list.
+- Done something.
+- Done something.
+- Updated package structure chart.
+- Updated todo list.
+- Done some steps for server.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Updated todo list.
+- Updated todo.
+- More help for using git.
+- Log progress.
+- Updated todo.
+- Planing for server.
+- Added more git help.
+- Done some steps.
+- Added details for next todo steps.
+- Moved monitor modules from dev to done.
+- Added spawn module.
+- Updated todo list.
+- Added more examples for filepaths.
+- Added rules for wait and retry times.
+- Added todos for spawn.
+- Updated documentation.
+- Done net sensor.
+- Updated todo list.
+- Finished http sensor in todo list.
+- Added more planing for next sensors.
+- Updated coffee tips for substring search and todo list.
+- Updated sensor.
+- Planing for sensor restructuring.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- More planing.
+- Updated todo
+- Updated todo list.
+- Added next steps for server development.
+- Removed done entries from todo.
+- Fixed some bugs.
+- Updated todo list.
+- Change todo.
+- More planing for further sensors.
+- Updated todo list.
+- Update
+- Removed update tasks.
+- Document todo for man page creation.
+- Updated todo list.
+- Added information for installing applications.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Added planing for iostats.
+- Updated todo list.
+- Updated todo list.
+- Changed todo list.
+- Updated todo list.
+- Added more todos.
+- Updated todo.
+- Update todo list.
+- New todo list.
+- Updated status.
+- Updated planing of monitor and sensors next steps.
+- Updated todo list.
+- Updated docs.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Upodated
+- Updated todo list.
+- Added chalk description.
+- Updated todo list.
+- update
+- Changed todo list.
+- Updated todo list
+- New todo
+- Changed todo list
+- Updated todo list.
+- Updated todo list.
+- Updated todo list.
+- Changed todo.
+- Done some parts.
+- Updated todo.
+- Updated documentation.
+- Updated todo list.
+- New todo list.
+- Changed todo list
+- Changed todo list.
+- Removed todo entries which are done.
+- changes
+- Add info about example directory.
+- Change todo.
+- Added next steps.
+- Example level for npm set loglevel.
+- Added the validator module.
+- Spellcheck
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Added monitor-sensor module.
+- Added tipp for less noisy npm output.
+- Extended example for static aceess in coffeescript.
+- Added tip for 'error' event in node.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Restructure order of paragraphs.
+- Rewrote async description.
+- Added modules in development.
+- Updated documentation with config and util module.
+- Refreshed list of alinex modules.
+- More coffee tips.
+- Adding examples for for-loops.
+- Added class usage in coffeescript.
+- Adding Atom editor and javascript tips.
+- Fixed coffescript help for empty object detection.
+- Adding ideas for the future.
+- Small wording changes.
+- Added some developer hints for installation on new development machines.
+- Added tip for empty object detection.
+- Added command for password store.
+- Added git help for user settings.
+- Added git configuration.
+- Added installation documentation.
+- Small changes in description of /var filestructure.
+- Added atom doc.
+- Updated docs.
+- Merge documentation.
+- Updated documentation.
+- Added more third party modules.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Added more sublime shortcuts.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Fixed documentation links.
+- Make local links work in github.
+- Merge branch 'master' of https://github.com/alinex/node-alinex
+- Added sublime shortcuts.
+- More documentation.
+- Updated documentation.
+- Added the new alinex-fs package.
+- Updated documentation
+- Added some first tips to coffee.
+- Finalized file structure.
+- Added some documents for usage tips and tricks.
+- Adding some information about helpful development tools.
+- Describing the file structure more deeply.
+- Added more documents from the old alinex core.
+- Added old documents.
+- Initial commit
+

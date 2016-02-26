@@ -4,6 +4,12 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.1.1 (2016-02-26)
+-------------------------------------------------
+- Update documentation.
+- Upgraded builder, chai and mocha.
+- Fixed changelog.
+
 Version 0.1.0 (2016-02-26)
 -------------------------------------------------
 - Added tests for logo display.

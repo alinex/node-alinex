@@ -4,6 +4,10 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.1.4 (2016-02-29)
+-------------------------------------------------
+- Change name because of npm install problems.
+
 Version 0.1.3 (2016-02-29)
 -------------------------------------------------
 - Fixed tests.

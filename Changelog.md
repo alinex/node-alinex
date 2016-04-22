@@ -4,6 +4,10 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.2 (2016-04-22)
+-------------------------------------------------
+- 
+
 Version 0.2.1 (2016-04-22)
 -------------------------------------------------
 - Fixed missing packages.

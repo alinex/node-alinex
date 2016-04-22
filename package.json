@@ -1,6 +1,6 @@
 {
   "name": "alinex-core",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Central module for the alinex systems.",
   "copyright": "Alexander Schilling 2016",
   "private": false,

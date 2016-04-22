@@ -45,7 +45,15 @@
       </div>
 
       <div class="heading h2">
-        <a href="#exports">Exports</a>
+        <a href="#node-modules">Node Modules</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#logo">Logo</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#error-management">Error management</a>
       </div>
 
     </div>
@@ -74,10 +82,38 @@ Inclusion of parts
     
       <tr>
         <td class="docs">
-          <div class="pilwrap" id="exports">
+          <div class="pilwrap" id="node-modules">
   <h2>
-    <a href="#exports" name="exports" class="pilcrow"></a>
-Exports
+    <a href="#node-modules" name="node-modules" class="pilcrow"></a>
+Node Modules
+  </h2>
+</div>
+
+        </td>
+        <td class="code highlight">
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3"></a>
+</div>
+<p>include base modules</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="coffeescript">chalk = <span class="hljs-built_in">require</span> <span class="hljs-string">'chalk'</span></pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap" id="logo">
+  <h2>
+    <a href="#logo" name="logo" class="pilcrow"></a>
+Logo
   </h2>
 </div>
 
@@ -85,6 +121,57 @@ Exports
         <td class="code highlight">
           <pre class="coffeescript">exports.logo = <span class="hljs-function"><span class="hljs-params">(title)</span> -&gt;</span>
   <span class="hljs-built_in">require</span>(<span class="hljs-string">'./logo'</span>) title</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap" id="error-management">
+  <h2>
+    <a href="#error-management" name="error-management" class="pilcrow"></a>
+Error management
+  </h2>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="coffeescript">exit = exports.exit = <span class="hljs-function"><span class="hljs-params">(code = <span class="hljs-number">0</span>, err)</span> -&gt;</span></pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-6" id="section-6"></a>
+</div>
+<p>exit without error</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="coffeescript">  process.exit code <span class="hljs-keyword">unless</span> err</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-7" id="section-7"></a>
+</div>
+<p>exit with error</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="coffeescript">  <span class="hljs-built_in">console</span>.error chalk.red.bold <span class="hljs-string">"FAILED: <span class="hljs-subst">#{err.message}</span>"</span>
+  <span class="hljs-built_in">console</span>.error err.description <span class="hljs-keyword">if</span> err.description
+  process.exit code
+
+exports.initExit = <span class="hljs-function">-&gt;</span>
+  process.<span class="hljs-literal">on</span> <span class="hljs-string">'SIGINT'</span>, <span class="hljs-function">-&gt;</span> exit <span class="hljs-number">130</span>, <span class="hljs-keyword">new</span> Error <span class="hljs-string">"Got SIGINT signal"</span>
+  process.<span class="hljs-literal">on</span> <span class="hljs-string">'SIGTERM'</span>, <span class="hljs-function">-&gt;</span> exit <span class="hljs-number">143</span>, <span class="hljs-keyword">new</span> Error <span class="hljs-string">"Got SIGTERM signal"</span>
+  process.<span class="hljs-literal">on</span> <span class="hljs-string">'SIGHUP'</span>, <span class="hljs-function">-&gt;</span> exit <span class="hljs-number">129</span>, <span class="hljs-keyword">new</span> Error <span class="hljs-string">"Got SIGHUP signal"</span>
+  process.<span class="hljs-literal">on</span> <span class="hljs-string">'SIGQUIT'</span>, <span class="hljs-function">-&gt;</span> exit <span class="hljs-number">131</span>, <span class="hljs-keyword">new</span> Error <span class="hljs-string">"Got SIGQUIT signal"</span>
+  process.<span class="hljs-literal">on</span> <span class="hljs-string">'SIGABRT'</span>, <span class="hljs-function">-&gt;</span> exit <span class="hljs-number">134</span>, <span class="hljs-keyword">new</span> Error <span class="hljs-string">"Got SIGABRT signal"</span>
+  exit</pre>
         </td>
       </tr>
     

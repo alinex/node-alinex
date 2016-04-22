@@ -45,6 +45,18 @@
       </div>
 
       <div class="heading h2">
+        <a href="#usage">Usage</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#logo">Logo</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#error-codes">Error Codes</a>
+      </div>
+
+      <div class="heading h2">
         <a href="#alinex-modules">Alinex Modules</a>
       </div>
 
@@ -66,6 +78,36 @@ Package: alinex
 some helpers are contained here.</p>
 <p>It is not made to be used for other modules.</p>
 <p>Read more about the <a href="http://alinex.github.io/develop/alinex.html">philosphy behind</a>.</p>
+<div class="pilwrap" id="usage">
+  <h2>
+    <a href="#usage" name="usage" class="pilcrow"></a>
+Usage
+  </h2>
+</div>
+<div class="pilwrap" id="logo">
+  <h3>
+    <a href="#logo" name="logo" class="pilcrow"></a>
+Logo
+  </h3>
+</div>
+<p>A function to bring a common logo to all alinex cli interfaces using ASCII
+art can be made like:</p>
+<pre><code class="coffee">alinex = <span class="hljs-built_in">require</span> <span class="hljs-string">'alinex-core'</span>
+logo = alinex.logo <span class="hljs-string">'Development Helper'</span>
+<span class="hljs-built_in">console</span>.log logo
+</code></pre>
+<div class="pilwrap" id="error-codes">
+  <h3>
+    <a href="#error-codes" name="error-codes" class="pilcrow"></a>
+Error Codes
+  </h3>
+</div>
+<p>The following code will setup handler for SIGNAL handling and also give you
+a handy method for exit the program with code and message.</p>
+<pre><code class="coffee">alinex = <span class="hljs-built_in">require</span> <span class="hljs-string">'alinex-core'</span>
+alinex.initExit()
+alinex.exit <span class="hljs-number">1</span>, <span class="hljs-string">"Something one wrong"</span>
+</code></pre>
 <div class="pilwrap" id="alinex-modules">
   <h2>
     <a href="#alinex-modules" name="alinex-modules" class="pilcrow"></a>

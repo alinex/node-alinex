@@ -9,6 +9,32 @@ It is not made to be used for other modules.
 Read more about the [philosphy behind](http://alinex.github.io/develop/alinex.html).
 
 
+Usage
+-------------------------------------------------
+
+### Logo
+
+A function to bring a common logo to all alinex cli interfaces using ASCII
+art can be made like:
+
+``` coffee
+alinex = require 'alinex-core'
+logo = alinex.logo 'Development Helper'
+console.log logo
+```
+
+### Error Codes
+
+The following code will setup handler for SIGNAL handling and also give you
+a handy method for exit the program with code and message.
+
+``` coffee
+alinex = require 'alinex-core'
+alinex.initExit()
+alinex.exit 1, "Something one wrong"
+```
+
+
 Alinex Modules
 -------------------------------------------------
 

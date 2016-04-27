@@ -17,7 +17,29 @@ exports.logo = (title) ->
 
 # Error management
 # -------------------------------------------------
-exit = exports.exit = (code = 0, err) ->
+exit = exports.exit = (code, err) ->
+  # autodetection for exit code
+  unless code?
+    code = if err.exit? and typeof err.exit is 'numeric'
+      err.exit
+    else if err.code?
+      switch err.code
+        when 'EACCES' then 3
+        when 'EADDRINUSE' then 4
+        when 'ECONNREFUSED' then 6
+        when 'ECONNRESET' then 5
+        when 'EEXIST' then 3
+        when 'EISDIR' then 3
+        when 'EMFILE' then 3
+        when 'ENOENT' then 3
+        when 'ENOTDIR' then 3
+        when 'ENOTEMPTY' then 3
+        when 'EPERM' then 3
+        when 'EPIPE' then 3
+        when 'ETIMEDOUT' then 5
+        else 1
+    else
+      0
   # exit without error
   process.exit code unless err
   # exit with error

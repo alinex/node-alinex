@@ -4,6 +4,14 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version undefined (2016-04-27)
+-------------------------------------------------
+- Fixed tests to always have chalk enabled.
+- Upgraded builder.
+- Added missing util package.
+- Merge with origin.
+- Upgraded chalk package.
+
 Version 0.2.2 (2016-04-22)
 -------------------------------------------------
 - Fixed missing packages.

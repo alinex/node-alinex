@@ -6,6 +6,17 @@ individual versions:
 
 Version undefined (2016-04-27)
 -------------------------------------------------
+test new publish task
+
+- Added information for version undefined
+- Fixed tests to always have chalk enabled.
+- Upgraded builder.
+- Added missing util package.
+- Merge with origin.
+- Upgraded chalk package.
+
+Version undefined (2016-04-27)
+-------------------------------------------------
 - Fixed tests to always have chalk enabled.
 - Upgraded builder.
 - Added missing util package.

@@ -27,15 +27,13 @@
     "lib": "./lib"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "alinex-util": "^2.0.3",
     "chalk": "^1.1.3"
->>>>>>> 73bc4cf2a325840965728136e39dcc9ea69b47bf
   },
   "devDependencies": {
-    "alinex-builder": "^1.2.9",
-    "chai": "^3.5.0"
+    "alinex-builder": "^1.2.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
   },
   "optionalDependencies": {},
   "engines": {

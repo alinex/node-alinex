@@ -7,7 +7,7 @@
 # -------------------------------------------------
 
 chalk = require 'chalk'
-{string} = require 'alinex-util'
+util = require 'alinex-util'
 
 # Generate specific logo
 # -------------------------------------------------
@@ -17,7 +17,7 @@ module.exports = (title = 'Application') ->
   sign = 'alinex' unless logo[sign]?
   # get the title
   title = title.toUpperCase().split('').join ' '
-  title = string.repeat(' ', Math.floor (80 - title.length) / 2) + title
+  title = util.string.repeat(' ', Math.floor (80 - title.length) / 2) + title
   # return the logo
   return logo[sign] title
 

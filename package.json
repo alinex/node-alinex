@@ -26,7 +26,8 @@
   "directories": {
     "lib": "./lib"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "alinex-builder": "^1.2.0",
     "chai": "^3.5.0",

@@ -4,6 +4,18 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.4 (2016-04-27)
+-------------------------------------------------
+- Add exit code auto detection.
+- Added information for version 0.2.3
+- Added information for version undefined
+- Added information for version undefined
+- Fixed tests to always have chalk enabled.
+- Upgraded builder.
+- Added missing util package.
+- Merge with origin.
+- Upgraded chalk package.
+
 Version 0.2.3 (2016-04-27)
 -------------------------------------------------
 test new publish task

@@ -4,6 +4,12 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.5 (2016-04-28)
+-------------------------------------------------
+- Added optional exit code.
+- Fiy error code detection for undefined code or code -1.
+- Fix changelog.
+
 Version 0.2.4 (2016-04-27)
 -------------------------------------------------
 - Add exit code auto detection.

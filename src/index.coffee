@@ -19,8 +19,8 @@ exports.logo = (title) ->
 # -------------------------------------------------
 exit = exports.exit = (code, err) ->
   # autodetection for exit code
-  unless code?
-    code = if err.exit? and typeof err.exit is 'numeric'
+  unless code? or code < 0
+    code = unless err.exit? and typeof err.exit isnt 'number'
       err.exit
     else if err.code?
       switch err.code
@@ -40,6 +40,7 @@ exit = exports.exit = (code, err) ->
         else 1
     else
       0
+  console.log code
   # exit without error
   process.exit code unless err
   # exit with error

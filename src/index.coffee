@@ -18,8 +18,11 @@ exports.logo = (title) ->
 # Error management
 # -------------------------------------------------
 exit = exports.exit = (code, err) ->
+  if typeof code is 'object' and not err?
+    err = code
+    code = null
   # autodetection for exit code
-  unless code? or code < 0
+  unless code?
     code = unless err.exit? and typeof err.exit isnt 'number'
       err.exit
     else if err.code?
@@ -40,7 +43,6 @@ exit = exports.exit = (code, err) ->
         else 1
     else
       0
-  console.log code
   # exit without error
   process.exit code unless err
   # exit with error

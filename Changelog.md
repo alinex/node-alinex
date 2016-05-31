@@ -4,6 +4,11 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.6 (2016-05-31)
+-------------------------------------------------
+- Upgraded builder package.
+- Optimize alinex logo.
+
 Version 0.2.5 (2016-04-28)
 -------------------------------------------------
 - Added optional exit code.

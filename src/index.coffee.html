@@ -7,7 +7,7 @@
   <script src="../doc-filelist.js"></script>
   <script>
     var relativeDir = "../";
-    var thisFile = "home/alex/github/node-alinex/src/index.coffee";
+    var thisFile = "src/index.coffee";
     var defaultSidebar = true;
   </script>
   <script src="../doc-script.js"></script>
@@ -135,7 +135,10 @@ Error management
 
         </td>
         <td class="code highlight">
-          <pre class="coffeescript">exit = exports.exit = <span class="hljs-function"><span class="hljs-params">(code = <span class="hljs-number">0</span>, err)</span> -&gt;</span></pre>
+          <pre class="coffeescript">exit = exports.exit = <span class="hljs-function"><span class="hljs-params">(code, err)</span> -&gt;</span>
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">typeof</span> code <span class="hljs-keyword">is</span> <span class="hljs-string">'object'</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> err?
+    err = code
+    code = <span class="hljs-literal">null</span></pre>
         </td>
       </tr>
     
@@ -143,6 +146,39 @@ Error management
         <td class="docs">
           <div class="pilwrap">
   <a class="pilcrow" href="#section-6" id="section-6"></a>
+</div>
+<p>autodetection for exit code</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="coffeescript">  <span class="hljs-keyword">unless</span> code?
+    code = <span class="hljs-keyword">unless</span> err.exit? <span class="hljs-keyword">and</span> <span class="hljs-keyword">typeof</span> err.exit <span class="hljs-keyword">isnt</span> <span class="hljs-string">'number'</span>
+      err.exit
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> err.code?
+      <span class="hljs-keyword">switch</span> err.code
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EACCES'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EADDRINUSE'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">4</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ECONNREFUSED'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">6</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ECONNRESET'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">5</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EEXIST'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EISDIR'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EMFILE'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ENOENT'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ENOTDIR'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ENOTEMPTY'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EPERM'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'EPIPE'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">3</span>
+        <span class="hljs-keyword">when</span> <span class="hljs-string">'ETIMEDOUT'</span> <span class="hljs-keyword">then</span> <span class="hljs-number">5</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-number">0</span></pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-7" id="section-7"></a>
 </div>
 <p>exit without error</p>
 
@@ -155,7 +191,7 @@ Error management
       <tr>
         <td class="docs">
           <div class="pilwrap">
-  <a class="pilcrow" href="#section-7" id="section-7"></a>
+  <a class="pilcrow" href="#section-8" id="section-8"></a>
 </div>
 <p>exit with error</p>
 

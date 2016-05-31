@@ -7,7 +7,7 @@
   <script src="../doc-filelist.js"></script>
   <script>
     var relativeDir = "../";
-    var thisFile = "home/alex/github/node-alinex/src/logo.coffee";
+    var thisFile = "src/logo.coffee";
     var defaultSidebar = true;
   </script>
   <script src="../doc-script.js"></script>
@@ -147,7 +147,7 @@ Node Modules
         <td class="code highlight">
           <pre class="coffeescript">
 chalk = <span class="hljs-built_in">require</span> <span class="hljs-string">'chalk'</span>
-{string} = <span class="hljs-built_in">require</span> <span class="hljs-string">'alinex-util'</span></pre>
+util = <span class="hljs-built_in">require</span> <span class="hljs-string">'alinex-util'</span></pre>
         </td>
       </tr>
     
@@ -190,7 +190,7 @@ Generate specific logo
         </td>
         <td class="code highlight">
           <pre class="coffeescript">  title = title.toUpperCase().split(<span class="hljs-string">''</span>).join <span class="hljs-string">' '</span>
-  title = string.repeat(<span class="hljs-string">' '</span>, Math.floor (<span class="hljs-number">80</span> - title.length) / <span class="hljs-number">2</span>) + title</pre>
+  title = util.string.repeat(<span class="hljs-string">' '</span>, Math.floor (<span class="hljs-number">80</span> - title.length) / <span class="hljs-number">2</span>) + title</pre>
         </td>
       </tr>
     
@@ -220,7 +220,7 @@ Default Alinex Logo
 
         </td>
         <td class="code highlight">
-          <pre class="coffeescript">  <span class="hljs-attribute">alinex</span>: <span class="hljs-function"><span class="hljs-params">(title)</span> -&gt;</span>
+          <pre class="coffeescript">  alinex: <span class="hljs-function"><span class="hljs-params">(title)</span> -&gt;</span>
     c1 = chalk.cyan
     c2 = chalk.bold.yellow
     ct = chalk.yellow
@@ -312,7 +312,7 @@ divibib Logo
 
         </td>
         <td class="code highlight">
-          <pre class="coffeescript">  <span class="hljs-attribute">divibib</span>: <span class="hljs-function"><span class="hljs-params">(title)</span> -&gt;</span>
+          <pre class="coffeescript">  divibib: <span class="hljs-function"><span class="hljs-params">(title)</span> -&gt;</span>
     c1 = chalk.bold.gray
     c2 = chalk.green
     ct = chalk.green

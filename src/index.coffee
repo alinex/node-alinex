@@ -23,7 +23,7 @@ exit = exports.exit = (code, err) ->
     code = null
   # autodetection for exit code
   unless code?
-    code = unless err?.exit? and typeof err?.exit isnt 'number'
+    code = if err?.exit? and typeof err.exit is 'number'
       err.exit
     else if err?.code?
       switch err.code

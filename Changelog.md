@@ -4,6 +4,10 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.8 (2016-06-09)
+-------------------------------------------------
+- Fix exit without error.
+
 Version 0.2.7 (2016-06-09)
 -------------------------------------------------
 - Upgraded util, mocha and builder package.

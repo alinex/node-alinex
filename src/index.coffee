@@ -23,9 +23,9 @@ exit = exports.exit = (code, err) ->
     code = null
   # autodetection for exit code
   unless code?
-    code = unless err.exit? and typeof err.exit isnt 'number'
+    code = unless err?.exit? and typeof err.exit isnt 'number'
       err.exit
-    else if err.code?
+    else if err?.code?
       switch err.code
         when 'EACCES' then 3
         when 'EADDRINUSE' then 4

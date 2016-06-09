@@ -4,6 +4,11 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.7 (2016-06-09)
+-------------------------------------------------
+- Upgraded util, mocha and builder package.
+- Allow calling exit without error.
+
 Version 0.2.6 (2016-05-31)
 -------------------------------------------------
 - Upgraded builder package.

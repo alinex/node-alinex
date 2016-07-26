@@ -1,16 +1,20 @@
-# Installation
+# Logo
 # =================================================
-# This logo may easily be loaded and the emblem can be selected by using a
-# LOGO environment variable.
+# A function to bring a common logo to all alinex cli interfaces using ASCII
+# art can be made. The logo is designed to be output on console view.
+
 
 # Node Modules
 # -------------------------------------------------
-
 chalk = require 'chalk'
+# alinex modules
 util = require 'alinex-util'
 
+
 # Generate specific logo
-# -------------------------------------------------
+#
+# @param {string} [title=Application] - application title
+# @return {string} logo like shown above
 module.exports = (title = 'Application') ->
   # detect emblem
   sign = process.env.LOGO ? 'alinex'
@@ -21,10 +25,14 @@ module.exports = (title = 'Application') ->
   # return the logo
   return logo[sign] title
 
- logo =
 
-  # Default Alinex Logo
-  # -------------------------------------------------
+# Logo Definition
+# -------------------------------------------------
+
+logo =
+
+  # ### Default Alinex Logo
+  #
   alinex: (title) ->
     c1 = chalk.cyan
     c2 = chalk.bold.yellow
@@ -48,8 +56,8 @@ module.exports = (title = 'Application') ->
 
     """
 
-  # divibib Logo
-  # -------------------------------------------------
+  # ### divibib Logo
+  #
   divibib: (title) ->
     c1 = chalk.bold.gray
     c2 = chalk.green

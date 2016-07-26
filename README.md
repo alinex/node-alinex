@@ -1,12 +1,35 @@
-Package: alinex
+Base System: Readme
 =================================================
 
-This is the base package for the alinex universe. Currently only
+This is the base package for the alinex namespace. Currently only
 some helpers are contained here.
 
-It is not made to be used for other modules.
+It is not made to be used for other modules. Currently it contains:
+- the app logo (for console)
+- error management
 
-Read more about the [philosphy behind](http://alinex.github.io/develop/alinex.html).
+> Read more about the [philosphy behind](https://alinex.github.io/develop/alinex.html).
+
+__Read the complete documentation under
+[https://alinex.github.io/node-alinex](https://alinex.github.io/node-alinex).__
+<!-- {p: .hide} -->
+
+
+Install
+-------------------------------------------------
+
+[![NPM](https://nodei.co/npm/alinex-core.png?downloads=true&downloadRank=true&stars=true)
+ ![Downloads](https://nodei.co/npm-dl/alinex-core.png?months=9&height=3)
+](https://www.npmjs.com/package/alinex-core)
+
+### API Integration
+
+To do this you install it into your own module:
+
+``` sh
+# from within your module directory
+sudo npm install --save alinex-codedoc
+```
 
 
 Usage
@@ -14,8 +37,8 @@ Usage
 
 ### Logo
 
-A function to bring a common logo to all alinex cli interfaces using ASCII
-art can be made like:
+You can get an logo easily to be printed on the console with the application title
+included:
 
 ``` coffee
 alinex = require 'alinex-core'
@@ -23,7 +46,7 @@ logo = alinex.logo 'Development Helper'
 console.log logo
 ```
 
-### Exit Handler
+### Error Management
 
 The following code will setup handler for SIGNAL handling and also give you
 a handy method for exit the program with code and message.
@@ -41,33 +64,15 @@ This will:
 - exit the process with the given code
 
 You can find the possible codes for alinex in the
-[developer guide](http://alinex.github.io/develop/alinex/exitcodes.html).
+[developer guide](https://alinex.github.io/develop/alinex/exitcodes.html).
 
-This handler may also autodetect the exit code from the given error. To use this
-call it without an exit code:
-
-``` coffee
-alinex = require 'alinex-core'
-alinex.initExit()
-err = new Error "Wrong parameter"
-err.exit = 2
-alinex.exit err
-```
-
-The exit code will be taken from:
-
-- the err.exit field
-- from the err.code name (autodetect for node errors)
-
-This procedure gives you the possibility to define the exit code then the error
-occurs but throw it first and decide later on other position if you want to give
-it to the exit handler.
+> See the separate pages for the [Package API](src/index.html) for more details.
 
 
 Alinex Modules
 -------------------------------------------------
 
-Look at my [Code page](http://alinex.github.io/code.html) (button on the top)
+Look at my [Code page](https://alinex.github.io/code.html) (button on the top)
 to get a list of currently finished modules.
 
 
@@ -80,7 +85,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
->  <http://www.apache.org/licenses/LICENSE-2.0>
+>  <https://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

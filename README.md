@@ -1,6 +1,9 @@
 Base System: Readme
 =================================================
 
+[![GitHub](https://assets-cdn.github.com/favicon.ico)](https://github.com/alinex/node-codedoc "Code on GitHub")
+<!-- {.right} -->
+
 This is the base package for the alinex namespace. Currently only
 some helpers are contained here.
 

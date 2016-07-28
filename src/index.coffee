@@ -1,5 +1,5 @@
 ###
-Package Main
+API Usage
 =================================================
 This module is used as API in all alinex based apps. It will help setting it up.
 ###

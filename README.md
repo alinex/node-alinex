@@ -1,7 +1,7 @@
 Base System: Readme
 =================================================
 
-[![GitHub](https://assets-cdn.github.com/favicon.ico)](https://github.com/alinex/node-codedoc "Code on GitHub")
+[![GitHub](https://assets-cdn.github.com/favicon.ico)](https://github.com/alinex/node-core "Code on GitHub")
 <!-- {.right} -->
 
 This is the base package for the alinex namespace. Currently only
@@ -14,7 +14,7 @@ It is not made to be used for other modules. Currently it contains:
 > Read more about the [philosphy behind](https://alinex.github.io/develop/alinex.html).
 
 __Read the complete documentation under
-[https://alinex.github.io/node-alinex](https://alinex.github.io/node-alinex).__
+[https://alinex.github.io/node-core](https://alinex.github.io/node-core).__
 <!-- {p: .hide} -->
 
 
@@ -31,7 +31,7 @@ To do this you install it into your own module:
 
 ``` sh
 # from within your module directory
-sudo npm install --save alinex-codedoc
+sudo npm install --save alinex-core
 ```
 
 
@@ -69,7 +69,7 @@ This will:
 You can find the possible codes for alinex in the
 [developer guide](https://alinex.github.io/develop/alinex/exitcodes.html).
 
-> See the separate pages for the [Package API](src/index.html) for more details.
+> See the separate pages for the {@link index.coffee} for more details.
 
 
 Alinex Modules

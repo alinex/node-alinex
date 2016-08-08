@@ -4,48 +4,6 @@ API Usage
 This module is used as API in all alinex based apps. It will help setting it up.
 ###
 
-###
-#Exit Handler
-
-The following code will setup handler for SIGNAL handling and also give you
-a handy method for exit the program with code and message.
-
-``` coffee
-alinex = require 'alinex-core'
-alinex.initExit()
-alinex.exit 1, new Error "Something went wrong"
-```
-
-This will:
-
-- output the error
-- output a possible err.description property
-- exit the process with the given code
-
-You can find the possible codes for alinex in the
-[developer guide](http://alinex.github.io/develop/alinex/exitcodes.html).
-
-This handler may also autodetect the exit code from the given error. To use this
-call it without an exit code:
-
-``` coffee
-alinex = require 'alinex-core'
-alinex.initExit()
-err = new Error "Wrong parameter"
-err.exit = 2
-alinex.exit err
-```
-
-The exit code will be taken from:
-
-- the err.exit field
-- from the err.code name (autodetect for node errors)
-
-This procedure gives you the possibility to define the exit code then the error
-occurs but throw it first and decide later on other position if you want to give
-it to the exit handler.
-###
-
 # Node Modules
 # -------------------------------------------------
 
@@ -83,7 +41,81 @@ exports.logo = (title) ->
 ###
 Error management
 -------------------------------------------------
+The following code will setup handler for SIGNAL handling and also give you
+handy method for exit the program with code and message.
+
+``` coffee
+alinex = require 'alinex-core'
+alinex.initExit()
+alinex.exit 1, new Error "Something went wrong"
+```
+
+This will:
+
+- output the error
+- output a possible err.description property
+- exit the process with the given code
+- auto set the code if possible
+
+The alinex tools are based on the bash exit codes 0, 1 and 124-143. In addition the
+codes 3-6 are used for NodeJS system codes and some alinex codes are set in
+the range 16-120 like:
+
+| Code | Description                             |
+| ----:| --------------------------------------- |
+|    0 | OK - no error                           |
+|    1 | General error which should not occur    |
+|    2 | Command parameter problem               |
+|    3 | File system access problem              |
+|    4 | Network problems                        |
+|    5 | Service or system access problem        |
+|    6 | No such service or address              |
+|  124 | command times out                       |
+|  125 | if a command itself fails               |
+|  126 | Command invoked cannot execute          |
+|  127 | "command not found"                     |
+|  128 | Invalid argument to exit                |
+|  129 | SIGHUP (Signal 1)                       |
+|  130 | SIGINT like through Ctrl + C (Signal 2) |
+|  131 | SIGQUIT (Signal 3)                      |
+|  134 | SIGABRT or SIGIOT (Signal 6)            |
+|  143 | SIGTERM (Signal 15)                     |
+|  255 | Exit status out of range                |
+
+You can find all possible codes for bash and Linux in the
+[developer guide](http://alinex.github.io/develop/alinex/exitcodes.html).
+
+This handler may also autodetect the exit code from the given error. To use this
+call it without an exit code:
+
+``` coffee
+alinex = require 'alinex-core'
+alinex.initExit()
+err = new Error "Wrong parameter"
+err.exit = 2
+alinex.exit err
+```
+
+The exit code will be taken from:
+
+- the err.exit field
+- from the err.code name (autodetect for node errors)
+
+This procedure gives you the possibility to define the exit code then the error
+occurs but throw it first and decide later on other position if you want to give
+it to the exit handler.
 ###
+
+###
+Initialize signal handler to exit on common interrupt signals.
+###
+exports.initExit = ->
+  process.on 'SIGINT', -> exit 130, new Error "Got SIGINT signal"
+  process.on 'SIGTERM', -> exit 143, new Error "Got SIGTERM signal"
+  process.on 'SIGHUP', -> exit 129, new Error "Got SIGHUP signal"
+  process.on 'SIGQUIT', -> exit 131, new Error "Got SIGQUIT signal"
+  process.on 'SIGABRT', -> exit 134, new Error "Got SIGABRT signal"
+  exit
 
 ###
 This method will exit processing immediately and return to the OS with an error
@@ -124,14 +156,3 @@ exit = exports.exit = (code, err) ->
   console.error chalk.red.bold "FAILED: #{err.message}"
   console.error err.description if err.description
   process.exit code
-
-###
-Initialize signal handler to exit on common interrupt signals.
-###
-exports.initExit = ->
-  process.on 'SIGINT', -> exit 130, new Error "Got SIGINT signal"
-  process.on 'SIGTERM', -> exit 143, new Error "Got SIGTERM signal"
-  process.on 'SIGHUP', -> exit 129, new Error "Got SIGHUP signal"
-  process.on 'SIGQUIT', -> exit 131, new Error "Got SIGQUIT signal"
-  process.on 'SIGABRT', -> exit 134, new Error "Got SIGABRT signal"
-  exit

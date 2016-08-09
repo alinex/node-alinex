@@ -32,8 +32,8 @@ The resulting string is colorized using ascii escape code and may look like:
 ###
 
 ###
-@param {string} [title=Application] application title
-@return {string} logo like shown above
+@param {String} [title=Application] application title
+@return {String} logo like shown above
 ###
 exports.logo = (title) ->
   require('./logo') title

@@ -11,10 +11,11 @@ chalk = require 'chalk'
 util = require 'alinex-util'
 
 
-# Generate specific logo
+# Generate specific logo which may be specified through the environment setting
+# with the apropriate title text.
 #
-# @param {string} [title=Application] - application title
-# @return {string} logo like shown above
+# @param {String} [title=Application] application title
+# @return {String} logo like shown above
 module.exports = (title = 'Application') ->
   # detect emblem
   sign = process.env.LOGO ? 'alinex'

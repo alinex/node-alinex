@@ -33,7 +33,7 @@ The resulting string is colorized using ascii escape code and may look like:
 
 ###
 @param {String} [title=Application] application title
-@return {String} logo like shown above
+@return {String} logo like shown above to be printed on console
 ###
 exports.logo = (title) ->
   require('./logo') title
@@ -108,6 +108,8 @@ it to the exit handler.
 
 ###
 Initialize signal handler to exit on common interrupt signals.
+
+@return {function(<Integer>, <String>)} returns the {@link exit} function to be used.
 ###
 exports.initExit = ->
   process.on 'SIGINT', -> exit 130, new Error "Got SIGINT signal"
@@ -123,6 +125,9 @@ code.
 
 @param {integer} [code=autodetect] error code number
 @param {Error} [err] error message
+@description
+This will output a message on `STDERR` before exiting with the defined or detected
+exit code.
 ###
 exit = exports.exit = (code, err) ->
   if typeof code is 'object' and not err?

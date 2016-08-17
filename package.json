@@ -33,7 +33,7 @@
   "devDependencies": {
     "alinex-builder": "^2.1.9",
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^3.0.2"
   },
   "optionalDependencies": {},
   "engines": {

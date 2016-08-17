@@ -32,8 +32,10 @@ module.exports = (title = 'Application') ->
 
 logo =
 
-  # ### Default Alinex Logo
+  # ### Alinex logo
   #
+  # @param {String} title title to be printed below image
+  # @return {String} ASCII art image
   alinex: (title) ->
     c1 = chalk.cyan
     c2 = chalk.bold.yellow
@@ -52,14 +54,16 @@ logo =
     #{i} ##### ######### ########################## ############  #####     #####
     #{i}##### ##########  ########################   ########### #####       #####
     #{i}___________________________________________________________________________
-    
+
     #{ct title}
     #{i}___________________________________________________________________________
 
     """
 
-  # ### divibib Logo
-  #
+# ### divibib logo
+#
+# @param {String} title title to be printed below image
+# @return {String} ASCII art image
   divibib: (title) ->
     c1 = chalk.bold.gray
     c2 = chalk.green

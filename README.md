@@ -88,8 +88,8 @@ This will:
 - output a possible err.description property
 - exit the process with the given code
 
-You can find the possible codes for alinex in the
-[developer guide](https://alinex.github.io/develop/alinex/exitcodes.html).
+You can find the possible codes for alinex in in the description of the
+[Error Management](src/index.coffee.html#error-management).
 
 > See the separate pages for the {@link index.coffee} for more details.
 

@@ -37,7 +37,7 @@ It is not made to be used for other modules. Currently it contains:
 
 __Read the complete documentation under
 [https://alinex.github.io/node-core](https://alinex.github.io/node-core).__
-<!-- {p: .hide} -->
+<!-- {p: .hidden} -->
 
 
 Install

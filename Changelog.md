@@ -4,6 +4,22 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.10 (2016-08-19)
+-------------------------------------------------
+- Update alinex-builder@2.3.6, alinex-util@2.4.0, mocha@3.0.2
+- Fix error code to be at least 1 if error given.
+- Update docs.
+- Update documentation.
+- Fix logo documentation.
+- Slightly updated documentation.
+- Update documentation.
+- Rename repository to use general alinex namespace naming.
+- Add github link.
+- Rename index title.
+- Updated documentation.
+- Update docs.
+- Add copyright sign.
+
 Version 0.2.9 (2016-06-09)
 -------------------------------------------------
 - Fix exit without error.

@@ -11,3 +11,5 @@
 /test
 /var/local
 /var/lib
+/coffeelint.json
+/.*

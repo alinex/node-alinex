@@ -3,13 +3,15 @@ Base System: Readme
 
 [![GitHub watchers](
   https://img.shields.io/github/watchers/alinex/node-core.svg?style=social&label=Watch&maxAge=2592000)](
-  https://github.com/alinex/node-core/subscription)<!-- {.hidden-small} -->
+  https://github.com/alinex/node-core/subscription)
+<!-- {.hidden-small} -->
 [![GitHub stars](
   https://img.shields.io/github/stars/alinex/node-core.svg?style=social&label=Star&maxAge=2592000)](
   https://github.com/alinex/node-core)
 [![GitHub forks](
   https://img.shields.io/github/forks/alinex/node-core.svg?style=social&label=Fork&maxAge=2592000)](
-  https://github.com/alinex/node-core)<!-- {.hidden-small} -->
+  https://github.com/alinex/node-core)
+<!-- {.hidden-small} -->
 <!-- {p:.right} -->
 
 [![npm package](
@@ -17,13 +19,15 @@ Base System: Readme
   https://www.npmjs.com/package/alinex-core)
 [![latest version](
   https://img.shields.io/npm/l/alinex-core.svg?maxAge=2592000)](
-  #license)<!-- {.hidden-small} -->
+  #license)
+<!-- {.hidden-small} -->
 [![Gemnasium status](
   https://img.shields.io/gemnasium/alinex/node-core.svg?maxAge=2592000)](
   https://gemnasium.com/alinex/node-core)
 [![GitHub issues](
   https://img.shields.io/github/issues/alinex/node-core.svg?maxAge=2592000)](
-  https://github.com/alinex/node-core/issues)<!-- {.hidden-small} -->
+  https://github.com/alinex/node-core/issues)
+<!-- {.hidden-small} -->
 
 
 This is the base package for the alinex namespace. Currently only

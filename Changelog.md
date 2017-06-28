@@ -4,6 +4,10 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.12 (2017-06-28)
+-------------------------------------------------
+- Fix divibib logo
+
 Version 0.2.11 (2017-06-28)
 -------------------------------------------------
 - Skip tests

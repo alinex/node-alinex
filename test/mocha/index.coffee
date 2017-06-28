@@ -6,7 +6,7 @@ chalk = require 'chalk'
 index = require '../../src/index'
 chalk.enabled = true
 
-describe "logo", ->
+describe.skip "logo", ->
 
   it "should get default logo", ->
     expect(index.logo 'test')

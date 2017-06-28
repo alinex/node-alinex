@@ -4,6 +4,14 @@ Version changes
 The following list gives a short overview about what is changed between
 individual versions:
 
+Version 0.2.11 (2017-06-28)
+-------------------------------------------------
+- Skip tests
+- Add possibility for shutdown function on exit handler
+- Fix documentation to hide style comments in github view.
+- Updated ignore files.
+- Update travis.
+
 Version 0.2.10 (2016-08-19)
 -------------------------------------------------
 - Update alinex-builder@2.3.6, alinex-util@2.4.0, mocha@3.0.2

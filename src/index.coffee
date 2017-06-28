@@ -112,12 +112,21 @@ Initialize signal handler to exit on common interrupt signals.
 @return {function(<Integer>, <String>)} returns the {@link exit} function to be used.
 ###
 exports.initExit = (cb = ->) ->
-  process.on 'SIGINT', -> exit 130, new Error "Got SIGINT signal"
-  process.on 'SIGTERM', -> exit 143, new Error "Got SIGTERM signal"
-  process.on 'SIGHUP', -> exit 129, new Error "Got SIGHUP signal"
-  process.on 'SIGQUIT', -> exit 131, new Error "Got SIGQUIT signal"
-  process.on 'SIGABRT', -> exit 134, new Error "Got SIGABRT signal"
-  cb()
+  process.on 'SIGINT', ->
+    cb()
+    exit 130, new Error "Got SIGINT signal"
+  process.on 'SIGTERM', ->
+    cb()
+    exit 143, new Error "Got SIGTERM signal"
+  process.on 'SIGHUP', ->
+    cb()
+    exit 129, new Error "Got SIGHUP signal"
+  process.on 'SIGQUIT', ->
+    cb()
+    exit 131, new Error "Got SIGQUIT signal"
+  process.on 'SIGABRT', ->
+    cb()
+    exit 134, new Error "Got SIGABRT signal"
   exit
 
 ###
